@@ -1,0 +1,17 @@
+Quartus II Archive log --	C:/Users/gongal/ARCap/Repository/InfraredProto/__InfraredProto.auto.qarlog
+
+Archive:	C:/Users/gongal/ARCap/Repository/InfraredProto/__InfraredProto.auto.qar
+Date:		Sun Feb 09 15:01:46 2014
+Quartus II 64-Bit		12.1 Build 243 01/31/2013 SP 1.33 SJ Full Version
+
+	=========== Files Selected: ===========
+C:/Users/gongal/ARCap/Repository/InfraredProto/db/InfraredProto.qpf
+InfraredProto.qsf
+InfraredProto.vhd
+c:/altera/12.1sp1/quartus/bin64/assignment_defaults.qdf
+infrared_controller.vhd
+project1.qsys
+	======= Total: 6 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

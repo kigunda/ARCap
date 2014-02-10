@@ -1,0 +1,75 @@
+-- Kenan Kigunda, Amshu Gongal
+-- Modified January 22, 2014
+
+-- DERIVED FROM monolith_sev_seg.vhd
+-- Nancy Minderman 
+-- Created December 17, 2013
+-- Makes much use of the Altera "Insert Template" feature
+-- nancy.minderman@ualberta.ca
+-- Modified January 13, 2014 to use the DE2_CONSTANTS package
+-- Makes much use of the Altera "Insert Template" feature
+-- nancy.minderman@ualberta.ca
+-- Modified January 13, 2014 to use the DE2_CONSTANTS package
+
+-- A library clause declares a name as a library.  It 
+-- does not create the library; it simply forward declares 
+-- it. 
+library ieee;
+
+-- Use clauses import declarations into the current scope.	
+-- If more than one use clause imports the same name into the
+-- the same scope, none of the names are imported.
+
+
+-- Commonly imported packages:
+
+-- STD_LOGIC and STD_LOGIC_VECTOR types, and relevant functions
+use ieee.std_logic_1164.all;
+
+-- SIGNED and UNSIGNED types, and relevant functions
+use ieee.numeric_std.all;
+
+-- Basic sequential functions and concurrent procedures
+use ieee.VITAL_Primitives.all;
+
+use work.DE2_CONSTANTS.all;
+
+entity edge_counter is
+
+	port(
+		-- clock and reset
+		clk		: in std_logic;
+		reset_n 	: in std_logic;
+		
+		-- signal from frequency generator
+		coe_freq	: in std_logic;
+		
+		-- avalon slave interface, for reading the count
+		avs_s0_readdata : out std_logic_vector(31 downto 0);
+		avs_s0_writedata : in std_LOGIC_VECTOR(31 downto 0);
+		avs_s0_write_n : in std_LOGIC
+	);
+
+end edge_counter;
+
+architecture avalon of edge_counter is
+	-- The count of the number of rising edges.
+	signal count : std_logic_vector(31 downto 0);
+begin
+	-- Watch the reset and frequency signals.
+	process(reset_n, avs_s0_write_n, coe_freq) is
+	begin
+		if (reset_n = '0') then
+			-- Reset the count.
+			count <= (others => '0');
+		elsif (avs_s0_write_n = '0') then
+			count <= avs_s0_writedata;
+		elsif (rising_edge(coe_freq)) then
+			-- Increment the count.
+			count <= std_logic_vector(unsigned(count) + 1);
+		end if;
+	end process;
+	-- Output the count.
+	avs_s0_readdata <= count;
+end avalon;
+
