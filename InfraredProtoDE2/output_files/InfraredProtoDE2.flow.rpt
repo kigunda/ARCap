@@ -1,5 +1,5 @@
 Flow report for InfraredProtoDE2
-Sun Feb 09 19:15:56 2014
+Wed Feb 12 16:04:34 2014
 Quartus II 64-Bit Version 12.1 Build 243 01/31/2013 Service Pack 1.33 SJ Full Version
 
 
@@ -38,15 +38,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------------+
 ; Flow Summary                                                                           ;
 +------------------------------------+---------------------------------------------------+
-; Flow Status                        ; Successful - Sun Feb 09 19:15:54 2014             ;
+; Flow Status                        ; Successful - Wed Feb 12 16:04:31 2014             ;
 ; Quartus II 64-Bit Version          ; 12.1 Build 243 01/31/2013 SP 1.33 SJ Full Version ;
 ; Revision Name                      ; InfraredProtoDE2                                  ;
 ; Top-level Entity Name              ; InfraredProtoDE2                                  ;
 ; Family                             ; Cyclone II                                        ;
 ; Device                             ; EP2C35F672C6                                      ;
 ; Timing Models                      ; Final                                             ;
-; Total logic elements               ; 2,956 / 33,216 ( 9 % )                            ;
-;     Total combinational functions  ; 2,750 / 33,216 ( 8 % )                            ;
+; Total logic elements               ; 2,964 / 33,216 ( 9 % )                            ;
+;     Total combinational functions  ; 2,759 / 33,216 ( 8 % )                            ;
 ;     Dedicated logic registers      ; 1,699 / 33,216 ( 5 % )                            ;
 ; Total registers                    ; 1767                                              ;
 ; Total pins                         ; 103 / 475 ( 22 % )                                ;
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/09/2014 19:14:28 ;
+; Start date & time ; 02/12/2014 16:02:48 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; InfraredProtoDE2    ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ applicable agreement for further details.
 +-------------------------------------+------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                        ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 116530612622.139199846704424 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 116530612622.139224616803660 ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                           ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                            ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; 16764057                     ; --            ; --          ; Top        ;
@@ -88,11 +88,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:01:01     ; 1.0                     ; 641 MB              ; 00:00:31                           ;
-; Fitter                    ; 00:00:19     ; 1.0                     ; 908 MB              ; 00:00:23                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 460 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 483 MB              ; 00:00:01                           ;
-; Total                     ; 00:01:23     ; --                      ; --                  ; 00:00:57                           ;
+; Analysis & Synthesis      ; 00:01:13     ; 1.0                     ; 629 MB              ; 00:00:33                           ;
+; Fitter                    ; 00:00:23     ; 1.5                     ; 920 MB              ; 00:00:24                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 452 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 483 MB              ; 00:00:01                           ;
+; Total                     ; 00:01:41     ; --                      ; --                  ; 00:01:00                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

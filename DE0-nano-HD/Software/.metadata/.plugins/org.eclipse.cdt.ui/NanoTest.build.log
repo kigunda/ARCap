@@ -1,0 +1,10 @@
+
+**** Build of configuration Nios II for project NanoTest ****
+
+make all 
+Info: Building ../NanoTest_bsp/
+make --no-print-directory -C ../NanoTest_bsp/
+[BSP build complete]
+[NanoTest build complete]
+
+**** Build Finished ****

@@ -1,4 +1,4 @@
-!SESSION 2014-02-09 18:47:14.891 -----------------------------------------------
+!SESSION 2014-02-12 16:06:45.972 -----------------------------------------------
 eclipse.buildId=M20120208-0800
 java.version=1.6.0_23
 java.vendor=Sun Microsystems Inc.
@@ -6,161 +6,23 @@ BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
 Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
 Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
 
-!ENTRY org.eclipse.cdt.core 1 0 2014-02-09 18:48:54.716
-!MESSAGE Indexed 'InfraredProtoDE2_bsp' (94 sources, 67 headers) in 1.09 sec: 2,286 declarations; 9,993 references; 125 unresolved inclusions; 5 syntax errors; 203 unresolved names (1.63%)
+!ENTRY org.eclipse.cdt.core 1 0 2014-02-12 16:07:28.056
+!MESSAGE Indexed 'IRDE2_bsp' (94 sources, 67 headers) in 0.97 sec: 2,286 declarations; 9,993 references; 125 unresolved inclusions; 5 syntax errors; 203 unresolved names (1.63%)
 
-!ENTRY org.eclipse.cdt.core 1 0 2014-02-09 18:48:57.633
-!MESSAGE Indexed 'InfraredProtoDE2' (1 sources, 13 headers) in 0.02 sec: 8 declarations; 23 references; 15 unresolved inclusions; 0 syntax errors; 6 unresolved names (16.22%)
+!ENTRY org.eclipse.cdt.core 1 0 2014-02-12 16:07:29.109
+!MESSAGE Indexed 'IRDE2' (1 sources, 13 headers) in 0.02 sec: 8 declarations; 23 references; 15 unresolved inclusions; 0 syntax errors; 6 unresolved names (16.22%)
 
-!ENTRY com.altera.sbtgui.launch 1 0 2014-02-09 18:50:46.101
-!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1109068 --id=0x0 --timestamp=1391996687]
+!ENTRY com.altera.sbtgui.launch 1 0 2014-02-12 16:09:06.859
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1109068 --id=0x0 --timestamp=1392246173]
 
-!ENTRY com.altera.sbtgui.launch 1 0 2014-02-09 18:50:47.832
-!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1109068 --id=0x0 --timestamp=1391996687 /cygdrive/c/Users/gongal/ARCap/Repository/InfraredProtoDE2/Software/InfraredProtoDE2/InfraredProtoDE2.elf]
+!ENTRY com.altera.sbtgui.launch 1 0 2014-02-12 16:09:08.509
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1109068 --id=0x0 --timestamp=1392246173 /cygdrive/c/Users/gongal/ARCap/Repository/InfraredProtoDE2/Software/IRDE2/IRDE2.elf]
 
-!ENTRY org.eclipse.cdt.ui 2 0 2014-02-09 19:10:59.885
-!MESSAGE The 'org.eclipse.cdt.mylyn.ui.InclusionProposalComputer' proposal computer from the 'org.eclipse.cdt.mylyn.ui' plug-in did not complete normally. The extension violated the API contract of the 'computeContextInformation()' operation.
-
-!ENTRY org.eclipse.cdt.ui 2 0 2014-02-09 19:11:00.759
-!MESSAGE The 'org.eclipse.cdt.ui.InclusionProposalComputer' proposal computer from the 'org.eclipse.cdt.ui' plug-in did not complete normally. The extension violated the API contract of the 'computeContextInformation()' operation.
-
-!ENTRY com.altera.sbtgui.launch 1 0 2014-02-09 19:11:50.415
-!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1109068 --id=0x0 --timestamp=1391996687]
-
-!ENTRY com.altera.sbtgui.launch 1 0 2014-02-09 19:11:52.178
-!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1109068 --id=0x0 --timestamp=1391996687 /cygdrive/c/Users/gongal/ARCap/Repository/InfraredProtoDE2/Software/InfraredProtoDE2/InfraredProtoDE2.elf]
-!SESSION 2014-02-09 19:16:19.582 -----------------------------------------------
-eclipse.buildId=M20120208-0800
-java.version=1.6.0_23
-java.vendor=Sun Microsystems Inc.
-BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
-Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
-Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
-
-!ENTRY org.eclipse.core.resources 4 567 2014-02-09 19:16:21.673
-!MESSAGE Workspace restored, but some problems occurred.
-!SUBENTRY 1 org.eclipse.core.resources 4 567 2014-02-09 19:16:21.673
-!MESSAGE Could not read metadata for 'InfraredProtoDE2'.
-!STACK 1
-org.eclipse.core.internal.resources.ResourceException: The project description file (.project) for 'InfraredProtoDE2' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
-	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:851)
-	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:874)
-	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:854)
-	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:703)
-	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1528)
-	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2503)
-	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2251)
-	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:439)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
-	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
-	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:299)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
-	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:268)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
-	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:463)
-	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:400)
-	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:473)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:429)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:417)
-	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
-!SUBENTRY 2 org.eclipse.core.resources 4 567 2014-02-09 19:16:21.673
-!MESSAGE The project description file (.project) for 'InfraredProtoDE2' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
-!SUBENTRY 1 org.eclipse.core.resources 4 567 2014-02-09 19:16:21.673
-!MESSAGE Could not read metadata for 'InfraredProtoDE2_bsp'.
-!STACK 1
-org.eclipse.core.internal.resources.ResourceException: The project description file (.project) for 'InfraredProtoDE2_bsp' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
-	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:851)
-	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:874)
-	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:854)
-	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:703)
-	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1528)
-	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2503)
-	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2251)
-	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:439)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
-	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
-	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
-	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:299)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
-	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:268)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
-	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:463)
-	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:400)
-	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:473)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:429)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:417)
-	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
-!SUBENTRY 2 org.eclipse.core.resources 4 567 2014-02-09 19:16:21.673
-!MESSAGE The project description file (.project) for 'InfraredProtoDE2_bsp' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
-
-!ENTRY org.eclipse.cdt.core 1 0 2014-02-09 19:16:56.352
-!MESSAGE Indexed 'InfraredProtoDE2_bsp' (94 sources, 67 headers) in 0.84 sec: 2,286 declarations; 9,993 references; 125 unresolved inclusions; 5 syntax errors; 203 unresolved names (1.63%)
-
-!ENTRY org.eclipse.cdt.core 1 0 2014-02-09 19:16:57.802
-!MESSAGE Indexed 'InfraredProtoDE2' (1 sources, 13 headers) in 0.02 sec: 8 declarations; 23 references; 15 unresolved inclusions; 0 syntax errors; 6 unresolved names (16.22%)
-
-!ENTRY com.altera.sbtgui.launch 1 0 2014-02-09 19:18:18.109
-!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1109068 --id=0x0 --timestamp=1391998472]
-
-!ENTRY com.altera.sbtgui.launch 1 0 2014-02-09 19:18:19.778
-!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1109068 --id=0x0 --timestamp=1391998472 /cygdrive/c/Users/gongal/ARCap/Repository/InfraredProtoDE2/Software/InfraredProtoDE2/InfraredProtoDE2.elf]
-
-!ENTRY com.altera.sbtgui.launch 1 0 2014-02-09 19:20:08.810
-!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1109068 --id=0x0 --timestamp=1391998472]
-
-!ENTRY com.altera.sbtgui.launch 1 0 2014-02-09 19:20:10.479
-!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1109068 --id=0x0 --timestamp=1391998472 /cygdrive/c/Users/gongal/ARCap/Repository/InfraredProtoDE2/Software/InfraredProtoDE2/InfraredProtoDE2.elf]
-
-!ENTRY com.altera.sbtgui.launch 1 0 2014-02-09 19:29:24.636
+!ENTRY com.altera.sbtgui.launch 1 0 2014-02-12 16:31:30.576
 !MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
 
-!ENTRY com.altera.sbtgui.launch 1 0 2014-02-09 19:29:25.026
-!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1109068 --id=0x0 --timestamp=1391998472]
+!ENTRY com.altera.sbtgui.launch 1 0 2014-02-12 16:31:30.976
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1109068 --id=0x0 --timestamp=1392246173]
 
-!ENTRY com.altera.sbtgui.launch 1 0 2014-02-09 19:29:26.679
-!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1109068 --id=0x0 --timestamp=1391998472 /cygdrive/c/Users/gongal/ARCap/Repository/InfraredProtoDE2/Software/InfraredProtoDE2/InfraredProtoDE2.elf]
-
-!ENTRY com.altera.sbtgui.launch 1 0 2014-02-09 19:30:51.546
-!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x1109068 --id=0x0 --timestamp=1391998472]
-
-!ENTRY com.altera.sbtgui.launch 1 0 2014-02-09 19:30:53.231
-!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1109068 --id=0x0 --timestamp=1391998472 /cygdrive/c/Users/gongal/ARCap/Repository/InfraredProtoDE2/Software/InfraredProtoDE2/InfraredProtoDE2.elf]
+!ENTRY com.altera.sbtgui.launch 1 0 2014-02-12 16:31:32.636
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x1109068 --id=0x0 --timestamp=1392246173 /cygdrive/c/Users/gongal/ARCap/Repository/InfraredProtoDE2/Software/IRDE2/IRDE2.elf]

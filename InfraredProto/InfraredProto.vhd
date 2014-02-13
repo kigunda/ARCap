@@ -26,21 +26,26 @@ library ieee;
 	
 	port
 	(
-		-- Input ports and 50 MHz Clock
-		KEY		: in  std_logic_vector (0 downto 0);
+		-- 50 MHz Clock
 		CLOCK_50	: in  std_logic;
+	
+		-- Input ports
+		KEY		: in  std_logic_vector (1 downto 0);		-- pushbuttons
+		GPIO_0	: inout std_logic_vector (0 downto 0);		-- expansion header
+		LED 		: out DE0_LED;										-- LEDs
 
-		-- SRAM on board
-		SRAM_ADDR	:	out	DE0_SRAM_ADDR_BUS;
-		SRAM_DQ		:	inout DE0_SRAM_DATA_BUS;
-		SRAM_WE_N	:	out	std_logic;
-		SRAM_OE_N	:	out	std_logic;
-		SRAM_UB_N	:	out 	std_logic;
-		SRAM_LB_N	:	out	std_logic;
-		SRAM_CE_N	:	out	std_logic;
-		
-		-- GPIO for infrared signals
-		GPIO_0 	: out std_logic_vector (0 downto 0)
+		-- SDRAM on board
+		DRAM_DQ		:	inout DE0_SDRAM_DATA_BUS;
+		DRAM_ADDR	:	out	DE0_SDRAM_ADDR_BUS;
+		DRAM_DQM		:	out	DE0_SDRAM_DATA_MASK_BUS;
+		DRAM_CLK		:	out	std_logic;
+		DRAM_CKE		:	out	std_logic;
+		DRAM_WE_N	: 	out 	std_logic;
+		DRAM_CAS_N	:	out	std_logic;
+		DRAM_RAS_N	: 	out	std_logic;
+		DRAM_CS_N	:	out	std_logic;
+		DRAM_BA_0	: 	out	std_logic;
+		DRAM_BA_1	:	out	std_logic
 		
 	);
 end InfraredProto;
@@ -50,38 +55,54 @@ architecture structure of InfraredProto is
 
 	-- Declarations (optional)
 	
-	 component niosII_system is
+	 component project1 is
         port (
-            clk_clk                                 			: in		std_logic			:= 'X';             	-- clk
-            reset_reset_n                           			: in		std_logic			:= 'X';             	-- reset_n
-            sram_0_external_interface_DQ            			: inout	DE0_SRAM_DATA_BUS := (others => 'X');	-- DQ
-            sram_0_external_interface_ADDR          			: out		DE0_SRAM_ADDR_BUS;							-- ADDR
-            sram_0_external_interface_LB_N          			: out		std_logic;										-- LB_N
-            sram_0_external_interface_UB_N          			: out		std_logic;										-- UB_N
-            sram_0_external_interface_CE_N          			: out		std_logic;										-- CE_N
-            sram_0_external_interface_OE_N          			: out		std_logic;										-- OE_N
-            sram_0_external_interface_WE_N          			: out		std_logic;										-- WE_N
-				infrared_controller_0_conduit_end_0_export		: in		std_logic										-- export infrared emitter signal
+            clk_clk                                 	: in	  std_logic				:= 'X';             	-- clk
+            reset_reset_n                           	: in	  std_logic				:= 'X';             	-- reset_n
+				sdram_0_wire_dq                         	: inout DE0_SDRAM_DATA_BUS := (others => 'X'); 	-- dq
+            sdram_0_wire_addr                       	: out   DE0_SDRAM_ADDR_BUS;                    	-- addr
+            sdram_0_wire_dqm                        	: out   DE0_SDRAM_DATA_MASK_BUS;						-- dqm
+				sdram_0_wire_cke                        	: out   std_logic;                              -- cke
+				sdram_0_wire_we_n                       	: out   std_logic;                              -- we_n
+            sdram_0_wire_cas_n                      	: out   std_logic;                             	-- cas_n
+            sdram_0_wire_ras_n                      	: out   std_logic;                             	-- ras_n
+            sdram_0_wire_cs_n                       	: out   std_logic;                              -- cs_n
+				sdram_0_wire_ba                         	: out   std_logic_vector(1 downto 0);           -- ba
+            altpll_0_c0_clk                         	: out   std_logic;										-- sdram clk
+				leds_external_connection_export   			: out   DE0_LED;											-- export LEDs
+				push_button_external_connection_export		: in	  std_logic;										-- export pushbutton
+				ir_emitter_external_connection_export		: out	  std_logic											-- export ir emitter signal
         );
-    end component niosII_system;
+    end component project1;
 
+	 -- These signals are for matching the provided IP core to
+	 -- The specific SDRAM chip in our system	 
+	 signal BA	: std_logic_vector (1 downto 0);
+	 
 begin
+	
+	DRAM_BA_1 <= BA(1);
+	DRAM_BA_0 <= BA(0);
 	
 	-- Component Instantiation Statement (optional)
 	
-	  u0 : component niosII_system
+	  u0 : component project1
         port map (
-            clk_clk                                 			=> CLOCK_50,                                
-            reset_reset_n                           			=> KEY(0),                                                
-            green_leds_external_connection_export   			=> LEDG,       
-            sram_0_external_interface_DQ            			=> SRAM_DQ,           
-            sram_0_external_interface_ADDR          			=> SRAM_ADDR,          
-            sram_0_external_interface_LB_N          			=> SRAM_LB_N,         
-            sram_0_external_interface_UB_N          			=> SRAM_UB_N,          
-            sram_0_external_interface_CE_N          			=> SRAM_CE_N,         
-            sram_0_external_interface_OE_N          			=> SRAM_OE_N,         
-            sram_0_external_interface_WE_N          			=> SRAM_WE_N,
-				infrared_controller_0_conduit_end_0_export		=> GPIO_0(0)
+            clk_clk                                 	=> CLOCK_50,                                
+            reset_reset_n                           	=> KEY(0),
+				sdram_0_wire_dq                         	=> DRAM_DQ,
+            sdram_0_wire_addr                       	=> DRAM_ADDR,
+            sdram_0_wire_dqm                        	=> DRAM_DQM,                    
+            sdram_0_wire_cke                        	=> DRAM_CKE,                     
+            sdram_0_wire_we_n                       	=> DRAM_WE_N,                
+            sdram_0_wire_cas_n                      	=> DRAM_CAS_N,                
+            sdram_0_wire_ras_n                      	=> DRAM_RAS_N,                        
+            sdram_0_wire_cs_n                       	=> DRAM_CS_N,  
+            sdram_0_wire_ba                         	=> BA,         
+            altpll_0_c0_clk                         	=> DRAM_CLK,		                                               		
+            leds_external_connection_export   			=> LED,
+				push_button_external_connection_export		=> KEY(1),
+				ir_emitter_external_connection_export		=> GPIO_0(0)
         );
 
 end structure;
@@ -95,12 +116,10 @@ library ieee;
 
 package DE0_CONSTANTS is
 	
-	type DE0_SDRAM_ADDR_BUS is array(11 downto 0) of std_logic;
-	type DE0_SDRAM_DATA_BUS is array(15 downto 0) of std_logic;
+	type DE0_SDRAM_ADDR_BUS 		is array(12 downto 0) of std_logic;
+	type DE0_SDRAM_DATA_BUS 		is array(15 downto 0) of std_logic;
+	type DE0_SDRAM_DATA_MASK_BUS	is array( 1 downto 0) of std_logic;
 	
-	type DE0_LED_GREEN		is array(7 downto 0)  of std_logic;
-	
-	type DE0_SRAM_ADDR_BUS	is array(17 downto 0) of std_logic;
-	type DE0_SRAM_DATA_BUS  is array(15 downto 0) of std_logic;
+	type DE0_LED						is array(7 downto 0)  of std_logic;
 	
 end DE0_CONSTANTS;

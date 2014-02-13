@@ -31,9 +31,9 @@ library ieee;
 	port
 	(
 		-- Input ports and 50 MHz Clock
-		KEY		: in  std_logic_vector (1 downto 0); 	-- pushbuttons
-		SW			: in 	std_logic_vector (0 downto 0); 	-- switches
-		GPIO_0 	: inout std_logic_vector (0 downto 0);		-- general purpose i/o
+		KEY		: in  std_logic_vector (1 downto 0); 		-- pushbuttons
+		SW			: in 	std_logic_vector (0 downto 0); 		-- switches
+		GPIO_0 	: inout std_logic_vector (0 downto 0);	-- general purpose i/o
 		CLOCK_50	: in  std_logic;
 		
 		-- LCD on board

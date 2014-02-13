@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Feb 10 17:33:31 2014
+Quartus II 64-Bit Version : 12.1 Build 243 01/31/2013 SP 1.33 SJ Full Version
+Revision Name : InfraredProto
+Top-level Entity Name : InfraredProto
+Family : Cyclone IV E
+Total logic elements : 2,526
+    Total combinational functions : 2,213
+    Dedicated logic registers : 1,397
+Total registers : 1397
+Total pins : 51
+Total virtual pins : 0
+Total memory bits : 142,336
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

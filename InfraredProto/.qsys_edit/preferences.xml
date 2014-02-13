@@ -3,8 +3,9 @@
  <debug showDebugMenu="0" />
  <systemtable>
   <columns>
-   <connections preferredWidth="111" />
+   <connections preferredWidth="159" />
    <irq preferredWidth="34" />
+   <export preferredWidth="248" />
   </columns>
  </systemtable>
  <clocktable>
@@ -14,7 +15,6 @@
    <frequency preferredWidth="220" />
   </columns>
  </clocktable>
- <library
-   expandedCategories="Library/University Program/Memory,Library/University Program,Project,Library" />
+ <library expandedCategories="Library,Project" />
  <window width="1100" height="800" x="0" y="0" />
 </preferences>
