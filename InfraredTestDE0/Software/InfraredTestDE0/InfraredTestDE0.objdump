@@ -1115,6 +1115,7 @@ static void isr_on_ir_pushbutton(void * context) {
  1000214:	df000204 	addi	fp,sp,8
  1000218:	e13fff15 	stw	r4,-4(fp)
 	// Read the state of the pushbutton and post it to the queue.
+	//printf("Pressed\n");
 	int message = IR_QUEUE_SEND_BASE + IORD_ALTERA_AVALON_PIO_DATA(PIO_KEY_LEFT_BASE);
  100021c:	00808034 	movhi	r2,512
  1000220:	10842004 	addi	r2,r2,4224

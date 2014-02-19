@@ -59,6 +59,7 @@ OS_EVENT *queue;
 /* Interrupt service routine triggered whenever the status of the IR emitter pushbutton changes. */
 static void isr_on_ir_pushbutton(void * context) {
 	// Read the state of the pushbutton and post it to the queue.
+	//printf("Pressed\n");
 	int message = IR_QUEUE_SEND_BASE + IORD_ALTERA_AVALON_PIO_DATA(PIO_KEY_LEFT_BASE);
 	OSQPost(queue, (void*)message);
 	// Mask to mark the end of the ISR.

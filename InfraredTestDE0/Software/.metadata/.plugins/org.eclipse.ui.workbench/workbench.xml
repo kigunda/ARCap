@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="30" version="2.0">
+<workbench progressCount="36" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="50" y="50">
 <fastViewData fastViewLocation="1024"/>
@@ -36,7 +36,7 @@
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/Users/gongal/ARCap/Repository/InfraredTestDE0/Software/InfraredTestDE0/main.c" title="main.c" tooltip="InfraredTestDE0/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/InfraredTestDE0/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2864" selectionTopPixel="720"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3218" selectionTopPixel="836"/>
 </editor>
 </editors>
 <views>
@@ -300,8 +300,11 @@
 <position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="main.c" index="3"/>
-<item active="true" historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="3">
 <position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="main.c" index="3">
+<position info="not_deleted" x="3218" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>

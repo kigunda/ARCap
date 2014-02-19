@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>ucosii</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>13-Feb-2014 4:30:53 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1392334253826</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>14-Feb-2014 2:04:49 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1392411889007</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\gongal\ARCap\Repository\InfraredTestDE0\Software\InfraredTestDE0_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\gongal\ARCap\Repository\InfraredTestDE0\system.sopcinfo</SopcDesignFile>

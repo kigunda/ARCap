@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'system'
  * SOPC Builder design path: C:/Users/gongal/ARCap/Repository/InfraredTestDE0/system.sopcinfo
  *
- * Generated: Thu Feb 13 16:20:30 MST 2014
+ * Generated: Fri Feb 14 14:04:49 MST 2014
  */
 
 /*
@@ -385,7 +385,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1392333275
+#define SYSID_TIMESTAMP 1392411633
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 

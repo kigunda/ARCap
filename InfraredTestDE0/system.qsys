@@ -97,6 +97,22 @@
          type = "int";
       }
    }
+   element pio_ir_emitter.s1
+   {
+      datum baseAddress
+      {
+         value = "33558624";
+         type = "String";
+      }
+   }
+   element pio_sw.s1
+   {
+      datum baseAddress
+      {
+         value = "33558640";
+         type = "String";
+      }
+   }
    element pio_led.s1
    {
       datum baseAddress
@@ -105,11 +121,19 @@
          type = "String";
       }
    }
-   element pio_ir_emitter.s1
+   element pio_key_left.s1
    {
       datum baseAddress
       {
-         value = "33558624";
+         value = "33558656";
+         type = "String";
+      }
+   }
+   element sdram.s1
+   {
+      datum baseAddress
+      {
+         value = "16777216";
          type = "String";
       }
    }
@@ -126,30 +150,6 @@
       datum baseAddress
       {
          value = "33558592";
-         type = "String";
-      }
-   }
-   element sdram.s1
-   {
-      datum baseAddress
-      {
-         value = "16777216";
-         type = "String";
-      }
-   }
-   element pio_key_left.s1
-   {
-      datum baseAddress
-      {
-         value = "33558656";
-         type = "String";
-      }
-   }
-   element pio_sw.s1
-   {
-      datum baseAddress
-      {
-         value = "33558640";
          type = "String";
       }
    }
@@ -205,7 +205,7 @@
  <parameter name="projectName" value="de0_nano_system.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1392330273821" />
+ <parameter name="timeStamp" value="1392421670318" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_sys.clk_in" type="clock" dir="end" />
@@ -408,7 +408,7 @@
   <parameter name="timerPreset" value="CUSTOM" />
  </module>
  <module kind="altera_avalon_uart" version="12.1" enabled="1" name="uart_0">
-  <parameter name="baud" value="115200" />
+  <parameter name="baud" value="9600" />
   <parameter name="clockRate" value="100000000" />
   <parameter name="dataBits" value="8" />
   <parameter name="fixedBaud" value="false" />

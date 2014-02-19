@@ -110,6 +110,7 @@ architecture syn of de0_nano_system is
 
    component system is
       port (
+				
              clk_clk              		: in    std_logic                     	:= 'X';             	-- clk
              reset_reset_n        		: in    std_logic                     	:= 'X';             	-- reset_n				 
              sdram_addr           		: out   std_logic_vector(12 downto 0);                    	-- addr
@@ -172,13 +173,13 @@ begin
                  sdram_ras_n          		=> DRAM_RAS_N,
                  sdram_we_n           		=> DRAM_WE_N,
 
-                 uart_0_rxd           		=> GPIO_0(1),
-                 uart_0_txd           		=> GPIO_0(0),
+                 uart_0_rxd           		=> GPIO_0(24),
+                 uart_0_txd           		=> GPIO_0(26),
 
                  pio_led_export 		  		=> LED(6 downto 0),
                  pio_key_left_export  		=> KEY(1),
                  pio_sw_export        		=> SW,
-					  pio_ir_emitter_export		=> GPIO_1(1)
+					  pio_ir_emitter_export		=> GPIO_1(0)
                );  
             
  --  DRAM_BA_1 <= sdram_ba(1);
