@@ -1,0 +1,18 @@
+/*
+ * InfraredListener.cpp
+ *
+ *  Created on: 2014-03-01
+ *      Author: kigunda
+ */
+
+#include "InfraredListener.h"
+
+InfraredListener::InfraredListener() {
+	// TODO Auto-generated constructor stub
+
+}
+
+InfraredListener::~InfraredListener() {
+	// TODO Auto-generated destructor stub
+}
+

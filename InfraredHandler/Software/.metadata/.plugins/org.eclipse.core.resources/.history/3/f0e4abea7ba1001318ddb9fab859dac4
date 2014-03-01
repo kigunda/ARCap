@@ -1,0 +1,17 @@
+/*
+ * InfraredListener.h
+ *
+ *  Created on: 2014-03-01
+ *      Author: kigunda
+ */
+
+#ifndef INFRAREDLISTENER_H_
+#define INFRAREDLISTENER_H_
+
+class InfraredListener {
+public:
+	virtual ~InfraredListener() {}
+	virtual void onInfraredReceive(unsigned int level) = 0;
+};
+
+#endif /* INFRAREDLISTENER_H_ */

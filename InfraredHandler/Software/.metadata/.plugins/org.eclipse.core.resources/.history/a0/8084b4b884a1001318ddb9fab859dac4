@@ -1,0 +1,22 @@
+/*
+ * CommandHandler.h
+ *
+ *  Created on: 2014-03-01
+ *      Author: Kenan Kigunda
+ */
+
+#ifndef COMMANDHANDLER_H_
+#define COMMANDHANDLER_H_
+
+#include "InfraredListener.h"
+
+class CommandHandler: public InfraredListener {
+public:
+	CommandHandler();
+	virtual ~CommandHandler();
+
+	/* Responds to an infrared receive event. */
+	InfraredStatus onInfraredReceive(unsigned int level);
+};
+
+#endif /* COMMANDHANDLER_H_ */

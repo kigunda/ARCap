@@ -1,0 +1,74 @@
+/*
+ * InfaredHandler.cpp
+ *
+ *  Created on: 2014-02-28
+ *      Author: Kenan Kigunda
+ */
+
+#include <stdio.h>
+#include "InfraredHandler.h"
+
+// ALLOCATION
+InfraredHandler::InfraredHandler() {}
+InfraredHandler::~InfraredHandler() {}
+
+// INITIALIZATION
+
+/* A mock implemementation of InfraredHandler::init, for testing. */
+InfraredHandlerStatus InfraredHandler::init() {
+	return INFRARED_HANDLER_OK;
+}
+
+/*
+ * Initializes this handler.
+ * @return INFRARED_OK if there are no initialization errors
+ */
+//int InfraredHandler::init() {
+//	// Open the ADC.
+//	adc_dev = alt_up_de0_nano_adc_open_dev(ADC_NAME);
+//	if (adc_dev == NULL) {
+//		return INFRARED_ERR;
+//	} else {
+//		return INFRARED_OK;
+//	}
+//}
+
+// UPDATES
+
+/*
+ * Updates the infrared status by checking all receivers.
+ * @return INFRARED_OK if the infrared status is accepted by all listeners
+ */
+InfraredHandlerStatus InfraredHandler::update() {
+	return onInfraredReceive(read(1));
+}
+
+// RECEIVERS
+
+/* A mock implementation of InfraredHandler::read, for testing. */
+unsigned int InfraredHandler::read(int channel) {
+	return 10;
+}
+
+///* Reads the level of the given receive channel. */
+//unsigned int InfraredHandler::read(int channel) {
+//	unsigned int level = alt_up_de0_nano_adc_read(adc_dev, channel);
+//	printf("InfraredHandler [channel: %d, level: %u] ", channel, level);
+//	return level;
+//}
+
+/*
+ * Posts the given infrared level readings to all listener queues.
+ * @param level - the level read by the infrared receivers
+ * @return INFRARED_OK if the readings are posted to all listener queues without error
+ */
+InfraredHandlerStatus InfraredHandler::onInfraredReceive(unsigned int level) {
+	InfraredHandlerStatus overall = INFRARED_HANDLER_OK;
+	INT8U status;
+	for (list<OS_EVENT *>::iterator it = listeners.begin(); it != listeners.end(); ++it) {
+		status = OSQPost(*it, (void*)level);
+		if (status != OS_NO_ERR) overall = INFRARED_HANDLER_ERR;
+	} return overall;
+}
+
+

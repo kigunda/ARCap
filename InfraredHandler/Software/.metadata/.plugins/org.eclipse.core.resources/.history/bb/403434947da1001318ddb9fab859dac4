@@ -1,0 +1,46 @@
+/*
+ * Source.h
+ *
+ *  Created on: 2014-03-01
+ *      Author: kigunda
+ */
+
+#ifndef SOURCE_H_
+#define SOURCE_H_
+using namespace std;
+
+template<class Listener>
+class DataSource {
+public:
+	virtual ~DataSource();
+	void addListener(Listener *listener);
+	void removeListener(Listener *listener);
+protected:
+	list<Listener *> listeners;
+};
+
+
+// CONSTRUCTION
+
+DataSource::DataSource() {
+	// TODO Auto-generated constructor stub
+
+}
+
+DataSource::~DataSource() {
+	// TODO Auto-generated destructor stub
+}
+
+// LISTENERS
+
+template<class Listener>
+void DataSource<Listener>::addListener(Listener *listener) {
+	listeners.push_back(listener);
+}
+
+template<class Listener>
+void DataSource<Listener>::removeListener(Listener *listener) {
+	listeners.remove(listener);
+}
+
+#endif /* SOURCE_H_ */

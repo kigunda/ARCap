@@ -5,13 +5,6 @@ make all
 Info: Building ../InfraredHandler_bsp/
 make --no-print-directory -C ../InfraredHandler_bsp/
 [BSP build complete]
-Info: Compiling main.cpp to obj/default/main.o
-nios2-elf-gcc -xc++ -MP -MMD -c -I../InfraredHandler_bsp//UCOSII/inc -I../InfraredHandler_bsp//HAL/inc -I../InfraredHandler_bsp/ -I../InfraredHandler_bsp//drivers/inc  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -D__ucosii__      -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/main.o main.cpp
-main.cpp: In function 'int main()':
-main.cpp:77: error: invalid conversion from 'void*' to 'OS_STK*'
-main.cpp:77: error:   initializing argument 3 of 'INT8U OSTaskCreateExt(void (*)(void*), void*, OS_STK*, INT8U, INT16U, OS_STK*, INT32U, void*, INT16U)'
-main.cpp:88: error: invalid conversion from 'void*' to 'OS_STK*'
-main.cpp:88: error:   initializing argument 3 of 'INT8U OSTaskCreateExt(void (*)(void*), void*, OS_STK*, INT8U, INT16U, OS_STK*, INT32U, void*, INT16U)'
-make: *** [obj/default/main.o] Error 1
+[InfraredHandler build complete]
 
 **** Build Finished ****

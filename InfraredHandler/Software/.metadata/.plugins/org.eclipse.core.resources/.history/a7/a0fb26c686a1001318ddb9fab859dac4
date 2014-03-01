@@ -1,0 +1,26 @@
+/*
+ * DataSource.h
+ *
+ *  Created on: 2014-03-01
+ *      Author: kigunda
+ */
+
+#ifndef DATASOURCE_H_
+#define DATASOURCE_H_
+
+using namespace std;
+
+#include <list>
+
+class DataSource {
+public:
+	DataSource();
+	virtual ~DataSource();
+	void addListener(OS_EVENT queue);
+	void removeListener(OS_EVENT queue);
+private:
+	/* The queues used to send messages to listeners. */
+	list<OS_EVENT *> queues;
+};
+
+#endif /* DATASOURCE_H_ */

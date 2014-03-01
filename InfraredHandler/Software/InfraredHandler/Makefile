@@ -143,8 +143,10 @@ ELF := InfraredHandler.elf
 
 # Paths to C, C++, and assembly source files.
 C_SRCS :=
-CXX_SRCS += main.cpp
 CXX_SRCS += InfraredHandler.cpp
+CXX_SRCS += CommandHandler.cpp
+CXX_SRCS += main.cpp
+CXX_SRCS += DataSource.cpp
 ASM_SRCS :=
 
 

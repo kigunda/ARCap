@@ -1,0 +1,19 @@
+/*
+ * Source.cpp
+ *
+ *  Created on: 2014-03-01
+ *      Author: kigunda
+ */
+
+#include "Source.h"
+using namespace std;
+
+Source::Source() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Source::~Source() {
+	// TODO Auto-generated destructor stub
+}
+

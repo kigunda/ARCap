@@ -1,0 +1,21 @@
+/*
+ * InfraredListener.h
+ *
+ *  Created on: 2014-03-01
+ *      Author: Kenan Kigunda
+ */
+
+#ifndef INFRAREDLISTENER_H_
+#define INFRAREDLISTENER_H_
+
+#include "InfraredStatus.h"
+
+class InfraredListener {
+public:
+	virtual ~InfraredListener() {}
+
+	/* Responds to an infrared receive event. */
+	virtual InfraredStatus onInfraredReceive(unsigned int level) = 0;
+};
+
+#endif /* INFRAREDLISTENER_H_ */

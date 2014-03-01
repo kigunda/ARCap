@@ -1,0 +1,16 @@
+/*
+ * COMMANDStatus.h
+ *
+ *  Created on: 2014-03-01
+ *      Author: Kenan Kigunda
+ */
+
+#ifndef COMMANDSTATUS_H_
+#define COMMANDSTATUS_H_
+
+enum COMMAND_STATUS {
+	COMMAND_ERR = -1,
+	COMMAND_OK = 0
+};
+
+#endif /* COMMANDSTATUS_H_ */

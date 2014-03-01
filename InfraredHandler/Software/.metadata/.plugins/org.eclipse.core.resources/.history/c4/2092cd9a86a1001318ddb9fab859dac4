@@ -1,0 +1,23 @@
+/*
+ * DataSource.h
+ *
+ *  Created on: 2014-03-01
+ *      Author: kigunda
+ */
+
+#ifndef DATASOURCE_H_
+#define DATASOURCE_H_
+
+using namespace std;
+
+#include <list>
+
+class DataSource {
+public:
+	DataSource();
+	virtual ~DataSource();
+private:
+	list<OS_EVENT *> outqueues;
+};
+
+#endif /* DATASOURCE_H_ */

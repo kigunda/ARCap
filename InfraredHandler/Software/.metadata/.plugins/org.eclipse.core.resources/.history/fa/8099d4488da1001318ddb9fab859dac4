@@ -1,0 +1,46 @@
+/*
+ * InfraredHandler.h
+ *
+ *  Created on: 2014-02-28
+ *      Author: Kenan Kigunda
+ */
+
+#ifndef INFRAREDHANDLER_H_
+#define INFRAREDHANDLER_H_
+
+#include "altera_up_avalon_de0_nano_adc.h"
+#include "altera_up_avalon_de0_nano_adc_regs.h"
+#include "includes.h"
+
+#include "DataSource.h"
+
+enum InfraredStatus {
+	INFRARED_ERR = -1,
+	INFRARED_OK = 0
+};
+
+class InfraredHandler: public DataSource {
+public:
+	InfraredHandler();
+	virtual ~InfraredHandler();
+
+	/*
+	 * Initializes this handler.
+	 * @return INFRARED_OK if there are no initialization errors
+	 */
+	InfraredStatus init();
+
+	/*
+	 * Updates this handler.
+	 * @return INFRARED_OK if the infrared readings are valid and have been posted to all listeners without error
+	 */
+	InfraredStatus update();
+
+private:
+	alt_up_de0_nano_adc_dev *adc_dev;
+
+	unsigned int read(int channel);
+	InfraredStatus onInfraredReceive(unsigned int level);
+};
+
+#endif /* INFRAREDHANDLER_H_ */

@@ -1,0 +1,16 @@
+/*
+ * Status.h
+ *
+ *  Created on: 2014-03-01
+ *      Author: kigunda
+ */
+
+#ifndef STATUS_H_
+#define STATUS_H_
+
+enum Status {
+
+};
+
+
+#endif /* STATUS_H_ */

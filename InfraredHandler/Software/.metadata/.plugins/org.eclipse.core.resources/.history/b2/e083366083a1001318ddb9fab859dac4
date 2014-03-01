@@ -1,0 +1,16 @@
+/*
+ * InfraredStauts.h
+ *
+ *  Created on: 2014-03-01
+ *      Author: Kenan Kigunda
+ */
+
+#ifndef INFRAREDSTAUTS_H_
+#define INFRAREDSTAUTS_H_
+
+enum InfraredStatus {
+	INFRARED_ERR = -1,
+	INFRARED_OK = 0
+};
+
+#endif /* INFRAREDSTAUTS_H_ */

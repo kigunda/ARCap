@@ -17,3 +17,158 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.
 
 !ENTRY org.eclipse.cdt.ui 2 0 2014-02-28 16:59:14.052
 !MESSAGE The 'org.eclipse.cdt.ui.InclusionProposalComputer' proposal computer from the 'org.eclipse.cdt.ui' plug-in did not complete normally. The extension violated the API contract of the 'computeContextInformation()' operation.
+!SESSION 2014-03-01 10:58:51.349 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.ui 4 4 2014-03-01 10:58:58.759
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2014-03-01 10:59:00.927
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2014-03-01 10:59:00.927
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-01 10:59:00.927
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-01 10:59:00.927
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-01 10:59:00.927
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2014-03-01 10:59:00.927
+!MESSAGE Unable to restore perspective: Workspace - Nios II.
+!SUBENTRY 2 org.eclipse.ui 0 0 2014-03-01 10:59:00.927
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2014-03-01 10:59:00.927
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2014-03-01 10:59:00.927
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-01 10:59:00.927
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-01 10:59:00.927
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-01 10:59:00.927
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-01 10:59:00.927
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-01 10:59:00.927
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-01 10:59:00.927
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-01 10:59:00.927
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2014-03-01 10:59:00.927
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2014-03-01 10:59:00.927
+!MESSAGE OK
+
+!ENTRY org.eclipse.cdt.ui 4 0 2014-03-01 12:51:16.939
+!MESSAGE Error in CDT UI during reconcile
+!STACK 1
+C Model Exception: C Model Status [Element InfraredHandler.cpp does not exist.]
+	at org.eclipse.cdt.internal.core.model.CElement.newNotPresentException(CElement.java:485)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.makeConsistent(TranslationUnit.java:538)
+	at org.eclipse.cdt.internal.core.model.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:62)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:339)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:602)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:630)
+	at org.eclipse.cdt.internal.core.model.WorkingCopy.reconcile(WorkingCopy.java:403)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:88)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:73)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:84)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.reconcile(CCompositeReconcilingStrategy.java:90)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.process(CReconciler.java:396)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+!SUBENTRY 1 org.eclipse.cdt.core 4 969 2014-03-01 12:51:16.939
+!MESSAGE Element InfraredHandler.cpp does not exist.
+
+!ENTRY org.eclipse.cdt.ui 4 0 2014-03-01 13:16:33.084
+!MESSAGE cannot work without declarator
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-01 13:16:33.694
+!MESSAGE Indexed 'InfraredHandler' (3 sources, 83 headers) in 0.60 sec: 2,263 declarations; 2,460 references; 0 unresolved inclusions; 2 syntax errors; 22 unresolved names (0.46%)
+
+!ENTRY org.eclipse.cdt.ui 4 0 2014-03-01 13:16:41.714
+!MESSAGE cannot work without declarator
+
+!ENTRY org.eclipse.cdt.core 4 0 2014-03-01 14:43:11.438
+!MESSAGE Error: Resource '/InfraredHandler/InfraredStatus.h' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/InfraredHandler/InfraredStatus.h' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:320)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:194)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:287)
+	at org.eclipse.cdt.internal.core.parser.InternalParserUtil.createWorkspaceFileContent(InternalParserUtil.java:157)
+	at org.eclipse.cdt.core.parser.FileContent.create(FileContent.java:83)
+	at org.eclipse.cdt.core.parser.FileContent.create(FileContent.java:67)
+	at org.eclipse.cdt.internal.core.pdom.indexer.ProjectIndexerInputAdapter.getCodeReader(ProjectIndexerInputAdapter.java:296)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseFile(AbstractIndexerTask.java:875)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(AbstractIndexerTask.java:795)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:371)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:127)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:137)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2014-03-01 14:43:11.438
+!MESSAGE Resource '/InfraredHandler/InfraredStatus.h' does not exist.
+
+!ENTRY org.eclipse.cdt.ui 4 0 2014-03-01 15:03:16.275
+!MESSAGE cannot work without declarator
+!SESSION 2014-03-01 15:38:52.221 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.ui 4 4 2014-03-01 15:38:57.301
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2014-03-01 15:38:59.002
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2014-03-01 15:38:59.002
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-01 15:38:59.002
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-01 15:38:59.002
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-01 15:38:59.002
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2014-03-01 15:38:59.002
+!MESSAGE Unable to restore perspective: Workspace - Nios II.
+!SUBENTRY 2 org.eclipse.ui 0 0 2014-03-01 15:38:59.002
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2014-03-01 15:38:59.002
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2014-03-01 15:38:59.002
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-01 15:38:59.002
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-01 15:38:59.002
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-01 15:38:59.002
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-01 15:38:59.002
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-01 15:38:59.002
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-01 15:38:59.002
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-01 15:38:59.002
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-01 15:38:59.002
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2014-03-01 15:38:59.002
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2014-03-01 15:38:59.002
+!MESSAGE OK
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-01 15:39:26.411
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x2001098 --id=0x0 --timestamp=1393628085]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-01 15:39:28.111
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x2001098 --id=0x0 --timestamp=1393628085 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/InfraredHandler/Software/InfraredHandler/InfraredHandler.elf]

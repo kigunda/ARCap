@@ -1,0 +1,17 @@
+/*
+ * DataSource.h
+ *
+ *  Created on: 2014-03-01
+ *      Author: kigunda
+ */
+
+#ifndef DATASOURCE_H_
+#define DATASOURCE_H_
+
+class DataSource {
+public:
+	DataSource();
+	virtual ~DataSource();
+};
+
+#endif /* DATASOURCE_H_ */

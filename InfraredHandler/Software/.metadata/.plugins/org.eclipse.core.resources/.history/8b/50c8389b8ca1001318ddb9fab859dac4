@@ -1,0 +1,52 @@
+/*
+ * CommandHandler.cpp
+ *
+ *  Created on: 2014-03-01
+ *      Author: Kenan Kigunda
+ */
+
+#include <stdio.h>
+#include "CommandHandler.h"
+
+// CONSTRUCTION
+
+/* Creates a new command handler. */
+CommandHandler::CommandHandler() {
+
+}
+
+/* Destroys a command handler. */
+CommandHandler::~CommandHandler() {
+}
+
+/*
+ * Initializes this handler.
+ * @return COMMAND_OK if there are no initialization errors
+ */
+CommandStatus CommandHandler::init() {
+	/* Create the infrared receive queue. */
+	infraredReceiveQueue = OSQCreate((void**)&infraredReceiveArray, COMMAND_INFRARED_RECEIVE_SIZE);
+	if (infraredReceiveQueue == NULL) {
+		return COMMAND_HANDLER_ERR;
+	} else {
+		return COMMAND_HANDLER_OK;
+	}
+}
+
+// INFRARED
+
+/*
+ * Gets the queue used to accept infrared receive events.
+ * @return the infrared receive queue
+ */
+OS_EVENT *CommandHandler::onInfraredReceive() {
+	return infraredReceiveQueue;
+}
+
+/*
+ * Processes an infrared receive event.
+ * @param level - the level recorded by the infrared receiver
+ */
+void CommandHandler::processInfraredReceive(unsigned int level) {
+	printf("CommandHandler [event: infrared in, level: %u]", level);
+}

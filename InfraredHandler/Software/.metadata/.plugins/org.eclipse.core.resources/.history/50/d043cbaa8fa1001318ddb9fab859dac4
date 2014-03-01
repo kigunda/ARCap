@@ -1,0 +1,18 @@
+/*
+ * Status.h
+ *
+ *  Created on: 2014-03-01
+ *      Author: Kenan Kigunda
+ */
+
+#ifndef STATUS_H_
+#define STATUS_H_
+
+typedef enum Status {
+	OK = 0,
+	BANANABOXY = 2,
+	INFRARED_ERR = 3,
+	COMMAND_ERR
+} Status;
+
+#endif /* STATUS_H_ */
