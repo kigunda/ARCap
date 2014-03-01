@@ -1,0 +1,41 @@
+/*
+ * InfaredHandler.cpp
+ *
+ *  Created on: 2014-02-28
+ *      Author: kigunda
+ */
+
+#include "InfaredHandler.h"
+#include "altera_up_avalon_de0_nano_adc.h"
+#include "altera_up_avalon_de0_nano_adc_regs.h"
+
+// CONSTRUCTION
+
+/*
+ * Creates a new infrared handler.
+ */
+InfaredHandler::InfaredHandler() {
+}
+
+/*
+ * Destroys an infrared handler.
+ */
+InfaredHandler::~InfaredHandler() {
+	// TODO Auto-generated destructor stub
+}
+
+/*
+ * Initializes the infrared handler.
+ */
+int InfraredHandler::init() {
+	// Open the ADc.
+	adc_dev = alt_up_de0_nano_adc_open_dev(ADC_NAME);
+	if (adc_dev == NULL) {
+		return INFRARED_HANDLER_ERR;
+	} else {
+		return INFRARED_HANDLER_OK;
+	}
+}
+
+// INFRARED RECEIVERS
+

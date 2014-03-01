@@ -1,0 +1,19 @@
+/*
+ * InfaredHandler.h
+ *
+ *  Created on: 2014-02-28
+ *      Author: kigunda
+ */
+
+#ifndef INFAREDHANDLER_H_
+#define INFAREDHANDLER_H_
+
+class InfaredHandler {
+public:
+	InfaredHandler();
+	virtual ~InfaredHandler();
+private:
+	alt_up_de0_nano_adc_dev adc_dev;
+};
+
+#endif /* INFAREDHANDLER_H_ */

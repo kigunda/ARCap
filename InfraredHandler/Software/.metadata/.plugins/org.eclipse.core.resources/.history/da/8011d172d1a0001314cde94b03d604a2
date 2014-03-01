@@ -1,0 +1,25 @@
+/*
+ * InfaredHandler.cpp
+ *
+ *  Created on: 2014-02-28
+ *      Author: kigunda
+ */
+
+#include "InfaredHandler.h"
+#include "altera_up_avalon_de0_nano_adc.h"
+#include "altera_up_avalon_de0_nano_adc_regs.h"
+
+InfaredHandler::InfaredHandler() {
+}
+
+InfaredHandler::~InfaredHandler() {
+	// TODO Auto-generated destructor stub
+}
+
+int InfraredHandler::init() {
+	// Open the ADc.
+	adc_dev = alt_up_de0_nano_adc_open_dev(ADC_BASE);
+	if (adc_dev == NULL) {
+		retrurn
+	}
+}

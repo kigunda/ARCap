@@ -1,0 +1,19 @@
+!SESSION 2014-02-28 16:16:19.035 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-02-28 16:16:58.006
+!MESSAGE Indexed 'InfraredHandler_bsp' (94 sources, 89 headers) in 1.13 sec: 3,103 declarations; 10,700 references; 121 unresolved inclusions; 5 syntax errors; 221 unresolved names (1.58%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-02-28 16:16:58.866
+!MESSAGE Indexed 'InfraredHandler' (1 sources, 13 headers) in 0.01 sec: 8 declarations; 23 references; 15 unresolved inclusions; 0 syntax errors; 6 unresolved names (16.22%)
+
+!ENTRY org.eclipse.cdt.ui 2 0 2014-02-28 16:59:13.082
+!MESSAGE The 'org.eclipse.cdt.mylyn.ui.InclusionProposalComputer' proposal computer from the 'org.eclipse.cdt.mylyn.ui' plug-in did not complete normally. The extension violated the API contract of the 'computeContextInformation()' operation.
+
+!ENTRY org.eclipse.cdt.ui 2 0 2014-02-28 16:59:14.052
+!MESSAGE The 'org.eclipse.cdt.ui.InclusionProposalComputer' proposal computer from the 'org.eclipse.cdt.ui' plug-in did not complete normally. The extension violated the API contract of the 'computeContextInformation()' operation.
