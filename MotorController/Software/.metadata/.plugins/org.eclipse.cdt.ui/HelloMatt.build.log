@@ -1,0 +1,10 @@
+
+**** Build of configuration Nios II for project HelloMatt ****
+
+make all 
+Info: Building ../HelloMatt_bsp/
+make --no-print-directory -C ../HelloMatt_bsp/
+[BSP build complete]
+[HelloMatt build complete]
+
+**** Build Finished ****

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="257" key="DIALOG_WIDTH"/>
+		<item value="127" key="DIALOG_Y_ORIGIN"/>
+		<item value="380" key="DIALOG_HEIGHT"/>
+		<item value="685" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="false" key="isRegEx"/>
+		<item value="true" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="sendByteMC" key="selection"/>
+		<list key="findhistory">
+			<item value="sendByte"/>
+			<item value="stopSpeed"/>
+			<item value="constSpeed"/>
+			<item value="motor3B"/>
+			<item value="motor2B"/>
+			<item value="DeviceType"/>
+			<item value="motor2F"/>
+			<item value="motor3F"/>
+		</list>
+		<list key="replacehistory">
+			<item value="sendByteMC"/>
+			<item value="SERIAL_STOP_SPEED"/>
+			<item value="SERIAL_CONST_SPEED"/>
+			<item value="SERIAL_MOTOR3_BACKWARD"/>
+			<item value="SERIAL_MOTOR2_BACKWARD"/>
+			<item value="SERIAL_MOTOR2_FORWARD"/>
+			<item value="SERIAL_MOTOR3_FORWARD"/>
+			<item value="SERIAL_DEVICE_TYPE"/>
+		</list>
+	</section>
+</section>
