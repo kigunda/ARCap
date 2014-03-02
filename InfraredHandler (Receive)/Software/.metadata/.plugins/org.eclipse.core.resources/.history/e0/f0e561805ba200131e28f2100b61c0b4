@@ -1,0 +1,66 @@
+/*
+ * CommandHandler.cpp
+ *
+ *  Created on: 2014-03-01
+ *      Author: Kenan Kigunda
+ */
+
+#include <stdio.h>
+#include "CommandHandler.h"
+
+// ALLOCATION
+InfraredToNetwork::InfraredToNetwork() {}
+InfraredToNetwork::~InfraredToNetwork() {}
+
+// INITIALIZATION
+
+/*
+ * Initializes this handler.
+ * @return OK if there are no initialization errors
+ */
+Status InfraredToNetwork::init() {
+	/* Create the infrared receive queue. */
+	receiveQueue = OSQCreate((void**)&receiveBuffer, COMMAND_INFRARED_RECEIVE_SIZE);
+	if (receiveQueue == NULL) {
+		return ERR_INFRARED;
+	} else {
+		return OK;
+	}
+}
+
+// INFRARED
+
+Status InfraredToNetwork::createInfraredReceive() {
+}
+
+/*
+ * Gets the queue used to accept infrared receive events.
+ * @return the infrared receive queue
+ */
+OS_EVENT *InfraredToNetwork::listener() {
+	return receiveQueue;
+}
+
+/*
+ * Checks the infrared receive queue for new readings.
+ * @return OK when a new reading is received and processed without error
+ */
+Status InfraredToNetwork::update() {
+	INT8U status;
+	int level = (int)OSQPend(receiveQueue, 0, &status);
+	if (status != OS_NO_ERR) {
+		return ERR_INFRARED;
+	} else {
+		return process(level);
+	}
+}
+
+/*
+ * Processes an infrared receive event.
+ * @param level - the level recorded by the infrared receiver
+ */
+Status InfraredToNetwork::process(unsigned int level) {
+	if (level > COMMAND_INFRARED_RECEIVE_THRESHHOLD) {
+		printf("CommandHandler [event: infrared receive, level: %u]\n", level);
+	} return OK;
+}

@@ -19,3 +19,4 @@ wifi
 amshu
 gongal
 pon
+initialize
