@@ -8,20 +8,21 @@
 		<item value="227191" key="searchFlags"/>
 		<item value="false" key="caseSensitive"/>
 		<list key="previousPatterns">
+			<item value="command_check"/>
 			<item value="true"/>
 		</list>
 	</section>
+	<section name="RenameInformationPopup">
+	</section>
 	<section name="NewClassWizardPage">
 		<item value="true" key="stubSelected1"/>
-		<item value="false" key="testFileSelected"/>
 		<item value="false" key="namespaceSelected"/>
+		<item value="false" key="testFileSelected"/>
 		<item value="false" key="stubInline1"/>
 		<item value="true" key="stubVirtual1"/>
 		<item value="false" key="stubInline0"/>
-		<item value="true" key="stubSelected0"/>
 		<item value="" key="namespace"/>
-	</section>
-	<section name="RenameInformationPopup">
+		<item value="true" key="stubSelected0"/>
 	</section>
 	<section name="CRenameRefactoringInputPage">
 	</section>

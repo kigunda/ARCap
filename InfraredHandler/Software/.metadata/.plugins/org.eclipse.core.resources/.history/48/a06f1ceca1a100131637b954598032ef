@@ -1,0 +1,15 @@
+/*
+ * Handlers.h
+ *
+ *  Created on: 2014-03-01
+ *      Author: kigunda
+ */
+
+#ifndef HANDLERS_H_
+#define HANDLERS_H_
+
+extern CommandHandler *command;
+extern InfraredHandler *infrared;
+
+
+#endif /* HANDLERS_H_ */

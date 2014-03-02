@@ -32,6 +32,9 @@ public:
 	 */
 	Status update();
 
+	// TASKS
+	void registerInfraredReceiveTask();
+
 private:
 	alt_up_de0_nano_adc_dev *adc_dev;
 

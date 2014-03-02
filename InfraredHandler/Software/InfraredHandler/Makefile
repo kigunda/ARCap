@@ -147,6 +147,8 @@ CXX_SRCS += InfraredHandler.cpp
 CXX_SRCS += CommandHandler.cpp
 CXX_SRCS += main.cpp
 CXX_SRCS += DataSource.cpp
+CXX_SRCS += CommandTasks.cpp
+CXX_SRCS += InfraredTasks.cpp
 ASM_SRCS :=
 
 

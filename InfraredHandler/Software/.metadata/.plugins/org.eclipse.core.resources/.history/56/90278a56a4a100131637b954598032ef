@@ -1,0 +1,26 @@
+/*
+ * InfraredTasks.cpp
+ *
+ *  Created on: 2014-03-01
+ *      Author: kigunda
+ */
+
+// TASKS
+
+/* Polls the infrared handler for infrared updates. */
+void infrared_read_task(void* pdata) {
+	int status;
+
+	// Initialize the infrared handler.
+	infrared->addListener(onInfraredReceive());
+	status = infrared->init();
+	while (status == OK) {
+		// Update the infrared handler.
+		status = infrared->update();
+		// Wait for 500 ms.
+		OSTimeDlyHMSM(0, 0, 0, 500);
+	}
+}
+
+
+

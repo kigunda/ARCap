@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>ucosii</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>1-Mar-2014 1:38:37 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1393706317387</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>1-Mar-2014 6:43:08 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1393724588872</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\kigunda\Documents\Ece492\Repository\InfraredHandler\Software\InfraredHandler_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\kigunda\Documents\Ece492\Repository\InfraredHandler\system.sopcinfo</SopcDesignFile>

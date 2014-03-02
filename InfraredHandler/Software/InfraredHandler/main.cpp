@@ -1,104 +1,53 @@
 /*************************************************************************
- * Copyright (c) 2004 Altera Corporation, San Jose, California, USA.      *
- * All rights reserved. All use of this software and documentation is     *
- * subject to the License Agreement located at the end of this file below.*
- **************************************************************************
- * Description:                                                           *
- * The following is a simple hello world program running MicroC/OS-II.The *
- * purpose of the design is to be a very simple application that just     *
- * demonstrates MicroC/OS-II running on NIOS II.The design doesn't account*
- * for issues such as checking system call return codes. etc.             *
- *                                                                        *
- * Requirements:                                                          *
- *   -Supported Example Hardware Platforms                                *
- *     Standard                                                           *
- *     Full Featured                                                      *
- *     Low Cost                                                           *
- *   -Supported Development Boards                                        *
- *     Nios II Development Board, Stratix II Edition                      *
- *     Nios Development Board, Stratix Professional Edition               *
- *     Nios Development Board, Stratix Edition                            *
- *     Nios Development Board, Cyclone Edition                            *
- *   -System Library Settings                                             *
- *     RTOS Type - MicroC/OS-II                                           *
- *     Periodic System Timer                                              *
- *   -Know Issues                                                         *
- *     If this design is run on the ISS, terminal output will take several*
- *     minutes per iteration.                                             *
+ * ARCap
+ * Kenan Kigunda, Amshu Gongal, Matt Pon
+ * March 2014
  **************************************************************************/
 
+using namespace std;
 #include <stdbool.h>
 #include <stdio.h>
-#include "CommandHandler.h"
-#include "InfraredHandler.h"
+
 #include "includes.h"
 
-using namespace std;
-
-/* Definition of Task Stacks */
-#define   TASK_STACKSIZE       	2048
-OS_STK    command_task_stk		[TASK_STACKSIZE];
-OS_STK    ir_task_stk			[TASK_STACKSIZE];
-
-/* Definition of Task Priorities */
-#define COMMAND_TASK_PRIORITY		1
-#define IR_TASK_PRIORITY      		2
+#include "Tasks.h"
 
 /* Command handler. */
 CommandHandler *command = new CommandHandler();
-
-/* Prints "Hello World" and sleeps for three seconds */
-void command_task(void* pdata) {
-	while (true) {
-		// Update the command handler.
-		// This will wait on the infrared (and later wifi) handler.
-		command->update();
-	}
-}
-
-/* Polls the infrared handler for infrared updates. */
-void ir_task(void* pdata) {
-	int status;
-
-	// Initialize the infrared handler.
-	InfraredHandler *infrared = new InfraredHandler();
-	infrared->addListener(command->onInfraredReceive());
-	status = infrared->init();
-	while (status == OK) {
-		// Update the infrared handler.
-		status = infrared->update();
-		// Wait for 500 ms.
-		OSTimeDlyHMSM(0, 0, 0, 500);
-	}
-}
+InfraredHandler *infrared = new InfraredHandler();
 
 /* The main function creates the command and infrared tasks and starts multi-tasking */
 int main(void) {
 
-	// Set up the command task.
-	OSTaskCreateExt(command_task,
+	// Register tasks.
+	OSTaskCreateExt(infrared_read_task,
 			NULL,
-			&command_task_stk[TASK_STACKSIZE-1],
-			COMMAND_TASK_PRIORITY,
-			COMMAND_TASK_PRIORITY,
-			command_task_stk,
+			&infrared_read_task_stk[TASK_STACKSIZE-1],
+			INFRARED_READ_TASK_PRIORITY,
+			INFRARED_READ_TASK_PRIORITY,
+			infrared_read_task_stk,
 			TASK_STACKSIZE,
 			NULL,
 			0);
 
-	// Set up the infrared task.
-	OSTaskCreateExt(ir_task,
-			NULL,
-			&ir_task_stk[TASK_STACKSIZE-1],
-			IR_TASK_PRIORITY,
-			IR_TASK_PRIORITY,
-			ir_task_stk,
+	OSTaskCreateExt(command_check_infrared_task,
+			0,
+			&command_check_infrared_task_stk[TASK_STACKSIZE-1],
+			COMMAND_CHECK_INFRARED_TASK_PRIORITY,
+			COMMAND_CHECK_INFRARED_TASK_PRIORITY,
+			command_check_infrared_task_stk,
 			TASK_STACKSIZE,
-			NULL,
+			0,
 			0);
 
-	// Initialize the command handler and start.
-	if (command->init() == OK) {
+
+	// Initialize the handlers.
+	if ((command->init() == OK) && (infrared->init() == OK)) {
+
+		// Create the communications chain.
+		infrared->addListener(command->onInfraredReceive());
+
+		// Start.
 		OSStart();
 	}
 
