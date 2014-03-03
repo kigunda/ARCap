@@ -1,9 +1,9 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="b0109e623cec640742de"/>
+    <hash md5_digest_80b="cb090feba9e1cd85357d"/>
   </project>
   <file_info>
-    <file checksum="0x004621F3" device="EP4CE22F17C6" path="de0_nano_system.sof" usercode="0xFFFFFFFF"/>
+    <file checksum="0x004865F7" device="EP4CE22F17C6" path="de0_nano_system.sof" usercode="0xFFFFFFFF"/>
   </file_info>
   <hub_info ir_width="2" node_count="2"/>
   <node_info>
@@ -144,7 +144,7 @@
   <sld_infos>
     <sld_info hpath="system:inst_cpu" name="inst_cpu">
       <assignment_values>
-        <assignment_value text="QSYS_NAME system HAS_SOPCINFO 1 GENERATION_ID 1393717012"/>
+        <assignment_value text="QSYS_NAME system HAS_SOPCINFO 1 GENERATION_ID 1393806947"/>
       </assignment_values>
       <parameters/>
     </sld_info>

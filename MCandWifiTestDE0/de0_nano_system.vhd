@@ -124,6 +124,10 @@ architecture syn of de0_nano_system is
              sdram_we_n           		: out   std_logic;                                         	-- we_n
              uart_wifi_rxd           	: in    std_logic                     	:= 'X';             	-- rxd
              uart_wifi_txd           	: out   std_logic;                                        	-- txd
+				 
+				 rs232_wifi_rxd           	: in    std_logic                     	:= 'X';             	-- rxd
+             rs232_wifi_txd           	: out   std_logic;                                        	-- txd
+				 
 				 uart_mc_rxd          	 	: in    std_logic                     	:= 'X';             	-- rxd
              uart_mc_txd           		: out   std_logic;                                        	-- txd
              pio_led_export 		 		: out   std_logic_vector(6 downto 0);                     	-- export
@@ -175,8 +179,12 @@ begin
                  sdram_ras_n          		=> DRAM_RAS_N,
                  sdram_we_n           		=> DRAM_WE_N,
 
-                 uart_wifi_rxd        		=> GPIO_0(31),
-                 uart_wifi_txd        		=> GPIO_0(33),
+                 --uart_wifi_rxd        		=> GPIO_0(31),
+                -- uart_wifi_txd        		=> GPIO_0(33),
+					  
+					  rs232_wifi_rxd        		=> GPIO_0(31),
+                 rs232_wifi_txd        		=> GPIO_0(33),
+					  
 					  
 					  uart_mc_rxd        		=> GPIO_1(31),
                  uart_mc_txd        		=> GPIO_1(33),

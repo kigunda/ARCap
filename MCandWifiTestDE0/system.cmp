@@ -18,7 +18,9 @@
 			pio_sw_export         : in    std_logic_vector(3 downto 0)  := (others => 'X'); -- export
 			pio_ir_emitter_export : out   std_logic;                                        -- export
 			uart_mc_rxd           : in    std_logic                     := 'X';             -- rxd
-			uart_mc_txd           : out   std_logic                                         -- txd
+			uart_mc_txd           : out   std_logic;                                        -- txd
+			rs232_wifi_RXD        : in    std_logic                     := 'X';             -- RXD
+			rs232_wifi_TXD        : out   std_logic                                         -- TXD
 		);
 	end component system;
 
