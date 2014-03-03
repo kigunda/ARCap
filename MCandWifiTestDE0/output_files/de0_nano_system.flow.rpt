@@ -1,5 +1,5 @@
 Flow report for de0_nano_system
-Sun Mar 02 18:54:57 2014
+Mon Mar 03 16:13:13 2014
 Quartus II 64-Bit Version 12.1 Build 243 01/31/2013 Service Pack 1.33 SJ Full Version
 
 
@@ -38,14 +38,14 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------------+
 ; Flow Summary                                                                           ;
 +------------------------------------+---------------------------------------------------+
-; Flow Status                        ; Successful - Sun Mar 02 18:54:50 2014             ;
+; Flow Status                        ; Successful - Mon Mar 03 16:13:06 2014             ;
 ; Quartus II 64-Bit Version          ; 12.1 Build 243 01/31/2013 SP 1.33 SJ Full Version ;
 ; Revision Name                      ; de0_nano_system                                   ;
 ; Top-level Entity Name              ; de0_nano_system                                   ;
 ; Family                             ; Cyclone IV E                                      ;
 ; Device                             ; EP4CE22F17C6                                      ;
 ; Timing Models                      ; Final                                             ;
-; Total logic elements               ; 4,752 / 22,320 ( 21 % )                           ;
+; Total logic elements               ; 4,711 / 22,320 ( 21 % )                           ;
 ;     Total combinational functions  ; 4,105 / 22,320 ( 18 % )                           ;
 ;     Dedicated logic registers      ; 2,919 / 22,320 ( 13 % )                           ;
 ; Total registers                    ; 2988                                              ;
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/02/2014 18:53:45 ;
+; Start date & time ; 03/03/2014 16:11:57 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; de0_nano_system     ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ applicable agreement for further details.
 +-------------------------------------+----------------------------------------------------------+---------------+---------------------------------+------------+
 ; Assignment Name                     ; Value                                                    ; Default Value ; Entity Name                     ; Section Id ;
 +-------------------------------------+----------------------------------------------------------+---------------+---------------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 116530612622.139381162503784                             ; --            ; --                              ; --         ;
+; COMPILER_SIGNATURE_ID               ; 116530612622.139388831704860                             ; --            ; --                              ; --         ;
 ; IP_TOOL_ENV                         ; qsys                                                     ; --            ; altera_avalon_sc_fifo           ; --         ;
 ; IP_TOOL_ENV                         ; qsys                                                     ; --            ; altera_merlin_burst_adapter     ; --         ;
 ; IP_TOOL_ENV                         ; qsys                                                     ; --            ; altera_merlin_master_agent      ; --         ;
@@ -191,7 +191,7 @@ applicable agreement for further details.
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                      ; --            ; --                              ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                    ; --            ; --                              ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                             ; --            ; --                              ; --         ;
-; SLD_INFO                            ; QSYS_NAME system HAS_SOPCINFO 1 GENERATION_ID 1393806947 ; --            ; system                          ; --         ;
+; SLD_INFO                            ; QSYS_NAME system HAS_SOPCINFO 1 GENERATION_ID 1393886764 ; --            ; system                          ; --         ;
 ; SOPCINFO_FILE                       ; system/synthesis/../../system.sopcinfo                   ; --            ; --                              ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                       ; --            ; --                              ; --         ;
 +-------------------------------------+----------------------------------------------------------+---------------+---------------------------------+------------+
@@ -202,11 +202,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:21     ; 1.0                     ; 644 MB              ; 00:00:20                           ;
-; Fitter                    ; 00:00:37     ; 1.6                     ; 1138 MB             ; 00:00:46                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 460 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 2.3                     ; 563 MB              ; 00:00:07                           ;
-; Total                     ; 00:01:07     ; --                      ; --                  ; 00:01:15                           ;
+; Analysis & Synthesis      ; 00:00:21     ; 1.0                     ; 644 MB              ; 00:00:21                           ;
+; Fitter                    ; 00:00:40     ; 2.3                     ; 1135 MB             ; 00:00:50                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 456 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 569 MB              ; 00:00:06                           ;
+; Total                     ; 00:01:09     ; --                      ; --                  ; 00:01:19                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

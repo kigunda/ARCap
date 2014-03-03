@@ -14,7 +14,6 @@
    <frequency preferredWidth="274" />
   </columns>
  </clocktable>
- <library
-   expandedCategories="Library/University Program,Library/University Program/Communications,Project,Library" />
- <window width="1163" height="860" x="180" y="0" />
+ <library expandedCategories="Library,Project" />
+ <window width="1163" height="860" x="41" y="0" />
 </preferences>

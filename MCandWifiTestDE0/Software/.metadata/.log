@@ -1,4 +1,4 @@
-!SESSION 2014-03-02 19:03:11.114 -----------------------------------------------
+!SESSION 2014-03-03 15:50:57.447 -----------------------------------------------
 eclipse.buildId=M20120208-0800
 java.version=1.6.0_23
 java.vendor=Sun Microsystems Inc.
@@ -6,8 +6,85 @@ BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
 Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
 Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
 
-!ENTRY org.eclipse.cdt.core 1 0 2014-03-02 19:03:52.454
-!MESSAGE Indexed 'MCandWifiTestDE0_bsp' (99 sources, 116 headers) in 1.25 sec: 3,609 declarations; 11,652 references; 100 unresolved inclusions; 4 syntax errors; 194 unresolved names (1.26%)
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-03 15:52:40.626
+!MESSAGE Indexed 'MCTest_bsp' (99 sources, 113 headers) in 1.18 sec: 3,369 declarations; 11,599 references; 123 unresolved inclusions; 57 syntax errors; 222 unresolved names (1.46%)
 
-!ENTRY org.eclipse.cdt.core 1 0 2014-03-02 19:03:53.174
-!MESSAGE Indexed 'MCandWifiTestDE0' (1 sources, 13 headers) in 0.01 sec: 8 declarations; 23 references; 15 unresolved inclusions; 0 syntax errors; 6 unresolved names (16.22%)
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-03 15:52:41.464
+!MESSAGE Indexed 'MCTest' (1 sources, 13 headers) in 0.02 sec: 8 declarations; 23 references; 15 unresolved inclusions; 0 syntax errors; 6 unresolved names (16.22%)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2014-03-03 16:05:25.261
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System ID mismatch - connected: "0xf0f0f0f0", expected: "0x0". 
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:607)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2014-03-03 16:05:25.265
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System ID mismatch - connected: "0xf0f0f0f0", expected: "0x0". 
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:607)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2014-03-03 16:25:06.654 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.ui 4 4 2014-03-03 16:25:11.711
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2014-03-03 16:25:13.387
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2014-03-03 16:25:13.387
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-03 16:25:13.387
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-03 16:25:13.387
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-03 16:25:13.387
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2014-03-03 16:25:13.387
+!MESSAGE Unable to restore perspective: Workspace - Nios II.
+!SUBENTRY 2 org.eclipse.ui 0 0 2014-03-03 16:25:13.387
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2014-03-03 16:25:13.387
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2014-03-03 16:25:13.387
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-03 16:25:13.387
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-03 16:25:13.387
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-03 16:25:13.387
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-03 16:25:13.387
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-03 16:25:13.387
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-03 16:25:13.387
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-03 16:25:13.387
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2014-03-03 16:25:13.387
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2014-03-03 16:25:13.387
+!MESSAGE OK
