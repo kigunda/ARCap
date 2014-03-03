@@ -9,20 +9,17 @@
 
 #include "InfraredHandler.h"
 
-#define ADC_READ_UNUSED 	4
-#define ADC_READ_BASE		(1 << 25)
+#define INFRARED_HANDLER_ADC_READ_UNUSED 	4
+#define INFRARED_HANDLER_ADC_READ_BASE		(1 << 25)
+
+#define INFRARED_HANDLER_EMITTTER_ON		1
+#define INFRARED_HANDLER_EMITTER_OFF		0
 
 // ALLOCATION
 InfraredHandler::InfraredHandler() {}
 InfraredHandler::~InfraredHandler() {}
 
 // INITIALIZATION
-
-/* A mock implemementation of InfraredHandler::init, for testing. */
-//Status InfraredHandler::init() {
-//	return OK;
-//}
-
 /*
  * Initializes this handler.
  * @return INFRARED_OK if there are no initialization errors
@@ -37,7 +34,22 @@ Status InfraredHandler::init() {
 	}
 }
 
-// UPDATES
+// EMITTERS
+
+/**
+ * Sends a signal from the infrared emitters.
+ * @return OK if the signal was sent successfully
+ */
+Status InfraredHandler::send() {
+	IOWR_ALTERA_AVALON_PIO_DATA(PIO_IR_EMITTER_BASE, INFRARED_HANDLER_EMITTTER_ON);
+	INFRAREDHANDLER_SEND_LOG(printf("InfraredHandler [emitter: on]\n"));
+	OSTimeDlyHMSM(0, 0, INFRARED_HANDLER_EMITTER_ON_TIME_SECONDS, 0);
+	IOWR_ALTERA_AVALON_PIO_DATA(PIO_IR_EMITTER_BASE, INFRARED_HANDLER_EMITTER_OFF);
+	INFRAREDHANDLER_SEND_LOG(printf("InfraredHandler [emitter: off]\n"));
+	return OK;
+}
+
+// RECEIVERS
 
 /*
  * Updates the infrared readings by checking all receivers.
@@ -47,18 +59,16 @@ Status InfraredHandler::update() {
 	return onInfraredReceive(read(1));
 }
 
-// RECEIVERS
-
-/* A mock implementation of InfraredHandler::read, for testing. */
-//unsigned int InfraredHandler::read(int channel) {
-//	return 10;
-//}
-
-/* Reads the level of the given receive channel. */
+/*
+ * Reads the level of the given receive channel.
+ * @param channel - the number of the ADC channel to read
+ * @return the 12-bit level read from the channel, indicating the amount of infrared light
+ * hitting the receivers
+ * */
 unsigned int InfraredHandler::read(int channel) {
 	alt_up_de0_nano_adc_update(adc_dev);
-	unsigned int level = (alt_up_de0_nano_adc_read(adc_dev, channel) >> ADC_READ_UNUSED) - ADC_READ_BASE;
-	INFRAREDHANDLER_LOG(printf("InfraredHandler [channel: %d, level: %u]\n", channel, level));
+	unsigned int level = (alt_up_de0_nano_adc_read(adc_dev, channel) >> INFRARED_HANDLER_ADC_READ_UNUSED) - INFRARED_HANDLER_ADC_READ_BASE;
+	INFRAREDHANDLER_RECEIVE_LOG(printf("InfraredHandler [channel: %d, level: %u]\n", channel, level));
 	return level;
 }
 

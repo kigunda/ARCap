@@ -40,9 +40,19 @@ int main(void) {
 			0,
 			0);
 
+	OSTaskCreateExt(infrared_handler_send_test_task,
+			0,
+			&infrared_handler_send_test_task_stk[TASK_STACKSIZE-1],
+			INFRARED_HANDLER_SEND_TEST_TASK_PRIORITY,
+			INFRARED_HANDLER_SEND_TEST_TASK_PRIORITY,
+			infrared_handler_send_test_task_stk,
+			TASK_STACKSIZE,
+			0,
+			0);
+
 	// Initialize the handlers and bridges.
 	if ((infrared->init() == OK) && (infraredToNetwork->init() == OK)) {
-		printf("Initialize OK\n");
+		printf("Main [initialize, status: OK]\n");
 
 		// Create the communications chain.
 		infrared->addListener(infraredToNetwork->listener());

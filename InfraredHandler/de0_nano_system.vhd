@@ -79,8 +79,9 @@ entity de0_nano_system is
          LED     		  : out   std_logic_vector(7 downto 0);	-- LEDs
          KEY           : in    std_logic_vector(1 downto 0);	-- Pushbuttons
          SW            : in    std_logic_vector(3 downto 0);	-- Switches
-         GPIO_0		  : inout std_logic_vector(33 downto 0); 	-- Expansion header
-			GPIO_1		  : inout std_logic_vector(33 downto 0)	-- Expansion header	
+         GPIO_0		  : inout std_logic_vector(33 downto 0); 	-- 2 x 40 Expansion Header
+			GPIO_1		  : inout std_logic_vector(33 downto 0);	-- 2 x 40 Expansion Header
+			GPIO_2		  : inout std_logic_vector(1 downto 0)		-- 2 x 13 Expansion Header
        );
 end entity de0_nano_system;
 
@@ -195,7 +196,7 @@ begin
                  pio_led_export 		  		=> LED(6 downto 0),
                  pio_key_left_export  		=> KEY(1),
                  pio_sw_export        		=> SW,
-					  pio_ir_emitter_export		=> GPIO_1(0)
+					  pio_ir_emitter_export		=> GPIO_2(1)
                );  
          
 end architecture syn;

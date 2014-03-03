@@ -39,18 +39,25 @@ public:
 	OS_EVENT *listener();
 
 private:
+	/* The buffer and queue used to receive infrared readings. */
 	int receiveBuffer[INFRARED_TO_NETWORK_RECEIVE_SIZE];
 	OS_EVENT *receiveQueue;
 
+	/*
+	 * Processes the infrared reading of the given level.
+	 * The reading will be forwarded to the network if it is above the
+	 * INFRARED_TO_NETWORK_RECEIVE_THRESHHOLD.
+	 * @param level the 12-bit infrared input level to process
+	 */
 	Status process(unsigned int level);
 };
 
 
 #define INFRAREDNETWORKBRIDGE_DEBUG
 #if defined(INFRAREDNETWORKBRIDGE_DEBUG) || defined(DEBUG)
-#define INFRAREDNETWORKBRIDGE_LOG(x) x
+#define INFRAREDNETWORKBRIDGE_LOG(info) info
 #else
-#define INFRAREDNETWORKBRIDGE_LOG(x)
+#define INFRAREDNETWORKBRIDGE_LOG(info)
 #endif
 
 #endif /* INFRAREDNETWORKBRIDGE_H_ */

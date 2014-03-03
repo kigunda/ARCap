@@ -63,7 +63,7 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus II 64-Bit Version 12.1 Build 243 01/31/2013 Service Pack 1.33 SJ Full Version
+Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1.33 SJ Full Version
 CHIP  "de0_nano_system"  ASSIGNED TO AN: EP4CE22F17C6
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
@@ -81,7 +81,7 @@ ADC_CS_N                     : A10       : output : 2.5 V             :         
 LED[3]                       : A11       : output : 2.5 V             :         : 7         : Y              
 GPIO_0[30]                   : A12       : bidir  : 2.5 V             :         : 7         : Y              
 LED[1]                       : A13       : output : 2.5 V             :         : 7         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : A14       :        :                   :         : 7         :                
+GPIO_2[0]                    : A14       : bidir  : 2.5 V             :         : 7         : Y              
 LED[0]                       : A15       : output : 2.5 V             :         : 7         : Y              
 VCCIO7                       : A16       : power  :                   : 2.5V    : 7         :                
 LED[6]                       : B1        : output : 2.5 V             :         : 1         : Y              
@@ -99,7 +99,7 @@ GPIO_0[33]                   : B12       : bidir  : 2.5 V             :         
 LED[2]                       : B13       : output : 2.5 V             :         : 7         : Y              
 ADC_SCLK                     : B14       : output : 2.5 V             :         : 7         : Y              
 GND                          : B15       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B16       :        :                   :         : 6         :                
+GPIO_2[1]                    : B16       : bidir  : 2.5 V             :         : 6         : Y              
 ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : C1        : input  : 2.5 V             :         : 1         : N              
 DRAM_WE_N                    : C2        : output : 2.5 V             :         : 1         : Y              
 GPIO_0[1]                    : C3        : bidir  : 2.5 V             :         : 8         : Y              

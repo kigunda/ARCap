@@ -156,3 +156,306 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.
 !MESSAGE Could not find view: org.eclipse.ui.internal.introview
 !SUBENTRY 1 unknown 0 0 2014-03-02 16:40:53.108
 !MESSAGE OK
+!SESSION 2014-03-02 16:48:41.066 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-02 17:10:20.548
+!MESSAGE Indexed 'InfraredHandler_bsp' (94 sources, 136 headers) in 1.08 sec: 6,072 declarations; 13,706 references; 0 unresolved inclusions; 3 syntax errors; 18 unresolved names (0.09%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-02 17:10:24.229
+!MESSAGE Indexed 'InfraredHandler' (5 sources, 110 headers) in 0.70 sec: 4,035 declarations; 4,951 references; 0 unresolved inclusions; 2 syntax errors; 37 unresolved names (0.41%)
+!SESSION 2014-03-02 17:16:42.482 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.ui 4 4 2014-03-02 17:16:47.213
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2014-03-02 17:16:48.830
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2014-03-02 17:16:48.830
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-02 17:16:48.830
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-02 17:16:48.830
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-02 17:16:48.830
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2014-03-02 17:16:48.830
+!MESSAGE Unable to restore perspective: Workspace - Nios II.
+!SUBENTRY 2 org.eclipse.ui 0 0 2014-03-02 17:16:48.830
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2014-03-02 17:16:48.830
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:16:48.830
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:16:48.830
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:16:48.830
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:16:48.830
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:16:48.830
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:16:48.830
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:16:48.830
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:16:48.830
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:16:48.830
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2014-03-02 17:16:48.830
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2014-03-02 17:16:48.830
+!MESSAGE OK
+!SESSION 2014-03-02 17:21:50.426 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.ui 4 4 2014-03-02 17:21:54.482
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2014-03-02 17:21:56.073
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2014-03-02 17:21:56.073
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-02 17:21:56.073
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-02 17:21:56.073
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-02 17:21:56.073
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2014-03-02 17:21:56.073
+!MESSAGE Unable to restore perspective: Workspace - Nios II.
+!SUBENTRY 2 org.eclipse.ui 0 0 2014-03-02 17:21:56.073
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2014-03-02 17:21:56.073
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:21:56.073
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:21:56.073
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:21:56.073
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:21:56.073
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:21:56.073
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:21:56.073
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:21:56.073
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:21:56.073
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:21:56.073
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2014-03-02 17:21:56.073
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2014-03-02 17:21:56.073
+!MESSAGE OK
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 17:22:25.168
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x2001098 --id=0x0 --timestamp=1393793416]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 17:22:26.837
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x2001098 --id=0x0 --timestamp=1393793416 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/InfraredHandler/Software/InfraredHandler/InfraredHandler.elf]
+!SESSION 2014-03-02 17:23:46.804 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.ui 4 4 2014-03-02 17:23:51.687
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2014-03-02 17:23:53.325
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2014-03-02 17:23:53.325
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-02 17:23:53.325
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-02 17:23:53.325
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-02 17:23:53.325
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2014-03-02 17:23:53.325
+!MESSAGE Unable to restore perspective: Workspace - Nios II.
+!SUBENTRY 2 org.eclipse.ui 0 0 2014-03-02 17:23:53.325
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2014-03-02 17:23:53.325
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:23:53.325
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:23:53.325
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:23:53.325
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:23:53.325
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:23:53.325
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:23:53.325
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:23:53.325
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:23:53.325
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 17:23:53.325
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2014-03-02 17:23:53.325
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2014-03-02 17:23:53.325
+!MESSAGE OK
+
+!ENTRY org.eclipse.cdt.ui 4 0 2014-03-02 17:24:32.122
+!MESSAGE cannot work without declarator
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-02 17:24:33.089
+!MESSAGE Indexed 'InfraredHandler' (5 sources, 110 headers) in 0.95 sec: 4,035 declarations; 4,963 references; 0 unresolved inclusions; 2 syntax errors; 38 unresolved names (0.42%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 17:36:19.588
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x2001098 --id=0x0 --timestamp=1393793416]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 17:36:21.273
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x2001098 --id=0x0 --timestamp=1393793416 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/InfraredHandler/Software/InfraredHandler/InfraredHandler.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 17:48:01.937
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x2001098 --id=0x0 --timestamp=1393793416]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 17:48:03.622
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x2001098 --id=0x0 --timestamp=1393793416 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/InfraredHandler/Software/InfraredHandler/InfraredHandler.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 17:49:01.259
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x2001098 --id=0x0 --timestamp=1393793416]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 17:49:02.960
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x2001098 --id=0x0 --timestamp=1393793416 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/InfraredHandler/Software/InfraredHandler/InfraredHandler.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 17:51:23.939
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x2001098 --id=0x0 --timestamp=1393793416]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 17:51:25.624
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x2001098 --id=0x0 --timestamp=1393793416 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/InfraredHandler/Software/InfraredHandler/InfraredHandler.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 17:52:40.402
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 17:52:40.839
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x2001098 --id=0x0 --timestamp=1393793416]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 17:52:42.540
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x2001098 --id=0x0 --timestamp=1393793416 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/InfraredHandler/Software/InfraredHandler/InfraredHandler.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 17:54:44.760
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x2001098 --id=0x0 --timestamp=1393793416]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 17:54:46.429
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x2001098 --id=0x0 --timestamp=1393793416 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/InfraredHandler/Software/InfraredHandler/InfraredHandler.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 17:55:32.968
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x2001098 --id=0x0 --timestamp=1393793416]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 17:55:34.653
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x2001098 --id=0x0 --timestamp=1393793416 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/InfraredHandler/Software/InfraredHandler/InfraredHandler.elf]
+!SESSION 2014-03-02 18:22:22.066 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.ui 4 4 2014-03-02 18:22:30.662
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2014-03-02 18:22:32.237
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2014-03-02 18:22:32.237
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-02 18:22:32.237
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-02 18:22:32.237
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-02 18:22:32.237
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2014-03-02 18:22:32.237
+!MESSAGE Unable to restore perspective: Workspace - Nios II.
+!SUBENTRY 2 org.eclipse.ui 0 0 2014-03-02 18:22:32.237
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2014-03-02 18:22:32.237
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2014-03-02 18:22:32.237
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 18:22:32.237
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 18:22:32.237
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 18:22:32.237
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 18:22:32.237
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 18:22:32.237
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 18:22:32.237
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 18:22:32.237
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-02 18:22:32.237
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2014-03-02 18:22:32.237
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2014-03-02 18:22:32.237
+!MESSAGE OK
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 18:22:58.914
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x2001098 --id=0x0 --timestamp=1393793416]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 18:23:00.598
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x2001098 --id=0x0 --timestamp=1393793416 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/InfraredHandler/Software/InfraredHandler/InfraredHandler.elf]
+!SESSION 2014-03-02 18:32:00.211 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 18:35:25.416
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x2001098 --id=0x0 --timestamp=1393793416]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 18:35:27.069
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x2001098 --id=0x0 --timestamp=1393793416 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/InfraredHandler/Software/InfraredHandler/InfraredHandler.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 18:38:15.772
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x2001098 --id=0x0 --timestamp=1393793416]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 18:38:17.441
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x2001098 --id=0x0 --timestamp=1393793416 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/InfraredHandler/Software/InfraredHandler/InfraredHandler.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 18:46:30.463
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x2001098 --id=0x0 --timestamp=1393793416]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 18:46:32.133
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x2001098 --id=0x0 --timestamp=1393793416 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/InfraredHandler/Software/InfraredHandler/InfraredHandler.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 18:48:43.185
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x2001098 --id=0x0 --timestamp=1393793416]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-02 18:48:44.854
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x2001098 --id=0x0 --timestamp=1393793416 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/InfraredHandler/Software/InfraredHandler/InfraredHandler.elf]

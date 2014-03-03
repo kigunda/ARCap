@@ -14,6 +14,9 @@ obj/default/main.o: main.cpp ../InfraredHandler_bsp//HAL/inc/includes.h \
   ../InfraredHandler_bsp//UCOSII/inc/os_cfg.h \
   ../InfraredHandler_bsp//HAL/inc/os_cpu.h Tasks.h TaskProperties.h \
   InfraredTasks.h InfraredHandler.h \
+  ../InfraredHandler_bsp//drivers/inc/altera_avalon_pio_regs.h \
+  ../InfraredHandler_bsp//HAL/inc/io.h \
+  ../InfraredHandler_bsp//HAL/inc/alt_types.h \
   ../InfraredHandler_bsp//drivers/inc/altera_up_avalon_de0_nano_adc.h \
   ../InfraredHandler_bsp//HAL/inc/sys/alt_dev.h \
   ../InfraredHandler_bsp//HAL/inc/sys/alt_llist.h \
@@ -22,9 +25,7 @@ obj/default/main.o: main.cpp ../InfraredHandler_bsp//HAL/inc/includes.h \
   ../InfraredHandler_bsp//HAL/inc/sys/alt_alarm.h \
   ../InfraredHandler_bsp//HAL/inc/sys/alt_warning.h \
   ../InfraredHandler_bsp//drivers/inc/altera_up_avalon_de0_nano_adc_regs.h \
-  ../InfraredHandler_bsp//HAL/inc/io.h \
-  ../InfraredHandler_bsp//HAL/inc/alt_types.h DataSource.h Status.h \
-  InfraredNetworkBridge.h
+  DataSource.h Status.h InfraredNetworkBridge.h
 
 ../InfraredHandler_bsp//HAL/inc/includes.h:
 
@@ -66,6 +67,12 @@ InfraredTasks.h:
 
 InfraredHandler.h:
 
+../InfraredHandler_bsp//drivers/inc/altera_avalon_pio_regs.h:
+
+../InfraredHandler_bsp//HAL/inc/io.h:
+
+../InfraredHandler_bsp//HAL/inc/alt_types.h:
+
 ../InfraredHandler_bsp//drivers/inc/altera_up_avalon_de0_nano_adc.h:
 
 ../InfraredHandler_bsp//HAL/inc/sys/alt_dev.h:
@@ -81,10 +88,6 @@ InfraredHandler.h:
 ../InfraredHandler_bsp//HAL/inc/sys/alt_warning.h:
 
 ../InfraredHandler_bsp//drivers/inc/altera_up_avalon_de0_nano_adc_regs.h:
-
-../InfraredHandler_bsp//HAL/inc/io.h:
-
-../InfraredHandler_bsp//HAL/inc/alt_types.h:
 
 DataSource.h:
 

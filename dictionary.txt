@@ -20,3 +20,8 @@ amshu
 gongal
 pon
 initialize
+emitter
+emitters
+initializes
+initialization
+analog

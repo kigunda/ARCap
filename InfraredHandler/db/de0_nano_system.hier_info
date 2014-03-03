@@ -91,7 +91,7 @@ GPIO_0[30] <> <UNC>
 GPIO_0[31] <> <UNC>
 GPIO_0[32] <> <UNC>
 GPIO_0[33] <> <UNC>
-GPIO_1[0] <> GPIO_1[0]
+GPIO_1[0] <> <UNC>
 GPIO_1[1] <> <UNC>
 GPIO_1[2] <> <UNC>
 GPIO_1[3] <> <UNC>
@@ -125,6 +125,8 @@ GPIO_1[30] <> <UNC>
 GPIO_1[31] <> <UNC>
 GPIO_1[32] <> <UNC>
 GPIO_1[33] <> <UNC>
+GPIO_2[0] <> <UNC>
+GPIO_2[1] <> GPIO_2[1]
 
 
 |de0_nano_system|pll_sys:inst_pll_sys

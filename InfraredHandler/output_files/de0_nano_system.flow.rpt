@@ -1,6 +1,6 @@
 Flow report for de0_nano_system
-Sun Mar 02 14:12:42 2014
-Quartus II 64-Bit Version 12.1 Build 243 01/31/2013 Service Pack 1.33 SJ Full Version
+Sun Mar 02 18:30:50 2014
+Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1.33 SJ Full Version
 
 
 ---------------------
@@ -38,18 +38,18 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------------+
 ; Flow Summary                                                                           ;
 +------------------------------------+---------------------------------------------------+
-; Flow Status                        ; Successful - Sun Mar 02 14:12:34 2014             ;
-; Quartus II 64-Bit Version          ; 12.1 Build 243 01/31/2013 SP 1.33 SJ Full Version ;
+; Flow Status                        ; Successful - Sun Mar 02 18:30:43 2014             ;
+; Quartus II 32-bit Version          ; 12.1 Build 243 01/31/2013 SP 1.33 SJ Full Version ;
 ; Revision Name                      ; de0_nano_system                                   ;
 ; Top-level Entity Name              ; de0_nano_system                                   ;
 ; Family                             ; Cyclone IV E                                      ;
 ; Device                             ; EP4CE22F17C6                                      ;
 ; Timing Models                      ; Final                                             ;
-; Total logic elements               ; 4,319 / 22,320 ( 19 % )                           ;
-;     Total combinational functions  ; 3,640 / 22,320 ( 16 % )                           ;
+; Total logic elements               ; 4,336 / 22,320 ( 19 % )                           ;
+;     Total combinational functions  ; 3,641 / 22,320 ( 16 % )                           ;
 ;     Dedicated logic registers      ; 2,682 / 22,320 ( 12 % )                           ;
 ; Total registers                    ; 2751                                              ;
-; Total pins                         ; 126 / 154 ( 82 % )                                ;
+; Total pins                         ; 128 / 154 ( 83 % )                                ;
 ; Total virtual pins                 ; 0                                                 ;
 ; Total memory bits                  ; 117,760 / 608,256 ( 19 % )                        ;
 ; Embedded Multiplier 9-bit elements ; 4 / 132 ( 3 % )                                   ;
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/02/2014 14:11:32 ;
+; Start date & time ; 03/02/2014 18:29:38 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; de0_nano_system     ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ applicable agreement for further details.
 +-------------------------------------+----------------------------------------------------------+---------------+---------------------------------+------------+
 ; Assignment Name                     ; Value                                                    ; Default Value ; Entity Name                     ; Section Id ;
 +-------------------------------------+----------------------------------------------------------+---------------+---------------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 116530612617.139379469203464                             ; --            ; --                              ; --         ;
+; COMPILER_SIGNATURE_ID               ; 116530612617.139381017804316                             ; --            ; --                              ; --         ;
 ; IP_TOOL_ENV                         ; qsys                                                     ; --            ; altera_avalon_sc_fifo           ; --         ;
 ; IP_TOOL_ENV                         ; qsys                                                     ; --            ; altera_merlin_burst_adapter     ; --         ;
 ; IP_TOOL_ENV                         ; qsys                                                     ; --            ; altera_merlin_master_agent      ; --         ;
@@ -196,11 +196,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:18     ; 1.0                     ; 626 MB              ; 00:00:17                           ;
-; Fitter                    ; 00:00:36     ; 2.5                     ; 1133 MB             ; 00:00:44                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 448 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:07     ; 1.0                     ; 565 MB              ; 00:00:06                           ;
-; Total                     ; 00:01:04     ; --                      ; --                  ; 00:01:09                           ;
+; Analysis & Synthesis      ; 00:00:20     ; 1.0                     ; 475 MB              ; 00:00:19                           ;
+; Fitter                    ; 00:00:36     ; 2.2                     ; 636 MB              ; 00:00:45                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 378 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 442 MB              ; 00:00:07                           ;
+; Total                     ; 00:01:05     ; --                      ; --                  ; 00:01:13                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
