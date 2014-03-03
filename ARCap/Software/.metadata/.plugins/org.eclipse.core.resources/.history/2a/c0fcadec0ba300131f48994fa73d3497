@@ -1,0 +1,13 @@
+/*
+ * NetworkHandler.cpp
+ *
+ *  Created on: 2014-03-03
+ *      Author: Kenan Kigunda
+ */
+
+#include "NetworkHandler.h"
+
+// ALLOCATION
+NetworkHandler::NetworkHandler() {}
+NetworkHandler::~NetworkHandler() {}
+

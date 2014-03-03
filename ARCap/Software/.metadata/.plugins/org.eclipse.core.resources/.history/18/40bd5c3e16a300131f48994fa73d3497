@@ -1,0 +1,17 @@
+/*
+ * NetworkTasks.h
+ *
+ *  Created on: 2014-03-03
+ *      Author: Kenan Kigunda
+ */
+
+#ifndef NETWORKTASKS_H_
+#define NETWORKTASKS_H_
+
+#include "NetworkHandler.h"
+#include "NetworkInfraredBridge.h"
+
+/* Waits for network updates to push to the infrared handler. */
+void infrared_to_network_update_task(void* pdata);
+
+#endif /* NETWORKTASKS_H_ */

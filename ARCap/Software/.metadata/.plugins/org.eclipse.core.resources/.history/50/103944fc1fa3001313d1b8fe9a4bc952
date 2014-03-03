@@ -1,0 +1,21 @@
+/*
+ * Bridge.h
+ *
+ *  Created on: 2014-03-03
+ *      Author: kigunda
+ */
+
+#ifndef BRIDGE_H_
+#define BRIDGE_H_
+
+class Bridge {
+public:
+	Bridge();
+	virtual ~Bridge();
+protected:
+	/* The buffer and queue used to receive infrared readings. */
+	int receiveBuffer[INFRARED_TO_NETWORK_RECEIVE_SIZE];
+	OS_EVENT *receiveQueue;
+};
+
+#endif /* BRIDGE_H_ */

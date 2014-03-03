@@ -1,0 +1,34 @@
+/*
+ * NetworkTasks.cpp
+ *
+ *  Created on: 2014-03-03
+ *      Author: Kenan Kigunda
+ */
+
+#include "NetworkTasks.h"
+
+extern NetworkHandler *network;
+extern NetworkInfraredBridge *networkToInfrared;
+
+/* Polls the network handler for network updates. */
+void network_handler_update_task(void* pdata) {
+	printf("NetworkHandler [task: update, status: start]\n");
+	int status = OK;
+	while (status == OK) {
+		// Update the network handler.
+		status = network->update();
+		// Wait for 50 ms.
+		OSTimeDlyHMSM(0, 0, 0, INFRARED_HANDLER_UPDATE_TIME_MILLIS);
+	}
+}
+
+/* Waits for infrared updates to push to the network. */
+void network_to_infrared_update_task(void* pdata) {
+	printf("NetworkInfraredBridge [task: update, status: start]\n");
+	while (true) {
+		networkToInfrared->update();
+	}
+}
+
+
+

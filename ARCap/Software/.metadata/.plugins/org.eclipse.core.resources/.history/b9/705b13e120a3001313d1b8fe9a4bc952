@@ -1,0 +1,25 @@
+/*
+ * Bridge.cpp
+ *
+ *  Created on: 2014-03-03
+ *      Author: kigunda
+ */
+
+#include "Bridge.h"
+
+Bridge::Bridge() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Bridge::~Bridge() {
+	// TODO Auto-generated destructor stub
+}
+
+/*
+ * Gets the queue used to accept infrared receive events.
+ * @return the infrared receive queue
+ */
+OS_EVENT *InfraredNetworkBridge::listener() {
+	return receiveQueue;
+}

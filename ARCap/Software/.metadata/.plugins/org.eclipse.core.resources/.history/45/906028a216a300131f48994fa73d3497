@@ -1,0 +1,22 @@
+/*
+ * NetworkTasks.cpp
+ *
+ *  Created on: 2014-03-03
+ *      Author: Kenan Kigunda
+ */
+
+#include "NetworkTasks.h"
+
+extern NetworkHandler *network;
+extern NetworkInfraredBridge *networkToInfrared;
+
+/* Waits for network updates to push to the network. */
+void infrared_to_network_update_task(void* pdata) {
+	printf("InfraredNetworkBridge [task: update, status: start]\n");
+	while (true) {
+		networkToInfrared->update();
+	}
+}
+
+
+

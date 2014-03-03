@@ -1,0 +1,63 @@
+/*
+ * NetworkInfraredBridge.h
+ *
+ *  Created on: 2014-03-03
+ *      Author: Kenan Kigunda
+ */
+
+#ifndef NETWORKINFRAREDBRIDGE_H_
+#define NETWORKINFRAREDBRIDGE_H_
+
+#include "includes.h"
+
+#include "InfraredHandler.h"
+#include "NetworkCommand.h"
+#include "Status.h"
+
+#define NETWORK_TO_INFRARED_RECEIVE_SIZE 4
+
+class NetworkInfraredBridge {
+public:
+	NetworkInfraredBridge();
+	virtual ~NetworkInfraredBridge();
+
+	/*
+	 * Initializes this bridge.
+	 * @return OK if there are no initialization errors
+	 */
+	Status init();
+
+	/*
+	 * Checks the network receive queue for infrared commands.
+	 * @return OK when a new command is received and processed without error
+	 */
+	Status update();
+
+	/*
+	 * Gets the queue used to accept network events.
+	 * @return the network receive queue
+	 */
+	OS_EVENT *listener();
+
+private:
+	/* The buffer and queue used to receive network events. */
+	int receiveBuffer[INFRARED_TO_NETWORK_RECEIVE_SIZE];
+	OS_EVENT *receiveQueue;
+
+	/*
+	 * Processes the given network command.
+	 * If the command is an infrared command, then it will be forwarded the infrared handler.
+	 * The reading will be forwarded to the network if it is above the
+	 * @param command - the command to process
+	 */
+	Status process(NetworkCommand command);
+};
+
+#define NETWORKINFRAREDBRIDGE_DEBUG
+#if defined(NETWORKINFRAREDBRIDGE_DEBUG) || defined(DEBUG)
+#define NETWORKINFRAREDBRIDGE_LOG(info) info
+#else
+#define NETWORKINFRAREDBRIDGE_LOG(info)
+#endif
+
+#endif /* NETWORKINFRAREDBRIDGE_H_ */

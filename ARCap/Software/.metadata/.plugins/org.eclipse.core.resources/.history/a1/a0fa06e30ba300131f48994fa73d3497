@@ -1,0 +1,15 @@
+/*
+ * NetworkHandler.cpp
+ *
+ *  Created on: 2014-03-03
+ *      Author: kigunda
+ */
+
+#include "NetworkHandler.h"
+
+NetworkHandler::NetworkHandler() {}
+
+NetworkHandler::~NetworkHandler() {
+	// TODO Auto-generated destructor stub
+}
+

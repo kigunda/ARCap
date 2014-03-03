@@ -1,0 +1,19 @@
+/*
+ * Debug.h
+ *
+ *  Created on: 2014-03-03
+ *      Author: kigunda
+ */
+
+#ifndef DEBUG_H_
+#define DEBUG_H_
+
+//#define NETWORKHANDLER_DEBUG
+#define NETWORKHANDLER_SEND_DEBUG
+//#define NETWORKHANDLER_RECEIVE_DEBUG
+
+
+#define INFRAREDNETWORKBRIDGE_DEBUG
+#define NETWORKINFRAREDBRIDGE_DEBUG
+
+#endif /* DEBUG_H_ */
