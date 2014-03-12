@@ -1,0 +1,158 @@
+!SESSION 2014-03-06 14:47:34.440 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-06 14:49:44.868
+!MESSAGE Indexed 'WifiTest_bsp' (96 sources, 70 headers) in 0.95 sec: 2,423 declarations; 10,690 references; 110 unresolved inclusions; 5 syntax errors; 206 unresolved names (1.55%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-06 14:49:47.816
+!MESSAGE Indexed 'WifiTest' (1 sources, 13 headers) in 0.03 sec: 8 declarations; 23 references; 15 unresolved inclusions; 0 syntax errors; 6 unresolved names (16.22%)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2014-03-06 15:03:02.368
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-06 15:03:02.368
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x40018e0 --id=0x0 --timestamp=1394140167]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-06 15:03:04.084
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x40018e0 --id=0x0 --timestamp=1394140167 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/de0_nano_fpga_100_final/Software/WifiTest/WifiTest.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2014-03-06 15:05:23.208
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-06 15:05:23.208
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x40018e0 --id=0x0 --timestamp=1394140167]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-06 15:05:24.861
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x40018e0 --id=0x0 --timestamp=1394140167 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/de0_nano_fpga_100_final/Software/WifiTest/WifiTest.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2014-03-06 15:06:08.793
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-06 15:06:08.793
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x40018e0 --id=0x0 --timestamp=1394140167]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-06 15:06:10.447
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x40018e0 --id=0x0 --timestamp=1394140167 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/de0_nano_fpga_100_final/Software/WifiTest/WifiTest.elf]
+!SESSION 2014-03-06 15:26:46.293 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.ui 4 4 2014-03-06 15:26:49.678
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2014-03-06 15:26:51.450
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2014-03-06 15:26:51.450
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-06 15:26:51.450
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-06 15:26:51.450
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-06 15:26:51.450
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2014-03-06 15:26:51.450
+!MESSAGE Unable to restore perspective: Workspace - Nios II.
+!SUBENTRY 2 org.eclipse.ui 0 0 2014-03-06 15:26:51.450
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2014-03-06 15:26:51.450
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2014-03-06 15:26:51.450
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-06 15:26:51.450
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-06 15:26:51.450
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-06 15:26:51.450
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-06 15:26:51.450
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-06 15:26:51.450
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-06 15:26:51.450
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-06 15:26:51.450
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2014-03-06 15:26:51.450
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2014-03-06 15:26:51.450
+!MESSAGE OK
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-06 15:27:48.875
+!MESSAGE Indexed 'WifiTest_bsp' (101 sources, 141 headers) in 1.43 sec: 5,996 declarations; 14,697 references; 0 unresolved inclusions; 3 syntax errors; 18 unresolved names (0.09%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-06 15:27:51.141
+!MESSAGE Indexed 'WifiTest' (1 sources, 91 headers) in 0.36 sec: 3,524 declarations; 3,555 references; 0 unresolved inclusions; 2 syntax errors; 6 unresolved names (0.08%)
+!SESSION 2014-03-06 15:45:16.979 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.ui 4 4 2014-03-06 15:45:27.445
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2014-03-06 15:45:29.202
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2014-03-06 15:45:29.202
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-06 15:45:29.202
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-06 15:45:29.202
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-06 15:45:29.202
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2014-03-06 15:45:29.202
+!MESSAGE Unable to restore perspective: Workspace - Nios II.
+!SUBENTRY 2 org.eclipse.ui 0 0 2014-03-06 15:45:29.202
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2014-03-06 15:45:29.202
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2014-03-06 15:45:29.202
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-06 15:45:29.202
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-06 15:45:29.202
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-06 15:45:29.202
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-06 15:45:29.202
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-06 15:45:29.202
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-06 15:45:29.202
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-06 15:45:29.202
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2014-03-06 15:45:29.202
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2014-03-06 15:45:29.202
+!MESSAGE OK
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-06 15:45:44.381
+!MESSAGE Indexed 'WifiTest_bsp' (101 sources, 141 headers) in 1.34 sec: 5,996 declarations; 14,689 references; 0 unresolved inclusions; 3 syntax errors; 18 unresolved names (0.09%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-06 15:45:46.143
+!MESSAGE Indexed 'WifiTest' (1 sources, 91 headers) in 0.36 sec: 3,524 declarations; 3,552 references; 0 unresolved inclusions; 2 syntax errors; 9 unresolved names (0.13%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-06 15:49:54.605
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x40018e8 --id=0x0 --timestamp=1394144997]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-06 15:49:56.255
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x40018e8 --id=0x0 --timestamp=1394144997 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/de0_nano_fpga_100_final/Software/WifiTest/WifiTest.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-06 15:51:13.948
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x40018e8 --id=0x0 --timestamp=1394144997]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-06 15:51:15.598
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x40018e8 --id=0x0 --timestamp=1394144997 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/de0_nano_fpga_100_final/Software/WifiTest/WifiTest.elf]

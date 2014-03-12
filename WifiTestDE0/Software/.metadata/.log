@@ -80,3 +80,84 @@ Caused by: org.eclipse.core.runtime.AssertionFailedException: null argument:
 
 !ENTRY com.altera.sbtgui.launch 1 0 2014-02-18 16:59:00.814
 !MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x2001098 --id=0x0 --timestamp=1392762819 /cygdrive/c/Users/gongal/ARCap/Repository/WifiTestDE0/Software/WiFiTestDE0/WiFiTestDE0.elf]
+!SESSION 2014-03-06 15:57:55.918 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.ui 4 4 2014-03-06 15:58:36.179
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2014-03-06 15:58:37.749
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2014-03-06 15:58:37.749
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-06 15:58:37.749
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-06 15:58:37.749
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-06 15:58:37.749
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2014-03-06 15:58:37.749
+!MESSAGE Unable to restore perspective: Workspace - Nios II.
+!SUBENTRY 2 org.eclipse.ui 0 0 2014-03-06 15:58:37.749
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2014-03-06 15:58:37.749
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2014-03-06 15:58:37.749
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-06 15:58:37.749
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-06 15:58:37.749
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-06 15:58:37.749
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-06 15:58:37.749
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-06 15:58:37.749
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-06 15:58:37.749
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-06 15:58:37.749
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2014-03-06 15:58:37.749
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2014-03-06 15:58:37.749
+!MESSAGE OK
+
+!ENTRY com.altera.sbtgui.core 4 0 2014-03-06 15:59:22.759
+!MESSAGE Error executing 'nios2-bsp-generate-files --bsp-dir . --settings settings.bsp', unexpected return code 1.
+
+Error message:
+
+SEVERE: File not found: C:\Users\gongal\ARCap\Repository\WifiTestDE0\system.sopcinfo
+SEVERE: File not found: C:\Users\gongal\ARCap\Repository\WifiTestDE0\system.sopcinfo
+SEVERE: nios2-bsp-generate-files failed.
+
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-06 16:01:45.831
+!MESSAGE Indexed 'WifiTest_bsp' (98 sources, 69 headers) in 0.83 sec: 2,340 declarations; 10,433 references; 127 unresolved inclusions; 5 syntax errors; 223 unresolved names (1.72%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-06 16:01:47.011
+!MESSAGE Indexed 'WifiTest' (1 sources, 13 headers) in 0.01 sec: 8 declarations; 23 references; 15 unresolved inclusions; 0 syntax errors; 6 unresolved names (16.22%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-06 16:04:29.413
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x2001098 --id=0x0 --timestamp=1392762819]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-06 16:04:31.063
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x2001098 --id=0x0 --timestamp=1392762819 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/WifiTestDE0/Software/WifiTest/WifiTest.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-06 16:05:32.536
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x2001098 --id=0x0 --timestamp=1392762819]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-06 16:05:34.216
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x2001098 --id=0x0 --timestamp=1392762819 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/WifiTestDE0/Software/WifiTest/WifiTest.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-06 16:10:08.881
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x2001098 --id=0x0 --timestamp=1392762819]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-06 16:10:10.531
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x2001098 --id=0x0 --timestamp=1392762819 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/WifiTestDE0/Software/WifiTest/WifiTest.elf]

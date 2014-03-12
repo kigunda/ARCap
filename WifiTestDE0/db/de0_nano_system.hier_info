@@ -53,8 +53,7 @@ SW[0] => system:inst_cpu.pio_sw_export[0]
 SW[1] => system:inst_cpu.pio_sw_export[1]
 SW[2] => system:inst_cpu.pio_sw_export[2]
 SW[3] => system:inst_cpu.pio_sw_export[3]
-GPIO_0[0] <> <UNC>
-GPIO_0[1] <> <UNC>
+GPIO_0[1] <> GPIO_0[1]
 GPIO_0[2] <> <UNC>
 GPIO_0[3] <> <UNC>
 GPIO_0[4] <> <UNC>
@@ -84,8 +83,9 @@ GPIO_0[27] <> <UNC>
 GPIO_0[28] <> <UNC>
 GPIO_0[29] <> <UNC>
 GPIO_0[30] <> <UNC>
+GPIO_0[31] <> <UNC>
 GPIO_0[32] <> <UNC>
-GPIO_0[33] <> GPIO_0[33]
+GPIO_0[33] <> <UNC>
 GPIO_1[0] <> GPIO_1[0]
 GPIO_1[1] <> <UNC>
 GPIO_1[2] <> <UNC>

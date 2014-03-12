@@ -113,6 +113,22 @@
          type = "int";
       }
    }
+   element pio_ir_emitter.s1
+   {
+      datum baseAddress
+      {
+         value = "33558656";
+         type = "String";
+      }
+   }
+   element uart_wifi.s1
+   {
+      datum baseAddress
+      {
+         value = "33558592";
+         type = "String";
+      }
+   }
    element sdram.s1
    {
       datum baseAddress
@@ -129,35 +145,11 @@
          type = "String";
       }
    }
-   element pio_sw.s1
-   {
-      datum baseAddress
-      {
-         value = "33558672";
-         type = "String";
-      }
-   }
-   element uart_wifi.s1
-   {
-      datum baseAddress
-      {
-         value = "33558592";
-         type = "String";
-      }
-   }
    element pio_key_left.s1
    {
       datum baseAddress
       {
          value = "33558688";
-         type = "String";
-      }
-   }
-   element sys_clk_timer.s1
-   {
-      datum baseAddress
-      {
-         value = "33558624";
          type = "String";
       }
    }
@@ -169,11 +161,19 @@
          type = "String";
       }
    }
-   element pio_ir_emitter.s1
+   element pio_sw.s1
    {
       datum baseAddress
       {
-         value = "33558656";
+         value = "33558672";
+         type = "String";
+      }
+   }
+   element sys_clk_timer.s1
+   {
+      datum baseAddress
+      {
+         value = "33558624";
          type = "String";
       }
    }
@@ -237,7 +237,7 @@
  <parameter name="projectName" value="de0_nano_system.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1393806391522" />
+ <parameter name="timeStamp" value="1394485274584" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_sys.clk_in" type="clock" dir="end" />

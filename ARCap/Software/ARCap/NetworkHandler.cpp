@@ -33,7 +33,7 @@ Status NetworkHandler::init() {
  * in the format param1=value1&param2=value2&...
  */
 Status NetworkHandler::send(NetworkCommand command, string parameters) {
-	NETWORKHANDLER_SEND_LOG(cout << "NetworkHandler [direction: out, command: " <<  (int)command << ", ?" << parameters);
+	NETWORKHANDLER_SEND_LOG(cout << "NetworkHandler [direction: out, command: " <<  (int)command << ", parameters: ?" << parameters << "\n");
 	return OK;
 }
 

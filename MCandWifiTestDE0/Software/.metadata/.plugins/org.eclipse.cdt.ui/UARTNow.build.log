@@ -1,0 +1,10 @@
+
+**** Build of configuration Nios II for project UARTNow ****
+
+make all 
+Info: Building ../UARTNow_bsp/
+make --no-print-directory -C ../UARTNow_bsp/
+[BSP build complete]
+[UARTNow build complete]
+
+**** Build Finished ****

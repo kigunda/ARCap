@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Viewer>
+<Column order="0" width="130"/>
+<Column order="1" width="150"/>
+<Column order="2" width="70"/>
+<Column order="3" width="100"/>
+<Column order="4" width="100"/>
+<Column order="5" width="0"/>
+<Sort column="4" direction="1024"/>
+</Viewer>

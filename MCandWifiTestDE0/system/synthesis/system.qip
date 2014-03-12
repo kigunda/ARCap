@@ -2,7 +2,7 @@ set_global_assignment -entity "system" -library "system" -name IP_TOOL_NAME "qsy
 set_global_assignment -entity "system" -library "system" -name IP_TOOL_VERSION "12.1sp1"
 set_global_assignment -entity "system" -library "system" -name IP_TOOL_ENV "qsys"
 set_global_assignment -library "system" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../system.sopcinfo"]
-set_instance_assignment -entity "system" -library "system" -name SLD_INFO "QSYS_NAME system HAS_SOPCINFO 1 GENERATION_ID 1393806947"
+set_instance_assignment -entity "system" -library "system" -name SLD_INFO "QSYS_NAME system HAS_SOPCINFO 1 GENERATION_ID 1394485293"
 set_global_assignment -library "system" -name MISC_FILE [file join $::quartus(qip_path) "../../system.cmp"]
 set_global_assignment -name SYNTHESIS_ONLY_QIP ON
 set_global_assignment -library "system" -name MISC_FILE [file join $::quartus(qip_path) "../../system.qsys"]

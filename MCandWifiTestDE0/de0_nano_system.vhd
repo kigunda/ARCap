@@ -179,15 +179,14 @@ begin
                  sdram_ras_n          		=> DRAM_RAS_N,
                  sdram_we_n           		=> DRAM_WE_N,
 
-                 --uart_wifi_rxd        		=> GPIO_0(31),
-                -- uart_wifi_txd        		=> GPIO_0(33),
+               --uart_wifi_rxd        		=> GPIO_0(31),
+					--uart_wifi_txd        		=> GPIO_0(33),
 					  
-					  rs232_wifi_rxd        		=> GPIO_0(31),
-                 rs232_wifi_txd        		=> GPIO_0(33),
+					  rs232_wifi_rxd        	=> GPIO_0(31),
+                 rs232_wifi_txd        	=> GPIO_0(33),
 					  
-					  
-					  uart_mc_rxd        		=> GPIO_1(31),
-                 uart_mc_txd        		=> GPIO_1(33),
+					  uart_mc_rxd        		=> GPIO_0(0), -- pin 2
+                 uart_mc_txd        		=> GPIO_0(1), -- pin 4
 
                  pio_led_export 		  		=> LED(6 downto 0),
                  pio_key_left_export  		=> KEY(1),

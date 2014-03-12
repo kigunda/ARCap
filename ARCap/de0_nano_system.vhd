@@ -137,7 +137,7 @@ architecture syn of de0_nano_system is
 				 adc_ctrl_din					: out	  std_logic;														-- data in
 				 adc_ctrl_dout					: in	  std_logic;														-- data out
 				 
-				 -- Parallel I/O
+				 -- Parallel I/Os
 				 pio_led_export 		 		: out   std_logic_vector(6 downto 0);                     	-- export
              pio_key_left_export  		: in    std_logic								:= 'X';				  	-- export
              pio_sw_export        		: in    std_logic_vector(3 downto 0)  	:= (others => 'X'); 	-- export

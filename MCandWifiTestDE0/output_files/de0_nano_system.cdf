@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE22F17) Path("C:/Users/gongal/ARCap/Repository/WifiTestDE0/output_files/") File("de0_nano_system.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE22F17) Path("C:/Users/kigunda/Documents/Ece492/Repository/MCandWifiTestDE0/output_files/") File("de0_nano_system.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

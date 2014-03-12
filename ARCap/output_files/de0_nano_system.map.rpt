@@ -1,5 +1,5 @@
 Analysis & Synthesis report for de0_nano_system
-Mon Mar 03 12:06:21 2014
+Fri Mar 07 16:47:29 2014
 Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1.33 SJ Full Version
 
 
@@ -187,13 +187,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                           ;
 +------------------------------------+---------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Mar 03 12:06:20 2014             ;
+; Analysis & Synthesis Status        ; Successful - Fri Mar 07 16:47:29 2014             ;
 ; Quartus II 32-bit Version          ; 12.1 Build 243 01/31/2013 SP 1.33 SJ Full Version ;
 ; Revision Name                      ; de0_nano_system                                   ;
 ; Top-level Entity Name              ; de0_nano_system                                   ;
 ; Family                             ; Cyclone IV E                                      ;
-; Total logic elements               ; 4,518                                             ;
-;     Total combinational functions  ; 3,635                                             ;
+; Total logic elements               ; 4,519                                             ;
+;     Total combinational functions  ; 3,636                                             ;
 ;     Dedicated logic registers      ; 2,759                                             ;
 ; Total registers                    ; 2759                                              ;
 ; Total pins                         ; 128                                               ;
@@ -353,11 +353,17 @@ applicable agreement for further details.
 ; system/synthesis/submodules/system_sdram.v                         ; yes             ; User Verilog HDL File            ; C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system/synthesis/submodules/system_sdram.v                         ; system  ;
 ; system/synthesis/submodules/system_sysid.v                         ; yes             ; User Verilog HDL File            ; C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system/synthesis/submodules/system_sysid.v                         ; system  ;
 ; system/synthesis/submodules/system_cpu.v                           ; yes             ; Encrypted User Verilog HDL File  ; C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system/synthesis/submodules/system_cpu.v                           ; system  ;
+; system/synthesis/submodules/system_cpu_bht_ram.mif                 ; yes             ; User Memory Initialization File  ; C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system/synthesis/submodules/system_cpu_bht_ram.mif                 ; system  ;
+; system/synthesis/submodules/system_cpu_dc_tag_ram.mif              ; yes             ; User Memory Initialization File  ; C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system/synthesis/submodules/system_cpu_dc_tag_ram.mif              ; system  ;
+; system/synthesis/submodules/system_cpu_ic_tag_ram.mif              ; yes             ; User Memory Initialization File  ; C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system/synthesis/submodules/system_cpu_ic_tag_ram.mif              ; system  ;
 ; system/synthesis/submodules/system_cpu_jtag_debug_module_sysclk.v  ; yes             ; User Verilog HDL File            ; C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system/synthesis/submodules/system_cpu_jtag_debug_module_sysclk.v  ; system  ;
 ; system/synthesis/submodules/system_cpu_jtag_debug_module_tck.v     ; yes             ; User Verilog HDL File            ; C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system/synthesis/submodules/system_cpu_jtag_debug_module_tck.v     ; system  ;
 ; system/synthesis/submodules/system_cpu_jtag_debug_module_wrapper.v ; yes             ; User Verilog HDL File            ; C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system/synthesis/submodules/system_cpu_jtag_debug_module_wrapper.v ; system  ;
 ; system/synthesis/submodules/system_cpu_mult_cell.v                 ; yes             ; User Verilog HDL File            ; C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system/synthesis/submodules/system_cpu_mult_cell.v                 ; system  ;
+; system/synthesis/submodules/system_cpu_ociram_default_contents.mif ; yes             ; User Memory Initialization File  ; C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system/synthesis/submodules/system_cpu_ociram_default_contents.mif ; system  ;
 ; system/synthesis/submodules/system_cpu_oci_test_bench.v            ; yes             ; User Verilog HDL File            ; C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system/synthesis/submodules/system_cpu_oci_test_bench.v            ; system  ;
+; system/synthesis/submodules/system_cpu_rf_ram_a.mif                ; yes             ; User Memory Initialization File  ; C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system/synthesis/submodules/system_cpu_rf_ram_a.mif                ; system  ;
+; system/synthesis/submodules/system_cpu_rf_ram_b.mif                ; yes             ; User Memory Initialization File  ; C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system/synthesis/submodules/system_cpu_rf_ram_b.mif                ; system  ;
 ; system/synthesis/submodules/system_cpu_test_bench.v                ; yes             ; User Verilog HDL File            ; C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system/synthesis/submodules/system_cpu_test_bench.v                ; system  ;
 ; pll_sys.vhd                                                        ; yes             ; User Wizard-Generated File       ; C:/Users/kigunda/Documents/Ece492/Repository/ARCap/pll_sys.vhd                                                        ;         ;
 ; altpll.tdf                                                         ; yes             ; Megafunction                     ; c:/altera/12.1sp1/quartus/libraries/megafunctions/altpll.tdf                                                          ;         ;
@@ -425,16 +431,16 @@ applicable agreement for further details.
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 4,518  ;
+; Estimated Total logic elements              ; 4,519  ;
 ;                                             ;        ;
-; Total combinational functions               ; 3635   ;
+; Total combinational functions               ; 3636   ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 1795   ;
-;     -- 3 input functions                    ; 1239   ;
-;     -- <=2 input functions                  ; 601    ;
+;     -- 4 input functions                    ; 1796   ;
+;     -- 3 input functions                    ; 1240   ;
+;     -- <=2 input functions                  ; 600    ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 3368   ;
+;     -- normal mode                          ; 3369   ;
 ;     -- arithmetic mode                      ; 267    ;
 ;                                             ;        ;
 ; Total registers                             ; 2759   ;
@@ -448,7 +454,7 @@ applicable agreement for further details.
 ;     -- PLLs                                 ; 1      ;
 ;                                             ;        ;
 ; Maximum fan-out                             ; 2828   ;
-; Total fan-out                               ; 27188  ;
+; Total fan-out                               ; 27193  ;
 ; Average fan-out                             ; 3.89   ;
 +---------------------------------------------+--------+
 
@@ -458,14 +464,14 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                          ; Library Name ;
 +----------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |de0_nano_system                                                                                               ; 3635 (1)          ; 2759 (0)     ; 117760      ; 4            ; 0       ; 2         ; 128  ; 0            ; |de0_nano_system                                                                                                                                                                                                                                                                                             ;              ;
+; |de0_nano_system                                                                                               ; 3636 (1)          ; 2759 (0)     ; 117760      ; 4            ; 0       ; 2         ; 128  ; 0            ; |de0_nano_system                                                                                                                                                                                                                                                                                             ;              ;
 ;    |heartbeat:inst_heartbeat|                                                                                  ; 22 (22)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de0_nano_system|heartbeat:inst_heartbeat                                                                                                                                                                                                                                                                    ;              ;
 ;    |pll_sys:inst_pll_sys|                                                                                      ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de0_nano_system|pll_sys:inst_pll_sys                                                                                                                                                                                                                                                                        ;              ;
 ;       |altpll:altpll_component|                                                                                ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de0_nano_system|pll_sys:inst_pll_sys|altpll:altpll_component                                                                                                                                                                                                                                                ;              ;
 ;          |pll_sys_altpll:auto_generated|                                                                       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de0_nano_system|pll_sys:inst_pll_sys|altpll:altpll_component|pll_sys_altpll:auto_generated                                                                                                                                                                                                                  ;              ;
-;    |sld_hub:auto_hub|                                                                                          ; 160 (1)           ; 97 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de0_nano_system|sld_hub:auto_hub                                                                                                                                                                                                                                                                            ;              ;
-;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                                                           ; 159 (118)         ; 97 (69)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de0_nano_system|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                                                                                                                                               ;              ;
-;          |sld_rom_sr:hub_info_reg|                                                                             ; 24 (24)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de0_nano_system|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                                                                                                                                                                       ;              ;
+;    |sld_hub:auto_hub|                                                                                          ; 161 (1)           ; 97 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de0_nano_system|sld_hub:auto_hub                                                                                                                                                                                                                                                                            ;              ;
+;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                                                           ; 160 (118)         ; 97 (69)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de0_nano_system|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                                                                                                                                               ;              ;
+;          |sld_rom_sr:hub_info_reg|                                                                             ; 25 (25)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de0_nano_system|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                                                                                                                                                                       ;              ;
 ;          |sld_shadow_jsm:shadow_jsm|                                                                           ; 17 (17)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de0_nano_system|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm                                                                                                                                                                                                     ;              ;
 ;    |system:inst_cpu|                                                                                           ; 3452 (0)          ; 2640 (0)     ; 117760      ; 4            ; 0       ; 2         ; 0    ; 0            ; |de0_nano_system|system:inst_cpu                                                                                                                                                                                                                                                                             ;              ;
 ;       |altera_avalon_sc_fifo:adc_adc_slave_translator_avalon_universal_slave_0_agent_rsp_fifo|                 ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |de0_nano_system|system:inst_cpu|altera_avalon_sc_fifo:adc_adc_slave_translator_avalon_universal_slave_0_agent_rsp_fifo                                                                                                                                                                                      ;              ;
@@ -2197,6 +2203,16 @@ Encoding Type:  One-Hot
 ; 9:1                ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |de0_nano_system|system:inst_cpu|system_addr_router_001:addr_router_001|src_channel[1]                                                                                                                                                                   ;
 ; 11:1               ; 2 bits    ; 14 LEs        ; 4 LEs                ; 10 LEs                 ; No         ; |de0_nano_system|system:inst_cpu|system_sdram:sdram|Selector35                                                                                                                                                                                           ;
 ; 16:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; No         ; |de0_nano_system|system:inst_cpu|system_sdram:sdram|Selector28                                                                                                                                                                                           ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |de0_nano_system|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[1]                                                                                                                                                      ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |de0_nano_system|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[0]                                                                                                                                                         ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |de0_nano_system|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[2][0]                                                                                                                                                             ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |de0_nano_system|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irf_reg[1][0]                                                                                                                                                             ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |de0_nano_system|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[4]                                                                                                                                   ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |de0_nano_system|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|shadow_irf_reg[2][1]                                                                                                                                                      ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |de0_nano_system|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|shadow_irf_reg[1][3]                                                                                                                                                      ;
+; 8:1                ; 5 bits    ; 25 LEs        ; 10 LEs               ; 15 LEs                 ; Yes        ; |de0_nano_system|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[3]                                                                                                                                                               ;
+; 34:1               ; 4 bits    ; 88 LEs        ; 56 LEs               ; 32 LEs                 ; Yes        ; |de0_nano_system|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[1]                                                                                                                                                        ;
+; 28:1               ; 4 bits    ; 72 LEs        ; 48 LEs               ; 24 LEs                 ; Yes        ; |de0_nano_system|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[0]                                                                                                                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -5364,13 +5380,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------+--------+----------+-------------------------+
 
 
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:10     ;
-+----------------+--------------+
++---------------------------------+
+; Elapsed Time Per Partition      ;
++------------------+--------------+
+; Partition Name   ; Elapsed Time ;
++------------------+--------------+
+; Top              ; 00:00:10     ;
+; sld_hub:auto_hub ; 00:00:01     ;
++------------------+--------------+
 
 
 +-------------------------------+
@@ -5379,7 +5396,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.1 Build 243 01/31/2013 Service Pack 1.33 SJ Full Version
-    Info: Processing started: Mon Mar 03 12:05:58 2014
+    Info: Processing started: Fri Mar 07 16:46:58 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off de0_nano_system -c de0_nano_system
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file de0_nano_system.vhd
@@ -5901,6 +5918,7 @@ Info (12128): Elaborating entity "system_cpu_nios2_oci_compute_tm_count" for hie
 Info (12128): Elaborating entity "system_cpu_nios2_oci_fifowp_inc" for hierarchy "system:inst_cpu|system_cpu:cpu|system_cpu_nios2_oci:the_system_cpu_nios2_oci|system_cpu_nios2_oci_fifo:the_system_cpu_nios2_oci_fifo|system_cpu_nios2_oci_fifowp_inc:system_cpu_nios2_oci_fifowp_inc_fifowp"
 Info (12128): Elaborating entity "system_cpu_nios2_oci_fifocount_inc" for hierarchy "system:inst_cpu|system_cpu:cpu|system_cpu_nios2_oci:the_system_cpu_nios2_oci|system_cpu_nios2_oci_fifo:the_system_cpu_nios2_oci_fifo|system_cpu_nios2_oci_fifocount_inc:system_cpu_nios2_oci_fifocount_inc_fifocount"
 Info (12128): Elaborating entity "system_cpu_oci_test_bench" for hierarchy "system:inst_cpu|system_cpu:cpu|system_cpu_nios2_oci:the_system_cpu_nios2_oci|system_cpu_nios2_oci_fifo:the_system_cpu_nios2_oci_fifo|system_cpu_oci_test_bench:the_system_cpu_oci_test_bench"
+Warning (12158): Entity "system_cpu_oci_test_bench" contains only dangling pins
 Info (12128): Elaborating entity "system_cpu_nios2_oci_pib" for hierarchy "system:inst_cpu|system_cpu:cpu|system_cpu_nios2_oci:the_system_cpu_nios2_oci|system_cpu_nios2_oci_pib:the_system_cpu_nios2_oci_pib"
 Info (12128): Elaborating entity "system_cpu_nios2_oci_im" for hierarchy "system:inst_cpu|system_cpu:cpu|system_cpu_nios2_oci:the_system_cpu_nios2_oci|system_cpu_nios2_oci_im:the_system_cpu_nios2_oci_im"
 Info (12128): Elaborating entity "system_cpu_traceram_lpm_dram_bdp_component_module" for hierarchy "system:inst_cpu|system_cpu:cpu|system_cpu_nios2_oci:the_system_cpu_nios2_oci|system_cpu_nios2_oci_im:the_system_cpu_nios2_oci_im|system_cpu_traceram_lpm_dram_bdp_component_module:system_cpu_traceram_lpm_dram_bdp_component"
@@ -6187,22 +6205,27 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "DRAM_CKE" is stuck at VCC
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17049): 364 registers lost all their fanouts during netlist optimizations.
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "sld_hub:auto_hub|receive[0][0]" is stuck at GND
+Info (286031): Timing-Driven Synthesis is running on partition "sld_hub:auto_hub"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[0]"
-Info (21057): Implemented 5322 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 5323 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 35 output pins
     Info (21060): Implemented 86 bidirectional pins
-    Info (21061): Implemented 4937 logic cells
+    Info (21061): Implemented 4938 logic cells
     Info (21064): Implemented 247 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 4 DSP elements
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 128 warnings
-    Info: Peak virtual memory: 476 megabytes
-    Info: Processing ended: Mon Mar 03 12:06:21 2014
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:20
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 131 warnings
+    Info: Peak virtual memory: 468 megabytes
+    Info: Processing ended: Fri Mar 07 16:47:29 2014
+    Info: Elapsed time: 00:00:31
+    Info: Total CPU time (on all processors): 00:00:26
 
 

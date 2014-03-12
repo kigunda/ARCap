@@ -1,0 +1,7 @@
+
+**** Clean-only build of configuration Nios II for project UARTNowB ****
+
+make clean 
+[UARTNowB clean complete]
+
+**** Build Finished ****
