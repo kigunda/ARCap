@@ -21,6 +21,16 @@ NetworkHandler::~NetworkHandler() {}
  * @return OK if there are no initialization errors
  */
 Status NetworkHandler::init() {
+	wifi = new WifiHandler();
+	return wifi->init();
+}
+
+/*
+ * Connects to the network.
+ * @return OK if the connection was successful
+ */
+Status NetworkHandler::connect() {
+	wifi->status();
 	return OK;
 }
 
@@ -33,8 +43,18 @@ Status NetworkHandler::init() {
  * in the format param1=value1&param2=value2&...
  */
 Status NetworkHandler::send(NetworkCommand command, string parameters) {
-	NETWORKHANDLER_SEND_LOG(cout << "NetworkHandler [direction: out, command: " <<  (int)command << ", parameters: ?" << parameters << "\n");
-	return OK;
+	NETWORKHANDLER_SEND_LOG(cout << "NetworkHandler [direction: out, command: " <<  (int)command << ", parameters: ?" << parameters << "]\n");
+	if (command == NETWORK_INFRARED_HIT) {
+		char *url = "/arcap/infrared/hit.php";
+		WifiMessage *response = wifi->httpGet(url);
+		NETWORKHANDLER_SUMMARY_LOG(printf("GET %s RETURNED\n", url));
+		NETWORKHANDLER_SEND_LOG(wifiMessagePrint(response));
+		free(response);
+		return OK;
+	} else {
+		NETWORKHANDLER_SEND_LOG(printf("NetworkHandler [error: command not accepted]\n"));
+		return ERR_NETWORK_COMMAND_NOT_ACCEPTED;
+	}
 }
 
 // INCOMING
@@ -44,5 +64,10 @@ Status NetworkHandler::send(NetworkCommand command, string parameters) {
  * @return OK if all incoming network messages have been read and posted to all listeners without error
  */
 Status NetworkHandler::update() {
+	char *url = "/arcap/infrared/hit.php";
+	WifiMessage *response = wifi->httpGet(url);
+	NETWORKHANDLER_SUMMARY_LOG(printf("GET %s RETURNED\n", url));
+	NETWORKHANDLER_SEND_LOG(wifiMessagePrint(response));
+	free(response);
 	return OK;
 }

@@ -5,8 +5,6 @@ obj/default/main.o: main.c \
   ../UartTest_bsp/linker.h ../UartTest_bsp//HAL/inc/sys/alt_llist.h \
   ../UartTest_bsp//HAL/inc/priv/alt_dev_llist.h \
   ../UartTest_bsp//HAL/inc/sys/alt_llist.h \
-  ../UartTest_bsp//drivers/inc/altera_up_avalon_de0_nano_adc_regs.h \
-  ../UartTest_bsp//HAL/inc/io.h ../UartTest_bsp//HAL/inc/alt_types.h \
   ../UartTest_bsp//HAL/inc/includes.h ../UartTest_bsp//HAL/inc/os_cpu.h \
   ../UartTest_bsp//HAL/inc/sys/alt_irq.h ../UartTest_bsp//HAL/inc/nios2.h \
   ../UartTest_bsp//HAL/inc/priv/alt_legacy_irq.h ../UartTest_bsp/system.h \
@@ -33,12 +31,6 @@ obj/default/main.o: main.c \
 ../UartTest_bsp//HAL/inc/priv/alt_dev_llist.h:
 
 ../UartTest_bsp//HAL/inc/sys/alt_llist.h:
-
-../UartTest_bsp//drivers/inc/altera_up_avalon_de0_nano_adc_regs.h:
-
-../UartTest_bsp//HAL/inc/io.h:
-
-../UartTest_bsp//HAL/inc/alt_types.h:
 
 ../UartTest_bsp//HAL/inc/includes.h:
 

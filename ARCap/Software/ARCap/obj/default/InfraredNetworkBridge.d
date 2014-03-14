@@ -11,7 +11,12 @@ obj/default/InfraredNetworkBridge.o: InfraredNetworkBridge.cpp \
   ../ARCap_bsp//HAL/inc/priv/alt_alarm.h ../ARCap_bsp/system.h \
   ../ARCap_bsp//UCOSII/inc/ucos_ii.h ../ARCap_bsp//UCOSII/inc/os_cfg.h \
   ../ARCap_bsp//HAL/inc/os_cpu.h Bridge.h Status.h Debug.h \
-  NetworkHandler.h DataSource.h NetworkCommand.h
+  NetworkHandler.h DataSource.h NetworkCommand.h WifiHandler.h \
+  ../ARCap_bsp//drivers/inc/altera_up_avalon_rs232.h \
+  ../ARCap_bsp//HAL/inc/alt_types.h ../ARCap_bsp//HAL/inc/sys/alt_dev.h \
+  ../ARCap_bsp//HAL/inc/sys/alt_llist.h \
+  ../ARCap_bsp//HAL/inc/priv/alt_dev_llist.h \
+  ../ARCap_bsp//HAL/inc/sys/alt_llist.h
 
 InfraredNetworkBridge.h:
 
@@ -66,3 +71,17 @@ NetworkHandler.h:
 DataSource.h:
 
 NetworkCommand.h:
+
+WifiHandler.h:
+
+../ARCap_bsp//drivers/inc/altera_up_avalon_rs232.h:
+
+../ARCap_bsp//HAL/inc/alt_types.h:
+
+../ARCap_bsp//HAL/inc/sys/alt_dev.h:
+
+../ARCap_bsp//HAL/inc/sys/alt_llist.h:
+
+../ARCap_bsp//HAL/inc/priv/alt_dev_llist.h:
+
+../ARCap_bsp//HAL/inc/sys/alt_llist.h:

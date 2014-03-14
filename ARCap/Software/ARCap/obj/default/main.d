@@ -21,7 +21,10 @@ obj/default/main.o: main.cpp ../ARCap_bsp//HAL/inc/includes.h \
   ../ARCap_bsp//HAL/inc/sys/alt_warning.h \
   ../ARCap_bsp//drivers/inc/altera_up_avalon_de0_nano_adc_regs.h Debug.h \
   DataSource.h Status.h InfraredNetworkBridge.h Bridge.h NetworkHandler.h \
-  NetworkCommand.h NetworkTasks.h NetworkInfraredBridge.h
+  NetworkCommand.h WifiHandler.h \
+  ../ARCap_bsp//drivers/inc/altera_up_avalon_rs232.h \
+  ../ARCap_bsp//HAL/inc/alt_types.h ../ARCap_bsp//HAL/inc/sys/alt_dev.h \
+  NetworkTasks.h NetworkInfraredBridge.h
 
 ../ARCap_bsp//HAL/inc/includes.h:
 
@@ -106,6 +109,14 @@ Bridge.h:
 NetworkHandler.h:
 
 NetworkCommand.h:
+
+WifiHandler.h:
+
+../ARCap_bsp//drivers/inc/altera_up_avalon_rs232.h:
+
+../ARCap_bsp//HAL/inc/alt_types.h:
+
+../ARCap_bsp//HAL/inc/sys/alt_dev.h:
 
 NetworkTasks.h:
 

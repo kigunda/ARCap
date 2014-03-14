@@ -20,7 +20,9 @@ obj/default/InfraredTasks.o: InfraredTasks.cpp InfraredTasks.h \
   ../ARCap_bsp/system.h ../ARCap_bsp//UCOSII/inc/ucos_ii.h \
   ../ARCap_bsp//UCOSII/inc/os_cfg.h ../ARCap_bsp//HAL/inc/os_cpu.h \
   Debug.h DataSource.h Status.h InfraredNetworkBridge.h Bridge.h \
-  NetworkHandler.h NetworkCommand.h
+  NetworkHandler.h NetworkCommand.h WifiHandler.h \
+  ../ARCap_bsp//drivers/inc/altera_up_avalon_rs232.h \
+  ../ARCap_bsp//HAL/inc/alt_types.h ../ARCap_bsp//HAL/inc/sys/alt_dev.h
 
 InfraredTasks.h:
 
@@ -101,3 +103,11 @@ Bridge.h:
 NetworkHandler.h:
 
 NetworkCommand.h:
+
+WifiHandler.h:
+
+../ARCap_bsp//drivers/inc/altera_up_avalon_rs232.h:
+
+../ARCap_bsp//HAL/inc/alt_types.h:
+
+../ARCap_bsp//HAL/inc/sys/alt_dev.h:

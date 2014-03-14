@@ -81,9 +81,14 @@ unsigned int InfraredHandler::read(int channel) {
 Status InfraredHandler::post(unsigned int level) {
 	Status overall = OK;
 	INT8U status;
+	// Post to listeners.
 	for (list<OS_EVENT *>::iterator it = listeners.begin(); it != listeners.end(); ++it) {
 		status = OSQPost(*it, (void*)level);
 		if (status != OS_NO_ERR) overall = ERR_INFRARED;
+	}
+	// Log status.
+	if (overall == ERR_INFRARED) {
+		INFRAREDHANDLER_RECEIVE_LOG(printf("InfraredHandler [error: could not post to all listeners]\n"));
 	} return overall;
 }
 

@@ -35,6 +35,7 @@ Status InfraredNetworkBridge::update() {
 	INT8U status;
 	int level = (int)OSQPend(receiveQueue, 0, &status);
 	if (status != OS_NO_ERR) {
+		INFRAREDNETWORKBRIDGE_LOG(printf("InfraredToNetwork [error: failed to read from receive queue]\n"));
 		return ERR_BRIDGE_READ;
 	} else {
 		return process(level);
@@ -50,9 +51,10 @@ Status InfraredNetworkBridge::update() {
  */
 Status InfraredNetworkBridge::process(unsigned int level) {
 	if (level > INFRARED_TO_NETWORK_RECEIVE_THRESHOLD) {
+		// Forward the hit event to the network.
 		INFRAREDNETWORKBRIDGE_LOG(printf("InfraredToNetwork [event: infrared receive, level: %u]\n", level));
 		ostringstream parameters;
 		parameters << "level=" << level;
-		network->send(NETWORK_INFRARED_HIT, parameters.str());
+//		network->send(NETWORK_INFRARED_HIT, parameters.str());
 	} return OK;
 }

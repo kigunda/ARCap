@@ -1,0 +1,91 @@
+/*
+ * WifiHandler.h
+ *
+ *  Created on: 2014-03-13
+ *      Author: Kenan Kigunda
+ */
+
+#ifndef WIFIHANDLER_H_
+#define WIFIHANDLER_H_
+
+#include "altera_up_avalon_rs232.h"
+#include "includes.h"
+
+struct WifiMessage;
+
+class WifiHandler {
+public:
+	WifiHandler();
+	virtual ~WifiHandler();
+
+private:
+	alt_up_rs232_dev *wifi_dev;
+
+	/*
+	 * Writes a message to the wifi UART device.
+	 * The message will be used to configure the Xbee wifi module, if the device is in configuration mode,
+	 * or it will be forwarded through TCP to the remote server given by DL (the destination IP address)
+	 * and DE (the destination IP port).
+	 * @param message - the message to write
+	 */
+	void wifiWrite(char *message);
+
+	/*
+	 * Listens on the wifi UART until a full message is received.
+	 * @param stop - the string marking the end of the message
+	 * @return the message that was received, which must be freed by the caller
+	 */
+	WifiMessage *wifiReadUntil(char *stop);
+
+	/*
+	 * Reads the latest configuration response from the Xbee wifi module.
+	 * @return the message object containing the response
+	 */
+	WifiMessage *wifiConfigStartRead();
+
+	/*
+	 * Reads the latest configuration response from the Xbee wifi module.
+	 */
+	void wifiConfigRead();
+
+	/*
+	 * Sends a configuration command to the Xbee wifi module.
+	 * @param command - the command to send
+	 */
+	void wifiConfigStartSend(char *command);
+
+	/*
+	 * Sends a configuration command to the Xbee wifi module,
+	 * then waits for and prints the response.
+	 * @param command - the command to send
+	 */
+	void wifiConfigSend(char *command);
+
+	/**
+	 * Sends the sequence to enter configuration mode on the Xbee wifi module.
+	 */
+	void wifiConfigEnter();
+
+	/*
+	 * Indicates whether the wifi module has connected to the network.
+	 * @return true if the wifi module is connected
+	 */
+	bool isWifiReady();
+
+	/*
+	 * Blocks until the wifi module has connected to the network.
+	 */
+	void waitForWifiReady();
+
+	/*
+	 * Prints the current status of the wifi module.
+	 */
+	void wifiStatus();
+
+	/*
+	 * Sets the wifi module up to connect to the network.
+	 */
+	void wifiConnect();
+};
+
+#endif /* WIFIHANDLER_H_ */

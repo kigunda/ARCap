@@ -16,6 +16,7 @@
 #include "Status.h"
 
 #define INFRARED_TO_NETWORK_RECEIVE_THRESHOLD 50
+#define INFRARED_TO_NETWORK_RECEIVE_TIMEOUT_SECONDS 1
 
 /*
  * The infrared-to-network-bridge listens for infrared events

@@ -152,6 +152,7 @@ CXX_SRCS += NetworkHandler.cpp
 CXX_SRCS += NetworkInfraredBridge.cpp
 CXX_SRCS += NetworkTasks.cpp
 CXX_SRCS += Bridge.cpp
+CXX_SRCS += WifiHandler.cpp
 ASM_SRCS :=
 
 
