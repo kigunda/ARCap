@@ -1,0 +1,18 @@
+/*
+ * MotorHandler.cpp
+ *
+ *  Created on: 2014-03-03
+ *      Author: gongal
+ */
+
+#include "MotorHandler.h"
+
+MotorHandler::MotorHandler() {
+	// TODO Auto-generated constructor stub
+
+}
+
+MotorHandler::~MotorHandler() {
+	// TODO Auto-generated destructor stub
+}
+

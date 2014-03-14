@@ -1,0 +1,10 @@
+
+**** Build of configuration Nios II for project MCtest ****
+
+make all 
+Info: Building ../MCtest_bsp/
+make --no-print-directory -C ../MCtest_bsp/
+[BSP build complete]
+[MCtest build complete]
+
+**** Build Finished ****

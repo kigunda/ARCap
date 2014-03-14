@@ -1,0 +1,13 @@
+!SESSION 2014-03-03 15:22:06.773 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-03 15:31:40.300
+!MESSAGE Indexed 'MCtest_bsp' (99 sources, 99 headers) in 1.17 sec: 3,065 declarations; 11,179 references; 95 unresolved inclusions; 6 syntax errors; 166 unresolved names (1.15%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-03 15:31:41.015
+!MESSAGE Indexed 'MCtest' (1 sources, 13 headers) in 0.01 sec: 8 declarations; 23 references; 15 unresolved inclusions; 0 syntax errors; 6 unresolved names (16.22%)

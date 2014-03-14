@@ -1,0 +1,17 @@
+/*
+ * MotorHandler.h
+ *
+ *  Created on: 2014-03-03
+ *      Author: gongal
+ */
+
+#ifndef MOTORHANDLER_H_
+#define MOTORHANDLER_H_
+
+class MotorHandler {
+public:
+	MotorHandler();
+	virtual ~MotorHandler();
+};
+
+#endif /* MOTORHANDLER_H_ */
