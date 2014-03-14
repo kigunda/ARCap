@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>ucosii</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>7-Mar-2014 4:52:07 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1394236327877</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>13-Mar-2014 3:11:58 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1394745118761</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\ARCap_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\kigunda\Documents\Ece492\Repository\ARCap\system.sopcinfo</SopcDesignFile>
@@ -1733,14 +1733,20 @@
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>jtag_uart_0</slaveDescriptor>
+                <slaveDescriptor>uart_wifi</slaveDescriptor>
                 <addressRange>0x02001090 - 0x02001097</addressRange>
+                <addressSpan>8</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>jtag_uart_0</slaveDescriptor>
+                <addressRange>0x02001098 - 0x0200109F</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>sysid</slaveDescriptor>
-                <addressRange>0x02001098 - 0x0200109F</addressRange>
+                <addressRange>0x020010A0 - 0x020010A7</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>

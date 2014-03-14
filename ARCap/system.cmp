@@ -18,7 +18,9 @@
 			adc_ctrl_sclk         : out   std_logic;                                        -- sclk
 			adc_ctrl_cs_n         : out   std_logic;                                        -- cs_n
 			adc_ctrl_dout         : in    std_logic                     := 'X';             -- dout
-			adc_ctrl_din          : out   std_logic                                         -- din
+			adc_ctrl_din          : out   std_logic;                                        -- din
+			uart_wifi_RXD         : in    std_logic                     := 'X';             -- RXD
+			uart_wifi_TXD         : out   std_logic                                         -- TXD
 		);
 	end component system;
 

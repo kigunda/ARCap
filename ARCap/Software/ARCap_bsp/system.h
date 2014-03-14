@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'system'
  * SOPC Builder design path: C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system.sopcinfo
  *
- * Generated: Mon Mar 03 12:11:15 MST 2014
+ * Generated: Thu Mar 13 15:11:59 MDT 2014
  */
 
 /*
@@ -134,6 +134,7 @@
 #define __ALTERA_AVALON_TIMER
 #define __ALTERA_NIOS2_QSYS
 #define __ALTERA_UP_AVALON_DE0_NANO_ADC
+#define __ALTERA_UP_AVALON_RS232
 
 
 /*
@@ -142,8 +143,8 @@
  */
 
 #define ALT_DEVICE_FAMILY "Cyclone IV E"
-#define ALT_ENHANCED_INTERRUPT_API_PRESENT
 #define ALT_IRQ_BASE NULL
+#define ALT_LEGACY_INTERRUPT_API_PRESENT
 #define ALT_LOG_PORT "/dev/null"
 #define ALT_LOG_PORT_BASE 0x0
 #define ALT_LOG_PORT_DEV null
@@ -152,19 +153,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart_0"
-#define ALT_STDERR_BASE 0x2001090
+#define ALT_STDERR_BASE 0x2001098
 #define ALT_STDERR_DEV jtag_uart_0
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart_0"
-#define ALT_STDIN_BASE 0x2001090
+#define ALT_STDIN_BASE 0x2001098
 #define ALT_STDIN_DEV jtag_uart_0
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart_0"
-#define ALT_STDOUT_BASE 0x2001090
+#define ALT_STDOUT_BASE 0x2001098
 #define ALT_STDOUT_DEV jtag_uart_0
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -202,7 +203,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart_0 altera_avalon_jtag_uart
-#define JTAG_UART_0_BASE 0x2001090
+#define JTAG_UART_0_BASE 0x2001098
 #define JTAG_UART_0_IRQ 14
 #define JTAG_UART_0_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_0_NAME "/dev/jtag_uart_0"
@@ -393,14 +394,28 @@
  */
 
 #define ALT_MODULE_CLASS_sysid altera_avalon_sysid_qsys
-#define SYSID_BASE 0x2001098
+#define SYSID_BASE 0x20010a0
 #define SYSID_ID 0
 #define SYSID_IRQ -1
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1393793416
+#define SYSID_TIMESTAMP 1394744647
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
+
+
+/*
+ * uart_wifi configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_uart_wifi altera_up_avalon_rs232
+#define UART_WIFI_BASE 0x2001090
+#define UART_WIFI_IRQ 2
+#define UART_WIFI_IRQ_INTERRUPT_CONTROLLER_ID 0
+#define UART_WIFI_NAME "/dev/uart_wifi"
+#define UART_WIFI_SPAN 8
+#define UART_WIFI_TYPE "altera_up_avalon_rs232"
 
 
 /*

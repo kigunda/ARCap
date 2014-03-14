@@ -28,6 +28,7 @@
  **************************************************************************/
 
 
+#include <string.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include "altera_avalon_uart.h"
@@ -43,12 +44,6 @@ OS_STK    task2_stk[TASK_STACKSIZE];
 #define TASK1_PRIORITY      1
 #define TASK2_PRIORITY      2
 
-/* Wifi message queue */
-#define MAX_MESSAGES 4
-#define WAIT_FOREVER 0
-int messages[MAX_MESSAGES];
-OS_EVENT *queue;
-
 // GENERAL UART
 
 void sendToggle() {
@@ -59,14 +54,44 @@ void sendToggle() {
 // UART TO WIFI
 
 #define WIFI_GUARD_TIME_SECONDS 1
+#define WIFI_READ_BUFFER_SIZE	1024
 
-void uart_isr(void *context) {
-	alt_u32 status;
+typedef struct {
+	char buffer[WIFI_READ_BUFFER_SIZE];
+	int mark;
+} WifiMessage;
 
-	status = IORD_ALTERA_AVALON_UART_STATUS(UART_MC_BASE);
-	if (status & ALTERA_AVALON_UART_STATUS_RRDY_MSK) {
+WifiMessage networkIn;
 
+#define WAIT_FOREVER 0
+
+#define WIFI_QUEUE_BUFFER_SIZE 4
+int wifiQueueBuffer[WIFI_QUEUE_BUFFER_SIZE];
+OS_EVENT *wifiQueue;
+
+void wifiMessageAppend(WifiMessage *message, char c) {
+	if (message->mark < WIFI_READ_BUFFER_SIZE) {
+		message->buffer[message->mark] = c;
+		message->mark++;
 	}
+}
+
+void wifiMessagePrint(WifiMessage *message) {
+	printf("%s\n", message->buffer);
+}
+
+void wifiMessageClear(WifiMessage *message) {
+	memset(&message, 0, sizeof(WifiMessage));
+}
+
+void uart_isr(void *context, alt_u32 id) {
+//	WifiMessage *message = context;
+//	alt_u32 status = IORD_ALTERA_AVALON_UART_STATUS(UART_MC_BASE);
+//	if (status & ALTERA_AVALON_UART_STATUS_RRDY_MSK) {
+//		wifiMessageAppend(message, (char)IORD_ALTERA_AVALON_UART_RXDATA(UART_MC_BASE));
+//		status = IORD_ALTERA_AVALON_UART_STATUS(UART_MC_BASE);
+//		OSQPost(wifiQueue, (void *)message);
+//	} IOWR_ALTERA_AVALON_UART_STATUS(UART_MC_BASE, 0);
 }
 
 char readFromUart() {
@@ -77,7 +102,7 @@ void writeToUart(char *data, int length) {
 	int i;
 	for (i = 0; i < length; i++) {
 		IOWR_ALTERA_AVALON_UART_TXDATA(UART_MC_BASE, data[i]);
-		OSTimeDlyHMSM(0, 0, 0, 3);
+		OSTimeDlyHMSM(0, 0, 0, 2);
 	}
 }
 
@@ -91,19 +116,26 @@ void sendXbeeConfigureStart() {
 	waitXbeeGuardTime();
 	writeToUart(message, length);
 	waitXbeeGuardTime();
-	printf("Sent [%s]\n", message);
+	printf("%s > ", message);
 }
 
-void receiveXbeeConfigureConfirm() {
-	printf("Received [%c%c]\n", readFromUart(), readFromUart());
-}
-
-void uart_test_task(void* pdata) {
-	printf("UART test task started\n");
+void uart_write_task(void* pdata) {
+	printf("UART Write Task started\n");
 	while (true) {
 		sendXbeeConfigureStart();
-		receiveXbeeConfigureConfirm();
-		OSTimeDlyHMSM(0, 0, 3, 0);
+		OSTimeDlyHMSM(0, 0, 10, 0);
+	}
+}
+
+void uart_read_task(void *pdata) {
+	printf("UART Read Task started\n");
+	INT8U err;
+	while (true) {
+		WifiMessage *message = OSQPend(wifiQueue, WAIT_FOREVER, &err);
+		if (err == OS_NO_ERR) {
+			wifiMessagePrint(message);
+			wifiMessageClear(message);
+		}
 	}
 }
 
@@ -112,7 +144,7 @@ void uart_test_task(void* pdata) {
 /* The main function creates two task and starts multi-tasking */
 int main(void)
 {
-	OSTaskCreateExt(uart_test_task,
+	OSTaskCreateExt(uart_write_task,
 			NULL,
 			(void *)&task1_stk[TASK_STACKSIZE-1],
 			TASK1_PRIORITY,
@@ -121,6 +153,22 @@ int main(void)
 			TASK_STACKSIZE,
 			NULL,
 			0);
+
+	OSTaskCreateExt(uart_read_task,
+			NULL,
+			(void *)&task2_stk[TASK_STACKSIZE-1],
+			TASK2_PRIORITY,
+			TASK2_PRIORITY,
+			task2_stk,
+			TASK_STACKSIZE,
+			NULL,
+			0);
+
+	wifiQueue = OSQCreate((void**)wifiQueueBuffer, WIFI_QUEUE_BUFFER_SIZE);
+
+	WifiMessage wifiMessage;
+	memset(&wifiMessage, 0, sizeof(wifiMessage));
+	alt_irq_register(UART_MC_IRQ_INTERRUPT_CONTROLLER_ID, (void *)&wifiMessage, uart_isr);
 
 	printf("Main started\n");
 

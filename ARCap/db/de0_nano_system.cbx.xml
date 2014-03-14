@@ -17,5 +17,7 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|de0_nano_system|system:inst_cpu|system_cpu:cpu|system_cpu_ic_tag_module:system_cpu_ic_tag|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_qtg1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|de0_nano_system|system:inst_cpu|system_cpu:cpu|system_cpu_mult_cell:the_system_cpu_mult_cell|altmult_add:the_altmult_add_part_2" CBX_FILE_NAME="mult_add_95u2.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|de0_nano_system|system:inst_cpu|system_cpu:cpu|system_cpu_register_bank_b_module:system_cpu_register_bank_b|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_gvf1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|de0_nano_system|system:inst_cpu|system_uart_wifi:uart_wifi|altera_up_rs232_in_deserializer:RS232_In_Deserializer|altera_up_sync_fifo:RS232_In_FIFO|scfifo:Sync_FIFO" CBX_FILE_NAME="scfifo_a341.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|de0_nano_system|system:inst_cpu|system_uart_wifi:uart_wifi|altera_up_rs232_out_serializer:RS232_Out_Serializer|altera_up_sync_fifo:RS232_Out_FIFO|scfifo:Sync_FIFO" CBX_FILE_NAME="scfifo_a341.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

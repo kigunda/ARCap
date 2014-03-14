@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>ucosii</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>10-Mar-2014 3:06:08 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1394485568902</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>13-Mar-2014 2:50:58 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1394743858357</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\kigunda\Documents\Ece492\Repository\MCandWifiTestDE0\Software\UARTNow_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\kigunda\Documents\Ece492\Repository\MCandWifiTestDE0\system.sopcinfo</SopcDesignFile>

@@ -141,7 +141,12 @@ architecture syn of de0_nano_system is
 				 pio_led_export 		 		: out   std_logic_vector(6 downto 0);                     	-- export
              pio_key_left_export  		: in    std_logic								:= 'X';				  	-- export
              pio_sw_export        		: in    std_logic_vector(3 downto 0)  	:= (others => 'X'); 	-- export
-				 pio_ir_emitter_export 		: out	  std_logic													  		-- export
+				 pio_ir_emitter_export 		: out	  std_logic;													  	-- export
+				 
+				 -- UART
+				 uart_wifi_rxd					: in	  std_logic								:= 'X';					-- receive
+				 uart_wifi_txd					: out	  std_logic															-- transmit
+				 
            );
    end component system;
    
@@ -196,7 +201,12 @@ begin
                  pio_led_export 		  		=> LED(6 downto 0),
                  pio_key_left_export  		=> KEY(1),
                  pio_sw_export        		=> SW,
-					  pio_ir_emitter_export		=> GPIO_2(1)
+					  pio_ir_emitter_export		=> GPIO_2(1),
+					  
+					  -- UART
+					  uart_wifi_rxd				=> GPIO_0(0), 	-- pin 2
+					  uart_wifi_txd				=> GPIO_0(1)	-- pin 4
+					  
                );  
          
 end architecture syn;
