@@ -4,6 +4,10 @@
 <scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
 <instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1313019385;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1313019385.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.716178441;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.1885922709">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="C:/Users/gongal/NewRepARCap/MCTEST/DE0-nano-HD/Software/MCTest_bsp/UCOSII/inc"/>
+<includePath path="C:/Users/gongal/NewRepARCap/MCTEST/DE0-nano-HD/Software/MCTest_bsp/HAL/inc"/>
+<includePath path="C:/Users/gongal/NewRepARCap/MCTEST/DE0-nano-HD/Software/MCTest_bsp/"/>
+<includePath path="C:/Users/gongal/NewRepARCap/MCTEST/DE0-nano-HD/Software/MCTest_bsp/drivers/inc"/>
 <includePath path="C:/Users/gongal/Desktop/MCTEST/DE0-nano-HD/Software/MCTest_bsp/UCOSII/inc"/>
 <includePath path="C:/Users/gongal/Desktop/MCTEST/DE0-nano-HD/Software/MCTest_bsp/HAL/inc"/>
 <includePath path="C:/Users/gongal/Desktop/MCTEST/DE0-nano-HD/Software/MCTest_bsp/"/>
@@ -233,6 +237,10 @@
 </instance>
 <instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1313019385;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1313019385.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.934764304;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.792445345">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="C:/Users/gongal/NewRepARCap/MCTEST/DE0-nano-HD/Software/MCTest_bsp/UCOSII/inc"/>
+<includePath path="C:/Users/gongal/NewRepARCap/MCTEST/DE0-nano-HD/Software/MCTest_bsp/HAL/inc"/>
+<includePath path="C:/Users/gongal/NewRepARCap/MCTEST/DE0-nano-HD/Software/MCTest_bsp/"/>
+<includePath path="C:/Users/gongal/NewRepARCap/MCTEST/DE0-nano-HD/Software/MCTest_bsp/drivers/inc"/>
 <includePath path="C:/Users/gongal/Desktop/MCTEST/DE0-nano-HD/Software/MCTest_bsp/UCOSII/inc"/>
 <includePath path="C:/Users/gongal/Desktop/MCTEST/DE0-nano-HD/Software/MCTest_bsp/HAL/inc"/>
 <includePath path="C:/Users/gongal/Desktop/MCTEST/DE0-nano-HD/Software/MCTest_bsp/"/>

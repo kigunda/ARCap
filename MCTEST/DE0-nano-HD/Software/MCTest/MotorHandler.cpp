@@ -59,16 +59,16 @@ void MotorHandler::test() {
  * Move rover forward by activating both motors.
  */
 void MotorHandler::forward() {
-	move(MOTOR_MOTOR1_FORWARD, "motor 1 forward");
-	move(MOTOR_MOTOR2_FORWARD, "motor 2 forward");
+	move(MOTOR_BOTH_FORWARD, "motor both forward");
+	//move(MOTOR_MOTOR2_FORWARD, "motor 2 forward");
 }
 
 /*
  * Move rover backward by activating both motor backwards.
  */
 void MotorHandler::backward() {
-	move(MOTOR_BOTH_BACKWARD, "both motors backward");
-//	move(MOTOR_MOTOR2_BACKWARD, "motor 2 backward");
+	move(MOTOR_BOTH_BACKWARD, "motor both backward");
+   // move(MOTOR_MOTOR2_BACKWARD, "motor 2 backward");
 }
 
 /*

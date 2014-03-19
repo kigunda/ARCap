@@ -18,8 +18,8 @@
 #define MOTOR_DEVICE_TYPE 		0x00
 #define MOTOR_BOTH_FORWARD		0x01		// both motor forward
 #define MOTOR_BOTH_BACKWARD		0x00		//both motor backward
-#define MOTOR_MOTOR1_BACKWARD 	0x40		// motor 1 backward
-#define MOTOR_MOTOR2_BACKWARD 	0x60		// motor 2 backward
+#define MOTOR_MOTOR1_BACKWARD 	0x04		// motor 1 backward
+#define MOTOR_MOTOR2_BACKWARD 	0x06		// motor 2 backward
 #define MOTOR_MOTOR1_FORWARD 	0x05		// motor 1 forward
 #define MOTOR_MOTOR2_FORWARD 	0x07		// motor 2 forward
 #define MOTOR_CONST_SPEED 		0x5F
