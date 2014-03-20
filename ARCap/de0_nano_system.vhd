@@ -204,8 +204,8 @@ begin
 					  pio_ir_emitter_export		=> GPIO_2(1),
 					  
 					  -- UART
-					  uart_wifi_rxd				=> GPIO_0(0), 	-- pin 2
-					  uart_wifi_txd				=> GPIO_0(1)	-- pin 4
+					  uart_wifi_rxd				=> GPIO_1(0), 	-- pin 2
+					  uart_wifi_txd				=> GPIO_1(1)	-- pin 4
 					  
                );  
          

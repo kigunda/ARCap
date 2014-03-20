@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="36" version="2.0">
+<workbench progressCount="28" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="122" y="-17">
 <fastViewData fastViewLocation="1024"/>
@@ -30,54 +30,14 @@
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="8"/>
 <part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="5"/>
-<part id="4"/>
-<part id="6"/>
-<part id="7"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="NetworkHandler.cpp" partName="NetworkHandler.cpp" path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/NetworkHandler.cpp" title="NetworkHandler.cpp" tooltip="ARCap/NetworkHandler.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ARCap/NetworkHandler.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1530" selectionTopPixel="316"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="NetworkHandler.h" partName="NetworkHandler.h" path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/NetworkHandler.h" title="NetworkHandler.h" tooltip="ARCap/NetworkHandler.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ARCap/NetworkHandler.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1594" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="WifiHandler.cpp" partName="WifiHandler.cpp" path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/WifiHandler.cpp" title="WifiHandler.cpp" tooltip="ARCap/WifiHandler.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ARCap/WifiHandler.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="7" selectionOffset="8257" selectionTopPixel="3705"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="WifiHandler.h" partName="WifiHandler.h" path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/WifiHandler.h" title="WifiHandler.h" tooltip="ARCap/WifiHandler.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ARCap/WifiHandler.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3313" selectionTopPixel="1486"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" partName="main.cpp" path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/main.cpp" title="main.cpp" tooltip="ARCap/main.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ARCap/main.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="942" selectionTopPixel="270"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="InfraredNetworkBridge.cpp" partName="InfraredNetworkBridge.cpp" path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/InfraredNetworkBridge.cpp" title="InfraredNetworkBridge.cpp" tooltip="ARCap/InfraredNetworkBridge.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ARCap/InfraredNetworkBridge.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="988" selectionTopPixel="166"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="InfraredTasks.cpp" partName="InfraredTasks.cpp" path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/InfraredTasks.cpp" title="InfraredTasks.cpp" tooltip="ARCap/InfraredTasks.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ARCap/InfraredTasks.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1149" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="NetworkTasks.cpp" partName="NetworkTasks.cpp" path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/NetworkTasks.cpp" title="NetworkTasks.cpp" tooltip="ARCap/NetworkTasks.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ARCap/NetworkTasks.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="335" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Debug.h" partName="Debug.h" path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/Debug.h" title="Debug.h" tooltip="ARCap/Debug.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ARCap/Debug.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="77" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/WifiTest/main.c" title="main.c" tooltip="WifiTest/main.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/WifiTest/main.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="11451" selectionTopPixel="4613"/>
 </editor>
 </editors>
 <views>
@@ -94,7 +54,10 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
+<expanded>
+<category IMemento.internal.id="Warnings"/>
+</expanded>
+<columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="536"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -117,7 +80,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="com.altera.sbtgui.ui.cPerspective">
+<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="com.altera.sbtgui.ui.cPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.cdt.internal.ui.CPerspectiveFactory" id="org.eclipse.cdt.ui.CPerspective" label="C/C++"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
@@ -227,7 +190,7 @@
 </mainWindow>
 </layout>
 </perspective>
-<perspective editorAreaTrimState="1" editorAreaVisible="1" fixed="0" version="0.016">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.altera.sbtgui.ui.Nios2CPerspectiveFactory" id="com.altera.sbtgui.ui.cPerspective" label="Nios II"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
@@ -260,20 +223,11 @@
 <new_wizard_action id="com.altera.sbtgui.ui.newLibrary"/>
 <perspective_action id="com.altera.sbtgui.ui.debugPerspective"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <fastViewBars>
 <fastViewBar fastViewLocation="131072" id="topRight" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
 <fastViews>
 <view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
-</fastViews>
-</fastViewBar>
-<fastViewBar fastViewLocation="16384" id="topLeft" orientation="512" selectedTabId="org.eclipse.ui.navigator.ProjectExplorer" style="1">
-<fastViews>
-<view id="org.eclipse.ui.navigator.ProjectExplorer" ratio="0.3"/>
-</fastViews>
-</fastViewBar>
-<fastViewBar fastViewLocation="131072" id="org.eclipse.ui.internal.ViewStack@1d4ede" orientation="512" selectedTabId="org.eclipse.cdt.ui.callHierarchy" style="0">
-<fastViews>
-<view id="org.eclipse.cdt.ui.callHierarchy" ratio="0.29964414"/>
 </fastViews>
 </fastViewBar>
 <fastViewBar fastViewLocation="1024" id="bottom" orientation="256" selectedTabId="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:USB-Blaster on localhost [USB-0].1.0" style="0">
@@ -283,6 +237,11 @@
 <view id="org.eclipse.ui.console.ConsoleView" ratio="0.29937106"/>
 <view id="org.eclipse.ui.views.PropertySheet" ratio="0.3"/>
 <view id="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:USB-Blaster on localhost [USB-0].1.0" ratio="0.29937106"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="131072" id="org.eclipse.ui.internal.ViewStack@1d4ede" orientation="512" selectedTabId="org.eclipse.cdt.ui.callHierarchy" style="0">
+<fastViews>
+<view id="org.eclipse.cdt.ui.callHierarchy" ratio="0.29964414"/>
 </fastViews>
 </fastViewBar>
 <fastViewBar fastViewLocation="131072" id="org.eclipse.ui.internal.ViewStack@17d56b" orientation="512" selectedTabId="org.eclipse.ui.internal.introview" style="0">
@@ -295,12 +254,14 @@
 <layout>
 <mainWindow>
 <info folder="true" part="topLeft">
-<folder appearance="2" expanded="0">
-<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
+<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
 <page content="org.eclipse.cdt.ui.CView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@17d56b" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="topLeft">
@@ -349,167 +310,20 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap/TaskProperties.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap/NetworkHandler.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap/InfraredHandler.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap/NetworkTasks.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap/InfraredTasks.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap/TaskProperties.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap/main.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap/InfraredNetworkBridge.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap/Debug.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/UartTest/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap/InfraredHandler.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/WifiTest/main.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/WifiTest/WifiTest.objdump"/>
 </editors>
-<item historyLabel="TaskProperties.h" index="0">
-<position info="not_deleted" x="349" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="NetworkHandler.cpp" index="1">
-<position info="not_deleted" x="1803" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="2045" y="0"/>
 </item>
-<item historyLabel="InfraredHandler.cpp" index="2">
-<position/>
+<item historyLabel="WifiTest.objdump" index="1">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="NetworkTasks.cpp" index="3">
-<position info="not_deleted" x="335" y="0"/>
-</item>
-<item historyLabel="InfraredTasks.cpp" index="4">
-<position info="not_deleted" x="482" y="0"/>
-</item>
-<item historyLabel="TaskProperties.h" index="5">
-<position info="not_deleted" x="484" y="0"/>
-</item>
-<item historyLabel="InfraredTasks.cpp" index="4">
-<position info="not_deleted" x="317" y="0"/>
-</item>
-<item historyLabel="InfraredHandler.cpp" index="2">
-<position/>
-</item>
-<item historyLabel="NetworkTasks.cpp" index="3">
-<position info="not_deleted" x="335" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="6">
-<position info="not_deleted" x="1138" y="0"/>
-</item>
-<item historyLabel="InfraredTasks.cpp" index="4">
-<position info="not_deleted" x="317" y="0"/>
-</item>
-<item historyLabel="InfraredHandler.cpp" index="2">
-<position/>
-</item>
-<item historyLabel="main.cpp" index="6">
-<position info="not_deleted" x="1179" y="0"/>
-</item>
-<item historyLabel="InfraredTasks.cpp" index="4">
-<position info="not_deleted" x="992" y="31"/>
-</item>
-<item historyLabel="InfraredNetworkBridge.cpp" index="7">
-<position info="not_deleted" x="1349" y="0"/>
-</item>
-<item historyLabel="InfraredNetworkBridge.cpp" index="7">
-<position info="not_deleted" x="1702" y="0"/>
-</item>
-<item historyLabel="NetworkHandler.cpp" index="1">
-<position info="not_deleted" x="1366" y="0"/>
-</item>
-<item historyLabel="InfraredNetworkBridge.cpp" index="7">
-<position info="not_deleted" x="1065" y="0"/>
-</item>
-<item historyLabel="NetworkHandler.cpp" index="1">
-<position info="not_deleted" x="1366" y="0"/>
-</item>
-<item historyLabel="Debug.h" index="8">
-<position info="not_deleted" x="122" y="0"/>
-</item>
-<item historyLabel="InfraredHandler.cpp" index="2">
-<position/>
-</item>
-<item historyLabel="InfraredTasks.cpp" index="4">
-<position info="not_deleted" x="489" y="0"/>
-</item>
-<item historyLabel="main.c" index="9">
-<position info="not_deleted" x="2180" y="0"/>
-</item>
-<item historyLabel="InfraredTasks.cpp" index="4">
-<position info="not_deleted" x="620" y="0"/>
-</item>
-<item historyLabel="InfraredHandler.h" index="10">
-<position info="not_deleted" x="376" y="0"/>
-</item>
-<item historyLabel="InfraredTasks.cpp" index="4">
-<position info="not_deleted" x="1147" y="0"/>
-</item>
-<item historyLabel="InfraredNetworkBridge.cpp" index="7">
-<position info="not_deleted" x="1702" y="0"/>
-</item>
-<item historyLabel="NetworkHandler.cpp" index="1">
-<position info="not_deleted" x="1530" y="0"/>
-</item>
-<item historyLabel="InfraredNetworkBridge.cpp" index="7">
-<position info="not_deleted" x="1455" y="0"/>
-</item>
-<item historyLabel="InfraredHandler.cpp" index="2">
-<position/>
-</item>
-<item historyLabel="InfraredNetworkBridge.cpp" index="7">
-<position info="not_deleted" x="1455" y="0"/>
-</item>
-<item historyLabel="InfraredTasks.cpp" index="4">
-<position info="not_deleted" x="1147" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="6">
-<position info="not_deleted" x="1138" y="0"/>
-</item>
-<item historyLabel="Debug.h" index="8">
-<position info="not_deleted" x="122" y="0"/>
-</item>
-<item historyLabel="NetworkTasks.cpp" index="3">
-<position info="not_deleted" x="335" y="0"/>
-</item>
-<item historyLabel="InfraredTasks.cpp" index="4">
-<position info="not_deleted" x="1147" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="6">
-<position info="not_deleted" x="989" y="0"/>
-</item>
-<item historyLabel="InfraredTasks.cpp" index="4">
-<position info="not_deleted" x="485" y="0"/>
-</item>
-<item historyLabel="InfraredHandler.cpp" index="2">
-<position/>
-</item>
-<item historyLabel="InfraredTasks.cpp" index="4">
-<position info="not_deleted" x="485" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="6">
-<position info="not_deleted" x="989" y="0"/>
-</item>
-<item historyLabel="InfraredTasks.cpp" index="4">
-<position info="not_deleted" x="844" y="0"/>
-</item>
-<item historyLabel="InfraredHandler.cpp" index="2">
-<position info="not_deleted" x="881" y="4"/>
-</item>
-<item historyLabel="InfraredTasks.cpp" index="4">
-<position info="not_deleted" x="1149" y="0"/>
-</item>
-<item historyLabel="InfraredNetworkBridge.cpp" index="7">
-<position info="not_deleted" x="988" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="6">
-<position info="not_deleted" x="1085" y="0"/>
-</item>
-<item historyLabel="Debug.h" index="8">
-<position info="not_deleted" x="122" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="6">
-<position info="not_deleted" x="868" y="0"/>
-</item>
-<item historyLabel="Debug.h" index="8">
-<position info="not_deleted" x="77" y="0"/>
-</item>
-<item active="true" historyLabel="main.cpp" index="6">
-<position info="not_deleted" x="868" y="0"/>
+<item active="true" historyLabel="main.c" index="0">
+<position info="not_deleted" x="2045" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -517,9 +331,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="topLeft"/>
-</trimArea>
 <trimArea IMemento.internal.id="131072">
 <trimItem IMemento.internal.id="topRight"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@17d56b"/>
@@ -538,6 +349,24 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="WifiTest.objdump" tooltip="WifiTest/WifiTest.objdump">
+<persistable path="/WifiTest/WifiTest.objdump"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="WifiTest/main.c">
+<persistable path="/WifiTest/main.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="ARCap/main.cpp">
+<persistable path="/ARCap/main.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="altera_up_avalon_de0_nano_adc.h" tooltip="ARCap_bsp/drivers/inc/altera_up_avalon_de0_nano_adc.h">
+<persistable path="/ARCap_bsp/drivers/inc/altera_up_avalon_de0_nano_adc.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="altera_avalon_jtag_uart.h" tooltip="ARCap_bsp/drivers/inc/altera_avalon_jtag_uart.h">
+<persistable path="/ARCap_bsp/drivers/inc/altera_avalon_jtag_uart.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="system.h" tooltip="ARCap_bsp/system.h">
+<persistable path="/ARCap_bsp/system.h"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="InfraredHandler.cpp" tooltip="ARCap/InfraredHandler.cpp">
 <persistable path="/ARCap/InfraredHandler.cpp"/>
 </file>
@@ -564,24 +393,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="InfraredNetworkBridge.h" tooltip="ARCap/InfraredNetworkBridge.h">
 <persistable path="/ARCap/InfraredNetworkBridge.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Bridge.h" tooltip="ARCap/Bridge.h">
-<persistable path="/ARCap/Bridge.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="InfraredNetworkBridge.cpp" tooltip="ARCap/InfraredNetworkBridge.cpp">
-<persistable path="/ARCap/InfraredNetworkBridge.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ucos_ii.h" tooltip="ARCap_bsp/UCOSII/inc/ucos_ii.h">
-<persistable path="/ARCap_bsp/UCOSII/inc/ucos_ii.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Status.h" tooltip="ARCap/Status.h">
-<persistable path="/ARCap/Status.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Tasks.h" tooltip="ARCap/Tasks.h">
-<persistable path="/ARCap/Tasks.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="ARCap/main.cpp">
-<persistable path="/ARCap/main.cpp"/>
 </file>
 </mruList>
 </workbench>

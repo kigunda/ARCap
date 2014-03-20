@@ -15,8 +15,8 @@ void network_handler_update_task(void *pdata) {
 	printf("NetworkHandler [task: update, status: start]\n");
 	Status status = network->connect();
 	while (status == OK) {
-		// Update the network handler.
-		status = network->update();
+//		// Update the network handler.
+//		status = network->update();
 		// [Test] Wait for 10 seconds.
 		OSTimeDlyHMSM(0, 0, 10, 0);
 //		// Wait.

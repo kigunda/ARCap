@@ -2441,3 +2441,509 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.
 
 !ENTRY com.altera.sbtgui.launch 1 0 2014-03-14 16:58:21.378
 !MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010a0 --id=0x0 --timestamp=1394744647 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+!SESSION 2014-03-17 14:28:56.930 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.ui 4 4 2014-03-17 14:29:15.619
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2014-03-17 14:29:17.257
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2014-03-17 14:29:17.257
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-17 14:29:17.257
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-17 14:29:17.257
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-17 14:29:17.257
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2014-03-17 14:29:17.257
+!MESSAGE Unable to restore perspective: Workspace - Nios II.
+!SUBENTRY 2 org.eclipse.ui 0 0 2014-03-17 14:29:17.257
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2014-03-17 14:29:17.257
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2014-03-17 14:29:17.257
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-17 14:29:17.257
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-17 14:29:17.257
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-17 14:29:17.257
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-17 14:29:17.257
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-17 14:29:17.257
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-17 14:29:17.257
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-17 14:29:17.257
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-17 14:29:17.257
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-17 14:29:17.257
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2014-03-17 14:29:17.257
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2014-03-17 14:29:17.257
+!MESSAGE OK
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-17 14:33:46.951
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010a0 --id=0x0 --timestamp=1394744647]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-17 14:33:48.714
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010a0 --id=0x0 --timestamp=1394744647 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-17 14:36:19.151
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010a0 --id=0x0 --timestamp=1394744647]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-17 14:36:20.836
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010a0 --id=0x0 --timestamp=1394744647 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-17 15:47:07.611
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-17 15:47:08.111
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010a0 --id=0x0 --timestamp=1394744647]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-17 15:47:09.795
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010a0 --id=0x0 --timestamp=1394744647 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-17 15:51:19.464
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010a0 --id=0x0 --timestamp=1394744647]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-17 15:51:21.148
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010a0 --id=0x0 --timestamp=1394744647 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-17 15:52:23.587
+!MESSAGE Indexed 'ARCap_bsp' (95 sources, 137 headers) in 1.47 sec: 6,104 declarations; 13,801 references; 0 unresolved inclusions; 3 syntax errors; 18 unresolved names (0.09%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-17 15:52:27.721
+!MESSAGE Indexed 'ARCap' (10 sources, 174 headers) in 2.32 sec: 11,244 declarations; 17,153 references; 0 unresolved inclusions; 2 syntax errors; 202 unresolved names (0.71%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-17 15:54:27.155
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010a0 --id=0x0 --timestamp=1394744647]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-17 15:54:28.840
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010a0 --id=0x0 --timestamp=1394744647 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-17 16:00:12.783
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010a0 --id=0x0 --timestamp=1394744647]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-17 16:00:14.467
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010a0 --id=0x0 --timestamp=1394744647 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+!SESSION 2014-03-20 12:30:45.363 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.ui 4 4 2014-03-20 12:31:13.053
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2014-03-20 12:31:15.128
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2014-03-20 12:31:15.128
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-20 12:31:15.128
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-20 12:31:15.128
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-20 12:31:15.128
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2014-03-20 12:31:15.128
+!MESSAGE Unable to restore perspective: Workspace - Nios II.
+!SUBENTRY 2 org.eclipse.ui 0 0 2014-03-20 12:31:15.128
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2014-03-20 12:31:15.128
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2014-03-20 12:31:15.128
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-20 12:31:15.128
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-20 12:31:15.128
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-20 12:31:15.128
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-20 12:31:15.128
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-20 12:31:15.128
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-20 12:31:15.128
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-20 12:31:15.128
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-20 12:31:15.128
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-20 12:31:15.128
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2014-03-20 12:31:15.128
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2014-03-20 12:31:15.128
+!MESSAGE OK
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-20 12:45:37.007
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010a0 --id=0x0 --timestamp=1394744647]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-20 12:45:38.754
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010a0 --id=0x0 --timestamp=1394744647 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-20 12:47:04.235
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010a0 --id=0x0 --timestamp=1394744647]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-20 12:47:05.920
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010a0 --id=0x0 --timestamp=1394744647 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-20 12:50:54.484
+!MESSAGE Indexed 'WifiTest' (1 sources, 86 headers) in 1.03 sec: 3,694 declarations; 3,752 references; 0 unresolved inclusions; 2 syntax errors; 6 unresolved names (0.08%)
+
+!ENTRY org.eclipse.ltk.ui.refactoring 4 10000 2014-03-20 12:51:04.109
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while moving resources.
+	at org.eclipse.core.internal.resources.Resource.move(Resource.java:1609)
+	at org.eclipse.ltk.core.refactoring.resource.RenameResourceChange.perform(RenameResourceChange.java:123)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Contains: Could not move '/UartTest_bsp'.
+org.eclipse.core.runtime.CoreException: Could not move: C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\UartTest_bsp.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:415)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.move(LocalFile.java:352)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.move(FileSystemResourceManager.java:767)
+	at org.eclipse.core.internal.resources.ResourceTree.moveProjectContent(ResourceTree.java:753)
+	at org.eclipse.core.internal.resources.ResourceTree.standardMoveProject(ResourceTree.java:1070)
+	at org.eclipse.core.internal.resources.Resource.unprotectedMove(Resource.java:1982)
+	at org.eclipse.core.internal.resources.Resource.move(Resource.java:1597)
+	at org.eclipse.ltk.core.refactoring.resource.RenameResourceChange.perform(RenameResourceChange.java:123)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Caused by: org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:125)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:411)
+	... 16 more
+!SUBENTRY 1 org.eclipse.core.resources 1 4 2014-03-20 12:51:04.109
+!MESSAGE Problems encountered while moving resources.
+!SUBENTRY 2 org.eclipse.core.resources 1 4 2014-03-20 12:51:04.109
+!MESSAGE Could not move '/UartTest_bsp'.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not move: C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\UartTest_bsp.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:415)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.move(LocalFile.java:352)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.move(FileSystemResourceManager.java:767)
+	at org.eclipse.core.internal.resources.ResourceTree.moveProjectContent(ResourceTree.java:753)
+	at org.eclipse.core.internal.resources.ResourceTree.standardMoveProject(ResourceTree.java:1070)
+	at org.eclipse.core.internal.resources.Resource.unprotectedMove(Resource.java:1982)
+	at org.eclipse.core.internal.resources.Resource.move(Resource.java:1597)
+	at org.eclipse.ltk.core.refactoring.resource.RenameResourceChange.perform(RenameResourceChange.java:123)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Caused by: org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:125)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:411)
+	... 16 more
+!SUBENTRY 3 org.eclipse.core.filesystem 4 272 2014-03-20 12:51:04.109
+!MESSAGE Could not move: C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\UartTest_bsp.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:125)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:411)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.move(LocalFile.java:352)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.move(FileSystemResourceManager.java:767)
+	at org.eclipse.core.internal.resources.ResourceTree.moveProjectContent(ResourceTree.java:753)
+	at org.eclipse.core.internal.resources.ResourceTree.standardMoveProject(ResourceTree.java:1070)
+	at org.eclipse.core.internal.resources.Resource.unprotectedMove(Resource.java:1982)
+	at org.eclipse.core.internal.resources.Resource.move(Resource.java:1597)
+	at org.eclipse.ltk.core.refactoring.resource.RenameResourceChange.perform(RenameResourceChange.java:123)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Contains: Could not delete: C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\UartTest_bsp\Makefile.
+Contains: Could not delete: C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\UartTest_bsp.
+!SUBENTRY 4 org.eclipse.core.filesystem 4 273 2014-03-20 12:51:04.109
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2014-03-20 12:51:04.109
+!MESSAGE Could not delete: C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\UartTest_bsp\Makefile.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2014-03-20 12:51:04.109
+!MESSAGE Could not delete: C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\UartTest_bsp.
+
+!ENTRY org.eclipse.core.resources 1 4 2014-03-20 12:51:04.124
+!MESSAGE Problems encountered while moving resources.
+!SUBENTRY 1 org.eclipse.core.resources 1 4 2014-03-20 12:51:04.124
+!MESSAGE Could not move '/UartTest_bsp'.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not move: C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\UartTest_bsp.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:415)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.move(LocalFile.java:352)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.move(FileSystemResourceManager.java:767)
+	at org.eclipse.core.internal.resources.ResourceTree.moveProjectContent(ResourceTree.java:753)
+	at org.eclipse.core.internal.resources.ResourceTree.standardMoveProject(ResourceTree.java:1070)
+	at org.eclipse.core.internal.resources.Resource.unprotectedMove(Resource.java:1982)
+	at org.eclipse.core.internal.resources.Resource.move(Resource.java:1597)
+	at org.eclipse.ltk.core.refactoring.resource.RenameResourceChange.perform(RenameResourceChange.java:123)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Caused by: org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:125)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:411)
+	... 16 more
+!SUBENTRY 2 org.eclipse.core.filesystem 4 272 2014-03-20 12:51:04.124
+!MESSAGE Could not move: C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\UartTest_bsp.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:125)
+	at org.eclipse.core.filesystem.provider.FileStore.move(FileStore.java:411)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.move(LocalFile.java:352)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.move(FileSystemResourceManager.java:767)
+	at org.eclipse.core.internal.resources.ResourceTree.moveProjectContent(ResourceTree.java:753)
+	at org.eclipse.core.internal.resources.ResourceTree.standardMoveProject(ResourceTree.java:1070)
+	at org.eclipse.core.internal.resources.Resource.unprotectedMove(Resource.java:1982)
+	at org.eclipse.core.internal.resources.Resource.move(Resource.java:1597)
+	at org.eclipse.ltk.core.refactoring.resource.RenameResourceChange.perform(RenameResourceChange.java:123)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Contains: Could not delete: C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\UartTest_bsp\Makefile.
+Contains: Could not delete: C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\UartTest_bsp.
+!SUBENTRY 3 org.eclipse.core.filesystem 4 273 2014-03-20 12:51:04.124
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 4 org.eclipse.core.filesystem 4 273 2014-03-20 12:51:04.124
+!MESSAGE Could not delete: C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\UartTest_bsp\Makefile.
+!SUBENTRY 4 org.eclipse.core.filesystem 4 273 2014-03-20 12:51:04.124
+!MESSAGE Could not delete: C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\UartTest_bsp.
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-20 12:51:28.351
+!MESSAGE Indexed 'WifiTest_bsp' (95 sources, 137 headers) in 1.06 sec: 6,104 declarations; 13,801 references; 0 unresolved inclusions; 3 syntax errors; 18 unresolved names (0.09%)
+!SESSION 2014-03-20 12:52:46.548 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.ui 4 4 2014-03-20 12:52:49.231
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2014-03-20 12:52:50.931
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2014-03-20 12:52:50.931
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-20 12:52:50.931
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-20 12:52:50.931
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-20 12:52:50.931
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2014-03-20 12:52:50.931
+!MESSAGE Unable to restore perspective: Workspace - Nios II.
+!SUBENTRY 2 org.eclipse.ui 0 0 2014-03-20 12:52:50.931
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2014-03-20 12:52:50.931
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2014-03-20 12:52:50.931
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-20 12:52:50.931
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-20 12:52:50.931
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-20 12:52:50.931
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-20 12:52:50.931
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-20 12:52:50.931
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-20 12:52:50.931
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-20 12:52:50.931
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-20 12:52:50.931
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-20 12:52:50.931
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2014-03-20 12:52:50.931
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2014-03-20 12:52:50.931
+!MESSAGE OK
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-20 12:56:00.223
+!MESSAGE Indexed 'WifiTest_bsp' (95 sources, 68 headers) in 0.97 sec: 2,262 declarations; 10,132 references; 128 unresolved inclusions; 5 syntax errors; 224 unresolved names (1.78%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-20 12:56:01.564
+!MESSAGE Indexed 'WifiTest' (1 sources, 13 headers) in 0.02 sec: 8 declarations; 23 references; 15 unresolved inclusions; 0 syntax errors; 6 unresolved names (16.22%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-20 13:46:11.237
+!MESSAGE Indexed 'WifiTest_bsp' (95 sources, 137 headers) in 0.97 sec: 6,104 declarations; 13,801 references; 0 unresolved inclusions; 3 syntax errors; 18 unresolved names (0.09%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-20 13:46:13.749
+!MESSAGE Indexed 'WifiTest' (1 sources, 86 headers) in 0.36 sec: 3,694 declarations; 3,752 references; 0 unresolved inclusions; 2 syntax errors; 6 unresolved names (0.08%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-20 13:46:45.682
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010a0 --id=0x0 --timestamp=1394744647]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-20 13:46:47.367
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010a0 --id=0x0 --timestamp=1394744647 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/WifiTest/WifiTest.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-20 13:49:40.951
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010a0 --id=0x0 --timestamp=1394744647]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-20 13:49:42.652
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010a0 --id=0x0 --timestamp=1394744647 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/WifiTest/WifiTest.elf]
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-20 13:50:55.008
+!MESSAGE Indexed 'Wifi_bsp' (95 sources, 68 headers) in 0.53 sec: 2,262 declarations; 10,132 references; 128 unresolved inclusions; 5 syntax errors; 224 unresolved names (1.78%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-20 13:50:56.334
+!MESSAGE Indexed 'Wifi' (1 sources, 13 headers) in 0.00 sec: 8 declarations; 23 references; 15 unresolved inclusions; 0 syntax errors; 6 unresolved names (16.22%)
+
+!ENTRY org.eclipse.ltk.ui.refactoring 4 10000 2014-03-20 13:51:08.564
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:793)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:344)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:132)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Contains: Could not delete 'C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\Wifi_bsp\Makefile'.
+org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:125)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFile(ResourceTree.java:304)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:384)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:837)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1945)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:780)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:344)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:132)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Contains: Could not delete: C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\Wifi_bsp\Makefile.
+Contains: Could not delete 'C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\Wifi_bsp'.
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2014-03-20 13:51:08.564
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2014-03-20 13:51:08.564
+!MESSAGE Could not delete 'C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\Wifi_bsp\Makefile'.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:125)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFile(ResourceTree.java:304)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:384)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:837)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1945)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:780)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:344)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:132)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Contains: Could not delete: C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\Wifi_bsp\Makefile.
+!SUBENTRY 3 org.eclipse.core.filesystem 4 273 2014-03-20 13:51:08.564
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 4 org.eclipse.core.filesystem 4 273 2014-03-20 13:51:08.564
+!MESSAGE Could not delete: C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\Wifi_bsp\Makefile.
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2014-03-20 13:51:08.564
+!MESSAGE Could not delete 'C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\Wifi_bsp'.
+
+!ENTRY org.eclipse.core.resources 4 273 2014-03-20 13:51:08.580
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2014-03-20 13:51:08.580
+!MESSAGE Could not delete 'C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\Wifi_bsp\Makefile'.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:125)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFile(ResourceTree.java:304)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:384)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:837)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1945)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:780)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:344)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:132)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:258)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Contains: Could not delete: C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\Wifi_bsp\Makefile.
+!SUBENTRY 2 org.eclipse.core.filesystem 4 273 2014-03-20 13:51:08.580
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 3 org.eclipse.core.filesystem 4 273 2014-03-20 13:51:08.580
+!MESSAGE Could not delete: C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\Wifi_bsp\Makefile.
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2014-03-20 13:51:08.580
+!MESSAGE Could not delete 'C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\Wifi_bsp'.

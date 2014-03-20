@@ -1,0 +1,7 @@
+
+**** Clean-only build of configuration Nios II for project Wifi ****
+
+make clean 
+[Wifi clean complete]
+
+**** Build Finished ****

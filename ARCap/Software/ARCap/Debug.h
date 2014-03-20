@@ -11,8 +11,8 @@
 //#define DEBUG
 
 //#define INFRAREDHANDLER_DEBUG				// Logs all infrared events.
-#define INFRAREDHANDLER_SEND_DEBUG 		// Logs infrared send events.
-#define INFRAREDHANDLER_RECEIVE_DEBUG		// Logs infrared receive events.
+//#define INFRAREDHANDLER_SEND_DEBUG 		// Logs infrared send events.
+//#define INFRAREDHANDLER_RECEIVE_DEBUG		// Logs infrared receive events.
 
 //#define NETWORKHANDLER_DEBUG				// Logs all network events.
 //#define NETWORKHANDLER_SEND_DEBUG			// Logs all network send events.
@@ -24,7 +24,7 @@
 //#define WIFIHANDLER_READ_DEBUG			// Logs all low-level wifi read events.
 //#define WIFIHANDLER_HTTP_DEBUG			// Logs outbound HTTP requests.
 
-#define INFRAREDNETWORKBRIDGE_DEBUG		// Logs events being transferred from the infrared handler to the network.
+//#define INFRAREDNETWORKBRIDGE_DEBUG		// Logs events being transferred from the infrared handler to the network.
 //#define NETWORKINFRAREDBRIDGE_DEBUG		// Logs events being transferred from the network to the infrared handler.
 
 #endif /* DEBUG_H_ */

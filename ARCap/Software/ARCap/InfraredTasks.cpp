@@ -17,10 +17,10 @@ void infrared_handler_update_task(void* pdata) {
 	while (status == OK) {
 		// Update the infrared handler.
 		status = infrared->update();
-//		// [Test] Wait for 1 seconds.
-//		OSTimeDlyHMSM(0, 0, 1, 0);
-		// Wait.
-		OSTimeDlyHMSM(0, 0, 0, INFRARED_HANDLER_UPDATE_TIME_MILLIS);
+		// [Test] Wait for 1 second.
+		OSTimeDlyHMSM(0, 0, 1, 0);
+//		// Wait.
+//		OSTimeDlyHMSM(0, 0, 0, INFRARED_HANDLER_UPDATE_TIME_MILLIS);
 	}
 }
 

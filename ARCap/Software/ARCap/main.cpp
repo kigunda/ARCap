@@ -22,15 +22,15 @@ NetworkInfraredBridge *networkToInfrared = new NetworkInfraredBridge(infrared);
 int main(void) {
 
 	// Register tasks.
-	//	OSTaskCreateExt(network_handler_update_task,
-	//			0,
-	//			&task1_stk[TASK_STACKSIZE - 1],
-	//			TASK1_PRIORITY,
-	//			TASK1_PRIORITY,
-	//			task1_stk,
-	//			TASK_STACKSIZE,
-	//			0,
-	//			0);
+	OSTaskCreateExt(network_handler_update_task,
+			0,
+			&task1_stk[TASK_STACKSIZE - 1],
+			TASK1_PRIORITY,
+			TASK1_PRIORITY,
+			task1_stk,
+			TASK_STACKSIZE,
+			0,
+			0);
 	OSTaskCreateExt(infrared_handler_update_task,
 			NULL,
 			&task2_stk[TASK_STACKSIZE-1],
@@ -49,15 +49,15 @@ int main(void) {
 			TASK_STACKSIZE,
 			0,
 			0);
-//	OSTaskCreateExt(infrared_handler_send_test_task,
-//			0,
-//			&task4_stk[TASK_STACKSIZE-1],
-//			TASK4_PRIORITY,
-//			TASK4_PRIORITY,
-//			task4_stk,
-//			TASK_STACKSIZE,
-//			0,
-//			0);
+	//	OSTaskCreateExt(infrared_handler_send_test_task,
+	//			0,
+	//			&task4_stk[TASK_STACKSIZE-1],
+	//			TASK4_PRIORITY,
+	//			TASK4_PRIORITY,
+	//			task4_stk,
+	//			TASK_STACKSIZE,
+	//			0,
+	//			0);
 
 	// Initialize the handlers and bridges.
 	if (	(infrared->init() == OK) &&

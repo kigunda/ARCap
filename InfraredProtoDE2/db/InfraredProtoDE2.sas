@@ -1,1 +1,0 @@
-InfraredProtoDE2/FIT
