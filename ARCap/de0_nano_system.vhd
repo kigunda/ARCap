@@ -140,13 +140,17 @@ architecture syn of de0_nano_system is
 				 -- Parallel I/Os
 				 pio_led_export 		 		: out   std_logic_vector(6 downto 0);                     	-- export
              pio_key_left_export  		: in    std_logic								:= 'X';				  	-- export
+				 pio_motor_rst_export		: out	  std_logic;														-- export
              pio_sw_export        		: in    std_logic_vector(3 downto 0)  	:= (others => 'X'); 	-- export
 				 pio_ir_emitter_export 		: out	  std_logic;													  	-- export
 				 
-				 -- UART
+				 -- UART WiFi
 				 uart_wifi_rxd					: in	  std_logic								:= 'X';					-- receive
-				 uart_wifi_txd					: out	  std_logic															-- transmit
+				 uart_wifi_txd					: out	  std_logic;														-- transmit
 				 
+				 -- UART RS-232 Motor
+				 rs232_motor_rxd				: in		std_logic							:= 'X';					-- recieve
+				 rs232_motor_txd				: out	  std_logic															-- transmit
            );
    end component system;
    
@@ -201,12 +205,16 @@ begin
                  pio_led_export 		  		=> LED(6 downto 0),
                  pio_key_left_export  		=> KEY(1),
                  pio_sw_export        		=> SW,
+					  pio_motor_rst_export		=>GPIO_1(26),
 					  pio_ir_emitter_export		=> GPIO_2(1),
 					  
 					  -- UART
 					  uart_wifi_rxd				=> GPIO_1(0), 	-- pin 2
-					  uart_wifi_txd				=> GPIO_1(1)	-- pin 4
+					  uart_wifi_txd				=> GPIO_1(1),	-- pin 4
 					  
+					  --RS232 motor controller
+					  rs232_motor_rxd				=>GPIO_1(24), -- Pin 31
+					  rs232_motor_txd				=> GPIO_1(12) -- Pin 17				  
                );  
          
 end architecture syn;

@@ -20,7 +20,10 @@
 			adc_ctrl_dout         : in    std_logic                     := 'X';             -- dout
 			adc_ctrl_din          : out   std_logic;                                        -- din
 			uart_wifi_RXD         : in    std_logic                     := 'X';             -- RXD
-			uart_wifi_TXD         : out   std_logic                                         -- TXD
+			uart_wifi_TXD         : out   std_logic;                                        -- TXD
+			rs232_motor_RXD       : in    std_logic                     := 'X';             -- RXD
+			rs232_motor_TXD       : out   std_logic;                                        -- TXD
+			pio_motor_rst_export  : out   std_logic_vector(7 downto 0)                      -- export
 		);
 	end component system;
 

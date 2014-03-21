@@ -1,5 +1,5 @@
 Flow report for de0_nano_system
-Mon Mar 17 15:49:09 2014
+Fri Mar 21 13:24:18 2014
 Quartus II 64-Bit Version 12.1 Build 243 01/31/2013 Service Pack 1.33 SJ Full Version
 
 
@@ -38,20 +38,20 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------------+
 ; Flow Summary                                                                           ;
 +------------------------------------+---------------------------------------------------+
-; Flow Status                        ; Successful - Mon Mar 17 15:49:03 2014             ;
+; Flow Status                        ; Successful - Fri Mar 21 13:24:11 2014             ;
 ; Quartus II 64-Bit Version          ; 12.1 Build 243 01/31/2013 SP 1.33 SJ Full Version ;
 ; Revision Name                      ; de0_nano_system                                   ;
 ; Top-level Entity Name              ; de0_nano_system                                   ;
 ; Family                             ; Cyclone IV E                                      ;
 ; Device                             ; EP4CE22F17C6                                      ;
 ; Timing Models                      ; Final                                             ;
-; Total logic elements               ; 4,584 / 22,320 ( 21 % )                           ;
-;     Total combinational functions  ; 3,917 / 22,320 ( 18 % )                           ;
-;     Dedicated logic registers      ; 2,869 / 22,320 ( 13 % )                           ;
-; Total registers                    ; 2938                                              ;
+; Total logic elements               ; 4,933 / 22,320 ( 22 % )                           ;
+;     Total combinational functions  ; 4,209 / 22,320 ( 19 % )                           ;
+;     Dedicated logic registers      ; 3,072 / 22,320 ( 14 % )                           ;
+; Total registers                    ; 3141                                              ;
 ; Total pins                         ; 128 / 154 ( 83 % )                                ;
 ; Total virtual pins                 ; 0                                                 ;
-; Total memory bits                  ; 119,808 / 608,256 ( 20 % )                        ;
+; Total memory bits                  ; 121,856 / 608,256 ( 20 % )                        ;
 ; Embedded Multiplier 9-bit elements ; 4 / 132 ( 3 % )                                   ;
 ; Total PLLs                         ; 1 / 4 ( 25 % )                                    ;
 +------------------------------------+---------------------------------------------------+
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/17/2014 15:48:00 ;
+; Start date & time ; 03/21/2014 13:22:58 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; de0_nano_system     ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ applicable agreement for further details.
 +-------------------------------------+----------------------------------------------------------+---------------+---------------------------------+------------+
 ; Assignment Name                     ; Value                                                    ; Default Value ; Entity Name                     ; Section Id ;
 +-------------------------------------+----------------------------------------------------------+---------------+---------------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 116530612617.139509288002748                             ; --            ; --                              ; --         ;
+; COMPILER_SIGNATURE_ID               ; 116530612622.139542977804724                             ; --            ; --                              ; --         ;
 ; IP_TOOL_ENV                         ; qsys                                                     ; --            ; altera_avalon_sc_fifo           ; --         ;
 ; IP_TOOL_ENV                         ; qsys                                                     ; --            ; altera_merlin_burst_adapter     ; --         ;
 ; IP_TOOL_ENV                         ; qsys                                                     ; --            ; altera_merlin_master_agent      ; --         ;
@@ -98,6 +98,7 @@ applicable agreement for further details.
 ; IP_TOOL_ENV                         ; qsys                                                     ; --            ; system_pio_ir_emitter           ; --         ;
 ; IP_TOOL_ENV                         ; qsys                                                     ; --            ; system_pio_key_left             ; --         ;
 ; IP_TOOL_ENV                         ; qsys                                                     ; --            ; system_pio_led                  ; --         ;
+; IP_TOOL_ENV                         ; qsys                                                     ; --            ; system_pio_motor_rst            ; --         ;
 ; IP_TOOL_ENV                         ; qsys                                                     ; --            ; system_pio_sw                   ; --         ;
 ; IP_TOOL_ENV                         ; qsys                                                     ; --            ; system_rsp_xbar_demux           ; --         ;
 ; IP_TOOL_ENV                         ; qsys                                                     ; --            ; system_rsp_xbar_demux_002       ; --         ;
@@ -131,6 +132,7 @@ applicable agreement for further details.
 ; IP_TOOL_NAME                        ; altera_avalon_pio                                        ; --            ; system_pio_ir_emitter           ; --         ;
 ; IP_TOOL_NAME                        ; altera_avalon_pio                                        ; --            ; system_pio_key_left             ; --         ;
 ; IP_TOOL_NAME                        ; altera_avalon_pio                                        ; --            ; system_pio_led                  ; --         ;
+; IP_TOOL_NAME                        ; altera_avalon_pio                                        ; --            ; system_pio_motor_rst            ; --         ;
 ; IP_TOOL_NAME                        ; altera_avalon_pio                                        ; --            ; system_pio_sw                   ; --         ;
 ; IP_TOOL_NAME                        ; altera_merlin_demultiplexer                              ; --            ; system_rsp_xbar_demux           ; --         ;
 ; IP_TOOL_NAME                        ; altera_merlin_demultiplexer                              ; --            ; system_rsp_xbar_demux_002       ; --         ;
@@ -164,6 +166,7 @@ applicable agreement for further details.
 ; IP_TOOL_VERSION                     ; 12.1                                                     ; --            ; system_pio_ir_emitter           ; --         ;
 ; IP_TOOL_VERSION                     ; 12.1                                                     ; --            ; system_pio_key_left             ; --         ;
 ; IP_TOOL_VERSION                     ; 12.1                                                     ; --            ; system_pio_led                  ; --         ;
+; IP_TOOL_VERSION                     ; 12.1                                                     ; --            ; system_pio_motor_rst            ; --         ;
 ; IP_TOOL_VERSION                     ; 12.1                                                     ; --            ; system_pio_sw                   ; --         ;
 ; IP_TOOL_VERSION                     ; 12.1                                                     ; --            ; system_rsp_xbar_demux           ; --         ;
 ; IP_TOOL_VERSION                     ; 12.1                                                     ; --            ; system_rsp_xbar_demux_002       ; --         ;
@@ -185,7 +188,7 @@ applicable agreement for further details.
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                      ; --            ; --                              ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                    ; --            ; --                              ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                             ; --            ; --                              ; --         ;
-; SLD_INFO                            ; QSYS_NAME system HAS_SOPCINFO 1 GENERATION_ID 1394744647 ; --            ; system                          ; --         ;
+; SLD_INFO                            ; QSYS_NAME system HAS_SOPCINFO 1 GENERATION_ID 1395429642 ; --            ; system                          ; --         ;
 ; SOPCINFO_FILE                       ; system/synthesis/../../system.sopcinfo                   ; --            ; --                              ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                       ; --            ; --                              ; --         ;
 +-------------------------------------+----------------------------------------------------------+---------------+---------------------------------+------------+
@@ -196,11 +199,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:21     ; 1.0                     ; 632 MB              ; 00:00:20                           ;
-; Fitter                    ; 00:00:35     ; 2.2                     ; 1051 MB             ; 00:00:45                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 451 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 574 MB              ; 00:00:06                           ;
-; Total                     ; 00:01:04     ; --                      ; --                  ; 00:01:13                           ;
+; Analysis & Synthesis      ; 00:00:28     ; 1.0                     ; 636 MB              ; 00:00:25                           ;
+; Fitter                    ; 00:00:37     ; 2.3                     ; 1136 MB             ; 00:00:47                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 451 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 2.6                     ; 574 MB              ; 00:00:07                           ;
+; Total                     ; 00:01:13     ; --                      ; --                  ; 00:01:21                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -209,10 +212,10 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; e3-11-19         ; Windows 7 ; 6.1        ; x86_64         ;
-; Fitter                    ; e3-11-19         ; Windows 7 ; 6.1        ; x86_64         ;
-; Assembler                 ; e3-11-19         ; Windows 7 ; 6.1        ; x86_64         ;
-; TimeQuest Timing Analyzer ; e3-11-19         ; Windows 7 ; 6.1        ; x86_64         ;
+; Analysis & Synthesis      ; e3-11-10         ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter                    ; e3-11-10         ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler                 ; e3-11-10         ; Windows 7 ; 6.1        ; x86_64         ;
+; TimeQuest Timing Analyzer ; e3-11-10         ; Windows 7 ; 6.1        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
