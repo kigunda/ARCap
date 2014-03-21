@@ -1,0 +1,28 @@
+Network
+
+Player [> Server] > Rover
+	::infrared/shoot?player=$player:
+		Sends out an infrared shoot event.
+		$player the player whose rover the shoot will be forwarded to
+	::motor/move?player=$player&motor=$motor&direction=$direction&speed=$speed:
+		Controls the motors.
+		$player the player whose rover the move will be forwarded to
+		$motor one of {left, right}
+		$direction one of {forward, backward}
+		$speed between 0 and 0x7f
+
+Rover > Server [> Players]
+	::infrared/hit:
+		Notifies server and players about an infrared hit event.
+		Determines source rover using client IP address ($_SERVER['REMOTE_ADDR']).
+		
+Player > Server
+	::index:
+		Redirects to ::/play:
+	::play[?game=$game[&player=$player]]:
+		Joins an ARCap game.
+		$game the id of the game to join
+			If not set, this page displays a list of all the games.
+		$player the id of the client as a player
+			If not set, this page generates a new player id and adds you to the game.
+	
