@@ -74,22 +74,26 @@ void mc_task(void *pdata)
 			printf( ", error]\n");
 		}
 		while(1){
-			motor->forward();
+			motor->motorCommand("left", "forward", "120");
+			motor->motorCommand("right","forward", "120");
 			OSTimeDlyHMSM(0, 0, 5, 0);
-			motor->stop();
-			OSTimeDlyHMSM(0, 0, 3,0);
-//			motor->left();
-//			OSTimeDlyHMSM(0, 0, 5, 0);
-//			motor->stop();
-//			OSTimeDlyHMSM(0, 0, 3,0);
-			motor->backward();
-			OSTimeDlyHMSM(0, 0, 5,0);
-			motor->stop();
-			OSTimeDlyHMSM(0, 0, 3,0);
-//			motor->right();
-//			OSTimeDlyHMSM(0, 0,5,0);
-//			motor->stop();
-//			OSTimeDlyHMSM(0, 0, 3,0);
+			motor->motorCommand("left", "forward", "0");
+			motor->motorCommand("right","forward", "0");
+			OSTimeDlyHMSM(0, 0, 5, 0);
+			motor->motorCommand("left", "backward", "120");
+			motor->motorCommand("right","backward", "120");
+			OSTimeDlyHMSM(0, 0, 5, 0);
+			motor->motorCommand("left", "forward", "0");
+			motor->motorCommand("right","forward", "0");
+			OSTimeDlyHMSM(0, 0, 5, 0);
+			motor->motorCommand("right","forward", "120");
+			OSTimeDlyHMSM(0, 0, 5, 0);
+			motor->motorCommand("right","forward", "0");
+			OSTimeDlyHMSM(0, 0, 5, 0);
+			motor->motorCommand("left","forward", "120");
+			OSTimeDlyHMSM(0, 0, 5, 0);
+			motor->motorCommand("left","forward", "0");
+			OSTimeDlyHMSM(0, 0, 5, 0);
 
 		}
 }

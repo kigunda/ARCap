@@ -1,0 +1,66 @@
+/*
+ * MotorHandler.h
+ *
+ *  Created on: 2014-03-03
+ *      Author: Amshu Gongal
+ */
+
+#ifndef MOTORHANDLER_H_
+#define MOTORHANDLER_H_
+
+#include "altera_up_avalon_rs232.h"
+#include "altera_up_avalon_rs232_regs.h"
+#include <stdio.h>
+#include "Status.h"
+
+// Motor messages are LSB first
+#define MOTOR_START_BYTE 		0x80
+#define MOTOR_DEVICE_TYPE 		0x00
+#define MOTOR_LEFT_BACKWARD 	0x04		// motor 1 backward
+#define MOTOR_RIGHT_BACKWARD 	0x06		// motor 2 backward
+#define MOTOR_LEFT_FORWARD 		0x05		// motor 1 forward
+#define MOTOR_RIGHT_FORWARD 	0x07		// motor 2 forward
+#define MOTOR_CONST_SPEED 		0x5F
+#define MOTOR_STOP_SPEED 		0x00
+#define MOTOR_CHANGE_CONFIGURATION 0X02
+
+class MotorHandler {
+public:
+	MotorHandler();
+	virtual ~MotorHandler();
+
+	/*
+	 * Initializes this handler.
+	 * @return OK if the handler was initialized without error
+	 */
+	Status init();
+	void move(char , char, char *);
+	void forward();
+	void backward();
+	void right();
+	void left();
+	void stop();
+	void configure();
+	void test();
+	void reset();
+
+private:
+	/* The device used to send serial commands to the motor controller. */
+	alt_up_rs232_dev *motor_dev;
+
+	/*
+	 * Moves in the given direction at constant speed.
+	 * @param direction - the motor and direction to move in, e.g. MOTOR_MOTOR1_FORWARD
+	 * @param description - the string description of the movement, for debugging
+	 */
+	void move(char direction, char *description);
+
+	/*
+	 * Sends a byte-length message to the motor controller.
+	 * @param message - the message to send
+	 * @param description - the string description of the message, for debugging
+	 */
+	void send(char message, char *description);
+};
+
+#endif /* MOTORHANDLER_H_ */
