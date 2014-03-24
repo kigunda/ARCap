@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;UartTest&apos; to &apos;WifiTest&apos;" description="Rename resource &apos;UartTest&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/UartTest" name="WifiTest" stamp="1395341453220" updateReferences="true"/>&#x0A;<refactoring comment="Delete 2 resources" deleteContents="false" description="Delete 2 resources" element1="/WifiTest" element2="/WifiTest_bsp" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="2" stamp="1395341508429"/>
-</session>

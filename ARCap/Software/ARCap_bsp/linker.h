@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'system'
  * SOPC Builder design path: C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system.sopcinfo
  *
- * Generated: Mon Mar 03 12:11:15 MST 2014
+ * Generated: Sun Mar 23 14:53:14 MDT 2014
  */
 
 /*

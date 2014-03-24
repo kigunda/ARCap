@@ -9,7 +9,7 @@ obj/default/Bridge.o: Bridge.cpp Bridge.h \
   ../ARCap_bsp//HAL/inc/sys/alt_llist.h \
   ../ARCap_bsp//HAL/inc/priv/alt_alarm.h ../ARCap_bsp/system.h \
   ../ARCap_bsp//UCOSII/inc/ucos_ii.h ../ARCap_bsp//UCOSII/inc/os_cfg.h \
-  ../ARCap_bsp//HAL/inc/os_cpu.h Status.h
+  ../ARCap_bsp//HAL/inc/os_cpu.h Status.h Debug.h
 
 Bridge.h:
 
@@ -54,3 +54,5 @@ Bridge.h:
 ../ARCap_bsp//HAL/inc/os_cpu.h:
 
 Status.h:
+
+Debug.h:

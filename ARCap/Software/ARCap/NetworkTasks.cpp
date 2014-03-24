@@ -8,7 +8,6 @@
 #include "NetworkTasks.h"
 
 extern NetworkHandler *network;
-extern NetworkInfraredBridge *networkToInfrared;
 
 /* Polls the network handler for network updates. */
 void network_handler_update_task(void *pdata) {
@@ -21,14 +20,6 @@ void network_handler_update_task(void *pdata) {
 		OSTimeDlyHMSM(0, 0, 10, 0);
 //		// Wait.
 //		OSTimeDlyHMSM(0, 0, 0, NETWORK_HANDLER_UPDATE_TIME_MILLIS);
-	}
-}
-
-/* Waits for infrared updates to push to the network. */
-void network_to_infrared_update_task(void *pdata) {
-	printf("NetworkInfraredBridge [task: update, status: start]\n");
-	while (true) {
-		networkToInfrared->update();
 	}
 }
 

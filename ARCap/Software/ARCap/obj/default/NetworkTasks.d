@@ -15,13 +15,7 @@ obj/default/NetworkTasks.o: NetworkTasks.cpp NetworkTasks.h \
   ../ARCap_bsp//HAL/inc/alt_types.h ../ARCap_bsp//HAL/inc/sys/alt_dev.h \
   ../ARCap_bsp//HAL/inc/sys/alt_llist.h \
   ../ARCap_bsp//HAL/inc/priv/alt_dev_llist.h \
-  ../ARCap_bsp//HAL/inc/sys/alt_llist.h NetworkInfraredBridge.h Bridge.h \
-  InfraredHandler.h ../ARCap_bsp//drivers/inc/altera_avalon_pio_regs.h \
-  ../ARCap_bsp//HAL/inc/io.h ../ARCap_bsp//HAL/inc/alt_types.h \
-  ../ARCap_bsp//drivers/inc/altera_up_avalon_de0_nano_adc.h \
-  ../ARCap_bsp//HAL/inc/sys/alt_alarm.h \
-  ../ARCap_bsp//HAL/inc/sys/alt_warning.h \
-  ../ARCap_bsp//drivers/inc/altera_up_avalon_de0_nano_adc_regs.h
+  ../ARCap_bsp//HAL/inc/sys/alt_llist.h
 
 NetworkTasks.h:
 
@@ -88,23 +82,3 @@ WifiHandler.h:
 ../ARCap_bsp//HAL/inc/priv/alt_dev_llist.h:
 
 ../ARCap_bsp//HAL/inc/sys/alt_llist.h:
-
-NetworkInfraredBridge.h:
-
-Bridge.h:
-
-InfraredHandler.h:
-
-../ARCap_bsp//drivers/inc/altera_avalon_pio_regs.h:
-
-../ARCap_bsp//HAL/inc/io.h:
-
-../ARCap_bsp//HAL/inc/alt_types.h:
-
-../ARCap_bsp//drivers/inc/altera_up_avalon_de0_nano_adc.h:
-
-../ARCap_bsp//HAL/inc/sys/alt_alarm.h:
-
-../ARCap_bsp//HAL/inc/sys/alt_warning.h:
-
-../ARCap_bsp//drivers/inc/altera_up_avalon_de0_nano_adc_regs.h:

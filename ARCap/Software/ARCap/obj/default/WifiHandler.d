@@ -1,5 +1,7 @@
-obj/default/WifiHandler.o: WifiHandler.cpp WifiHandler.h \
-  ../ARCap_bsp//drivers/inc/altera_up_avalon_rs232.h \
+obj/default/WifiHandler.o: WifiHandler.cpp \
+  ../ARCap_bsp//drivers/inc/altera_avalon_pio_regs.h \
+  ../ARCap_bsp//HAL/inc/io.h ../ARCap_bsp//HAL/inc/alt_types.h \
+  WifiHandler.h ../ARCap_bsp//drivers/inc/altera_up_avalon_rs232.h \
   ../ARCap_bsp//HAL/inc/alt_types.h ../ARCap_bsp//HAL/inc/sys/alt_dev.h \
   ../ARCap_bsp/system.h ../ARCap_bsp/linker.h \
   ../ARCap_bsp//HAL/inc/sys/alt_llist.h \
@@ -14,6 +16,12 @@ obj/default/WifiHandler.o: WifiHandler.cpp WifiHandler.h \
   ../ARCap_bsp//HAL/inc/priv/alt_alarm.h ../ARCap_bsp/system.h \
   ../ARCap_bsp//UCOSII/inc/ucos_ii.h ../ARCap_bsp//UCOSII/inc/os_cfg.h \
   ../ARCap_bsp//HAL/inc/os_cpu.h Debug.h Status.h
+
+../ARCap_bsp//drivers/inc/altera_avalon_pio_regs.h:
+
+../ARCap_bsp//HAL/inc/io.h:
+
+../ARCap_bsp//HAL/inc/alt_types.h:
 
 WifiHandler.h:
 

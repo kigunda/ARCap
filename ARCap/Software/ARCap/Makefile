@@ -143,16 +143,17 @@ ELF := ARCap.elf
 
 # Paths to C, C++, and assembly source files.
 C_SRCS :=
+CXX_SRCS += Bridge.cpp
 CXX_SRCS += DataSource.cpp
-CXX_SRCS += InfraredHandler.cpp
 CXX_SRCS += InfraredNetworkBridge.cpp
 CXX_SRCS += InfraredTasks.cpp
-CXX_SRCS += main.cpp
 CXX_SRCS += NetworkHandler.cpp
-CXX_SRCS += NetworkInfraredBridge.cpp
 CXX_SRCS += NetworkTasks.cpp
-CXX_SRCS += Bridge.cpp
 CXX_SRCS += WifiHandler.cpp
+CXX_SRCS += main.cpp
+CXX_SRCS += InfraredReceiver.cpp
+CXX_SRCS += InfraredSender.cpp
+CXX_SRCS += Listener.cpp
 ASM_SRCS :=
 
 

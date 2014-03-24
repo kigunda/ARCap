@@ -1,0 +1,21 @@
+/*
+ * InfraredSender.h
+ *
+ *  Created on: 2014-03-23
+ *      Author: kigunda
+ */
+
+#ifndef INFRAREDSENDER_H_
+#define INFRAREDSENDER_H_
+
+class InfraredSender {
+public:
+	InfraredSender();
+
+	/**
+	 * Sends a signal from the infrared emitters.
+	 */
+	Status send();
+};
+
+#endif /* INFRAREDSENDER_H_ */

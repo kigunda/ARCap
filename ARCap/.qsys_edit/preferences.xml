@@ -15,6 +15,6 @@
   </columns>
  </clocktable>
  <library
-   expandedCategories="Project,Library,Library/Peripherals/Microcontroller Peripherals,Library/Peripherals" />
+   expandedCategories="Library/Peripherals,Library/Peripherals/Microcontroller Peripherals,Library,Project" />
  <window width="1163" height="860" x="277" y="0" />
 </preferences>

@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="WorkbenchPreferenceDialogSettings">
-		<item value="8" key="DIALOG_Y_ORIGIN"/>
-		<item value="324" key="DIALOG_X_ORIGIN"/>
-	</section>
-	<section name="NewWizardAction">
-		<item value="org.eclipse.cdt.ui.wizards.NewClassCreationWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
-		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="org.eclipse.cdt.ui.newCWizards"/>
-		</list>
+		<item value="68" key="DIALOG_Y_ORIGIN"/>
+		<item value="411" key="DIALOG_X_ORIGIN"/>
 	</section>
 </section>

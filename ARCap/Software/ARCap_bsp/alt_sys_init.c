@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'system'
  * SOPC Builder design path: C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system.sopcinfo
  *
- * Generated: Thu Mar 13 15:11:59 MDT 2014
+ * Generated: Sun Mar 23 14:53:14 MDT 2014
  */
 
 /*
@@ -74,6 +74,7 @@ ALTERA_AVALON_JTAG_UART_INSTANCE ( JTAG_UART_0, jtag_uart_0);
 ALTERA_AVALON_SYSID_QSYS_INSTANCE ( SYSID, sysid);
 ALTERA_AVALON_TIMER_INSTANCE ( SYS_CLK_TIMER, sys_clk_timer);
 ALTERA_UP_AVALON_DE0_NANO_ADC_INSTANCE ( ADC, adc);
+ALTERA_UP_AVALON_RS232_INSTANCE ( UART_MOTOR, uart_motor);
 ALTERA_UP_AVALON_RS232_INSTANCE ( UART_WIFI, uart_wifi);
 
 /*
@@ -101,5 +102,6 @@ void alt_sys_init( void )
     ALTERA_AVALON_JTAG_UART_INIT ( JTAG_UART_0, jtag_uart_0);
     ALTERA_AVALON_SYSID_QSYS_INIT ( SYSID, sysid);
     ALTERA_UP_AVALON_DE0_NANO_ADC_INIT ( ADC, adc);
+    ALTERA_UP_AVALON_RS232_INIT ( UART_MOTOR, uart_motor);
     ALTERA_UP_AVALON_RS232_INIT ( UART_WIFI, uart_wifi);
 }

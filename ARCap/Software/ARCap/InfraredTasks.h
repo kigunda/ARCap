@@ -8,14 +8,7 @@
 #ifndef INFRAREDTASKS_H_
 #define INFRAREDTASKS_H_
 
-#include "InfraredHandler.h"
 #include "InfraredNetworkBridge.h"
-
-/* Polls the infrared handler for infrared updates. */
-void infrared_handler_update_task(void* pdata);
-
-/* @test Periodically sends an infrared signal. */
-void infrared_handler_send_test_task(void *pdata);
 
 /* Waits for infrared updates to push to the network. */
 void infrared_to_network_update_task(void* pdata);

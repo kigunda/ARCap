@@ -10,28 +10,32 @@ using namespace std;
 
 #include "includes.h"
 
+#include "TaskProperties.h"
 #include "Tasks.h"
 
-/* Handlers and bridges */
-InfraredHandler *infrared = new InfraredHandler();
+#include "InfraredReceiver.h"
+#include "InfraredSender.h"
+
+InfraredReceiver *infrared;
+InfraredSender *infraredSender;
+
 NetworkHandler *network = new NetworkHandler();
 InfraredNetworkBridge *infraredToNetwork = new InfraredNetworkBridge(network);
-NetworkInfraredBridge *networkToInfrared = new NetworkInfraredBridge(infrared);
 
 /* The main function registers the infrared tasks and starts multi-tasking */
 int main(void) {
 
 	// Register tasks.
-	OSTaskCreateExt(network_handler_update_task,
-			0,
-			&task1_stk[TASK_STACKSIZE - 1],
-			TASK1_PRIORITY,
-			TASK1_PRIORITY,
-			task1_stk,
-			TASK_STACKSIZE,
-			0,
-			0);
-	OSTaskCreateExt(infrared_handler_update_task,
+	//	OSTaskCreateExt(network_handler_update_task,
+	//			0,
+	//			&task1_stk[TASK_STACKSIZE - 1],
+	//			TASK1_PRIORITY,
+	//			TASK1_PRIORITY,
+	//			task1_stk,
+	//			TASK_STACKSIZE,
+	//			0,
+	//			0);
+	OSTaskCreateExt(infrared_receiver_update_task,
 			NULL,
 			&task2_stk[TASK_STACKSIZE-1],
 			TASK2_PRIORITY,
@@ -49,30 +53,36 @@ int main(void) {
 			TASK_STACKSIZE,
 			0,
 			0);
-	//	OSTaskCreateExt(infrared_handler_send_test_task,
-	//			0,
-	//			&task4_stk[TASK_STACKSIZE-1],
-	//			TASK4_PRIORITY,
-	//			TASK4_PRIORITY,
-	//			task4_stk,
-	//			TASK_STACKSIZE,
-	//			0,
-	//			0);
+	OSTaskCreateExt(infrared_sender_test_task,
+			0,
+			&task4_stk[TASK_STACKSIZE-1],
+			TASK4_PRIORITY,
+			TASK4_PRIORITY,
+			task4_stk,
+			TASK_STACKSIZE,
+			0,
+			0);
 
-	// Initialize the handlers and bridges.
-	if (	(infrared->init() == OK) &&
-			(network->init() == OK) &&
-			(infraredToNetwork->init() == OK) &&
-			(networkToInfrared->init() == OK)
-	) {
-		printf("Main [initialize, status: OK]\n");
+	// Initialize handlers.
+	try {
+		infrared = new InfraredReceiver();
+		infraredSender = new InfraredSender();
 
-		// Create the communications chain.
-		infrared->addListener(infraredToNetwork->listener());
-		network->addListener(networkToInfrared->listener());
+		// Initialize the handlers and bridges. (OLD)
+		if (	(network->init() == OK) &&
+				(infraredToNetwork->init() == OK)
+		) {
+			printf("Main [initialize, status: OK]\n");
 
-		// Start.
-		OSStart();
+			// Create the communications chain.
+			infrared->setListener(infraredToNetwork->listener());
+
+			// Start.
+			OSStart();
+		}
+
+	} catch (ARCapException &e) {
+		printf("%s", e.what());
 	}
 
 	return 0;

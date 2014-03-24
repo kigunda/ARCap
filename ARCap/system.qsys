@@ -16,7 +16,7 @@
    {
       datum _sortIndex
       {
-         value = "11";
+         value = "12";
          type = "int";
       }
    }
@@ -32,15 +32,15 @@
    {
       datum baseAddress
       {
-         value = "33558704";
+         value = "33558720";
          type = "String";
       }
    }
-   element rs232_motor.avalon_rs232_slave
+   element uart_motor.avalon_rs232_slave
    {
       datum baseAddress
       {
-         value = "33558688";
+         value = "33558704";
          type = "String";
       }
    }
@@ -48,7 +48,7 @@
    {
       datum baseAddress
       {
-         value = "33558696";
+         value = "33558712";
          type = "String";
       }
    }
@@ -69,7 +69,7 @@
    {
       datum baseAddress
       {
-         value = "33558712";
+         value = "33558728";
          type = "String";
       }
    }
@@ -121,7 +121,7 @@
          type = "int";
       }
    }
-   element pio_motor_rst
+   element pio_motor_reset_n
    {
       datum _sortIndex
       {
@@ -137,55 +137,23 @@
          type = "int";
       }
    }
-   element rs232_motor
+   element pio_wifi_reset_n
    {
       datum _sortIndex
       {
-         value = "13";
+         value = "11";
          type = "int";
       }
    }
-   element pio_led.s1
+   element pio_key_left.s1
    {
       datum baseAddress
       {
-         value = "33558560";
+         value = "33558688";
          type = "String";
       }
    }
    element pio_sw.s1
-   {
-      datum baseAddress
-      {
-         value = "33558656";
-         type = "String";
-      }
-   }
-   element pio_ir_emitter.s1
-   {
-      datum baseAddress
-      {
-         value = "33558640";
-         type = "String";
-      }
-   }
-   element pio_motor_rst.s1
-   {
-      datum baseAddress
-      {
-         value = "33558624";
-         type = "String";
-      }
-   }
-   element sys_clk_timer.s1
-   {
-      datum baseAddress
-      {
-         value = "33558592";
-         type = "String";
-      }
-   }
-   element pio_key_left.s1
    {
       datum baseAddress
       {
@@ -198,6 +166,46 @@
       datum baseAddress
       {
          value = "16777216";
+         type = "String";
+      }
+   }
+   element pio_led.s1
+   {
+      datum baseAddress
+      {
+         value = "33558560";
+         type = "String";
+      }
+   }
+   element sys_clk_timer.s1
+   {
+      datum baseAddress
+      {
+         value = "33558592";
+         type = "String";
+      }
+   }
+   element pio_motor_reset_n.s1
+   {
+      datum baseAddress
+      {
+         value = "33558640";
+         type = "String";
+      }
+   }
+   element pio_wifi_reset_n.s1
+   {
+      datum baseAddress
+      {
+         value = "33558624";
+         type = "String";
+      }
+   }
+   element pio_ir_emitter.s1
+   {
+      datum baseAddress
+      {
+         value = "33558656";
          type = "String";
       }
    }
@@ -230,11 +238,19 @@
          type = "int";
       }
    }
+   element uart_motor
+   {
+      datum _sortIndex
+      {
+         value = "14";
+         type = "int";
+      }
+   }
    element uart_wifi
    {
       datum _sortIndex
       {
-         value = "12";
+         value = "13";
          type = "int";
       }
    }
@@ -253,7 +269,7 @@
  <parameter name="projectName" value="de0_nano_system.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1395429372992" />
+ <parameter name="timeStamp" value="1395606170341" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_sys.clk_in" type="clock" dir="end" />
@@ -290,13 +306,18 @@
    type="conduit"
    dir="end" />
  <interface
-   name="rs232_motor"
-   internal="rs232_motor.external_interface"
+   name="uart_motor"
+   internal="uart_motor.external_interface"
    type="conduit"
    dir="end" />
  <interface
-   name="pio_motor_rst"
-   internal="pio_motor_rst.external_connection"
+   name="pio_motor_reset_n"
+   internal="pio_motor_reset_n.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="pio_wifi_reset_n"
+   internal="pio_wifi_reset_n.external_connection"
    type="conduit"
    dir="end" />
  <module kind="clock_source" version="12.1" enabled="1" name="clk_sys">
@@ -401,7 +422,7 @@
   <parameter name="tightlyCoupledInstructionMaster2AddrWidth" value="1" />
   <parameter name="tightlyCoupledInstructionMaster3AddrWidth" value="1" />
   <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='sdram.s1' start='0x1000000' end='0x2000000' /><slave name='cpu.jtag_debug_module' start='0x2000800' end='0x2001000' /></address-map>]]></parameter>
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='sdram.s1' start='0x1000000' end='0x2000000' /><slave name='cpu.jtag_debug_module' start='0x2000800' end='0x2001000' /><slave name='adc.adc_slave' start='0x2001000' end='0x2001020' /><slave name='pio_led.s1' start='0x2001020' end='0x2001040' /><slave name='sys_clk_timer.s1' start='0x2001040' end='0x2001060' /><slave name='pio_motor_rst.s1' start='0x2001060' end='0x2001070' /><slave name='pio_ir_emitter.s1' start='0x2001070' end='0x2001080' /><slave name='pio_sw.s1' start='0x2001080' end='0x2001090' /><slave name='pio_key_left.s1' start='0x2001090' end='0x20010A0' /><slave name='rs232_motor.avalon_rs232_slave' start='0x20010A0' end='0x20010A8' /><slave name='uart_wifi.avalon_rs232_slave' start='0x20010A8' end='0x20010B0' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x20010B0' end='0x20010B8' /><slave name='sysid.control_slave' start='0x20010B8' end='0x20010C0' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='sdram.s1' start='0x1000000' end='0x2000000' /><slave name='cpu.jtag_debug_module' start='0x2000800' end='0x2001000' /><slave name='adc.adc_slave' start='0x2001000' end='0x2001020' /><slave name='pio_led.s1' start='0x2001020' end='0x2001040' /><slave name='sys_clk_timer.s1' start='0x2001040' end='0x2001060' /><slave name='pio_wifi_reset_n.s1' start='0x2001060' end='0x2001070' /><slave name='pio_motor_reset_n.s1' start='0x2001070' end='0x2001080' /><slave name='pio_ir_emitter.s1' start='0x2001080' end='0x2001090' /><slave name='pio_sw.s1' start='0x2001090' end='0x20010A0' /><slave name='pio_key_left.s1' start='0x20010A0' end='0x20010B0' /><slave name='uart_motor.avalon_rs232_slave' start='0x20010B0' end='0x20010B8' /><slave name='uart_wifi.avalon_rs232_slave' start='0x20010B8' end='0x20010C0' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x20010C0' end='0x20010C8' /><slave name='sysid.control_slave' start='0x20010C8' end='0x20010D0' /></address-map>]]></parameter>
   <parameter name="clockFrequency" value="100000000" />
   <parameter name="deviceFamilyName" value="Cyclone IV E" />
   <parameter name="internalIrqMaskSystemInfo" value="16399" />
@@ -580,7 +601,7 @@
    kind="altera_up_avalon_rs232"
    version="12.0"
    enabled="1"
-   name="rs232_motor">
+   name="uart_motor">
   <parameter name="avalon_bus_type" value="Memory Mapped" />
   <parameter name="clk_rate" value="100000000" />
   <parameter name="baud" value="9600" />
@@ -594,7 +615,7 @@
    kind="altera_avalon_pio"
    version="12.1"
    enabled="1"
-   name="pio_motor_rst">
+   name="pio_motor_reset_n">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
   <parameter name="captureEdge" value="false" />
@@ -607,6 +628,24 @@
   <parameter name="simDoTestBenchWiring" value="false" />
   <parameter name="simDrivenValue" value="0" />
   <parameter name="width" value="8" />
+ </module>
+ <module
+   kind="altera_avalon_pio"
+   version="12.1"
+   enabled="1"
+   name="pio_wifi_reset_n">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="100000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="1" />
  </module>
  <connection
    kind="avalon"
@@ -715,7 +754,7 @@
    start="cpu.data_master"
    end="sysid.control_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x020010b8" />
+  <parameter name="baseAddress" value="0x020010c8" />
  </connection>
  <connection kind="avalon" version="12.1" start="cpu.data_master" end="sdram.s1">
   <parameter name="arbitrationPriority" value="1" />
@@ -739,11 +778,11 @@
    start="cpu.data_master"
    end="pio_key_left.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x02001090" />
+  <parameter name="baseAddress" value="0x020010a0" />
  </connection>
  <connection kind="avalon" version="12.1" start="cpu.data_master" end="pio_sw.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x02001080" />
+  <parameter name="baseAddress" value="0x02001090" />
  </connection>
  <connection
    kind="avalon"
@@ -779,7 +818,7 @@
    start="cpu.data_master"
    end="jtag_uart_0.avalon_jtag_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x020010b0" />
+  <parameter name="baseAddress" value="0x020010c0" />
  </connection>
  <connection
    kind="reset"
@@ -814,7 +853,7 @@
    start="cpu.data_master"
    end="pio_ir_emitter.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x02001070" />
+  <parameter name="baseAddress" value="0x02001080" />
  </connection>
  <connection kind="clock" version="12.1" start="clk_sys.clk" end="adc.clk" />
  <connection kind="reset" version="12.1" start="clk_sys.clk_reset" end="adc.reset" />
@@ -852,7 +891,7 @@
    start="cpu.data_master"
    end="uart_wifi.avalon_rs232_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x020010a8" />
+  <parameter name="baseAddress" value="0x020010b8" />
  </connection>
  <connection
    kind="interrupt"
@@ -865,53 +904,76 @@
    kind="reset"
    version="12.1"
    start="clk_sys.clk_reset"
-   end="rs232_motor.clock_reset_reset" />
+   end="uart_motor.clock_reset_reset" />
  <connection
    kind="reset"
    version="12.1"
    start="cpu.jtag_debug_module_reset"
-   end="rs232_motor.clock_reset_reset" />
+   end="uart_motor.clock_reset_reset" />
  <connection
    kind="clock"
    version="12.1"
    start="clk_sys.clk"
-   end="rs232_motor.clock_reset" />
+   end="uart_motor.clock_reset" />
  <connection
    kind="reset"
    version="12.1"
    start="clk_sys.clk_reset"
-   end="pio_motor_rst.reset" />
+   end="pio_motor_reset_n.reset" />
  <connection
    kind="reset"
    version="12.1"
    start="cpu.jtag_debug_module_reset"
-   end="pio_motor_rst.reset" />
+   end="pio_motor_reset_n.reset" />
  <connection
    kind="clock"
    version="12.1"
    start="clk_sys.clk"
-   end="pio_motor_rst.clk" />
+   end="pio_motor_reset_n.clk" />
  <connection
    kind="avalon"
    version="12.1"
    start="cpu.data_master"
-   end="rs232_motor.avalon_rs232_slave">
+   end="uart_motor.avalon_rs232_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x020010a0" />
+  <parameter name="baseAddress" value="0x020010b0" />
  </connection>
  <connection
    kind="avalon"
    version="12.1"
    start="cpu.data_master"
-   end="pio_motor_rst.s1">
+   end="pio_motor_reset_n.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x02001060" />
+  <parameter name="baseAddress" value="0x02001070" />
  </connection>
  <connection
    kind="interrupt"
    version="12.1"
    start="cpu.d_irq"
-   end="rs232_motor.interrupt">
+   end="uart_motor.interrupt">
   <parameter name="irqNumber" value="3" />
+ </connection>
+ <connection
+   kind="clock"
+   version="12.1"
+   start="clk_sys.clk"
+   end="pio_wifi_reset_n.clk" />
+ <connection
+   kind="reset"
+   version="12.1"
+   start="clk_sys.clk_reset"
+   end="pio_wifi_reset_n.reset" />
+ <connection
+   kind="reset"
+   version="12.1"
+   start="cpu.jtag_debug_module_reset"
+   end="pio_wifi_reset_n.reset" />
+ <connection
+   kind="avalon"
+   version="12.1"
+   start="cpu.data_master"
+   end="pio_wifi_reset_n.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x02001060" />
  </connection>
 </system>

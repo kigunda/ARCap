@@ -10,6 +10,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "altera_avalon_pio_regs.h"
+
 #include "WifiHandler.h"
 
 #define WRITE_FIFO_EMPTY	0x20
@@ -37,13 +39,12 @@ WifiHandler::~WifiHandler() {}
  */
 Status WifiHandler::init() {
 	// Open the wifi UART device.
+	IOWR_ALTERA_AVALON_PIO_DATA(PIO_WIFI_RESET_N_BASE, 1);
 	wifi_dev = alt_up_rs232_open_dev(UART_WIFI_NAME);
 	lock = OSSemCreate(1);
 	if ((wifi_dev == NULL) || (lock == NULL)) {
 		return ERR_WIFI;
 	} else {
-//		// Print the wifi status.
-//		status();
 		return OK;
 	}
 }

@@ -2,7 +2,7 @@
 <?scdStore version="2"?>
 
 <scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
-<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1518880905;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1518880905.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.2036548612;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.2058426516">
+<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.406130471;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.406130471.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.2071654059;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.102239609">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
 <includePath path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap_bsp/UCOSII/inc"/>
 <includePath path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap_bsp/HAL/inc"/>
@@ -231,7 +231,7 @@
 <definedSymbol symbol="__ucosii__=1"/>
 </collector>
 </instance>
-<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1518880905;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1518880905.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.1149531747;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.1219956735">
+<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.406130471;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.406130471.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.1224114673;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.1828948086">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
 <includePath path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap_bsp/UCOSII/inc"/>
 <includePath path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap_bsp/HAL/inc"/>

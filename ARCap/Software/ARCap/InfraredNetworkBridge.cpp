@@ -55,6 +55,6 @@ Status InfraredNetworkBridge::process(unsigned int level) {
 		INFRAREDNETWORKBRIDGE_LOG(printf("InfraredToNetwork [event: infrared receive, level: %u]\n", level));
 		ostringstream parameters;
 		parameters << "level=" << level;
-		network->send(NETWORK_INFRARED_HIT, parameters.str());
+//		network->send(NETWORK_INFRARED_HIT, parameters.str());
 	} return OK;
 }

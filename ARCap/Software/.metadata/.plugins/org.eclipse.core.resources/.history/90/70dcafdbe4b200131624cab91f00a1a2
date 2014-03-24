@@ -1,0 +1,37 @@
+/*
+ * InfraredSender.h
+ *
+ *  Created on: 2014-03-23
+ *      Author: kigunda
+ */
+
+#ifndef INFRAREDSENDER_H_
+#define INFRAREDSENDER_H_
+
+#include "Listener.h"
+
+/**
+ * Listens for send commands on a queue and applies them to the infrared emitters.
+ */
+class InfraredSender: Listener {
+public:
+	/*
+	 * Checks the receive queue for send commands.
+	 * When a send command is received, this sender issues a signal to the emitters.
+	 */
+	void update();
+
+private:
+	/**
+	 * Sends a signal from the infrared emitters.
+	 */
+	void send();
+};
+
+#if defined(INFRAREDHANDLER_DEBUG) || defined(DEBUG)
+#define INFRAREDSENDER_LOG(info) info
+#else
+#define INFRAREDSENDER_LOG(info)
+#endif
+
+#endif /* INFRAREDSENDER_H_ */
