@@ -23,7 +23,7 @@
 			uart_wifi_TXD            : out   std_logic;                                        -- TXD
 			uart_motor_RXD           : in    std_logic                     := 'X';             -- RXD
 			uart_motor_TXD           : out   std_logic;                                        -- TXD
-			pio_motor_reset_n_export : out   std_logic_vector(7 downto 0);                     -- export
+			pio_motor_reset_n_export : out   std_logic;                                        -- export
 			pio_wifi_reset_n_export  : out   std_logic                                         -- export
 		);
 	end component system;

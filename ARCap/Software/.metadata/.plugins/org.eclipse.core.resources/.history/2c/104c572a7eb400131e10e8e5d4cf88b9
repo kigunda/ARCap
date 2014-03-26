@@ -1,0 +1,20 @@
+/*
+ * NetworkSender.cpp
+ *
+ *  Created on: 2014-03-25
+ *      Author: Kenan Kigunda
+ */
+
+#include "NetworkSender.h"
+
+// CONSTRUCTION
+
+NetworkSender::NetworkSender(WifiHandler *wifi) {
+
+}
+
+// COMMANDS
+
+void NetworkSender::parse(char *command) {
+
+}

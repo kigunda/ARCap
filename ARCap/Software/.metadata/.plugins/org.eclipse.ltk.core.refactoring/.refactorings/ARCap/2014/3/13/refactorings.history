@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ARCap/TaskProperties.h&apos; to &apos;Tasks.h&apos;" description="Rename resource &apos;TaskProperties.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="TaskProperties.h" name="Tasks.h" stamp="1395796324752" updateReferences="true"/>
+</session>

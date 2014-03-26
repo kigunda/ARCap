@@ -1,0 +1,43 @@
+/*
+ * NetworkReceiver.cpp
+ *
+ *  Created on: 2014-03-25
+ *      Author: Kenan Kigunda
+ */
+
+#include "NetworkReceiver.h"
+
+// CONSTRUCTION
+
+/**
+ * Creates a new network receiver.
+ * @param wifi - the wifi handler to use to receive messages from the server
+ */
+NetworkReceiver::NetworkReceiver(WifiHandler *wifiHandler) {
+	wifi = wifiHandler;
+}
+
+// LISTENERS
+
+/*
+ * Adds a listener queue to this network receiver.
+ * The queue will receive network events which start with the listener's key.
+ * @param key the first character of network events intended for the listener
+ * @param queue - the queue to which matching network events will be forwarded
+ */
+void NetworkReceiver::addListener(char key, OS_EVENT *queue) {
+	keys.push_back(key);
+	listeners.push_back(queue);
+}
+
+/**
+ * Posts an infrared receive event to the listener.
+ * @param event - the name of the event, which must start with 'i' for infrared
+ * @throw PostException if the event cannot be posted to the listener
+ */
+void NetworkReceiver::post(const char *event) {
+
+}
+
+// UPDATES
+

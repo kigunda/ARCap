@@ -1,0 +1,16 @@
+/*
+ * NetworkSender.cpp
+ *
+ *  Created on: 2014-03-25
+ *      Author: kigunda
+ */
+
+#include "NetworkSender.h"
+
+// CONSTRUCTION
+
+// COMMANDS
+
+void NetworkSender::parse(char *command) {
+
+}

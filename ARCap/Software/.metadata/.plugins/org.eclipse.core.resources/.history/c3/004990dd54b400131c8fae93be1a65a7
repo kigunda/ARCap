@@ -1,0 +1,49 @@
+/*
+ * NetworkTasks.cpp
+ *
+ *  Created on: 2014-03-03
+ *      Author: Kenan Kigunda
+ */
+
+#include "NetworkTasks.h"
+
+extern NetworkHandler *network;
+extern WifiHandler *wifi;
+
+/* Polls the network handler for network updates. */
+void network_handler_update_task(void *pdata) {
+	printf("NetworkHandler [task: update, status: start]\n");
+	Status status = network->connect();
+	while (status == OK) {
+//		// Update the network handler.
+//		status = network->update();
+		// [Test] Wait for 10 seconds.
+		OSTimeDlyHMSM(0, 0, 10, 0);
+//		// Wait.
+//		OSTimeDlyHMSM(0, 0, 0, NETWORK_HANDLER_UPDATE_TIME_MILLIS);
+	}
+}
+
+/* Test the wifi handler. */
+void wifi_handler_test_task(void *pdata) {
+	printf("WifiHandler [task: test, status: start]\n");
+	if (wifi->init() != OK) {
+		printf("WifiHandler [error: failed to initialize]\n");
+		while (true) {
+			OSTimeDlyHMSM(1, 0, 0, 0);
+		}
+	} else {
+		while (true) {
+			wifi->testUart();
+			OSTimeDlyHMSM(0, 0, 2, 0);
+		}
+		wifi->status();
+		while (true) {
+			WifiMessage *response = wifi->httpGet("/arcap/infrared/hit.php");
+			wifiMessagePrint(response);
+			free(response);
+			OSTimeDlyHMSM(0, 0, 10, 0);
+		}
+	}
+}
+

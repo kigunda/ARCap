@@ -2,7 +2,7 @@
  * InfraredReceiver.h
  *
  *  Created on: 2014-03-23
- *      Author: kigunda
+ *      Author: Kenan Kigunda
  */
 
 #ifndef INFRAREDRECEIVER_H_
@@ -10,6 +10,9 @@
 
 #include "altera_up_avalon_de0_nano_adc.h"
 #include "Status.h"
+
+#define INFRARED_RECEIVER_HIT_THRESHOLD			90
+#define INFRARED_RECEIVER_UPDATE_TIME_MILLIS	500
 
 /* Polls the infrared receivers. */
 void infrared_receiver_update_task(void* pdata);
@@ -20,6 +23,9 @@ void infrared_receiver_update_task(void* pdata);
  */
 class InfraredReceiver {
 public:
+	/* Marks an infrared hit event. */
+	static const char *HIT;
+
 	/**
 	 * Creates a new infrared receiver.
 	 * @throw ADCOpenException if the receiver cannot connect to the analog-to-digital converter
@@ -32,7 +38,7 @@ public:
 	 */
 	void setListener(OS_EVENT *queue);
 
-	/*
+	/**
 	 * Updates this receiver. The receiver will read the ADC and post the readings to the listener.
 	 * @throw PostException if the reading cannot be posted to the listener
 	 */
@@ -45,7 +51,7 @@ private:
 	/* The listener queue to which infrared receive events will be posted. */
 	OS_EVENT *listener;
 
-	/*
+	/**
 	 * Reads the level of the given receive channel.
 	 * @param channel - the number of the ADC channel to read
 	 * @return the 12-bit level read from the channel, indicating the amount of infrared light
@@ -53,12 +59,20 @@ private:
 	 * */
 	unsigned int read(int channel);
 
-	/*
-	 * Posts the given infrared level readings to the listener.
+	/**
+	 * Checks the given infrared reading level against the infrared hit threshold.
+	 * If the level exceeds the threshold, a hit event will be posted to the listener.
 	 * @param level - the level read by the infrared receivers
-	 * @throw PostException if the reading cannot be posted to the listener
+	 * @throw PostException if the hit event cannot be posted to the listener
 	 */
-	void post(unsigned int level);
+	void check(unsigned int level);
+
+	/**
+	 * Posts an infrared receive event to the listener.
+	 * @param event - the name of the event, which must start with 'i' for infrared
+	 * @throw PostException if the event cannot be posted to the listener
+	 */
+	void post(const char *event);
 
 };
 

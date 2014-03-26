@@ -1,0 +1,24 @@
+/*
+ * NetworkSender.h
+ *
+ *  Created on: 2014-03-25
+ *      Author: kigunda
+ */
+
+#ifndef NETWORKSENDER_H_
+#define NETWORKSENDER_H_
+
+#include "Listener.h"
+
+class NetworkSender: public Listener {
+public:
+
+private:
+	/**
+	 * Parses the given infrared command.
+	 * If the command is a send command, this sender issues a signal to the emitters.
+	 */
+	void parse(char *command);
+};
+
+#endif /* NETWORKSENDER_H_ */

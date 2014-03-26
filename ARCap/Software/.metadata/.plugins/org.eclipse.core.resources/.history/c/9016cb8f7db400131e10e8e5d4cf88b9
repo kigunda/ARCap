@@ -1,0 +1,18 @@
+/*
+ * NetworkSender.h
+ *
+ *  Created on: 2014-03-25
+ *      Author: kigunda
+ */
+
+#ifndef NETWORKSENDER_H_
+#define NETWORKSENDER_H_
+
+#include "Listener.h"
+#include "Status.h"
+
+class NetworkSender: public Listener {
+public:
+};
+
+#endif /* NETWORKSENDER_H_ */

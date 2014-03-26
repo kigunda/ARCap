@@ -1,0 +1,16 @@
+/*
+ * Message.h
+ *
+ *  Created on: 2014-03-25
+ *      Author: kigunda
+ */
+
+#ifndef MESSAGE_H_
+#define MESSAGE_H_
+
+class Message {
+public:
+	Message();
+};
+
+#endif /* MESSAGE_H_ */

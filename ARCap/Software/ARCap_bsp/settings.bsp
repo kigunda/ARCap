@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>ucosii</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>23-Mar-2014 4:04:17 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1395612257806</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>24-Mar-2014 6:08:00 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1395706080121</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\ARCap_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\kigunda\Documents\Ece492\Repository\ARCap\system.sopcinfo</SopcDesignFile>

@@ -10,76 +10,94 @@ using namespace std;
 
 #include "includes.h"
 
-#include "TaskProperties.h"
 #include "Tasks.h"
 
 #include "InfraredReceiver.h"
 #include "InfraredSender.h"
+#include "MotorHandler.h"
+#include "NetworkSender.h"
+#include "NetworkReceiver.h"
 
-InfraredReceiver *infrared;
-InfraredSender *infraredSender;
-
-NetworkHandler *network = new NetworkHandler();
-InfraredNetworkBridge *infraredToNetwork = new InfraredNetworkBridge(network);
+InfraredReceiver *infraredIn;
+InfraredSender *infraredOut;
+MotorHandler *motor;
+WifiHandler *wifi;
+NetworkSender *networkOut;
+NetworkReceiver *networkIn;
 
 /* The main function registers the infrared tasks and starts multi-tasking */
 int main(void) {
 
-	// Register tasks.
-	//	OSTaskCreateExt(network_handler_update_task,
+	// WIFI TASKS
+	OSTaskCreateExt(wifi_handler_http_test_task,
+			0,
+			&task1_stk[TASK_STACKSIZE - 1],
+			TASK1_PRIORITY,
+			TASK1_PRIORITY,
+			task1_stk,
+			TASK_STACKSIZE,
+			0,
+			0);
+
+	//	// INFRARED TASKS
+	//	OSTaskCreateExt(infrared_receiver_update_task,
+	//			NULL,
+	//			&task2_stk[TASK_STACKSIZE-1],
+	//			TASK2_PRIORITY,
+	//			TASK2_PRIORITY,
+	//			task2_stk,
+	//			TASK_STACKSIZE,
+	//			NULL,
+	//			0);
+	//	OSTaskCreateExt(infrared_sender_test_task,
 	//			0,
-	//			&task1_stk[TASK_STACKSIZE - 1],
-	//			TASK1_PRIORITY,
-	//			TASK1_PRIORITY,
-	//			task1_stk,
+	//			&task3_stk[TASK_STACKSIZE-1],
+	//			TASK3_PRIORITY,
+	//			TASK3_PRIORITY,
+	//			task3_stk,
 	//			TASK_STACKSIZE,
 	//			0,
 	//			0);
-	OSTaskCreateExt(infrared_receiver_update_task,
-			NULL,
-			&task2_stk[TASK_STACKSIZE-1],
-			TASK2_PRIORITY,
-			TASK2_PRIORITY,
-			task2_stk,
-			TASK_STACKSIZE,
-			NULL,
-			0);
-	OSTaskCreateExt(infrared_to_network_update_task,
-			0,
-			&task3_stk[TASK_STACKSIZE-1],
-			TASK3_PRIORITY,
-			TASK3_PRIORITY,
-			task3_stk,
-			TASK_STACKSIZE,
-			0,
-			0);
-	OSTaskCreateExt(infrared_sender_test_task,
-			0,
-			&task4_stk[TASK_STACKSIZE-1],
-			TASK4_PRIORITY,
-			TASK4_PRIORITY,
-			task4_stk,
-			TASK_STACKSIZE,
-			0,
-			0);
+	//
+	//	// MOTOR TASKS
+	//	OSTaskCreateExt(motor_handler_test_task,
+	//			0,
+	//			&task4_stk[TASK_STACKSIZE-1],
+	//			TASK4_PRIORITY,
+	//			TASK4_PRIORITY,
+	//			task4_stk,
+	//			TASK_STACKSIZE,
+	//			0,
+	//			0);
+	//
+	//	// NETWORK TASKS
+	//	OSTaskCreateExt(network_sender_update_task,
+	//			0,
+	//			&task5_stk[TASK_STACKSIZE-1],
+	//			TASK5_PRIORITY,
+	//			TASK5_PRIORITY,
+	//			task5_stk,
+	//			TASK_STACKSIZE,
+	//			0,
+	//			0);
 
-	// Initialize handlers.
 	try {
-		infrared = new InfraredReceiver();
-		infraredSender = new InfraredSender();
+		// Create handlers.
+		infraredIn = new InfraredReceiver();
+		infraredOut = new InfraredSender();
+		motor = new MotorHandler();
+		wifi = new WifiHandler();
+		networkOut = new NetworkSender(wifi);
+		networkIn = new NetworkReceiver(wifi);
+		printf("Main [initialize, status: OK]\n");
 
-		// Initialize the handlers and bridges. (OLD)
-		if (	(network->init() == OK) &&
-				(infraredToNetwork->init() == OK)
-		) {
-			printf("Main [initialize, status: OK]\n");
+		// Create the communications chain.
+		infraredIn->setListener(networkOut->listener());
+		networkIn->addListener(INFRARED_SENDER_COMMAND, infraredOut->listener());
+		networkIn->addListener(MOTOR_COMMAND, motor->listener());
 
-			// Create the communications chain.
-			infrared->setListener(infraredToNetwork->listener());
-
-			// Start.
-			OSStart();
-		}
+		// Start.
+		OSStart();
 
 	} catch (ARCapException &e) {
 		printf("%s", e.what());

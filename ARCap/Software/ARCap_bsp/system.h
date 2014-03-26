@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'system'
  * SOPC Builder design path: C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system.sopcinfo
  *
- * Generated: Sun Mar 23 14:53:14 MDT 2014
+ * Generated: Mon Mar 24 18:08:01 MDT 2014
  */
 
 /*
@@ -306,7 +306,7 @@
 #define PIO_MOTOR_RESET_N_BIT_CLEARING_EDGE_REGISTER 0
 #define PIO_MOTOR_RESET_N_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PIO_MOTOR_RESET_N_CAPTURE 0
-#define PIO_MOTOR_RESET_N_DATA_WIDTH 8
+#define PIO_MOTOR_RESET_N_DATA_WIDTH 1
 #define PIO_MOTOR_RESET_N_DO_TEST_BENCH_WIRING 0
 #define PIO_MOTOR_RESET_N_DRIVEN_SIM_VALUE 0x0
 #define PIO_MOTOR_RESET_N_EDGE_TYPE "NONE"
@@ -454,7 +454,7 @@
 #define SYSID_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define SYSID_NAME "/dev/sysid"
 #define SYSID_SPAN 8
-#define SYSID_TIMESTAMP 1395606384
+#define SYSID_TIMESTAMP 1395705710
 #define SYSID_TYPE "altera_avalon_sysid_qsys"
 
 

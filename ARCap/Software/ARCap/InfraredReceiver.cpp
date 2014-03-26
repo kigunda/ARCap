@@ -10,9 +10,11 @@
 #define INFRARED_RECEIVER_ADC_READ_UNUSED 	4
 #define INFRARED_RECEIVER_ADC_READ_BASE		(1 << 25)
 
+const char *InfraredReceiver::HIT = "ih";
+
 // TASKS
 
-extern InfraredReceiver *infrared;
+extern InfraredReceiver *infraredIn;
 
 /* Polls the infrared receivers. */
 void infrared_receiver_update_task(void* pdata) {
@@ -20,24 +22,23 @@ void infrared_receiver_update_task(void* pdata) {
 	while (true) {
 		try {
 			// Update the infrared receiver.
-			infrared->update();
+			infraredIn->update();
 		} catch (ARCapException &e) {
-			// If exception, print.
-			INFRAREDRECEIVER_LOG(printf("%s", e.what()));
+			// Log exceptions.
+			INFRAREDRECEIVER_LOG(printf("%s\n", e.what()));
 		}
-		// [Test] Wait for 1 second.
-		OSTimeDlyHMSM(0, 0, 1, 0);
+		// Wait.
+		OSTimeDlyHMSM(0, 0, 0, INFRARED_RECEIVER_UPDATE_TIME_MILLIS);
 	}
 }
 
-// ALLOCATION
+// CONSTRUCTION
 
 /**
  * Creates a new infrared receiver.
  * @throw ADCOpenException if the receiver cannot connect to the analog-to-digital converter
  */
 InfraredReceiver::InfraredReceiver() {
-	// Open the ADC.
 	adc_dev = alt_up_de0_nano_adc_open_dev(ADC_NAME);
 	if (adc_dev == NULL) {
 		throw new ADCOpenException();
@@ -54,14 +55,26 @@ void InfraredReceiver::setListener(OS_EVENT *queue) {
 	listener = queue;
 }
 
-/*
- * Posts the given infrared level readings to the listener.
+/**
+ * Checks the given infrared reading level against the infrared hit threshold.
+ * If the level exceeds the threshold, a hit event will be posted to the listener.
  * @param level - the level read by the infrared receivers
- * @throw PostException is the reading cannot be posted to the listener
+ * @throw PostException if the hit event cannot be posted to the listener
  */
-void InfraredReceiver::post(unsigned int level) {
+void InfraredReceiver::check(unsigned int level) {
+	if (level > INFRARED_RECEIVER_HIT_THRESHOLD) {
+		post(HIT);
+	}
+}
+
+/**
+ * Posts an infrared receive event to the listener.
+ * @param event - the name of the event, which must start with 'i' for infrared
+ * @throw PostException if the event cannot be posted to the listener
+ */
+void InfraredReceiver::post(const char *event) {
 	INT8U status;
-	status = OSQPost(listener, (void *)level);
+	status = OSQPost(listener, (void *)event);
 	if (status != OS_NO_ERR) {
 		throw new QueuePostException();
 	}
@@ -69,13 +82,15 @@ void InfraredReceiver::post(unsigned int level) {
 
 // UPDATES
 
-/*
- * Updates this receiver.
- * @return OK if the infrared readings are valid and have been posted to the listener without error
+/**
+ * Updates this receiver. The receiver will read the ADC and post the readings to the listener.
+ * @throw PostException if the reading cannot be posted to the listener
  */
 void InfraredReceiver::update() {
-	post(read(1));
+	check(read(1));
 }
+
+// RECEIVERS
 
 /*
  * Reads the level of the given receive channel.
@@ -86,6 +101,6 @@ void InfraredReceiver::update() {
 unsigned int InfraredReceiver::read(int channel) {
 	alt_up_de0_nano_adc_update(adc_dev);
 	unsigned int level = (alt_up_de0_nano_adc_read(adc_dev, channel) >> INFRARED_RECEIVER_ADC_READ_UNUSED) - INFRARED_RECEIVER_ADC_READ_BASE;
-	INFRAREDRECEIVER_LOG(printf("InfraredHandler [channel: %d, level: %u]\n", channel, level));
+	INFRAREDRECEIVER_LOG(printf("InfraredReceiver [channel: %d, level: %u]\n", channel, level));
 	return level;
 }

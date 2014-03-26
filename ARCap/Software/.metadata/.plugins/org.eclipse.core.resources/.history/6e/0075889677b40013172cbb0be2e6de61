@@ -1,0 +1,16 @@
+/*
+ * NetworkSender.cpp
+ *
+ *  Created on: 2014-03-25
+ *      Author: kigunda
+ */
+
+#include "NetworkSender.h"
+
+NetworkSender::NetworkSender() {
+	// TODO Auto-generated constructor stub
+
+}
+
+void NetworkSender::test();
+

@@ -15,48 +15,51 @@
 
 // TASKS
 
-extern InfraredSender *infraredSender;
+extern InfraredSender *infraredOut;
 
 /* Waits for infrared send commands and executes them as they arrive. */
 void infrared_sender_update_task(void *pdata) {
 	printf("InfraredSender [task: update, status: start]\n");
 	while (true) {
-		infraredSender->update();
+		try {
+			// Update the infrared sender.
+			infraredOut->update();
+		} catch (ARCapException &e) {
+			// Log exceptions.
+			INFRAREDSENDER_LOG(printf("%s\n", e.what()));
+		}
 	}
 }
 
 /* @test Periodically sends an infrared signal. */
 void infrared_sender_test_task(void *pdata) {
-	printf("InfraredSender [task: send test, status: start]\n");
+	printf("InfraredSender [task: test, status: start]\n");
 	while (true) {
-		infraredSender->send();
-		OSTimeDlyHMSM(0, 0, INFRARED_SENDER_OFF_TIME_SECONDS, 0);
+		infraredOut->test();
 	}
 }
 
-// UPDATES
+// COMMANDS
 
-/*
- * Waits on the receive queue for send commands.
- * When a send command is received, this sender issues a signal to the emitters.
+/**
+ * Parses the given infrared command.
+ * @command - the infrared command to parse.
+ * If the command is a send command, this sender issues a signal to the emitters.
+ * The command must be dynamically allocated, and will be freed at the end of this method.
  */
-void InfraredSender::update() {
-	INT8U status;
-	char *command = (char *)OSQPend(receiveQueue, 0, &status);
-	if (status != OS_NO_ERR) {
-		throw new QueuePendException();
-	} else {
-		INFRAREDSENDER_LOG(printf("InfraredSender [command: %s]\n", command));
-		// First character is 'i' for infrared; second character gives subtype:
-		switch (command[0]) {
-		case 's':
-			// Shoot.
-			send();
-			break;
-		}
-		free(command);
+void InfraredSender::parse(char *command) {
+	INFRAREDSENDER_LOG(printf("InfraredSender [command: %s]\n", command));
+	// First character is 'i' for infrared; second character gives subtype:
+	switch (command[1]) {
+	case 's':
+		// Shoot.
+		send();
+		break;
 	}
+	free(command);
 }
+
+// EMITTERS
 
 /**
  * Sends a signal from the infrared emitters.
@@ -68,5 +71,15 @@ void InfraredSender::send() {
 	OSTimeDlyHMSM(0, 0, INFRARED_SENDER_ON_TIME_SECONDS, 0);
 	IOWR_ALTERA_AVALON_PIO_DATA(PIO_IR_EMITTER_BASE, INFRARED_SENDER_OFF);
 	INFRAREDSENDER_LOG(printf("InfraredSender [emitter: off]\n"));
+}
+
+// TESTING
+
+/**
+ * Tests the infrared emitters.
+ */
+void InfraredSender::test() {
+	parse("is");
+	OSTimeDlyHMSM(0, 0, INFRARED_SENDER_OFF_TIME_SECONDS, 0);
 }
 

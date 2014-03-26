@@ -1,0 +1,14 @@
+/*
+ * Message.cpp
+ *
+ *  Created on: 2014-03-25
+ *      Author: kigunda
+ */
+
+#include "Message.h"
+
+Message::Message() {
+	// TODO Auto-generated constructor stub
+
+}
+

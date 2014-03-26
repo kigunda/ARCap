@@ -145,38 +145,6 @@
          type = "int";
       }
    }
-   element pio_key_left.s1
-   {
-      datum baseAddress
-      {
-         value = "33558688";
-         type = "String";
-      }
-   }
-   element pio_sw.s1
-   {
-      datum baseAddress
-      {
-         value = "33558672";
-         type = "String";
-      }
-   }
-   element sdram.s1
-   {
-      datum baseAddress
-      {
-         value = "16777216";
-         type = "String";
-      }
-   }
-   element pio_led.s1
-   {
-      datum baseAddress
-      {
-         value = "33558560";
-         type = "String";
-      }
-   }
    element sys_clk_timer.s1
    {
       datum baseAddress
@@ -185,11 +153,11 @@
          type = "String";
       }
    }
-   element pio_motor_reset_n.s1
+   element pio_key_left.s1
    {
       datum baseAddress
       {
-         value = "33558640";
+         value = "33558688";
          type = "String";
       }
    }
@@ -201,11 +169,43 @@
          type = "String";
       }
    }
+   element pio_sw.s1
+   {
+      datum baseAddress
+      {
+         value = "33558672";
+         type = "String";
+      }
+   }
+   element pio_motor_reset_n.s1
+   {
+      datum baseAddress
+      {
+         value = "33558640";
+         type = "String";
+      }
+   }
+   element pio_led.s1
+   {
+      datum baseAddress
+      {
+         value = "33558560";
+         type = "String";
+      }
+   }
    element pio_ir_emitter.s1
    {
       datum baseAddress
       {
          value = "33558656";
+         type = "String";
+      }
+   }
+   element sdram.s1
+   {
+      datum baseAddress
+      {
+         value = "16777216";
          type = "String";
       }
    }
@@ -269,7 +269,7 @@
  <parameter name="projectName" value="de0_nano_system.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1395606170341" />
+ <parameter name="timeStamp" value="1395705676095" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_sys.clk_in" type="clock" dir="end" />
@@ -627,7 +627,7 @@
   <parameter name="resetValue" value="0" />
   <parameter name="simDoTestBenchWiring" value="false" />
   <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="8" />
+  <parameter name="width" value="1" />
  </module>
  <module
    kind="altera_avalon_pio"

@@ -1,0 +1,26 @@
+/*
+ * NetworkSender.h
+ *
+ *  Created on: 2014-03-25
+ *      Author: kigunda
+ */
+
+#ifndef NETWORKSENDER_H_
+#define NETWORKSENDER_H_
+
+class NetworkSender: public Listener {
+public:
+	NetworkSender();
+
+private:
+	/**
+	 * Parses the given network command.
+	 * The command will be forwarded to the server.
+	 * $m - the motor to move, from {l, r} for "left" and "right"
+	 * $d - the direction to move in, from {f, b} for "forward" and "back"
+	 * $sss - the speed to move at, between 0 and 127
+	 */
+	void parse(char *command);
+};
+
+#endif /* NETWORKSENDER_H_ */

@@ -2,10 +2,12 @@
 <section name="Workbench">
 	<section name="completion_proposal_size">
 	</section>
+	<section name="PDOMSearchPage">
+	</section>
 	<section name="RenameInformationPopup">
 	</section>
 	<section name="NewClassWizardPage">
-		<item value="true" key="stubSelected1"/>
+		<item value="false" key="stubSelected1"/>
 		<item value="false" key="testFileSelected"/>
 		<item value="false" key="namespaceSelected"/>
 		<item value="false" key="stubInline1"/>

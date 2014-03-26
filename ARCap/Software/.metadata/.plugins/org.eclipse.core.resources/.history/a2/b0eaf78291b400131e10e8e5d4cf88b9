@@ -1,0 +1,22 @@
+/*
+ * Message.h
+ *
+ *  Created on: 2014-03-25
+ *      Author: Kenan Kigunda
+ */
+
+#ifndef MESSAGE_H_
+#define MESSAGE_H_
+
+/**
+ * A message to be passed between handlers.
+ */
+class Message {
+public:
+	Message();
+
+private:
+	char
+};
+
+#endif /* MESSAGE_H_ */

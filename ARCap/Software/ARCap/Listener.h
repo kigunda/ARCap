@@ -23,17 +23,32 @@ public:
 	 * Creates a new listener.
 	 */
 	Listener();
+	virtual ~Listener() {}
 
-	/*
+	/**
 	 * Gets the queue used to accept events.
 	 * @return the receive queue
 	 */
 	OS_EVENT *listener();
 
+	/**
+	 * Waits on the receive queue for event.
+	 * When events are received, they are forwarded to parse().
+	 * @throw QueuePendException if this listener cannot read the receive queue
+	 */
+	void update();
+
 protected:
 	/* The buffer and queue used to receive events. */
 	int receiveBuffer[LISTENER_RECEIVE_QUEUE_SIZE];
 	OS_EVENT *receiveQueue;
+
+	/**
+	 * Parses the given event.
+	 * The listener will carry out the action associated with the event.
+	 * @param event specifies the type of event, and its parameters
+	 */
+	virtual void parse(char *event) = 0;
 
 };
 

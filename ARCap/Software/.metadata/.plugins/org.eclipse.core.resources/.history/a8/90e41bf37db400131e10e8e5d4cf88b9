@@ -1,0 +1,26 @@
+/*
+ * NetworkSender.h
+ *
+ *  Created on: 2014-03-25
+ *      Author: kigunda
+ */
+
+#ifndef NETWORKSENDER_H_
+#define NETWORKSENDER_H_
+
+#include "Listener.h"
+
+class NetworkSender: public Listener {
+public:
+
+private:
+	WifiHandler *wifi;
+
+	/**
+	 * Forwards the given network command to the server.
+	 * @param command the command to forward
+	 */
+	void parse(char *command);
+};
+
+#endif /* NETWORKSENDER_H_ */
