@@ -13,7 +13,7 @@
 #define INFRAREDRECEIVER_DEBUG			// Logs infrared receive events.
 //#define INFRAREDSENDER_DEBUG			// Logs infrared send events.
 
-//#define MOTORHANDLER_DEBUG			// Logs motor events.
+#define MOTORHANDLER_DEBUG			// Logs motor events.
 
 #define NETWORKSENDER_DEBUG				// Logs network send events.
 //#define NETWORKRECEIVER_DEBUG			// Logs network receive events.

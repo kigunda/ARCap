@@ -43,5 +43,5 @@ NetworkSender::NetworkSender(WifiHandler *wifiHandler) {
  */
 void NetworkSender::parse(char *command) {
 	NETWORKSENDER_LOG(printf("NetworkSender [command: %s]\n", command));
-//	wifi->tcpSend(command, "\n");
+	wifi->tcpSend(command, "\n");
 }

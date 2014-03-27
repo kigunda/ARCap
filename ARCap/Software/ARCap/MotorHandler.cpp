@@ -163,24 +163,32 @@ void MotorHandler::send(char message, const char *description) {
  */
 void MotorHandler::test() {
 	OSTimeDlyHMSM(0, 0, 3, 0);
+	// Go forward.
 	parse("mlf120");
 	parse("mrf120");
-	OSTimeDlyHMSM(0, 0, 30, 0);
+	OSTimeDlyHMSM(0, 0, 2, 0);
+	// Stop.
 	parse("mlf0");
-	parse("mrlf0");
+	parse("mrf0");
 	OSTimeDlyHMSM(0, 0, 5, 0);
+	// Go backward.
 	parse("mlb120");
 	parse("mrb120");
-	OSTimeDlyHMSM(0, 0, 5, 0);
+	OSTimeDlyHMSM(0, 0, 2, 0);
+	// Stop.
 	parse("mlf0");
 	parse("mrf0");
 	OSTimeDlyHMSM(0, 0, 5, 0);
+	// Turn left.
 	parse("mrf120");
-	OSTimeDlyHMSM(0, 0, 5, 0);
+	OSTimeDlyHMSM(0, 0, 2, 0);
+	// Stop.
 	parse("mrf0");
 	OSTimeDlyHMSM(0, 0, 5, 0);
+	// Turn right.
 	parse("mlf120");
-	OSTimeDlyHMSM(0, 0, 5, 0);
+	OSTimeDlyHMSM(0, 0, 2, 0);
+	// Stop.
 	parse("mlf0");
 	OSTimeDlyHMSM(0, 0, 5, 0);
 }

@@ -17,7 +17,7 @@
  * Indicates how long callers will wait to use a busy connection.
  */
 #define WIFI_HANDLER_LOCK_TIMEOUT_TICKS		OS_TICKS_PER_SEC
-#define	WIFI_READ_AVAILABLE_RETRIES			2000000
+#define	WIFI_READ_AVAILABLE_RETRIES			(1 << 22)
 
 typedef enum {
 	WIFI_TCP,
@@ -71,6 +71,13 @@ public:
 	void status();
 
 	/**
+	 * Connects to the server socket.
+	 * This method sends the rover identification command r(id), where (id) is ROVER_ID,
+	 * and waits until it receives the response "#ok".
+	 */
+	void tcpConnect();
+
+	/**
 	 * Sends the given TCP message to the server.
 	 * @param message the message to send
 	 * @param stop the string marking the end of the message, such as a newline "\n"
@@ -101,7 +108,7 @@ public:
 	 * Tests network communications.
 	 * Sends a message to the PHP socket server, then prints the response.
 	 */
-	void testSockets();
+	void tcpTest();
 
 private:
 	/* The UART device used to write and read data to and from the Xbee wifi module. */

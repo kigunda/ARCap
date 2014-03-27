@@ -1540,3 +1540,512 @@ java.util.zip.ZipException: ZipFile closed
 	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.dispatchEvent(BundleContextImpl.java:847)
 	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+!SESSION 2014-03-26 14:36:49.579 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.ui 4 4 2014-03-26 14:38:10.171
+!MESSAGE Could not create view: 'org.eclipse.ui.internal.introview'.
+
+!ENTRY org.eclipse.ui 4 0 2014-03-26 14:38:12.001
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2014-03-26 14:38:12.001
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-26 14:38:12.001
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-26 14:38:12.001
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2014-03-26 14:38:12.001
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2014-03-26 14:38:12.001
+!MESSAGE Unable to restore perspective: Workspace - Nios II.
+!SUBENTRY 2 org.eclipse.ui 0 0 2014-03-26 14:38:12.001
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2014-03-26 14:38:12.001
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2014-03-26 14:38:12.001
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-26 14:38:12.001
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-26 14:38:12.001
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-26 14:38:12.001
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-26 14:38:12.001
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-26 14:38:12.001
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-26 14:38:12.001
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2014-03-26 14:38:12.001
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 0 2014-03-26 14:38:12.001
+!MESSAGE Could not find view: org.eclipse.ui.internal.introview
+!SUBENTRY 1 unknown 0 0 2014-03-26 14:38:12.001
+!MESSAGE OK
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-26 14:47:02.906
+!MESSAGE Indexed 'ARCap_bsp' (95 sources, 137 headers) in 1.31 sec: 6,105 declarations; 13,819 references; 0 unresolved inclusions; 3 syntax errors; 18 unresolved names (0.09%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-26 14:47:07.116
+!MESSAGE Indexed 'ARCap' (8 sources, 151 headers) in 1.79 sec: 8,601 declarations; 11,261 references; 0 unresolved inclusions; 2 syntax errors; 195 unresolved names (0.97%)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2014-03-26 14:48:22.906
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:555)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2014-03-26 14:48:22.916
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:555)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 14:48:42.986
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 14:48:44.656
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 14:49:10.909
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 14:49:12.569
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 14:50:24.542
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 14:50:26.212
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 14:51:44.865
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 14:51:46.535
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 14:51:56.948
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 14:51:58.618
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 14:56:53.402
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 14:56:55.062
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 14:57:05.135
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 14:57:06.795
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2014-03-26 15:10:00.108
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: Connected system ID hash not found on target at expected base address.
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:589)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2014-03-26 15:10:00.118
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: Connected system ID hash not found on target at expected base address.
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:589)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2014-03-26 15:11:30.706 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 15:12:56.836
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 15:12:58.506
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 15:13:08.649
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 15:13:10.319
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+!SESSION 2014-03-26 15:29:37.245 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 15:29:56.846
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 15:29:58.578
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 15:30:10.304
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 15:30:11.974
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 15:30:55.548
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 15:30:57.249
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:09:58.132
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:09:59.801
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:11:11.622
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:11:13.291
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:11:30.610
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:11:32.279
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2014-03-26 16:14:14.309
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System ID mismatch - connected: "0x4b870f2d", expected: "0x0". 
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:607)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2014-03-26 16:14:14.309
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: System ID mismatch - connected: "0x4b870f2d", expected: "0x0". 
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:607)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:14:53.278
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:14:54.931
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:15:13.342
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:15:15.011
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:16:48.396
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:16:50.065
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:21:01.883
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:21:03.553
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:23:24.250
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:23:26.420
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:23:39.343
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:23:41.013
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:25:32.799
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:25:34.484
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2014-03-26 16:27:49.151
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: Connected system ID hash not found on target at expected base address.
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:589)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2014-03-26 16:27:49.151
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception: Connected system ID hash not found on target at expected base address.
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.assertTrue(SystemConsoleConnectionModel.java:645)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateSystemId(SystemConsoleConnectionModel.java:589)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:511)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:854)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:703)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:937)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1141)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2014-03-26 16:29:24.191 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:29:35.205
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:29:36.874
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:29:47.782
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:29:49.467
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+!SESSION 2014-03-26 16:53:16.229 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:53:27.071
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:53:28.756
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:53:44.795
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:53:46.465
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:58:02.950
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:58:03.418
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 16:58:05.088
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 17:00:17.727
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 17:00:19.396
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 17:05:40.092
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 17:05:40.575
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 17:05:42.244
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 17:06:14.202
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 17:06:15.871
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 17:07:40.927
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 17:07:42.596
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 17:27:08.588
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 17:27:10.258
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 17:27:22.961
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 17:27:24.630
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 17:51:34.486
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 17:51:36.155
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 17:51:59.735
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 17:52:01.420
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 17:52:28.942
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 17:52:30.626
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 17:55:49.124
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 17:55:50.793
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 17:56:10.109
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 17:56:11.778
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 18:11:24.261
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 18:11:25.930
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 18:11:35.839
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 18:11:37.524
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 18:34:34.485
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 18:34:35.484
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 18:34:37.669
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 18:34:46.228
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 18:34:47.882
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY org.eclipse.cdt.ui 4 0 2014-03-26 20:11:12.384
+!MESSAGE Error in CDT UI during reconcile
+!STACK 1
+C Model Exception: C Model Status [Element WifiHandler.cpp does not exist.]
+	at org.eclipse.cdt.internal.core.model.CElement.newNotPresentException(CElement.java:485)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.makeConsistent(TranslationUnit.java:538)
+	at org.eclipse.cdt.internal.core.model.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:62)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:339)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:602)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:630)
+	at org.eclipse.cdt.internal.core.model.WorkingCopy.reconcile(WorkingCopy.java:403)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:88)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:73)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:84)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.reconcile(CCompositeReconcilingStrategy.java:90)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.process(CReconciler.java:396)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+!SUBENTRY 1 org.eclipse.cdt.core 4 969 2014-03-26 20:11:12.384
+!MESSAGE Element WifiHandler.cpp does not exist.
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 20:30:12.086
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 20:30:13.746
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 20:30:42.922
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 20:30:44.562
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 20:31:51.160
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 20:31:52.800
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 20:32:16.655
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 20:32:18.305
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 20:34:05.133
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 20:34:06.773
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]

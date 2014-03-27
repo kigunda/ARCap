@@ -35,8 +35,8 @@ extern WifiHandler *wifi;
  */
 void wifi_handler_http_test_task(void *pdata) {
 	printf("WifiHandler [task: test, status: start]\n");
-//	wifi->setup(WIFI_HTTP);
-	wifi->status();
+	wifi->setup(WIFI_HTTP);
+	//	wifi->status();
 	while (true) {
 		char *response = wifi->httpGet("/arcap/infrared/hit.php");
 		free(response);
@@ -53,10 +53,13 @@ void wifi_handler_http_test_task(void *pdata) {
  */
 void wifi_handler_tcp_test_task(void *pdata) {
 	printf("WifiHandler [task: socket test, status: start]\n");
-	wifi->setup(WIFI_TCP);
-//	wifi->status();
+	// Setup the wifi module for TCP.
+	//	wifi->setup(WIFI_TCP);
+	wifi->status();
+	// Connect to the remote server.
+	wifi->tcpConnect();
 	while (true) {
-		wifi->testSockets();
+		wifi->tcpTest();
 	}
 }
 
@@ -113,9 +116,10 @@ void WifiHandler::status() {
 	configSend("ATEE");  	// Print the security type (0 = None, 1 = WPA, 2 = WPA2, 3 = WEP).
 	configSend("ATAH");  	// Print the network type (0 = Joiner, 1 = Creator, 2 = Infrastructure).
 	configSend("ATIP");  	// Print the IP protocol (0 = UDP, 1 = TCP).
+	configSend("ATTM");		// Read the TCP timeout (hex, multiply by 100 ms).
 	configSend("ATMA");  	// Print the IP addressing mode (0 = DHCP, 1 = Static).
-	configSend("ATDL");  	// Print the destination IP address.
-	configSend("ATDE");  	// Print the destination port number.
+	configSend("ATDL");  	// Print the destination IP address. (hex)
+	configSend("ATDE");  	// Print the destination port number. (hex)
 	waitForReady();
 	configSend("ATMY");  	// Print the IP address.
 	configSend("ATCN");  	// Exit command mode.
@@ -133,6 +137,7 @@ void WifiHandler::setup(WifiSetupType type) {
 	configSend("ATPKplaythegame");  	// Set the security key.
 	configSend("ATAH2");            	// Set the network type to Infrastructure.
 	configSend("ATIP1");            	// Set the IP protocol to TCP.
+	configSend("ATTMff");				// Set the TCP timeout to 2500 ms (0xff * 100 ms).
 	configSend("ATMA0");            	// Set the IP addressing mode to DHCP.
 	configSend("ATDL192.168.0.100");	// Set the destination IP address to ...100 (reserved for server).
 	setDestinationPort(type);			// Sets the destination port based on the setup type.
@@ -167,8 +172,24 @@ void WifiHandler::testUart() {
 // TCP
 
 /**
+ * Connects to the server socket.
+ * This method sends the rover identification command r(id), where (id) is ROVER_ID,
+ * and waits until it receives MESSAGE_OK.
+ */
+void WifiHandler::tcpConnect() {
+	char *response;
+	do {
+		WIFIHANDLER_TCP_LOG(printf("WifiHandler [connect, id: %s]\n", ROVER_ID));
+		tcpSend(ROVER_ID, "\n");
+		response = tcpReceive();
+		WIFIHANDLER_TCP_LOG(printf("WifiHandler [connect, status: %s]\n", response));
+	} while (strncmp(response, MESSAGE_OK, MESSAGE_OK_LENGTH) != 0);
+}
+
+/**
  * Sends the given TCP message to the server.
  * @param message the message to send
+ * @param stop the string marking the end of the message, such as a newline "\n"
  */
 void WifiHandler::tcpSend(char *message, char *stop) {
 	if (lock()) {
@@ -205,8 +226,8 @@ char *WifiHandler::tcpReceive() {
  * Tests network communications.
  * Sends a message to the PHP socket server, then prints the response.
  */
-void WifiHandler::testSockets() {
-	wifi->tcpSend("Hello, world!", "\n");
+void WifiHandler::tcpTest() {
+	wifi->tcpSend("ih", "\n");
 	char *response = wifi->tcpReceive();
 	free(response);
 	OSTimeDlyHMSM(0, 0, 3, 0);

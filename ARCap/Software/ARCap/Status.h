@@ -21,6 +21,13 @@ using namespace std;
 
 #define OK	0
 
+#define ROVER_ID	"r1"
+
+#define MESSAGE_OK			"#ok"
+#define MESSAGE_OK_LENGTH	3
+#define MESSAGE_ERR			"#err"
+#define MESSAGE_ERR_LENGTH	4
+
 class ARCapException : exception {
 public:
 	virtual const char *what() const throw() = 0;

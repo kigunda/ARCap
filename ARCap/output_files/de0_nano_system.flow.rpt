@@ -1,6 +1,6 @@
 Flow report for de0_nano_system
-Mon Mar 24 18:04:16 2014
-Quartus II 64-Bit Version 12.1 Build 243 01/31/2013 Service Pack 1.33 SJ Full Version
+Wed Mar 26 14:36:34 2014
+Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1.33 SJ Full Version
 
 
 ---------------------
@@ -38,15 +38,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------------+
 ; Flow Summary                                                                           ;
 +------------------------------------+---------------------------------------------------+
-; Flow Status                        ; Successful - Mon Mar 24 18:04:09 2014             ;
-; Quartus II 64-Bit Version          ; 12.1 Build 243 01/31/2013 SP 1.33 SJ Full Version ;
+; Flow Status                        ; Successful - Wed Mar 26 14:36:26 2014             ;
+; Quartus II 32-bit Version          ; 12.1 Build 243 01/31/2013 SP 1.33 SJ Full Version ;
 ; Revision Name                      ; de0_nano_system                                   ;
 ; Top-level Entity Name              ; de0_nano_system                                   ;
 ; Family                             ; Cyclone IV E                                      ;
 ; Device                             ; EP4CE22F17C6                                      ;
 ; Timing Models                      ; Final                                             ;
-; Total logic elements               ; 4,979 / 22,320 ( 22 % )                           ;
-;     Total combinational functions  ; 4,225 / 22,320 ( 19 % )                           ;
+; Total logic elements               ; 4,953 / 22,320 ( 22 % )                           ;
+;     Total combinational functions  ; 4,231 / 22,320 ( 19 % )                           ;
 ;     Dedicated logic registers      ; 3,068 / 22,320 ( 14 % )                           ;
 ; Total registers                    ; 3137                                              ;
 ; Total pins                         ; 128 / 154 ( 83 % )                                ;
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/24/2014 18:02:50 ;
+; Start date & time ; 03/26/2014 14:34:56 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; de0_nano_system     ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ applicable agreement for further details.
 +-------------------------------------+----------------------------------------------------------+---------------+---------------------------------+------------+
 ; Assignment Name                     ; Value                                                    ; Default Value ; Entity Name                     ; Section Id ;
 +-------------------------------------+----------------------------------------------------------+---------------+---------------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 116530612622.139570577004076                             ; --            ; --                              ; --         ;
+; COMPILER_SIGNATURE_ID               ; 116530612627.139586609604092                             ; --            ; --                              ; --         ;
 ; IP_TOOL_ENV                         ; qsys                                                     ; --            ; altera_avalon_sc_fifo           ; --         ;
 ; IP_TOOL_ENV                         ; qsys                                                     ; --            ; altera_merlin_burst_adapter     ; --         ;
 ; IP_TOOL_ENV                         ; qsys                                                     ; --            ; altera_merlin_master_agent      ; --         ;
@@ -196,11 +196,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:32     ; 1.0                     ; 651 MB              ; 00:00:25                           ;
-; Fitter                    ; 00:00:39     ; 2.4                     ; 1142 MB             ; 00:00:47                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 452 MB              ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:06     ; 2.5                     ; 572 MB              ; 00:00:06                           ;
-; Total                     ; 00:01:20     ; --                      ; --                  ; 00:01:20                           ;
+; Analysis & Synthesis      ; 00:00:38     ; 1.0                     ; 492 MB              ; 00:00:28                           ;
+; Fitter                    ; 00:00:42     ; 2.2                     ; 644 MB              ; 00:00:52                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 378 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:07     ; 2.8                     ; 454 MB              ; 00:00:07                           ;
+; Total                     ; 00:01:31     ; --                      ; --                  ; 00:01:29                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -209,10 +209,10 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; e3-11-10         ; Windows 7 ; 6.1        ; x86_64         ;
-; Fitter                    ; e3-11-10         ; Windows 7 ; 6.1        ; x86_64         ;
-; Assembler                 ; e3-11-10         ; Windows 7 ; 6.1        ; x86_64         ;
-; TimeQuest Timing Analyzer ; e3-11-10         ; Windows 7 ; 6.1        ; x86_64         ;
+; Analysis & Synthesis      ; e3-11-20         ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter                    ; e3-11-20         ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler                 ; e3-11-20         ; Windows 7 ; 6.1        ; x86_64         ;
+; TimeQuest Timing Analyzer ; e3-11-20         ; Windows 7 ; 6.1        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
