@@ -63,7 +63,7 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus II 32-bit Version 12.1 Build 243 01/31/2013 Service Pack 1.33 SJ Full Version
+Quartus II 64-Bit Version 12.1 Build 243 01/31/2013 Service Pack 1.33 SJ Full Version
 CHIP  "de0_nano_system"  ASSIGNED TO AN: EP4CE22F17C6
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
@@ -100,7 +100,7 @@ LED[2]                       : B13       : output : 2.5 V             :         
 ADC_SCLK                     : B14       : output : 2.5 V             :         : 7         : Y              
 GND                          : B15       : gnd    :                   :         :           :                
 GPIO_2[1]                    : B16       : bidir  : 2.5 V             :         : 6         : Y              
-~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : C1        : input  : 2.5 V             :         : 1         : N              
+EPCS_ASDO                    : C1        : output : 2.5 V             :         : 1         : Y              
 DRAM_WE_N                    : C2        : output : 2.5 V             :         : 1         : Y              
 GPIO_0[1]                    : C3        : bidir  : 2.5 V             :         : 8         : Y              
 VCCIO8                       : C4        : power  :                   : 2.5V    : 8         :                
@@ -117,7 +117,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : C14       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : C15       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C16       :        :                   :         : 6         :                
 LED[4]                       : D1        : output : 2.5 V             :         : 1         : Y              
-~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : D2        : input  : 2.5 V             :         : 1         : N              
+EPCS_NCSO                    : D2        : output : 2.5 V             :         : 1         : Y              
 GPIO_0[0]                    : D3        : bidir  : 2.5 V             :         : 8         : Y              
 VCCD_PLL3                    : D4        : power  :                   : 1.2V    :           :                
 GPIO_0[9]                    : D5        : bidir  : 2.5 V             :         : 8         : Y              
@@ -163,7 +163,7 @@ VCCA2                        : F12       : power  :                   : 2.5V    
 GPIO_1[0]                    : F13       : bidir  : 2.5 V             :         : 6         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : F14       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F15       :        :                   :         : 6         :                
-~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : F16       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F16       :        :                   :         : 6         :                
 DRAM_DQ[1]                   : G1        : bidir  : 2.5 V             :         : 1         : Y              
 DRAM_DQ[0]                   : G2        : bidir  : 2.5 V             :         : 1         : Y              
 VCCIO1                       : G3        : power  :                   : 2.5V    : 1         :                
@@ -180,8 +180,8 @@ GND                          : G13       : gnd    :                   :         
 VCCIO6                       : G14       : power  :                   : 2.5V    : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G15       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G16       :        :                   :         : 6         :                
-~ALTERA_DCLK~                : H1        : output : 2.5 V             :         : 1         : N              
-~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP : H2        : input  : 2.5 V             :         : 1         : N              
+EPCS_DCLK                    : H1        : output : 2.5 V             :         : 1         : Y              
+EPCS_DATA0                   : H2        : input  : 2.5 V             :         : 1         : Y              
 altera_reserved_tck          : H3        : input  : 2.5 V             :         : 1         : N              
 altera_reserved_tdi          : H4        : input  : 2.5 V             :         : 1         : N              
 nCONFIG                      : H5        :        :                   :         : 1         :                

@@ -17,7 +17,10 @@
  * Indicates how long callers will wait to use a busy connection.
  */
 #define WIFI_HANDLER_LOCK_TIMEOUT_TICKS		OS_TICKS_PER_SEC
-#define	WIFI_READ_AVAILABLE_RETRIES			(1 << 22)
+#define	WIFI_READ_AVAILABLE_RETRIES			(1 << 23)
+
+#define WIFI_CONNECT_PREFIX		"+"
+#define WIFI_STOP_MARKER		"\n"
 
 typedef enum {
 	WIFI_TCP,
@@ -25,13 +28,11 @@ typedef enum {
 } WifiSetupType;
 
 /**
- * Test network communications.
- * This test sends a GET request to an HTTP server and prints the response.
- * Before running this, make sure the computer serving /arcap/infrared/hit.php
- * is connecting to the ARCap network.
- * To view output enable WIFIHANDLER_HTTP_DEBUG in Debug.h.
+ * Starts network communications.
+ * This task configures the wifi module and calls WifiHandler::tcpConnect.
+ * All other tasks must wait for the connection to be confirmed before executing.
  */
-void wifi_handler_http_test_task(void *pdata);
+void wifi_handler_tcp_connect_task(void *pdata);
 
 /**
  * Tests network communications.
@@ -41,6 +42,15 @@ void wifi_handler_http_test_task(void *pdata);
  * To view output enable WIFIHANDLER_TCP_DEBUG in Debug.h.
  */
 void wifi_handler_tcp_test_task(void *pdata);
+
+/**
+ * Test network communications.
+ * This test sends a GET request to an HTTP server and prints the response.
+ * Before running this, make sure the computer serving /arcap/infrared/hit.php
+ * is connecting to the ARCap network.
+ * To view output enable WIFIHANDLER_HTTP_DEBUG in Debug.h.
+ */
+void wifi_handler_http_test_task(void *pdata);
 
 /**
  * The wifi handler provides a high-level view of the interfacing to the Xbee wifi module.
@@ -55,7 +65,7 @@ public:
 	WifiHandler();
 
 	/**
-	 * Sets the wifi module up to connect to the network.
+	 * Sets up the wifi module to connect to the network.
 	 * The connection settings are stored in non-volatile memory,
 	 * so this method only needs to be run once per Xbee module.
 	 * After that, use status() to ensure that the settings are correct.
@@ -82,7 +92,7 @@ public:
 	 * @param message the message to send
 	 * @param stop the string marking the end of the message, such as a newline "\n"
 	 */
-	void tcpSend(char *message, char *stop);
+	bool tcpSend(char *message, char *stop);
 
 	/**
 	 * Waits for the next TCP message from the server.
@@ -90,6 +100,13 @@ public:
 	 * @return the message received
 	 */
 	char *tcpReceive();
+
+	/**
+	 * Tests network communications.
+	 * Sends a series of commands to the server, prints the responses,
+	 * and closes the connection.
+	 */
+	void tcpTest();
 
 	/**
 	 * Sends an HTTP GET request for the given URL.
@@ -104,18 +121,16 @@ public:
 	 */
 	void testUart();
 
-	/**
-	 * Tests network communications.
-	 * Sends a message to the PHP socket server, then prints the response.
-	 */
-	void tcpTest();
-
 private:
 	/* The UART device used to write and read data to and from the Xbee wifi module. */
 	alt_up_rs232_dev *wifi_dev;
 
 	/* The semaphore used to ensure that multiple requests are not made simultaneously to the same connection. */
 	OS_EVENT *wifi_lock;
+
+	/* The semaphore used to ensure that we have a connection to the server before starting
+	 * a task that might make a wifi request. */
+	OS_EVENT *require_lock;
 
 	/**
 	 * Waits to acquire the lock on the wifi connection.

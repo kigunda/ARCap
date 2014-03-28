@@ -69,7 +69,7 @@ int main(void) {
 	//			TASK_STACKSIZE,
 	//			0,
 	//			0);
-	//
+
 	//	// NETWORK TASKS
 	//	OSTaskCreateExt(network_sender_update_task,
 	//			0,

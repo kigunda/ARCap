@@ -35,7 +35,7 @@ module system_addr_router_default_decode
                DEFAULT_DESTID = 1 
    )
   (output [90 - 87 : 0] default_destination_id,
-   output [14-1 : 0] default_src_channel
+   output [16-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
@@ -44,7 +44,7 @@ module system_addr_router_default_decode
     if (DEFAULT_CHANNEL == -1)
       assign default_src_channel = '0;
     else
-      assign default_src_channel = 14'b1 << DEFAULT_CHANNEL;
+      assign default_src_channel = 16'b1 << DEFAULT_CHANNEL;
   end
   endgenerate
 
@@ -73,7 +73,7 @@ module system_addr_router
     // -------------------
     output                          src_valid,
     output reg [101-1    : 0] src_data,
-    output reg [14-1 : 0] src_channel,
+    output reg [16-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
     input                           src_ready
@@ -87,7 +87,7 @@ module system_addr_router
     localparam PKT_DEST_ID_H = 90;
     localparam PKT_DEST_ID_L = 87;
     localparam ST_DATA_W = 101;
-    localparam ST_CHANNEL_W = 14;
+    localparam ST_CHANNEL_W = 16;
     localparam DECODER_TYPE = 0;
 
     localparam PKT_TRANS_WRITE = 64;
@@ -104,13 +104,15 @@ module system_addr_router
     // during address decoding
     // -------------------------------------------------------
     localparam PAD0 = log2ceil(64'h2000000 - 64'h1000000);
-    localparam PAD1 = log2ceil(64'h2001000 - 64'h2000800);
+    localparam PAD1 = log2ceil(64'h2008000 - 64'h2004000);
+    localparam PAD2 = log2ceil(64'h2009800 - 64'h2009000);
+    localparam PAD3 = log2ceil(64'h200a000 - 64'h2009800);
     // -------------------------------------------------------
     // Work out which address bits are significant based on the
     // address range of the slaves. If the required width is too
     // large or too small, we use the address field width instead.
     // -------------------------------------------------------
-    localparam ADDR_RANGE = 64'h2001000;
+    localparam ADDR_RANGE = 64'h200a000;
     localparam RANGE_ADDR_WIDTH = log2ceil(ADDR_RANGE);
     localparam OPTIMIZED_ADDR_H = (RANGE_ADDR_WIDTH > PKT_ADDR_W) ||
                                   (RANGE_ADDR_WIDTH == 0) ?
@@ -129,7 +131,7 @@ module system_addr_router
     assign src_endofpacket   = sink_endofpacket;
 
     wire [PKT_DEST_ID_W-1:0] default_destid;
-    wire [14-1 : 0] default_src_channel;
+    wire [16-1 : 0] default_src_channel;
 
 
 
@@ -151,13 +153,25 @@ module system_addr_router
 
         // ( 0x1000000 .. 0x2000000 )
         if ( {address[RG:PAD0],{PAD0{1'b0}}} == 26'h1000000 ) begin
-            src_channel = 14'b10;
+            src_channel = 16'b0010;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
         end
 
-        // ( 0x2000800 .. 0x2001000 )
-        if ( {address[RG:PAD1],{PAD1{1'b0}}} == 26'h2000800 ) begin
-            src_channel = 14'b01;
+        // ( 0x2004000 .. 0x2008000 )
+        if ( {address[RG:PAD1],{PAD1{1'b0}}} == 26'h2004000 ) begin
+            src_channel = 16'b1000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
+        end
+
+        // ( 0x2009000 .. 0x2009800 )
+        if ( {address[RG:PAD2],{PAD2{1'b0}}} == 26'h2009000 ) begin
+            src_channel = 16'b0100;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
+        end
+
+        // ( 0x2009800 .. 0x200a000 )
+        if ( {address[RG:PAD3],{PAD3{1'b0}}} == 26'h2009800 ) begin
+            src_channel = 16'b0001;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
         end
 

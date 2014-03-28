@@ -256,6 +256,11 @@ set_location_assignment PIN_D11 -to GPIO_0[31]
 set_location_assignment PIN_D12 -to GPIO_0[32]
 set_location_assignment PIN_B12 -to GPIO_0[33]
 
+set_location_assignment PIN_C1 -to EPCS_ASDO
+set_location_assignment PIN_H2 -to EPCS_DATA0
+set_location_assignment PIN_H1 -to EPCS_DCLK
+set_location_assignment PIN_D2 -to EPCS_NCSO
+
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_IN[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_0_IN[1]
@@ -368,6 +373,8 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[30]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[31]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[32]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO_1[33]
+
+
 
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"

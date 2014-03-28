@@ -27,6 +27,22 @@
 extern WifiHandler *wifi;
 
 /**
+ * Starts network communications.
+ * This task configures the wifi module and calls WifiHandler::tcpConnect.
+ * All other tasks must wait for the connection to be confirmed before executing.
+ */
+void wifi_handler_tcp_connect_task(void *pdata) {
+	printf("WifiHandler [task: connect, status: start]\n");
+//	wifi->setup(WIFI_TCP);
+	wifi->status();
+	wifi->tcpConnect();
+	while (true) {
+		OSTimeDlyHMSM(0, 20, 0, 0);
+	}
+}
+
+
+/**
  * Test network communications.
  * This test sends a GET request to an HTTP server and prints the response.
  * Before running this, make sure the computer serving /arcap/infrared/hit.php
@@ -58,6 +74,7 @@ void wifi_handler_tcp_test_task(void *pdata) {
 	wifi->status();
 	// Connect to the remote server.
 	wifi->tcpConnect();
+	// Run the test.
 	while (true) {
 		wifi->tcpTest();
 	}
@@ -126,7 +143,13 @@ void WifiHandler::status() {
 }
 
 /**
- * Sets the wifi module up to connect to the network.
+ * Sets up the wifi module to connect to the network.
+ * The connection settings are stored in non-volatile memory,
+ * so this method only needs to be run once per Xbee module.
+ * After that, use status() to ensure that the settings are correct.
+ * @param type
+ * WIFI_TCP - used to send TCP messages to PHP socket at 192.168.0.100:10000; preferred for full duplex communication
+ * WIFI_HTTP - used to send HTTP requests to HTTP server at 192.168.0.100:80; used in earlier testing
  */
 void WifiHandler::setup(WifiSetupType type) {
 	printf("WifiHandler [startup: do setup]\n");
@@ -178,24 +201,17 @@ void WifiHandler::testUart() {
  */
 void WifiHandler::tcpConnect() {
 	char *response;
-	do {
-		WIFIHANDLER_TCP_LOG(printf("WifiHandler [connect, id: %s]\n", ROVER_ID));
-		tcpSend(ROVER_ID, "\n");
-		response = tcpReceive();
-		WIFIHANDLER_TCP_LOG(printf("WifiHandler [connect, status: %s]\n", response));
-	} while (strncmp(response, MESSAGE_OK, MESSAGE_OK_LENGTH) != 0);
-}
-
-/**
- * Sends the given TCP message to the server.
- * @param message the message to send
- * @param stop the string marking the end of the message, such as a newline "\n"
- */
-void WifiHandler::tcpSend(char *message, char *stop) {
 	if (lock()) {
-		WIFIHANDLER_TCP_LOG(printf("[WifiHandler] send: %s%s", message, stop));
-		write(message);
-		write(stop);
+		do {
+			// Loop until we receive MESSAGE_OK.
+			WIFIHANDLER_TCP_LOG(printf("WifiHandler [connect, id: %s]\n", ROVER_ID));
+			write(WIFI_CONNECT_PREFIX);
+			write(ROVER_ID);
+			write(WIFI_STOP_MARKER);
+			response = readUntil(WIFI_STOP_MARKER);
+			WIFIHANDLER_TCP_LOG(printf("WifiHandler [connect, status: %s]\n", response));
+		} while (strncmp(response, MESSAGE_OK, MESSAGE_OK_LENGTH) != 0);
+		// Release the wifi connection for tcpSend and tcpReceive.
 		unlock();
 	} else {
 		WIFIHANDLER_TCP_LOG(printf("WifiHandler [error: failed to acquire lock]\n"));
@@ -203,22 +219,39 @@ void WifiHandler::tcpSend(char *message, char *stop) {
 }
 
 /**
+ * Sends the given TCP message to the server.
+ * @param message the message to send
+ * @param stop the string marking the end of the message, such as a newline "\n"
+ * @return true if the message was sent successfully, or false if the message could not be sent
+ * because the wifi connection is busy
+ */
+bool WifiHandler::tcpSend(char *message, char *stop) {
+	if (lock()) {
+		WIFIHANDLER_TCP_LOG(printf("[WifiHandler] send: %s%s", message, stop));
+		write(message);
+		write(stop);
+		unlock();
+		return true;
+	} else {
+		WIFIHANDLER_TCP_LOG(printf("WifiHandler [error: failed to acquire lock]\n"));
+		return false;
+	}
+}
+
+/**
  * Waits for the next TCP message from the server.
  * The message is terminated by a newline '\n'.
- * @return the message received
+ * @return the message received, or NULL if no message could be read because the wifi connection is busy
  */
 char *WifiHandler::tcpReceive() {
 	if (lock()) {
-		char *message = readUntil("\n");
+		char *message = readUntil(WIFI_STOP_MARKER);
 		WIFIHANDLER_TCP_LOG(printf("[WifiHandler] receive: %s", message));
 		unlock();
 		return message;
 	} else {
 		WIFIHANDLER_TCP_LOG(printf("WifiHandler [error: failed to acquire lock]\n"));
-		// Return an empty message.
-		char *response = (char *)malloc(sizeof(char));
-		response[0] = '\0';
-		return response;
+		return NULL;
 	}
 }
 
@@ -227,10 +260,23 @@ char *WifiHandler::tcpReceive() {
  * Sends a message to the PHP socket server, then prints the response.
  */
 void WifiHandler::tcpTest() {
-	wifi->tcpSend("ih", "\n");
-	char *response = wifi->tcpReceive();
-	free(response);
-	OSTimeDlyHMSM(0, 0, 3, 0);
+	static int count = 0;
+	// Send eleven commands.
+	if (count <= 10) {
+		if (count < 10) {
+			// First ten commands are infrared hit.
+			wifi->tcpSend("ih", WIFI_STOP_MARKER);
+		} else {
+			// Last command is quit.
+			wifi->tcpSend(":quit", WIFI_STOP_MARKER);
+		}
+		// Receive the response.
+		char *response = wifi->tcpReceive();
+		free(response);
+		count ++;
+	}
+	// Wait for 6 seconds.
+	OSTimeDlyHMSM(0, 0, 6, 0);
 }
 
 // HTTP

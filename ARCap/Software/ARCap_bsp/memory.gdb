@@ -3,7 +3,7 @@
 # Machine generated for CPU 'cpu' in SOPC Builder design 'system'
 # SOPC Builder design path: C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system.sopcinfo
 #
-# Generated: Wed Mar 26 14:47:22 MDT 2014
+# Generated: Thu Mar 27 16:38:39 MDT 2014
 
 # DO NOT MODIFY THIS FILE
 #
@@ -48,3 +48,9 @@
 
 # sdram
 memory 0x1000000 0x2000000 cache
+
+# onchip_memory2_0
+memory 0x2004000 0x2008000 cache
+
+# epcs_flash_controller_0
+memory 0x2009000 0x2009800 cache

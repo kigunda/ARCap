@@ -82,5 +82,9 @@ void NetworkReceiver::post(const char *event) {
  * @throw PostException if a message cannot be posted to a listener
  */
 void NetworkReceiver::update() {
-	post(wifi->tcpReceive());
+	char *message = wifi->tcpReceive();
+	if (message != NULL) {
+		post(message);
+		wifi->tcpSend(MESSAGE_OK, "\n");
+	}
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="32" version="2.0">
+<workbench progressCount="34" version="2.0">
 <workbenchAdvisor/>
 <window height="766" maximized="true" width="1024" x="420" y="-20">
 <fastViewData fastViewLocation="1024"/>
@@ -38,23 +38,21 @@
 <part id="6"/>
 <part id="7"/>
 <part id="8"/>
-<part id="10"/>
-<part id="11"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="InfraredSender.h" partName="InfraredSender.h" path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/InfraredSender.h" title="InfraredSender.h" tooltip="ARCap/InfraredSender.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ARCap/InfraredSender.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="676" selectionTopPixel="61"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="186" selectionTopPixel="61"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="Listener.h" partName="Listener.h" path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/Listener.h" title="Listener.h" tooltip="ARCap/Listener.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ARCap/Listener.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="625" selectionTopPixel="301"/>
+<editorState selectionHorizontalPixel="0" selectionLength="5" selectionOffset="1145" selectionTopPixel="341"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="Status.h" partName="Status.h" path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/Status.h" title="Status.h" tooltip="ARCap/Status.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ARCap/Status.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="714" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="78" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="InfraredReceiver.h" partName="InfraredReceiver.h" path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/InfraredReceiver.h" title="InfraredReceiver.h" tooltip="ARCap/InfraredReceiver.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ARCap/InfraredReceiver.h"/>
@@ -70,7 +68,7 @@
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="WifiHandler.h" partName="WifiHandler.h" path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/WifiHandler.h" title="WifiHandler.h" tooltip="ARCap/WifiHandler.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ARCap/WifiHandler.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="202" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="768" selectionTopPixel="45"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="NetworkSender.h" partName="NetworkSender.h" path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/NetworkSender.h" title="NetworkSender.h" tooltip="ARCap/NetworkSender.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ARCap/NetworkSender.h"/>
@@ -78,19 +76,11 @@
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="NetworkReceiver.h" partName="NetworkReceiver.h" path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/NetworkReceiver.h" title="NetworkReceiver.h" tooltip="ARCap/NetworkReceiver.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ARCap/NetworkReceiver.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1323" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="56" selectionTopPixel="416"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" partName="main.cpp" path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/main.cpp" title="main.cpp" tooltip="ARCap/main.cpp" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" partName="main.cpp" path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/main.cpp" title="main.cpp" tooltip="ARCap/main.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ARCap/main.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1837" selectionTopPixel="945"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="WifiHandler.cpp" partName="WifiHandler.cpp" path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/WifiHandler.cpp" title="WifiHandler.cpp" tooltip="ARCap/WifiHandler.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ARCap/WifiHandler.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1056" selectionTopPixel="405"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="NetworkSender.cpp" partName="NetworkSender.cpp" path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/NetworkSender.cpp" title="NetworkSender.cpp" tooltip="ARCap/NetworkSender.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ARCap/NetworkSender.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="698" selectionTopPixel="11"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1842" selectionTopPixel="1106"/>
 </editor>
 </editors>
 <views>
@@ -99,12 +89,14 @@
 </view>
 <view id="org.eclipse.ui.views.PropertySheet" partName="Properties"/>
 <view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Target"/>
+<view id="org.eclipse.cdt.ui.callHierarchy" partName="Call Hierarchy">
+<viewState showFilesInLabels="false" variableFilter="false"/>
+</view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors (6 items)"/>
-<category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Errors (3 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="392"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -284,6 +276,7 @@
 <view id="org.eclipse.ui.console.ConsoleView" ratio="0.29668874"/>
 <view id="org.eclipse.ui.views.PropertySheet" ratio="0.3"/>
 <view id="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:USB-Blaster on localhost [USB-0].1.0" ratio="0.29668874"/>
+<view id="org.eclipse.cdt.ui.callHierarchy" ratio="0.29933774"/>
 </fastViews>
 </fastViewBar>
 </fastViewBars>
@@ -316,6 +309,7 @@
 <page content="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:USB-Blaster on localhost [USB-0].1.0" label="LabelNotFound"/>
 <page content="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:*" label="LabelNotFound"/>
 <page content="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView" label="LabelNotFound"/>
+<page content="org.eclipse.cdt.ui.callHierarchy" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
@@ -334,162 +328,170 @@
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap/main.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap/WifiHandler.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap/Status.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap/NetworkReceiver.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap/NetworkSender.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap/Tasks.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap_bsp/HAL/inc/includes.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap/InfraredSender.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap/main.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap/NetworkSender.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap/Debug.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap_bsp/drivers/inc/altera_avalon_jtag_uart.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap_bsp/drivers/inc/altera_up_avalon_de0_nano_adc.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap_bsp/drivers/inc/altera_avalon_jtag_uart.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap/InfraredSender.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap/NetworkReceiver.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap/WifiHandler.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap/main.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap/WifiHandler.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ARCap/Status.h"/>
 </editors>
 <item historyLabel="WifiHandler.cpp" index="1">
-<position info="not_deleted" x="5638" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="0">
-<position info="not_deleted" x="795" y="0"/>
-</item>
-<item historyLabel="Status.h" index="2">
-<position info="not_deleted" x="368" y="0"/>
+<position info="not_deleted" x="869" y="0"/>
 </item>
 <item historyLabel="WifiHandler.cpp" index="1">
-<position info="not_deleted" x="5638" y="0"/>
+<position info="not_deleted" x="900" y="0"/>
 </item>
-<item historyLabel="NetworkReceiver.h" index="3">
-<position info="not_deleted" x="1323" y="0"/>
+<item historyLabel="main.cpp" index="0">
+<position info="not_deleted" x="1810" y="0"/>
 </item>
-<item historyLabel="NetworkSender.h" index="4">
+<item historyLabel="WifiHandler.cpp" index="1">
+<position info="not_deleted" x="900" y="0"/>
+</item>
+<item historyLabel="WifiHandler.cpp" index="1">
+<position info="not_deleted" x="489" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="0">
 <position info="not_deleted" x="887" y="0"/>
 </item>
 <item historyLabel="WifiHandler.cpp" index="1">
-<position info="not_deleted" x="386" y="0"/>
-</item>
-<item historyLabel="NetworkSender.h" index="4">
-<position info="not_deleted" x="886" y="0"/>
-</item>
-<item historyLabel="NetworkSender.cpp" index="5">
-<position info="not_deleted" x="698" y="0"/>
-</item>
-<item historyLabel="WifiHandler.cpp" index="1">
-<position info="not_deleted" x="386" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="0">
-<position info="not_deleted" x="2001" y="0"/>
-</item>
-<item historyLabel="WifiHandler.cpp" index="1">
-<position info="not_deleted" x="1973" y="11"/>
-</item>
-<item historyLabel="main.cpp" index="0">
-<position info="not_deleted" x="2001" y="0"/>
-</item>
-<item historyLabel="Status.h" index="2">
-<position info="not_deleted" x="714" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="0">
-<position info="not_deleted" x="2001" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="0">
 <position/>
 </item>
-<item historyLabel="main.cpp" index="0">
+<item historyLabel="Tasks.h" index="2">
+<position info="not_deleted" x="231" y="0"/>
+</item>
+<item historyLabel="WifiHandler.cpp" index="1">
+<position info="not_deleted" x="243" y="0"/>
+</item>
+<item historyLabel="Tasks.h" index="2">
+<position info="not_deleted" x="157" y="0"/>
+</item>
+<item historyLabel="includes.h" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Tasks.h" index="2">
+<position info="not_deleted" x="141" y="0"/>
+</item>
+<item historyLabel="WifiHandler.cpp" index="1">
+<position info="not_deleted" x="243" y="0"/>
+</item>
+<item historyLabel="WifiHandler.cpp" index="1">
+<position info="not_deleted" x="865" y="0"/>
+</item>
+<item historyLabel="WifiHandler.cpp" index="1">
+<position info="not_deleted" x="134" y="0"/>
+</item>
+<item historyLabel="Tasks.h" index="2">
+<position info="not_deleted" x="141" y="0"/>
+</item>
+<item historyLabel="InfraredSender.h" index="4">
+<position info="not_deleted" x="676" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="5">
+<position info="not_deleted" x="1599" y="0"/>
+</item>
+<item historyLabel="NetworkSender.cpp" index="6">
+<position info="not_deleted" x="796" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="5">
+<position info="not_deleted" x="1420" y="0"/>
+</item>
+<item historyLabel="altera_avalon_jtag_uart.h" index="7">
+<position info="not_deleted" x="2559" y="61"/>
+</item>
+<item historyLabel="altera_up_avalon_de0_nano_adc.h" index="8">
+<position info="not_deleted" x="311" y="0"/>
+</item>
+<item historyLabel="altera_avalon_jtag_uart.h" index="7">
+<position info="not_deleted" x="7754" y="47"/>
+</item>
+<item historyLabel="altera_up_avalon_de0_nano_adc.h" index="8">
 <position/>
 </item>
-<item historyLabel="WifiHandler.cpp" index="1">
-<position info="not_deleted" x="2962" y="6"/>
+<item historyLabel="altera_avalon_jtag_uart.h" index="9">
+<position info="not_deleted" x="2561" y="59"/>
 </item>
-<item historyLabel="WifiHandler.cpp" index="1">
-<position info="not_deleted" x="3030" y="0"/>
+<item historyLabel="altera_up_avalon_de0_nano_adc.h" index="8">
+<position info="not_deleted" x="313" y="0"/>
 </item>
-<item historyLabel="WifiHandler.cpp" index="1">
-<position info="not_deleted" x="14193" y="11"/>
+<item historyLabel="altera_avalon_jtag_uart.h" index="9">
+<position info="not_deleted" x="7754" y="47"/>
 </item>
-<item historyLabel="main.cpp" index="0">
+<item historyLabel="altera_up_avalon_de0_nano_adc.h" index="8">
+<position info="not_deleted" x="316" y="0"/>
+</item>
+<item historyLabel="altera_avalon_jtag_uart.h" index="9">
+<position info="not_deleted" x="7754" y="47"/>
+</item>
+<item historyLabel="InfraredSender.h" index="10">
+<position info="not_deleted" x="676" y="0"/>
+</item>
+<item historyLabel="NetworkReceiver.h" index="11">
+<position info="not_deleted" x="56" y="0"/>
+</item>
+<item historyLabel="WifiHandler.h" index="12">
+<position info="not_deleted" x="1933" y="504"/>
+</item>
+<item historyLabel="main.cpp" index="13">
+<position info="not_deleted" x="794" y="0"/>
+</item>
+<item historyLabel="WifiHandler.cpp" index="14">
 <position/>
 </item>
-<item historyLabel="WifiHandler.cpp" index="1">
-<position info="not_deleted" x="5828" y="10"/>
+<item historyLabel="main.cpp" index="13">
+<position info="not_deleted" x="794" y="0"/>
 </item>
-<item historyLabel="WifiHandler.cpp" index="1">
-<position info="not_deleted" x="6078" y="0"/>
+<item historyLabel="Status.h" index="15">
+<position info="not_deleted" x="343" y="0"/>
 </item>
-<item historyLabel="WifiHandler.cpp" index="1">
-<position info="not_deleted" x="6081" y="0"/>
+<item historyLabel="WifiHandler.h" index="12">
+<position info="not_deleted" x="2056" y="0"/>
 </item>
-<item historyLabel="WifiHandler.cpp" index="1">
-<position info="not_deleted" x="5879" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="0">
-<position info="not_deleted" x="798" y="0"/>
-</item>
-<item historyLabel="WifiHandler.cpp" index="1">
-<position info="not_deleted" x="1377" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="0">
-<position info="not_deleted" x="1791" y="0"/>
-</item>
-<item historyLabel="Status.h" index="2">
-<position info="not_deleted" x="714" y="0"/>
-</item>
-<item historyLabel="Debug.h" index="6">
-<position info="not_deleted" x="550" y="0"/>
-</item>
-<item historyLabel="Debug.h" index="6">
-<position info="not_deleted" x="703" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="0">
+<item historyLabel="WifiHandler.cpp" index="14">
 <position/>
 </item>
-<item historyLabel="WifiHandler.cpp" index="1">
-<position info="not_deleted" x="6181" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="0">
+<item historyLabel="WifiHandler.cpp" index="14">
 <position/>
 </item>
-<item historyLabel="WifiHandler.cpp" index="1">
-<position info="not_deleted" x="2962" y="6"/>
-</item>
-<item historyLabel="WifiHandler.cpp" index="1">
-<position info="not_deleted" x="3079" y="0"/>
-</item>
-<item historyLabel="WifiHandler.cpp" index="1">
-<position info="not_deleted" x="14011" y="10"/>
-</item>
-<item historyLabel="WifiHandler.cpp" index="1">
-<position info="not_deleted" x="14077" y="0"/>
-</item>
-<item historyLabel="WifiHandler.cpp" index="1">
-<position info="not_deleted" x="13534" y="10"/>
-</item>
-<item historyLabel="main.cpp" index="0">
-<position info="not_deleted" x="792" y="0"/>
-</item>
-<item historyLabel="WifiHandler.cpp" index="1">
-<position info="not_deleted" x="1384" y="26"/>
-</item>
-<item historyLabel="WifiHandler.cpp" index="1">
-<position info="not_deleted" x="1660" y="0"/>
-</item>
-<item historyLabel="WifiHandler.cpp" index="1">
-<position info="not_deleted" x="7213" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="0">
-<position info="not_deleted" x="1837" y="0"/>
-</item>
-<item historyLabel="WifiHandler.cpp" index="1">
-<position info="not_deleted" x="7669" y="0"/>
-</item>
-<item historyLabel="WifiHandler.h" index="7">
-<position info="not_deleted" x="202" y="0"/>
-</item>
-<item historyLabel="WifiHandler.cpp" index="1">
-<position info="not_deleted" x="7669" y="0"/>
-</item>
-<item historyLabel="WifiHandler.cpp" index="1">
-<position info="not_deleted" x="1659" y="0"/>
-</item>
-<item historyLabel="WifiHandler.cpp" index="1">
-<position info="not_deleted" x="7321" y="11"/>
-</item>
-<item active="true" historyLabel="WifiHandler.cpp" index="1">
+<item historyLabel="WifiHandler.cpp" index="14">
 <position/>
+</item>
+<item historyLabel="WifiHandler.cpp" index="14">
+<position/>
+</item>
+<item historyLabel="WifiHandler.cpp" index="14">
+<position/>
+</item>
+<item historyLabel="WifiHandler.cpp" index="14">
+<position/>
+</item>
+<item historyLabel="WifiHandler.cpp" index="14">
+<position/>
+</item>
+<item historyLabel="WifiHandler.h" index="12">
+<position info="not_deleted" x="768" y="0"/>
+</item>
+<item historyLabel="WifiHandler.cpp" index="14">
+<position info="not_deleted" x="682" y="29"/>
+</item>
+<item historyLabel="WifiHandler.cpp" index="14">
+<position info="not_deleted" x="845" y="0"/>
+</item>
+<item historyLabel="WifiHandler.cpp" index="14">
+<position info="not_deleted" x="6938" y="0"/>
+</item>
+<item historyLabel="Status.h" index="15">
+<position info="not_deleted" x="78" y="0"/>
+</item>
+<item active="true" historyLabel="main.cpp" index="13">
+<position info="not_deleted" x="758" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -516,17 +518,8 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="NetworkSender.cpp" tooltip="ARCap/NetworkSender.cpp">
-<persistable path="/ARCap/NetworkSender.cpp"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="WifiHandler.cpp" tooltip="ARCap/WifiHandler.cpp">
 <persistable path="/ARCap/WifiHandler.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="MotorHandler.cpp" tooltip="ARCap/MotorHandler.cpp">
-<persistable path="/ARCap/MotorHandler.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="ARCap/main.cpp">
-<persistable path="/ARCap/main.cpp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="altera_up_avalon_de0_nano_adc.h" tooltip="ARCap_bsp/drivers/inc/altera_up_avalon_de0_nano_adc.h">
 <persistable path="/ARCap_bsp/drivers/inc/altera_up_avalon_de0_nano_adc.h"/>
@@ -534,11 +527,29 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="altera_avalon_jtag_uart.h" tooltip="ARCap_bsp/drivers/inc/altera_avalon_jtag_uart.h">
 <persistable path="/ARCap_bsp/drivers/inc/altera_avalon_jtag_uart.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="InfraredSender.cpp" tooltip="ARCap/InfraredSender.cpp">
-<persistable path="/ARCap/InfraredSender.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="NetworkSender.cpp" tooltip="ARCap/NetworkSender.cpp">
+<persistable path="/ARCap/NetworkSender.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="includes.h" tooltip="ARCap_bsp/HAL/inc/includes.h">
+<persistable path="/ARCap_bsp/HAL/inc/includes.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Tasks.h" tooltip="ARCap/Tasks.h">
+<persistable path="/ARCap/Tasks.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="NetworkReceiver.cpp" tooltip="ARCap/NetworkReceiver.cpp">
 <persistable path="/ARCap/NetworkReceiver.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Listener.cpp" tooltip="ARCap/Listener.cpp">
+<persistable path="/ARCap/Listener.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="MotorHandler.cpp" tooltip="ARCap/MotorHandler.cpp">
+<persistable path="/ARCap/MotorHandler.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="ARCap/main.cpp">
+<persistable path="/ARCap/main.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="InfraredSender.cpp" tooltip="ARCap/InfraredSender.cpp">
+<persistable path="/ARCap/InfraredSender.cpp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="InfraredReceiver.cpp" tooltip="ARCap/InfraredReceiver.cpp">
 <persistable path="/ARCap/InfraredReceiver.cpp"/>
@@ -551,15 +562,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="DataSource.h" tooltip="ARCap/DataSource.h">
 <persistable path="/ARCap/DataSource.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="DataSource.cpp" tooltip="ARCap/DataSource.cpp">
-<persistable path="/ARCap/DataSource.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="NetworkReceiver.h" tooltip="ARCap/NetworkReceiver.h">
-<persistable path="/ARCap/NetworkReceiver.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Listener.cpp" tooltip="ARCap/Listener.cpp">
-<persistable path="/ARCap/Listener.cpp"/>
 </file>
 </mruList>
 </workbench>

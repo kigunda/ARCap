@@ -2049,3 +2049,75 @@ C Model Exception: C Model Status [Element WifiHandler.cpp does not exist.]
 
 !ENTRY com.altera.sbtgui.launch 1 0 2014-03-26 20:34:06.773
 !MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+!SESSION 2014-03-27 13:09:46.144 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-27 13:12:39.689
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-27 13:12:41.340
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-27 13:15:32.562
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-27 13:15:34.212
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-27 13:21:44.398
+!MESSAGE Indexed 'ARCap_bsp' (95 sources, 137 headers) in 1.12 sec: 6,105 declarations; 13,819 references; 0 unresolved inclusions; 3 syntax errors; 18 unresolved names (0.09%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-27 13:21:47.471
+!MESSAGE Indexed 'ARCap' (8 sources, 151 headers) in 1.41 sec: 8,604 declarations; 11,320 references; 0 unresolved inclusions; 2 syntax errors; 195 unresolved names (0.97%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-27 14:06:49.028
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-27 14:06:50.678
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-27 14:18:19.277
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-27 14:18:20.928
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+!SESSION 2014-03-27 16:07:19.089 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-27 16:18:34.736
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x20010c8 --id=0x0 --timestamp=1395705710]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-27 16:18:36.426
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x20010c8 --id=0x0 --timestamp=1395705710 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+!SESSION 2014-03-27 16:38:07.868 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-03-27 20:37:58.496
+!MESSAGE Indexed 'ARCap' (8 sources, 151 headers) in 1.79 sec: 8,610 declarations; 11,325 references; 0 unresolved inclusions; 2 syntax errors; 195 unresolved names (0.97%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-27 20:45:21.778
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x200a0c8 --id=0x0 --timestamp=1395959215]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-03-27 20:45:23.494
+!MESSAGE Executing: [C:/altera/12.1sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x200a0c8 --id=0x0 --timestamp=1395959215 /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2014-03-27 20:45:28.193
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --go, --sidp=0x200a0c8, --id=0x0, --timestamp=1395959215, /cygdrive/c/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap/ARCap.elf] return code: 4, 'other error'
+
+!ENTRY com.altera.sbtgui.launch 4 0 2014-03-27 20:45:28.208
+!MESSAGE Downloading ELF Process failed

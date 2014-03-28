@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>ucosii</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>26-Mar-2014 2:47:21 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1395866841966</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>27-Mar-2014 4:38:38 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1395959918959</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\kigunda\Documents\Ece492\Repository\ARCap\Software\ARCap_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\kigunda\Documents\Ece492\Repository\ARCap\system.sopcinfo</SopcDesignFile>
@@ -1697,74 +1697,86 @@
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>onchip_memory2_0</slaveDescriptor>
+                <addressRange>0x02004000 - 0x02007FFF</addressRange>
+                <addressSpan>16384</addressSpan>
+                <attributes>memory</attributes>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>epcs_flash_controller_0</slaveDescriptor>
+                <addressRange>0x02009000 - 0x020097FF</addressRange>
+                <addressSpan>2048</addressSpan>
+                <attributes>flash, memory, non-volatile</attributes>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>adc</slaveDescriptor>
-                <addressRange>0x02001000 - 0x0200101F</addressRange>
+                <addressRange>0x0200A000 - 0x0200A01F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>pio_led</slaveDescriptor>
-                <addressRange>0x02001020 - 0x0200103F</addressRange>
+                <addressRange>0x0200A020 - 0x0200A03F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>sys_clk_timer</slaveDescriptor>
-                <addressRange>0x02001040 - 0x0200105F</addressRange>
+                <addressRange>0x0200A040 - 0x0200A05F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>pio_wifi_reset_n</slaveDescriptor>
-                <addressRange>0x02001060 - 0x0200106F</addressRange>
+                <addressRange>0x0200A060 - 0x0200A06F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>pio_motor_reset_n</slaveDescriptor>
-                <addressRange>0x02001070 - 0x0200107F</addressRange>
+                <addressRange>0x0200A070 - 0x0200A07F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>pio_ir_emitter</slaveDescriptor>
-                <addressRange>0x02001080 - 0x0200108F</addressRange>
+                <addressRange>0x0200A080 - 0x0200A08F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>pio_sw</slaveDescriptor>
-                <addressRange>0x02001090 - 0x0200109F</addressRange>
+                <addressRange>0x0200A090 - 0x0200A09F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>pio_key_left</slaveDescriptor>
-                <addressRange>0x020010A0 - 0x020010AF</addressRange>
+                <addressRange>0x0200A0A0 - 0x0200A0AF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>uart_motor</slaveDescriptor>
-                <addressRange>0x020010B0 - 0x020010B7</addressRange>
+                <addressRange>0x0200A0B0 - 0x0200A0B7</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>uart_wifi</slaveDescriptor>
-                <addressRange>0x020010B8 - 0x020010BF</addressRange>
+                <addressRange>0x0200A0B8 - 0x0200A0BF</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag_uart_0</slaveDescriptor>
-                <addressRange>0x020010C0 - 0x020010C7</addressRange>
+                <addressRange>0x0200A0C0 - 0x0200A0C7</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>sysid</slaveDescriptor>
-                <addressRange>0x020010C8 - 0x020010CF</addressRange>
+                <addressRange>0x0200A0C8 - 0x0200A0CF</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>

@@ -15,6 +15,7 @@
   </columns>
  </clocktable>
  <library
-   expandedCategories="Library/Peripherals,Library/Peripherals/Microcontroller Peripherals,Library,Project" />
+   expandedCategories="Library/Memories and Memory Controllers,Library,Project,Library/Memories and Memory Controllers/On-Chip" />
  <window width="1163" height="860" x="277" y="0" />
+ <hdlexample language="VERILOG" />
 </preferences>

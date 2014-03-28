@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'system'
  * SOPC Builder design path: C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system.sopcinfo
  *
- * Generated: Wed Mar 26 14:47:22 MDT 2014
+ * Generated: Thu Mar 27 16:38:39 MDT 2014
  */
 
 /*
@@ -59,6 +59,7 @@
  */
 
 #include "altera_nios2_qsys_irq.h"
+#include "altera_avalon_epcs_flash_controller.h"
 #include "altera_avalon_jtag_uart.h"
 #include "altera_avalon_sysid_qsys.h"
 #include "altera_avalon_timer.h"
@@ -70,6 +71,7 @@
  */
 
 ALTERA_NIOS2_QSYS_IRQ_INSTANCE ( CPU, cpu);
+ALTERA_AVALON_EPCS_FLASH_CONTROLLER_INSTANCE ( EPCS_FLASH_CONTROLLER_0, epcs_flash_controller_0);
 ALTERA_AVALON_JTAG_UART_INSTANCE ( JTAG_UART_0, jtag_uart_0);
 ALTERA_AVALON_SYSID_QSYS_INSTANCE ( SYSID, sysid);
 ALTERA_AVALON_TIMER_INSTANCE ( SYS_CLK_TIMER, sys_clk_timer);
@@ -99,6 +101,7 @@ void alt_irq_init ( const void* base )
 void alt_sys_init( void )
 {
     ALTERA_AVALON_TIMER_INIT ( SYS_CLK_TIMER, sys_clk_timer);
+    ALTERA_AVALON_EPCS_FLASH_CONTROLLER_INIT ( EPCS_FLASH_CONTROLLER_0, epcs_flash_controller_0);
     ALTERA_AVALON_JTAG_UART_INIT ( JTAG_UART_0, jtag_uart_0);
     ALTERA_AVALON_SYSID_QSYS_INIT ( SYSID, sysid);
     ALTERA_UP_AVALON_DE0_NANO_ADC_INIT ( ADC, adc);

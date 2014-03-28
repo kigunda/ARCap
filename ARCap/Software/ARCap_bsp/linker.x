@@ -4,7 +4,7 @@
  * Machine generated for CPU 'cpu' in SOPC Builder design 'system'
  * SOPC Builder design path: C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system.sopcinfo
  *
- * Generated: Wed Mar 26 14:47:22 MDT 2014
+ * Generated: Thu Mar 27 16:38:39 MDT 2014
  */
 
 /*
@@ -50,12 +50,17 @@
 
 MEMORY
 {
-    reset : ORIGIN = 0x1000000, LENGTH = 32
-    sdram : ORIGIN = 0x1000020, LENGTH = 16777184
+    sdram : ORIGIN = 0x1000000, LENGTH = 16777216
+    onchip_memory2_0_BEFORE_EXCEPTION : ORIGIN = 0x2004000, LENGTH = 32
+    onchip_memory2_0 : ORIGIN = 0x2004020, LENGTH = 16352
+    reset : ORIGIN = 0x2009000, LENGTH = 32
+    epcs_flash_controller_0 : ORIGIN = 0x2009020, LENGTH = 2016
 }
 
 /* Define symbols for each memory base-address */
 __alt_mem_sdram = 0x1000000;
+__alt_mem_onchip_memory2_0 = 0x2004000;
+__alt_mem_epcs_flash_controller_0 = 0x2009000;
 
 OUTPUT_FORMAT( "elf32-littlenios2",
                "elf32-littlenios2",
@@ -110,7 +115,7 @@ SECTIONS
         KEEP (*(.exceptions.exit));
         KEEP (*(.exceptions));
         PROVIDE (__ram_exceptions_end = ABSOLUTE(.));
-    } > sdram
+    } > onchip_memory2_0
 
     PROVIDE (__flash_exceptions_start = LOADADDR(.exceptions));
 
@@ -318,6 +323,40 @@ SECTIONS
     } > sdram
 
     PROVIDE (_alt_partition_sdram_load_addr = LOADADDR(.sdram));
+
+    /*
+     *
+     * This section's LMA is set to the .text region.
+     * crt0 will copy to this section's specified mapped region virtual memory address (VMA)
+     *
+     */
+
+    .onchip_memory2_0 : AT ( LOADADDR (.sdram) + SIZEOF (.sdram) )
+    {
+        PROVIDE (_alt_partition_onchip_memory2_0_start = ABSOLUTE(.));
+        *(.onchip_memory2_0. onchip_memory2_0.*)
+        . = ALIGN(4);
+        PROVIDE (_alt_partition_onchip_memory2_0_end = ABSOLUTE(.));
+    } > onchip_memory2_0
+
+    PROVIDE (_alt_partition_onchip_memory2_0_load_addr = LOADADDR(.onchip_memory2_0));
+
+    /*
+     *
+     * This section's LMA is set to the .text region.
+     * crt0 will copy to this section's specified mapped region virtual memory address (VMA)
+     *
+     */
+
+    .epcs_flash_controller_0 : AT ( LOADADDR (.onchip_memory2_0) + SIZEOF (.onchip_memory2_0) )
+    {
+        PROVIDE (_alt_partition_epcs_flash_controller_0_start = ABSOLUTE(.));
+        *(.epcs_flash_controller_0. epcs_flash_controller_0.*)
+        . = ALIGN(4);
+        PROVIDE (_alt_partition_epcs_flash_controller_0_end = ABSOLUTE(.));
+    } > epcs_flash_controller_0
+
+    PROVIDE (_alt_partition_epcs_flash_controller_0_load_addr = LOADADDR(.epcs_flash_controller_0));
 
     /*
      * Stabs debugging sections.

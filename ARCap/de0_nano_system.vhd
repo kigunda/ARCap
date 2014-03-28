@@ -81,7 +81,13 @@ entity de0_nano_system is
          SW            : in    std_logic_vector(3 downto 0);	-- Switches
          GPIO_0		  : inout std_logic_vector(33 downto 0); 	-- 2 x 40 Expansion Header
 			GPIO_1		  : inout std_logic_vector(33 downto 0);	-- 2 x 40 Expansion Header
-			GPIO_2		  : inout std_logic_vector(1 downto 0)		-- 2 x 13 Expansion Header
+			GPIO_2		  : inout std_logic_vector(1 downto 0);		-- 2 x 13 Expansion Header
+			
+			--EPCS
+			EPCS_ASDO	:	out std_logic;
+			EPCS_DATA0	:	in std_logic;
+			EPCS_DCLK	:	out std_logic;
+			EPCS_NCSO	:	out std_logic
        );
 end entity de0_nano_system;
 
@@ -151,7 +157,14 @@ architecture syn of de0_nano_system is
 				 -- Motor controller
 				 uart_motor_rxd				: in	  std_logic								:= 'X';					-- recieve
 				 uart_motor_txd				: out	  std_logic;														-- transmit
-				 pio_motor_reset_n_export	: out	  std_logic															-- export
+				 pio_motor_reset_n_export	: out	  std_logic;														-- export	
+			
+				 -- Flash controller
+				 epcs_flash_controller_dclk  : out   std_logic;                                        -- dclk
+             epcs_flash_controller_sce   : out   std_logic;                                        -- sce
+             epcs_flash_controller_sdo   : out   std_logic;                                        -- sdo
+             epcs_flash_controller_data0 : in    std_logic                     := 'X'             	-- data0
+				
            );
    end component system;
    
@@ -216,7 +229,13 @@ begin
 					  -- Motor controller
 					  uart_motor_rxd				=> GPIO_0(24),	-- pin 31
 					  uart_motor_txd				=> GPIO_0(12), -- pin 17
-					  pio_motor_reset_n_export	=> GPIO_0(26)	-- pin 33			  
+					  pio_motor_reset_n_export	=> GPIO_0(26),	-- pin 33
+					  
+					  -- Flash controller
+					  epcs_flash_controller_dclk  => EPCS_DCLK,
+					  epcs_flash_controller_sce   => EPCS_NCSO,
+					  epcs_flash_controller_sdo   => EPCS_ASDO,
+					  epcs_flash_controller_data0 => EPCS_DATA0		  
                );  
          
 end architecture syn;
