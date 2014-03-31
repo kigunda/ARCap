@@ -1,9 +1,9 @@
 # memory.gdb - GDB memory region definitions
 #
 # Machine generated for CPU 'cpu' in SOPC Builder design 'system'
-# SOPC Builder design path: C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system.sopcinfo
+# SOPC Builder design path: C:/Users/gongal/ARCapRepository/ARCap/system.sopcinfo
 #
-# Generated: Thu Mar 27 16:38:39 MDT 2014
+# Generated: Sat Mar 29 11:07:32 MDT 2014
 
 # DO NOT MODIFY THIS FILE
 #

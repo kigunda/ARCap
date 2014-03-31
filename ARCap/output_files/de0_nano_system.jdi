@@ -1,10 +1,10 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="790ac92efd2bab9299f0"/>
+    <hash md5_digest_80b="9e1e679a8e33d82070c0"/>
   </project>
   <file_info>
-    <file checksum="0x003A7D57" device="EP4CE22F17C6" path="de0_nano_system.sof" usercode="0xFFFFFFFF"/>
-    <file checksum="0x7C53819A" device="EPCS64" path="de0_nano_system.pof" usercode="0x00000000"/>
+    <file checksum="0x003A9E9E" device="EP4CE22F17C6" path="de0_nano_system.sof" usercode="0xFFFFFFFF"/>
+    <file checksum="0x7C56BF84" device="EPCS64" path="de0_nano_system.pof" usercode="0x00000000"/>
   </file_info>
   <hub_info ir_width="2" node_count="2"/>
   <node_info>

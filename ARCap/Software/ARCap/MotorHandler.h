@@ -17,6 +17,7 @@
 #define MOTOR_RIGHT 	'r'
 #define MOTOR_FORWARD 	'f'
 #define MOTOR_BACKWARD	'b'
+#define MOTOR_BOTH		'b'
 
 #define MOTOR_START_BYTE 			0x80
 #define MOTOR_DEVICE_TYPE 			0x00

@@ -9,10 +9,11 @@
 #define INFRAREDRECEIVER_H_
 
 #include "altera_up_avalon_de0_nano_adc.h"
+#include "altera_up_avalon_de0_nano_adc_regs.h"
 #include "Status.h"
 
-#define INFRARED_RECEIVER_HIT_THRESHOLD			90
-#define INFRARED_RECEIVER_UPDATE_TIME_MILLIS	500
+#define INFRARED_RECEIVER_HIT_THRESHOLD			50
+#define INFRARED_RECEIVER_UPDATE_TIME_MILLIS	200
 
 /* Polls the infrared receivers. */
 void infrared_receiver_update_task(void* pdata);

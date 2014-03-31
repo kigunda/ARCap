@@ -181,6 +181,16 @@ $(MEM_0)_CREATE_LANES := 0
 $(MEM_0)_EPCS_FLAGS := --epcs
 $(MEM_0)_NO_ZERO_FILL_FLAG := --no-zero-fill
 
+$(HDL_SIM_DIR)/$(MEM_0).dat: $(MEM_0).flash
+	$(post-process-info)
+	$(MKDIR) -p $(@D)
+	bash -c '$(FLASH2DAT) --infile=$< --outfile=$@ \
+		--base=$(mem_start_address) --end=$(mem_end_address) --width=$(mem_width) \
+		--create-lanes=$(mem_create_lanes) $(flash2dat_extra_args)'
+
+
+FLASH_DAT_FILES += $(HDL_SIM_DIR)/$(MEM_0).dat
+
 .PHONY: epcs_flash_controller_0
 epcs_flash_controller_0: check_elf_exists $(HDL_SIM_DIR)/$(MEM_0).hex $(HDL_SIM_DIR)/$(MEM_0).dat $(HDL_SIM_DIR)/$(MEM_0).sym $(MEM_0).flash
 

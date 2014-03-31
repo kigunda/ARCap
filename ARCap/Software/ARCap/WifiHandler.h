@@ -13,14 +13,20 @@
 
 #include "Status.h"
 
-/*
- * Indicates how long callers will wait to use a busy connection.
- */
-#define WIFI_HANDLER_LOCK_TIMEOUT_TICKS		OS_TICKS_PER_SEC
-#define	WIFI_READ_AVAILABLE_RETRIES			(1 << 23)
+/* Indicates how long callers will wait to use a busy connection. */
+#define WIFI_DEFAULT_TIMEOUT				OS_TICKS_PER_SEC
 
-#define WIFI_CONNECT_PREFIX		"+"
-#define WIFI_STOP_MARKER		"\n"
+/* Indicates how many times we will continue reading when we receive no data. */
+#define	WIFI_READ_AVAILABLE_RETRIES			(1 << 18)
+
+/* The LED is turned off when we're connected to the server. */
+#define WIFI_LED_WAITING		0
+#define WIFI_LED_CONNECTED		0
+#define WIFI_LED_DISCONNECTED	1
+
+/* Indicates how often we should ping the server to maintain the connection. */
+#define WIFI_HANDLER_UPDATE_TIME_SECONDS	6
+#define WIFI_CONNECT_RETRY_TIME_SECONDS		1
 
 typedef enum {
 	WIFI_TCP,
@@ -32,7 +38,12 @@ typedef enum {
  * This task configures the wifi module and calls WifiHandler::tcpConnect.
  * All other tasks must wait for the connection to be confirmed before executing.
  */
-void wifi_handler_tcp_connect_task(void *pdata);
+void wifi_handler_tcp_start_task(void *pdata);
+
+/**
+ * Pings the server to confirm the continued connection between the rover and the server.
+ */
+void wifi_handler_tcp_update_task(void *pdata);
 
 /**
  * Tests network communications.
@@ -65,6 +76,92 @@ public:
 	WifiHandler();
 
 	/**
+	 * Sets up the wifi module for TCP communication with the server.
+	 * If the module is already configured for TCP, prints the status of the module.
+	 * After confirming the module status, calls tcpConnect() to establish a connection to the server socket.
+	 * @return true if the connection was established
+	 * This method will also indicate the connection status by turning off the LED.
+	 */
+	bool tcpStart();
+
+	/**
+	 * Sends the given TCP message to the server.
+	 * @param message - the message to send
+	 * @param timeout - the number of ticks that the caller is willing to wait to use the connection
+	 * @return true if the message was sent successfully, or false if the message could not be sent
+	 * because the wifi connection is busy
+	 */
+	bool tcpSend(char *message, INT16U timeout);
+
+	/**
+	 * Sends the given TCP message to the server and waits for the confirmation MESSAGE_OK.
+	 * The message will be resent until we receive MESSAGE_OK.
+	 * @param message - the message to send
+	 * @param timeout - the number of ticks that the caller is willing to wait to use the connection
+	 * @return true if the message was sent successfully, or false if the message could not be sent
+	 * because the wifi connection is busy
+	 */
+	bool tcpSendAndConfirm(char *message, INT16U timeout);
+
+	/**
+	 * Waits for the next TCP message from the server.
+	 * The message is terminated by a newline '\n'.
+	 * @return the message received, or NULL if no message could be read because the wifi connection is busy
+	 */
+	char *tcpReceive();
+
+	/**
+	 * Tests network communications.
+	 * Sends a series of commands to the server, prints the responses,
+	 * and closes the connection.
+	 */
+	void tcpSendTest();
+
+	/**
+	 * Test network communications from the server to the rover.
+	 * Listens on the socket for new messages and prints them out.
+	 */
+	void tcpReceiveTest();
+
+	/**
+	 * Sets up the wifi module for HTTP communication with the server.
+	 * If the module is already configured for HTTP, prints the status of the module.
+	 * @return true if the connection was established
+	 * This method will also indicate the connection status by turning off the LED.
+	 */
+	bool httpStart();
+
+	/**
+	 * Sends an HTTP GET request for the given URL.
+	 * @param url - the URL specifying the resource to request
+	 * @return the response to the request
+	 */
+	char *httpGet(char *url);
+
+	/**
+	 * Indicates whether there is data to read.
+	 * @return true - if there is data in the read buffer
+	 */
+	bool hasData();
+
+	/**
+	 * Tests the UART communications between the board and the wifi module.
+	 * Sends the configuration command "+++" and expects the response "OK\r".
+	 */
+	void testUart();
+
+private:
+	/* The UART device used to write and read data to and from the Xbee wifi module. */
+	alt_up_rs232_dev *wifi_dev;
+
+	/* The semaphore used to ensure that multiple requests are not made simultaneously to the same connection. */
+	OS_EVENT *wifi_lock;
+
+	/* The semaphore used to ensure that we have a connection to the server before starting
+	 * a task that might make a wifi request. */
+	OS_EVENT *require_lock;
+
+	/**
 	 * Sets up the wifi module to connect to the network.
 	 * The connection settings are stored in non-volatile memory,
 	 * so this method only needs to be run once per Xbee module.
@@ -84,53 +181,18 @@ public:
 	 * Connects to the server socket.
 	 * This method sends the rover identification command r(id), where (id) is ROVER_ID,
 	 * and waits until it receives the response "#ok".
+	 * @return true if connection was accepted
 	 */
-	void tcpConnect();
+	bool tcpConnect();
 
 	/**
-	 * Sends the given TCP message to the server.
-	 * @param message the message to send
-	 * @param stop the string marking the end of the message, such as a newline "\n"
+	 * Waits to acquire the lock on the wifi connection.
+	 * Since we are using transparent mode, there can only be one connection at a time.
+	 * Methods calling write() or readUntil() must acquire this lock first.
+	 * @param timeout - the maximum number of ticks that the caller is willing to wait to acquire the lock
+	 * @return true if the lock was acquired
 	 */
-	bool tcpSend(char *message, char *stop);
-
-	/**
-	 * Waits for the next TCP message from the server.
-	 * The message is terminated by a newline '\n'.
-	 * @return the message received
-	 */
-	char *tcpReceive();
-
-	/**
-	 * Tests network communications.
-	 * Sends a series of commands to the server, prints the responses,
-	 * and closes the connection.
-	 */
-	void tcpTest();
-
-	/**
-	 * Sends an HTTP GET request for the given URL.
-	 * @param url - the URL specifying the resource to request
-	 * @return the response to the request
-	 */
-	char *httpGet(char *url);
-
-	/**
-	 * Tests the UART communications between the board and the wifi module.
-	 * Sends the configuration command "+++" and expects the response "OK\r".
-	 */
-	void testUart();
-
-private:
-	/* The UART device used to write and read data to and from the Xbee wifi module. */
-	alt_up_rs232_dev *wifi_dev;
-
-	/* The semaphore used to ensure that multiple requests are not made simultaneously to the same connection. */
-	OS_EVENT *wifi_lock;
-
-	/* The semaphore used to ensure that we have a connection to the server before starting
-	 * a task that might make a wifi request. */
-	OS_EVENT *require_lock;
+	bool lockUpTo(INT16U timeout);
 
 	/**
 	 * Waits to acquire the lock on the wifi connection.
@@ -162,6 +224,13 @@ private:
 	 * @param message - the message to write
 	 */
 	void write(char *message);
+
+	/**
+	 * Listens on the wifi UART until a full message is received.
+	 * @param message - the buffer in which the message will be placed
+	 * @param stop - the string marking the end of the message
+	 */
+	void readIntoBufferUntil(char *message, char *stop);
 
 	/*
 	 * Listens on the wifi UART until a full message is received.
@@ -222,6 +291,12 @@ private:
 #define WIFIHANDLER_READ_LOG(info) info
 #else
 #define WIFIHANDLER_READ_LOG(info)
+#endif
+
+#if defined(WIFIHANDLER_CONFIG_DEBUG) || defined(WIFIHANDLER_DEBUG) || defined(DEBUG)
+#define WIFIHANDLER_CONFIG_LOG(info) info
+#else
+#define WIFIHANDLER_CONFIG_LOG(info)
 #endif
 
 #if defined(WIFIHANDLER_TCP_DEBUG) || defined(WIFIHANDLER_DEBUG) || defined(DEBUG)

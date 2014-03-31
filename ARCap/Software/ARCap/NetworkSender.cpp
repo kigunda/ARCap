@@ -13,7 +13,7 @@ extern NetworkSender *networkOut;
 
 /* Waits for outgoing network commands and forwards them as they arrive. */
 void network_sender_update_task(void *pdata) {
-	printf("NetworkSender [task: update, status: start]\n");
+	TASK_LOG(printf("NetworkSender [task: update, status: start]\n"));
 	while (true) {
 		try {
 			// Update the network sender.
@@ -43,5 +43,5 @@ NetworkSender::NetworkSender(WifiHandler *wifiHandler) {
  */
 void NetworkSender::parse(char *command) {
 	NETWORKSENDER_LOG(printf("NetworkSender [command: %s]\n", command));
-//	wifi->tcpSend(command, "\n");
+	wifi->tcpSendAndConfirm(command, WAIT_FOREVER);
 }

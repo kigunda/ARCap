@@ -18,7 +18,8 @@ obj/default/main.o: main.cpp ../ARCap_bsp//HAL/inc/includes.h \
   ../ARCap_bsp//HAL/inc/sys/alt_alarm.h \
   ../ARCap_bsp//HAL/inc/sys/alt_warning.h \
   ../ARCap_bsp//drivers/inc/altera_up_avalon_de0_nano_adc_regs.h \
-  ../ARCap_bsp//HAL/inc/io.h ../ARCap_bsp//HAL/inc/alt_types.h Status.h \
+  ../ARCap_bsp//HAL/inc/io.h ../ARCap_bsp//HAL/inc/alt_types.h \
+  ../ARCap_bsp//drivers/inc/altera_up_avalon_de0_nano_adc_regs.h Status.h \
   Debug.h InfraredSender.h \
   ../ARCap_bsp//drivers/inc/altera_avalon_pio_regs.h Listener.h \
   MotorHandler.h ../ARCap_bsp//drivers/inc/altera_up_avalon_rs232.h \
@@ -88,6 +89,8 @@ InfraredReceiver.h:
 ../ARCap_bsp//HAL/inc/io.h:
 
 ../ARCap_bsp//HAL/inc/alt_types.h:
+
+../ARCap_bsp//drivers/inc/altera_up_avalon_de0_nano_adc_regs.h:
 
 Status.h:
 

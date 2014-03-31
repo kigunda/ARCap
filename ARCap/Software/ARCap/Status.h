@@ -55,4 +55,10 @@ public:
 	}
 };
 
+#if defined(TASK_DEBUG) || defined(DEBUG)
+#define TASK_LOG(info) info
+#else
+#define TASK_LOG(info)
+#endif
+
 #endif /* STATUS_H_ */

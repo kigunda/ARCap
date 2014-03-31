@@ -2,9 +2,9 @@
  * linker.h - Linker script mapping information
  *
  * Machine generated for CPU 'cpu' in SOPC Builder design 'system'
- * SOPC Builder design path: C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system.sopcinfo
+ * SOPC Builder design path: C:/Users/gongal/ARCapRepository/ARCap/system.sopcinfo
  *
- * Generated: Thu Mar 27 16:38:39 MDT 2014
+ * Generated: Sat Mar 29 11:07:32 MDT 2014
  */
 
 /*
@@ -87,21 +87,5 @@
 #define ALT_RODATA_DEVICE SDRAM
 #define ALT_RWDATA_DEVICE SDRAM
 #define ALT_TEXT_DEVICE SDRAM
-
-
-/*
- * Initialization code at the reset address is allowed (e.g. no external bootloader).
- *
- */
-
-#define ALT_ALLOW_CODE_AT_RESET
-
-
-/*
- * The alt_load() facility is called from crt0 to copy sections into RAM.
- *
- */
-
-#define ALT_LOAD_COPY_RWDATA
 
 #endif /* __LINKER_H_ */

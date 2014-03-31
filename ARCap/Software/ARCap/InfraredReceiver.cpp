@@ -18,7 +18,7 @@ extern InfraredReceiver *infraredIn;
 
 /* Polls the infrared receivers. */
 void infrared_receiver_update_task(void* pdata) {
-	printf("InfraredReceiver [task: update, status: start]\n");
+	TASK_LOG(printf("InfraredReceiver [task: update, status: start]\n"));
 	while (true) {
 		try {
 			// Update the infrared receiver.
@@ -63,6 +63,7 @@ void InfraredReceiver::setListener(OS_EVENT *queue) {
  */
 void InfraredReceiver::check(unsigned int level) {
 	if (level > INFRARED_RECEIVER_HIT_THRESHOLD) {
+		INFRAREDRECEIVER_LOG(printf("InfraredReceiver [event: HIT]\n"));
 		post(HIT);
 	}
 }

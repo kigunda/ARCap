@@ -29,7 +29,7 @@ NetworkReceiver *networkIn;
 int main(void) {
 
 	// WIFI TASKS
-	OSTaskCreateExt(wifi_handler_tcp_test_task,
+	OSTaskCreateExt(wifi_handler_tcp_start_task,
 			0,
 			&task1_stk[TASK_STACKSIZE - 1],
 			TASK1_PRIORITY,
@@ -38,48 +38,64 @@ int main(void) {
 			TASK_STACKSIZE,
 			0,
 			0);
+	OSTaskCreateExt(wifi_handler_tcp_update_task,
+			0,
+			&task2_stk[TASK_STACKSIZE - 1],
+			TASK2_PRIORITY,
+			TASK2_PRIORITY,
+			task2_stk,
+			TASK_STACKSIZE,
+			0,
+			0);
 
-	//	// INFRARED TASKS
-	//	OSTaskCreateExt(infrared_receiver_update_task,
-	//			NULL,
-	//			&task2_stk[TASK_STACKSIZE-1],
-	//			TASK2_PRIORITY,
-	//			TASK2_PRIORITY,
-	//			task2_stk,
-	//			TASK_STACKSIZE,
-	//			NULL,
-	//			0);
-	//	OSTaskCreateExt(infrared_sender_test_task,
-	//			0,
-	//			&task3_stk[TASK_STACKSIZE-1],
-	//			TASK3_PRIORITY,
-	//			TASK3_PRIORITY,
-	//			task3_stk,
-	//			TASK_STACKSIZE,
-	//			0,
-	//			0);
-	//
-	//	// MOTOR TASKS
-	//	OSTaskCreateExt(motor_handler_test_task,
-	//			0,
-	//			&task4_stk[TASK_STACKSIZE-1],
-	//			TASK4_PRIORITY,
-	//			TASK4_PRIORITY,
-	//			task4_stk,
-	//			TASK_STACKSIZE,
-	//			0,
-	//			0);
+	// LISTENER TASKS
+	OSTaskCreateExt(network_sender_update_task,
+			0,
+			&task3_stk[TASK_STACKSIZE-1],
+			TASK3_PRIORITY,
+			TASK3_PRIORITY,
+			task3_stk,
+			TASK_STACKSIZE,
+			0,
+			0);
+	OSTaskCreateExt(infrared_sender_update_task,
+			0,
+			&task4_stk[TASK_STACKSIZE-1],
+			TASK4_PRIORITY,
+			TASK4_PRIORITY,
+			task4_stk,
+			TASK_STACKSIZE,
+			0,
+			0);
+	OSTaskCreateExt(motor_handler_update_task,
+			0,
+			&task5_stk[TASK_STACKSIZE-1],
+			TASK5_PRIORITY,
+			TASK5_PRIORITY,
+			task5_stk,
+			TASK_STACKSIZE,
+			0,
+			0);
 
-	//	// NETWORK TASKS
-	//	OSTaskCreateExt(network_sender_update_task,
-	//			0,
-	//			&task5_stk[TASK_STACKSIZE-1],
-	//			TASK5_PRIORITY,
-	//			TASK5_PRIORITY,
-	//			task5_stk,
-	//			TASK_STACKSIZE,
-	//			0,
-	//			0);
+	// SOURCE TASKS
+	OSTaskCreateExt(network_receiver_update_task,
+			0,
+			&task6_stk[TASK_STACKSIZE-1],
+			TASK6_PRIORITY,
+			TASK6_PRIORITY,
+			task6_stk,
+			TASK_STACKSIZE,
+			0,
+			0);
+	OSTaskCreateExt(infrared_receiver_update_task,
+			NULL,
+			&task7_stk[TASK_STACKSIZE-1],
+			TASK7_PRIORITY,
+			TASK7_PRIORITY,
+			task7_stk,
+			TASK_STACKSIZE,
+			NULL,
+			0);
 
 	try {
 		// Create handlers.
@@ -89,7 +105,7 @@ int main(void) {
 		wifi = new WifiHandler();
 		networkOut = new NetworkSender(wifi);
 		networkIn = new NetworkReceiver(wifi);
-		printf("Main [initialize, status: OK]\n");
+		TASK_LOG(printf("Main [initialize, status: OK]\n"));
 
 		// Create the communications chain.
 		infraredIn->setListener(networkOut->listener());

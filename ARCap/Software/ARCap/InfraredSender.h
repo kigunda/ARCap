@@ -25,6 +25,12 @@ void infrared_sender_test_task(void *pdata);
 class InfraredSender: public Listener {
 public:
 	/**
+	 * Creates a new infrared sender.
+	 * Turns the emitters on for verification.
+	 */
+	InfraredSender();
+
+	/**
 	 * Tests the infrared emitters.
 	 */
 	void test();

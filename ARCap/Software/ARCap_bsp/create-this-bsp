@@ -5,7 +5,7 @@
 BSP_TYPE=ucosii
 BSP_DIR=.
 SOPC_DIR=../../
-SOPC_FILE=C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system.sopcinfo
+SOPC_FILE=C:/Users/gongal/ARCapRepository/ARCap/system.sopcinfo
 NIOS2_BSP_ARGS=""
 CPU_NAME=
 

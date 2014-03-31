@@ -101,7 +101,7 @@ ACDS_VERSION := 12.1sp1
 # BUILD_NUMBER: 243
 
 SETTINGS_FILE := settings.bsp
-SOPC_FILE := C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system.sopcinfo
+SOPC_FILE := C:/Users/gongal/ARCapRepository/ARCap/system.sopcinfo
 
 #-------------------------------------------------------------------------------
 #                             TOOL & COMMAND DEFINITIONS

@@ -14,12 +14,17 @@
 
 #include "WifiHandler.h"
 
+#define WIFI_ENABLE		1
+#define WIFI_RESET		0
+
 #define WRITE_FIFO_EMPTY	0x20
 #define READ_FIFO_EMPTY		0x0
 
-#define WIFI_READ_MAX_SIZE	1024
-#define WIFI_READ_STOP_MARKER_MAX_SIZE	32
+#define WIFI_CONNECT_PREFIX		"+"
+#define WIFI_STOP_MARKER		"\n"
 
+#define WIFI_READ_MAX_SIZE				1024
+#define WIFI_READ_STOP_MARKER_MAX_SIZE	32
 #define WIFI_HTTP_REQUEST_MAX_LENGTH	128
 
 // TASKS
@@ -31,32 +36,35 @@ extern WifiHandler *wifi;
  * This task configures the wifi module and calls WifiHandler::tcpConnect.
  * All other tasks must wait for the connection to be confirmed before executing.
  */
-void wifi_handler_tcp_connect_task(void *pdata) {
-	printf("WifiHandler [task: connect, status: start]\n");
-//	wifi->setup(WIFI_TCP);
-	wifi->status();
-	wifi->tcpConnect();
+void wifi_handler_tcp_start_task(void *pdata) {
+	TASK_LOG(printf("WifiHandler [task: start, status: start]\n"));
+	// Start TCP communications.
+	wifi->tcpStart();
+	TASK_LOG(printf("WifiHandler [task: start, status: finish]\n"));
+	// Delay forever.
 	while (true) {
-		OSTimeDlyHMSM(0, 20, 0, 0);
+		OSTimeDlyHMSM(1, 0, 0, 0);
 	}
 }
 
-
 /**
- * Test network communications.
- * This test sends a GET request to an HTTP server and prints the response.
- * Before running this, make sure the computer serving /arcap/infrared/hit.php
- * is connecting to the ARCap network.
- * To view output enable WIFIHANDLER_HTTP_DEBUG in Debug.h.
+ * Pings the server to confirm the continued connection between the rover and the server.
  */
-void wifi_handler_http_test_task(void *pdata) {
-	printf("WifiHandler [task: test, status: start]\n");
-	wifi->setup(WIFI_HTTP);
-	//	wifi->status();
+void wifi_handler_tcp_update_task(void *pdata) {
+	TASK_LOG(printf("WifiHandler [task: update, status: start]\n"));
 	while (true) {
-		char *response = wifi->httpGet("/arcap/infrared/hit.php");
-		free(response);
-		OSTimeDlyHMSM(0, 0, 10, 0);
+		OSTimeDlyHMSM(0, 0, WIFI_HANDLER_UPDATE_TIME_SECONDS, 0);
+		// Ping the server.
+		wifi->tcpSend(WIFI_CONNECT_PREFIX ROVER_ID, WAIT_FOREVER);
+		char *response = wifi->tcpReceive();
+		if (strncmp(response, MESSAGE_OK, MESSAGE_OK_LENGTH) == 0) {
+			// Indicate success on the LED.
+			IOWR_ALTERA_AVALON_PIO_DATA(PIO_IR_EMITTER_BASE, WIFI_LED_CONNECTED);
+		} else {
+			// Indicate the failure on the LED.
+			IOWR_ALTERA_AVALON_PIO_DATA(PIO_IR_EMITTER_BASE, WIFI_LED_DISCONNECTED);
+			WIFIHANDLER_TCP_LOG(printf("WifiHandler [task: update, error: failed to reach server]\n"));
+		}
 	}
 }
 
@@ -68,15 +76,32 @@ void wifi_handler_http_test_task(void *pdata) {
  * To view output enable WIFIHANDLER_TCP_DEBUG in Debug.h.
  */
 void wifi_handler_tcp_test_task(void *pdata) {
-	printf("WifiHandler [task: socket test, status: start]\n");
-	// Setup the wifi module for TCP.
-	//	wifi->setup(WIFI_TCP);
-	wifi->status();
-	// Connect to the remote server.
-	wifi->tcpConnect();
+	TASK_LOG(printf("WifiHandler [task: socket test, status: start]\n"));
+	// Start TCP communications.
+	wifi->tcpStart();
 	// Run the test.
 	while (true) {
-		wifi->tcpTest();
+		wifi->tcpSendTest();
+		wifi->tcpReceiveTest();
+	}
+}
+
+/**
+ * Test network communications.
+ * This test sends a GET request to an HTTP server and prints the response.
+ * Before running this, make sure the computer serving /arcap/infrared/hit.php
+ * is connecting to the ARCap network.
+ * To view output enable WIFIHANDLER_HTTP_DEBUG in Debug.h.
+ */
+void wifi_handler_http_test_task(void *pdata) {
+	TASK_LOG(printf("WifiHandler [task: test, status: start]\n"));
+	// Start HTTP communication.
+	wifi->httpStart();
+	while (true) {
+		// Get the test page.
+		char *response = wifi->httpGet("/arcap/infrared/hit.php");
+		free(response);
+		OSTimeDlyHMSM(0, 0, 10, 0);
 	}
 }
 
@@ -88,7 +113,7 @@ void wifi_handler_tcp_test_task(void *pdata) {
  * @throw SemCreateException if the handler cannot create a semaphore used to control access to the wifi connection
  */
 WifiHandler::WifiHandler() {
-	IOWR_ALTERA_AVALON_PIO_DATA(PIO_WIFI_RESET_N_BASE, 1);
+	IOWR_ALTERA_AVALON_PIO_DATA(PIO_WIFI_RESET_N_BASE, WIFI_ENABLE);
 	wifi_dev = alt_up_rs232_open_dev(UART_WIFI_NAME);
 	wifi_lock = OSSemCreate(1);
 	if (wifi_dev == NULL) {
@@ -104,12 +129,23 @@ WifiHandler::WifiHandler() {
  * Waits to acquire the lock on the wifi connection.
  * Since we are using transparent mode, there can only be one connection at a time.
  * Methods calling write() or readUntil() must acquire this lock first.
+ * @param timeout - the maximum number of ticks that the caller is willing to wait to acquire the lock
+ * @return true if the lock was acquired
+ */
+bool WifiHandler::lockUpTo(INT16U timeout) {
+	INT8U status;
+	OSSemPend(wifi_lock, timeout, &status);
+	return (status == OS_NO_ERR);
+}
+
+/**
+ * Waits to acquire the lock on the wifi connection.
+ * Since we are using transparent mode, there can only be one connection at a time.
+ * Methods calling write() or readUntil() must acquire this lock first.
  * @return true if the lock was acquired
  */
 bool WifiHandler::lock() {
-	INT8U status;
-	OSSemPend(wifi_lock, WIFI_HANDLER_LOCK_TIMEOUT_TICKS, &status);
-	return (status == OS_NO_ERR);
+	return lockUpTo(WIFI_DEFAULT_TIMEOUT);
 }
 
 /**
@@ -124,9 +160,10 @@ void WifiHandler::unlock() {
 
 /**
  * Prints the current status of the wifi module.
+ * The caller must call lock() before calling this method.
  */
 void WifiHandler::status() {
-	printf("WifiHandler [startup: show status]\n");
+	WIFIHANDLER_CONFIG_LOG(printf("WifiHandler [startup: show status]\n"));
 	configEnter();       	// Enter command mode.
 	configSend("ATVR");  	// Print firmware version.
 	configSend("ATID");  	// Print the target SSID.
@@ -147,12 +184,13 @@ void WifiHandler::status() {
  * The connection settings are stored in non-volatile memory,
  * so this method only needs to be run once per Xbee module.
  * After that, use status() to ensure that the settings are correct.
+ * The caller must call lock() before calling this method.
  * @param type
  * WIFI_TCP - used to send TCP messages to PHP socket at 192.168.0.100:10000; preferred for full duplex communication
  * WIFI_HTTP - used to send HTTP requests to HTTP server at 192.168.0.100:80; used in earlier testing
  */
 void WifiHandler::setup(WifiSetupType type) {
-	printf("WifiHandler [startup: do setup]\n");
+	WIFIHANDLER_CONFIG_LOG(printf("WifiHandler [startup: do setup]\n"));
 	configEnter();
 	configSend("ATVR");             	// Print firmware version.
 	configSend("ATIDARCap");        	// Set the target SSID to ARCAP.
@@ -160,7 +198,7 @@ void WifiHandler::setup(WifiSetupType type) {
 	configSend("ATPKplaythegame");  	// Set the security key.
 	configSend("ATAH2");            	// Set the network type to Infrastructure.
 	configSend("ATIP1");            	// Set the IP protocol to TCP.
-	configSend("ATTMff");				// Set the TCP timeout to 2500 ms (0xff * 100 ms).
+	configSend("ATTMff");				// Set the TCP timeout to 25,500 ms (0xff * 100 ms).
 	configSend("ATMA0");            	// Set the IP addressing mode to DHCP.
 	configSend("ATDL192.168.0.100");	// Set the destination IP address to ...100 (reserved for server).
 	setDestinationPort(type);			// Sets the destination port based on the setup type.
@@ -195,41 +233,99 @@ void WifiHandler::testUart() {
 // TCP
 
 /**
- * Connects to the server socket.
- * This method sends the rover identification command r(id), where (id) is ROVER_ID,
- * and waits until it receives MESSAGE_OK.
+ * Sets up the wifi module for TCP communication with the server.
+ * If the module is already configured for TCP, prints the status of the module.
+ * After confirming the module status, calls tcpConnect() to establish a connection to the server socket.
+ * @return true if the connection was established
+ * This method will also indicate the connection status by turning off the LED.
  */
-void WifiHandler::tcpConnect() {
-	char *response;
+bool WifiHandler::tcpStart() {
 	if (lock()) {
-		do {
-			// Loop until we receive MESSAGE_OK.
-			WIFIHANDLER_TCP_LOG(printf("WifiHandler [connect, id: %s]\n", ROVER_ID));
-			write(WIFI_CONNECT_PREFIX);
-			write(ROVER_ID);
-			write(WIFI_STOP_MARKER);
-			response = readUntil(WIFI_STOP_MARKER);
-			WIFIHANDLER_TCP_LOG(printf("WifiHandler [connect, status: %s]\n", response));
-		} while (strncmp(response, MESSAGE_OK, MESSAGE_OK_LENGTH) != 0);
-		// Release the wifi connection for tcpSend and tcpReceive.
+		// Setup or show the wifi status.
+//		WIFIHANDLER_CONFIG_LOG(setup(WIFI_TCP));
+		WIFIHANDLER_CONFIG_LOG(status());
+		// Connect to the server.
+		tcpConnect();
 		unlock();
+		return true;
 	} else {
-		WIFIHANDLER_TCP_LOG(printf("WifiHandler [error: failed to acquire lock]\n"));
+		WIFIHANDLER_TCP_LOG(printf("WifiHandler [task: start, error: failed to acquire lock]\n"));
+		return false;
 	}
 }
 
 /**
+ * Connects to the server socket.
+ * This method sends the rover identification command r(id), where (id) is ROVER_ID,
+ * and waits until it receives MESSAGE_OK.
+ * The caller must call lock() before calling this method.
+ * @return true if connection was accepted
+ */
+bool WifiHandler::tcpConnect() {
+	char *response = (char *)malloc(WIFI_READ_MAX_SIZE);
+	bool retryCount = 0;
+	// Loop until we receive MESSAGE_OK.
+	do {
+		// If retrying, wait.
+		if (retryCount > 0) {
+			IOWR_ALTERA_AVALON_PIO_DATA(PIO_IR_EMITTER_BASE, WIFI_LED_WAITING);
+			OSTimeDlyHMSM(0, 0, WIFI_CONNECT_RETRY_TIME_SECONDS, 0);
+		}
+		// Indicate the connection status.
+		IOWR_ALTERA_AVALON_PIO_DATA(PIO_IR_EMITTER_BASE, WIFI_LED_DISCONNECTED);
+		// Send the connection message.
+		WIFIHANDLER_TCP_LOG(printf("WifiHandler [connect, send: %s%s]\n", WIFI_CONNECT_PREFIX, ROVER_ID));
+		write(WIFI_CONNECT_PREFIX ROVER_ID WIFI_STOP_MARKER);
+		// Read the connection response.
+		readIntoBufferUntil(response, WIFI_STOP_MARKER);
+		WIFIHANDLER_TCP_LOG(printf("[WifiHandler] receive: %s%s", response, WIFI_STOP_MARKER));
+		// Update the retry count.
+		retryCount++;
+	} while (strncmp(response, MESSAGE_OK, MESSAGE_OK_LENGTH) != 0);
+	// Indicate the connection status.
+	IOWR_ALTERA_AVALON_PIO_DATA(PIO_IR_EMITTER_BASE, WIFI_LED_CONNECTED);
+	return true;
+}
+
+/**
  * Sends the given TCP message to the server.
- * @param message the message to send
- * @param stop the string marking the end of the message, such as a newline "\n"
+ * @param message - the message to send
+ * @param timeout - the number of ticks that the caller is willing to wait to use the connection
  * @return true if the message was sent successfully, or false if the message could not be sent
  * because the wifi connection is busy
  */
-bool WifiHandler::tcpSend(char *message, char *stop) {
-	if (lock()) {
-		WIFIHANDLER_TCP_LOG(printf("[WifiHandler] send: %s%s", message, stop));
+bool WifiHandler::tcpSend(char *message, INT16U timeout) {
+	if (lockUpTo(timeout)) {
+		WIFIHANDLER_TCP_LOG(printf("[WifiHandler] send: %s%s", message, WIFI_STOP_MARKER));
 		write(message);
-		write(stop);
+		write(WIFI_STOP_MARKER);
+		unlock();
+		return true;
+	} else {
+		WIFIHANDLER_TCP_LOG(printf("WifiHandler [error: failed to acquire lock]\n"));
+		return false;
+	}
+}
+
+/**
+ * Sends the given TCP message to the server and waits for the confirmation MESSAGE_OK.
+ * The message will be resent until we receive MESSAGE_OK.
+ * @param message - the message to send
+ * @param timeout - the number of ticks that the caller is willing to wait to use the connection
+ * @return true if the message was sent successfully, or false if the message could not be sent
+ * because the wifi connection is busy
+ */
+bool WifiHandler::tcpSendAndConfirm(char *message, INT16U timeout) {
+	if (lockUpTo(timeout)) {
+		char *response = (char *)malloc(WIFI_READ_MAX_SIZE);
+		do {
+			WIFIHANDLER_TCP_LOG(printf("[WifiHandler] send: %s%s", message, WIFI_STOP_MARKER));
+			WIFIHANDLER_TCP_LOG(printf("[WifiHandler] expect: %s%s", MESSAGE_OK, WIFI_STOP_MARKER));
+			write(message);
+			write(WIFI_STOP_MARKER);
+			readIntoBufferUntil(response, WIFI_STOP_MARKER);
+			WIFIHANDLER_TCP_LOG(printf("[WifiHandler] receive: %s%s", response, WIFI_STOP_MARKER));
+		} while (strncmp(response, MESSAGE_OK, MESSAGE_OK_LENGTH) != 0);
 		unlock();
 		return true;
 	} else {
@@ -256,30 +352,56 @@ char *WifiHandler::tcpReceive() {
 }
 
 /**
- * Tests network communications.
+ * Tests network communications from the rover to the server.
  * Sends a message to the PHP socket server, then prints the response.
  */
-void WifiHandler::tcpTest() {
-	static int count = 0;
-	// Send eleven commands.
-	if (count <= 10) {
-		if (count < 10) {
-			// First ten commands are infrared hit.
-			wifi->tcpSend("ih", WIFI_STOP_MARKER);
+void WifiHandler::tcpSendTest() {
+	static int count = 1;
+	// Send six commands.
+	if (count <= 6) {
+		if (count < 6) {
+			// First five commands are infrared hit.
+			wifi->tcpSendAndConfirm("ih", WIFI_DEFAULT_TIMEOUT);
 		} else {
 			// Last command is quit.
-			wifi->tcpSend(":quit", WIFI_STOP_MARKER);
-		}
-		// Receive the response.
-		char *response = wifi->tcpReceive();
-		free(response);
-		count ++;
+			wifi->tcpSend(":quit", WIFI_DEFAULT_TIMEOUT);
+		} count++;
 	}
 	// Wait for 6 seconds.
 	OSTimeDlyHMSM(0, 0, 6, 0);
 }
 
+/**
+ * Test network communications from the server to the rover.
+ * Listens on the socket for new messages and prints them out.
+ */
+void WifiHandler::tcpReceiveTest() {
+	WIFIHANDLER_TCP_LOG(printf("[WifiHandler] receive: %s", tcpReceive()));
+	OSTimeDlyHMSM(0, 0, 0, 100);
+}
+
 // HTTP
+
+/**
+ * Sets up the wifi module for HTTP communication with the server.
+ * If the module is already configured for HTTP, prints the status of the module.
+ * @return true if the connection was established
+ * This method will also indicate the connection status by turning off the LED.
+ */
+bool WifiHandler::httpStart() {
+	if (lock()) {
+		// Setup for HTTP or show the wifi status.
+		WIFIHANDLER_CONFIG_LOG(setup(WIFI_HTTP));
+		//	WIFIHANDLER_CONFIG_LOG(status());
+		// Indicate the connection on the LED.
+		IOWR_ALTERA_AVALON_PIO_DATA(PIO_IR_EMITTER_BASE, WIFI_LED_CONNECTED);
+		unlock();
+		return true;
+	} else {
+		WIFIHANDLER_HTTP_LOG(printf("WifiHandler [task: start, error: failed to acquire lock]\n"));
+		return false;
+	}
+}
 
 /**
  * Sends an HTTP GET request for the given URL.
@@ -335,11 +457,11 @@ void WifiHandler::write(char *message) {
 			if (status != OK) WIFIHANDLER_WRITE_LOG(printf("[WifiWrite] error: cannot write\n"));
 			// Go to next character.
 			data = message[++i];
-			OSTimeDlyHMSM(0, 0, 0, 2); // TODO Check wifi write delay.
+			//			OSTimeDlyHMSM(0, 0, 0, 2); // TODO Check wifi write delay.
 		} else {
 			// If no space, wait.
 			WIFIHANDLER_WRITE_LOG(printf("[WifiWrite] waiting for space\n"));
-			OSTimeDlyHMSM(0, 0, 0, 100);
+			//			OSTimeDlyHMSM(0, 0, 0, 100);
 		}
 	}
 	alt_up_rs232_enable_read_interrupt(wifi_dev);
@@ -385,18 +507,25 @@ static bool inRetryRange(int retryCount) {
 }
 
 /**
- * Listens on the wifi UART until a full message is received.
- * @param stop - the string marking the end of the message
- * @return the message that was received, which must be freed by the caller
+ * Indicates whether there is data to read.
+ * @return true if there is data in the read buffer
  */
-char *WifiHandler::readUntil(char *stop) {
+bool WifiHandler::hasData() {
+	return alt_up_rs232_get_used_space_in_read_FIFO(wifi_dev) > READ_FIFO_EMPTY;
+}
+
+/**
+ * Listens on the wifi UART until a full message is received.
+ * @param message - the buffer in which the message will be placed
+ * @param stop - the string marking the end of the message
+ */
+void WifiHandler::readIntoBufferUntil(char *message, char *stop) {
 	alt_u8 data, parity;
 	unsigned readAvailable;
 	// Get the stop marker length.
 	int stopLength = strnlen(stop, WIFI_READ_STOP_MARKER_MAX_SIZE);
 	WIFIHANDLER_READ_LOG(printf("[WifiRead] stop: %s\n", stop));
-	// Create a new, empty message.
-	char *message = (char *)malloc(WIFI_READ_MAX_SIZE);
+	// Start with an empty message.
 	int messageLength = 0;
 	// Count the number of retries when there is no data available.
 	int retryCount = 0;
@@ -428,8 +557,18 @@ char *WifiHandler::readUntil(char *stop) {
 			} WIFIHANDLER_READ_LOG(printf("[WifiRead] length: %d\n", messageLength));
 		}
 	}
-	// Add the null character and return the message.
+	// Add the null character.
 	message[messageLength] = '\0';
+}
+
+/**
+ * Listens on the wifi UART until a full message is received.
+ * @param stop - the string marking the end of the message
+ * @return the message that was received, which must be freed by the caller
+ */
+char *WifiHandler::readUntil(char *stop) {
+	char *message = (char *)malloc(WIFI_READ_MAX_SIZE);
+	readIntoBufferUntil(message, stop);
 	return message;
 }
 
@@ -441,7 +580,7 @@ char *WifiHandler::readUntil(char *stop) {
  */
 char *WifiHandler::configReadStart() {
 	char *response = readUntil("\r");
-	printf("%s\n", response);
+	WIFIHANDLER_CONFIG_LOG(printf("%s\n", response));
 	return response;
 }
 
@@ -460,7 +599,7 @@ void WifiHandler::configRead() {
 void WifiHandler::configSendStart(char *command) {
 	write(command);
 	write("\r");
-	printf("%s > ", command);
+	WIFIHANDLER_CONFIG_LOG(printf("%s > ", command));
 }
 
 /**
@@ -479,7 +618,7 @@ void WifiHandler::configSend(char *command) {
 void WifiHandler::configEnter() {
 	OSTimeDlyHMSM(0, 0, 1, 0);
 	write("+++");
-	printf("+++ > ");
+	WIFIHANDLER_CONFIG_LOG(printf("+++ > "));
 	OSTimeDlyHMSM(0, 0, 2, 0);
 	configRead();
 }

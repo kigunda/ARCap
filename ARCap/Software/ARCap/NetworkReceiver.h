@@ -13,7 +13,7 @@
 #include "Status.h"
 #include "WifiHandler.h"
 
-#define NETWORK_RECEIVER_UPDATE_TIME_MILLIS		800
+#define NETWORK_RECEIVER_UPDATE_TIME_MILLIS		500
 
 /* Polls for server updates. */
 void network_receiver_update_task(void* pdata);

@@ -143,14 +143,14 @@ ELF := ARCap.elf
 
 # Paths to C, C++, and assembly source files.
 C_SRCS :=
-CXX_SRCS += WifiHandler.cpp
-CXX_SRCS += main.cpp
 CXX_SRCS += InfraredReceiver.cpp
 CXX_SRCS += InfraredSender.cpp
 CXX_SRCS += Listener.cpp
 CXX_SRCS += MotorHandler.cpp
-CXX_SRCS += NetworkSender.cpp
 CXX_SRCS += NetworkReceiver.cpp
+CXX_SRCS += NetworkSender.cpp
+CXX_SRCS += WifiHandler.cpp
+CXX_SRCS += main.cpp
 ASM_SRCS :=
 
 

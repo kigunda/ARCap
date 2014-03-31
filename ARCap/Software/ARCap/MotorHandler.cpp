@@ -22,7 +22,7 @@ extern MotorHandler *motor;
 
 /* Waits for motor commands and executes them as they arrive. */
 void motor_handler_update_task(void *pdata) {
-	printf("MotorHandler [task: update, status: start]\n");
+	TASK_LOG(printf("MotorHandler [task: update, status: start]\n"));
 	while (true) {
 		try {
 			// Update the motor handler.
@@ -36,7 +36,7 @@ void motor_handler_update_task(void *pdata) {
 
 /* @test Executes the motor handler test suite. */
 void motor_handler_test_task(void *pdata) {
-	printf("MotorHandler [task: test, status: start]\n");
+	TASK_LOG(printf("MotorHandler [task: test, status: start]\n"));
 	while (true) {
 		motor->test();
 	}
@@ -79,7 +79,15 @@ int MotorHandler::getSpeedFrom(char *command) {
  */
 void MotorHandler::parse(char *command) {
 	MOTORHANDLER_LOG(printf("MotorHandler [command: %s]\n", command));
-	if(command[MOTOR_MOTOR_INDEX] == MOTOR_LEFT) {
+	if (command[MOTOR_MOTOR_INDEX] == MOTOR_BOTH) {
+		if (command[MOTOR_DIRECTION_INDEX] == MOTOR_FORWARD) {
+			move(MOTOR_RIGHT_FORWARD, getSpeedFrom(command), "motor right forward");
+			move(MOTOR_LEFT_FORWARD, getSpeedFrom(command), "motor left forward");
+		} else {
+			move(MOTOR_LEFT_BACKWARD, getSpeedFrom(command), "motor left backward");
+			move(MOTOR_RIGHT_BACKWARD, getSpeedFrom(command), "motor right backward");
+		}
+	} else if(command[MOTOR_MOTOR_INDEX] == MOTOR_LEFT) {
 		if (command[MOTOR_DIRECTION_INDEX] == MOTOR_FORWARD) {
 			move(MOTOR_LEFT_FORWARD, getSpeedFrom(command), "motor left forward");
 		} else {

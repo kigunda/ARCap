@@ -13,7 +13,7 @@ extern NetworkReceiver *networkIn;
 
 /* Polls for server updates. */
 void network_receiver_update_task(void* pdata) {
-	printf("NetworkReceiver [task: update, status: start]\n");
+	TASK_LOG(printf("NetworkReceiver [task: update, status: start]\n"));
 	while (true) {
 		try {
 			// Update the network receiver.
@@ -82,9 +82,13 @@ void NetworkReceiver::post(const char *event) {
  * @throw PostException if a message cannot be posted to a listener
  */
 void NetworkReceiver::update() {
-	char *message = wifi->tcpReceive();
-	if (message != NULL) {
-		post(message);
-		wifi->tcpSend(MESSAGE_OK, "\n");
+	if (wifi->hasData()) {
+		char *message = wifi->tcpReceive();
+		if (message == NULL) {
+			NETWORKRECEIVER_LOG(printf("[NetworkReceiver] error: wifi busy\n"));
+		} else {
+			NETWORKRECEIVER_LOG(printf("[NetworkReceiver] message: %s", message));
+			post(message);
+		}
 	}
 }

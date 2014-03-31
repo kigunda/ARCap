@@ -19,7 +19,7 @@ extern InfraredSender *infraredOut;
 
 /* Waits for infrared send commands and executes them as they arrive. */
 void infrared_sender_update_task(void *pdata) {
-	printf("InfraredSender [task: update, status: start]\n");
+	TASK_LOG(printf("InfraredSender [task: update, status: start]\n"));
 	while (true) {
 		try {
 			// Update the infrared sender.
@@ -33,10 +33,20 @@ void infrared_sender_update_task(void *pdata) {
 
 /* @test Periodically sends an infrared signal. */
 void infrared_sender_test_task(void *pdata) {
-	printf("InfraredSender [task: test, status: start]\n");
+	TASK_LOG(printf("InfraredSender [task: test, status: start]\n"));
 	while (true) {
 		infraredOut->test();
 	}
+}
+
+// CONSTRUCTION
+
+/**
+ * Creates a new infrared sender.
+ * Turns the emitters on for verification.
+ */
+InfraredSender::InfraredSender() {
+	IOWR_ALTERA_AVALON_PIO_DATA(PIO_IR_EMITTER_BASE, INFRARED_SENDER_OFF);
 }
 
 // COMMANDS

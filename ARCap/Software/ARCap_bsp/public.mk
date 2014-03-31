@@ -87,11 +87,11 @@ ACDS_VERSION := 12.1sp1
 
 # Quartus Generated JDI File. Required for resolving node instance ID's with 
 # design component names. 
-JDI_FILE := C:/Users/kigunda/Documents/Ece492/Repository/ARCap/de0_nano_system.jdi
+JDI_FILE := C:/Users/gongal/ARCapRepository/ARCap/de0_nano_system.jdi
 
 # Qsys--generated SOPCINFO file. Required for resolving node instance ID's with 
 # design component names. 
-SOPCINFO_FILE := C:/Users/kigunda/Documents/Ece492/Repository/ARCap/system.sopcinfo
+SOPCINFO_FILE := C:/Users/gongal/ARCapRepository/ARCap/system.sopcinfo
 
 # Big-Endian operation. 
 # setting BIG_ENDIAN is false

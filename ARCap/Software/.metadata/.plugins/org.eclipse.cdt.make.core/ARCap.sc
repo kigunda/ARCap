@@ -2,12 +2,12 @@
 <?scdStore version="2"?>
 
 <scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
-<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.406130471;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.406130471.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.2071654059;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.102239609">
+<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.737699847;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.737699847.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.157808025;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.1437295214">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
-<includePath path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap_bsp/UCOSII/inc"/>
-<includePath path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap_bsp/HAL/inc"/>
-<includePath path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap_bsp/"/>
-<includePath path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap_bsp/drivers/inc"/>
+<includePath path="C:/Users/gongal/ARCapRepository/ARCap/Software/ARCap_bsp/UCOSII/inc"/>
+<includePath path="C:/Users/gongal/ARCapRepository/ARCap/Software/ARCap_bsp/HAL/inc"/>
+<includePath path="C:/Users/gongal/ARCapRepository/ARCap/Software/ARCap_bsp/"/>
+<includePath path="C:/Users/gongal/ARCapRepository/ARCap/Software/ARCap_bsp/drivers/inc"/>
 <includePath path="C:\altera\12.1sp1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include\c++"/>
 <includePath path="C:\altera\12.1sp1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include\c++\i686-pc-cygwin"/>
 <includePath path="C:\altera\12.1sp1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include\c++\backward"/>
@@ -231,12 +231,12 @@
 <definedSymbol symbol="__ucosii__=1"/>
 </collector>
 </instance>
-<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.406130471;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.406130471.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.1224114673;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.1828948086">
+<instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.737699847;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.737699847.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.697221843;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.258806248">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
-<includePath path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap_bsp/UCOSII/inc"/>
-<includePath path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap_bsp/HAL/inc"/>
-<includePath path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap_bsp/"/>
-<includePath path="C:/Users/kigunda/Documents/Ece492/Repository/ARCap/Software/ARCap_bsp/drivers/inc"/>
+<includePath path="C:/Users/gongal/ARCapRepository/ARCap/Software/ARCap_bsp/UCOSII/inc"/>
+<includePath path="C:/Users/gongal/ARCapRepository/ARCap/Software/ARCap_bsp/HAL/inc"/>
+<includePath path="C:/Users/gongal/ARCapRepository/ARCap/Software/ARCap_bsp/"/>
+<includePath path="C:/Users/gongal/ARCapRepository/ARCap/Software/ARCap_bsp/drivers/inc"/>
 <includePath path="C:\altera\12.1sp1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include"/>
 <includePath path="C:\altera\12.1sp1\quartus\bin\cygwin\lib\gcc\i686-pc-cygwin\4.5.3\include-fixed"/>
 <includePath path="C:\altera\12.1sp1\quartus\bin\cygwin\usr\include"/>
