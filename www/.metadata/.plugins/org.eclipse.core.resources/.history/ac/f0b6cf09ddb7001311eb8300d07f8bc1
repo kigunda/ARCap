@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Socket Test</title>
+</head>
+<body>
+	<form id="send">
+		<input id="send-data" 
+			type="text" placeholder="Enter your message here" value="" 
+		/>
+	</form>
+	<div id="receive"></div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="test.js"></script>
+</body>
+</html>

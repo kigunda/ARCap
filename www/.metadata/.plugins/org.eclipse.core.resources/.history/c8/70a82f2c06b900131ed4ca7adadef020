@@ -1,0 +1,36 @@
+$(document).ready(createTestSocket);
+
+function createTestSocket() {
+	websocket = new WebSocket('ws://192.168.0.100:10000/arcap/player');
+	
+	var id = $('#player-id').text();
+	
+	websocket.onopen = function(e) {
+		console.log('[WebSocket] Connected');
+		websocket.send('+p' + id);
+	};
+
+	websocket.onmessage = function(e) {
+		console.log('[WebSocket] ' + e.data);
+	};
+	
+	websocket.onerror = function(e) {
+		console.log('[WebSocket] ' + e.data);
+	};
+	
+	websocket.onclose = function(e) {
+		console.log("[WebSocket] disconnected');
+	};
+	
+	$('#send').submit(function(e) {
+		e.preventDefault();
+		var source = $('#send-data');
+		var data = source.val();
+		console.log(data);
+		websocket.send(data);
+		$('#log').append('<div class="outgoing">' + data + '</div>');
+		source.val('');
+	});
+	
+	$('#send-data').trigger('focus');
+}

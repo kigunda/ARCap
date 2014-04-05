@@ -1,0 +1,69 @@
+function DpadButton(dpad, placement, cssClass, actions, name) {
+	this.controller = dpad.controller;
+	this.dpad = dpad;
+	this.actions = actions;
+	this.actions.previous = null;
+	this.name = name;
+	this.position = {
+			x: placement.origin.x + (placement.offset.x * DpadButton.width),
+			y: placement.origin.y + (placement.offset.y * DpadButton.height),
+	};
+	var button = this;
+	this.shape = this.controller.draw
+	.rect(DpadButton.width, DpadButton.height)
+	.move(this.position.x, this.position.y)
+	.attr({
+		'class': 'button button-dpad ' + cssClass,
+		fill: '#da532c',
+		opacity: 0.5,
+	})
+	.on('click', function() {
+		if (button.controller.ready()) {
+			button.execute();
+		}
+	});
+}
+
+DpadButton.create = function(dpad, placement, cssClass, actions, name) {
+	return new DpadButton(dpad, placement, cssClass, actions, name);
+};
+
+
+DpadButton.height = Controller.height / 5;
+DpadButton.width = DpadButton.height;
+
+DpadButton.prototype.execute = function() {
+	previous = this.dpad.buttons.selected;
+	this.select();
+	if ((this.actions.length == 1) || (!this.previous)) {
+		this.controller.perform(this.actions[0]);
+	} else {
+		switch (previous.name) {
+		case "stop":
+			this.controller.perform(this.actions[0]); break;
+		case "forward":
+			this.controller.perform(this.actions[1]); break;
+		case "backward":
+			this.controller.perform(this.actions[2]); break;
+		default:
+			this.controller.perfo
+		}
+	}
+};
+
+DpadButton.prototype.select = function() {
+	// Deselct current button.
+	if (this.dpad.buttons.selected) {
+		this.dpad.buttons.selected.deselect();
+	} 
+	// Select this button.
+	this.dpad.buttons.selected = this;
+	this.shape.opacity(1);
+	return this;
+};
+
+DpadButton.prototype.deselect = function() {
+	this.dpad.buttons.selected = null;
+	this.shape.opacity(0.5);
+	return this;
+};

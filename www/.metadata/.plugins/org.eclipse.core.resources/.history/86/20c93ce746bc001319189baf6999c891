@@ -1,0 +1,25 @@
+function Dpad(controller, placement, cssClass) {
+	this.controller = controller;
+	this.position = {
+			x: placement.x - (DpadButton.width / 2),
+			y: placement.y - (DpadButton.height / 2),
+	};
+	this.buttons = {};
+	this.buttons.selected = null;
+	this.move.stop = this.createButton({x: 0, y: 0}, ['mbf0']);
+	this.move.up = this.createButton({x: 0, y: -1,}, ['mbf100']);
+	this.move.down = this.createButton({x: 0, y: 1}, ['mbb100']);
+	this.createButton({x: -1, y: 0}, ['mlf100', 'mrf60']);
+	this.createButton({x: 1, y: 0}, ['mrf100', 'mlf60']);
+}
+
+Dpad.prototype.createButton = function(offset, actions) {
+	return DpadButton.create(this, {
+		origin: this.position,
+		offset: offset,
+	}, this.cssClass, actions);
+};
+
+Dpad.create = function(controller, placement, cssClass, motor) {
+	return new Dpad(controller, placement, cssClass, motor);
+};

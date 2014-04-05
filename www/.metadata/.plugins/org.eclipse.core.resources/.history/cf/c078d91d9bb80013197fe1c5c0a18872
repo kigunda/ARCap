@@ -1,0 +1,14 @@
+<?php $version = 5; ?>
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="play.css?v=<?=$version?>" />
+</head>
+<body>
+	<div id="controller"></div>
+	<script src="/jquery-2.1.0.min.js"></script>
+	<script src="/svg.min.js"></script>
+	<script src="Controller.js?v=<?=$version?>"></script>
+	<script src="DpadButton.js?v=<?=$version?>"></script>
+</body>
+</html>

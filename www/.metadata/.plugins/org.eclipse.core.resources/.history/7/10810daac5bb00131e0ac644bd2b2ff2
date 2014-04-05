@@ -1,0 +1,81 @@
+function TrackButton(track, placement, cssClass, motor, options) {
+	this.setOptions(options);
+	this.controller = track.controller;
+	this.track = track;
+	this.motor = motor;
+	this.group = motor.direction + motor.speed;
+	this.action = "m" + motor.motor + this.group;
+	this.track.buttons[this.group] = this;
+	this.controller.group(this.group, this);
+	this.position = {
+			x: placement.origin.x + (placement.offset.x * TrackButton.width),
+			y: placement.origin.y + (placement.offset.y * TrackButton.height),
+	};
+	this.position = $.extend({
+		width: TrackButton.innerWidth,
+		height: TrackButton.innerHeight,
+	}, placement.origin, this.position);
+	var button = this;
+	this.shape = this.controller.draw
+	.rect(this.position.width, this.position.height)
+	.move(this.position.x, this.position.y)
+	.attr({'class': 'button button-track ' + cssClass})
+	.attr(this.options.attr.deselected)
+	.on('click', function() {
+		if (button.controller.ready()) {
+			button.controller.perform(button.action);
+			if (button.motor.motor == 'b') {
+				button.controller.move[button.group].foreach(function(linked) {
+					linked.select();
+				});
+			} else {
+				button.select();
+			}
+		}
+	});
+}
+
+TrackButton.prototype.setOptions = function(options) {
+	this.options = $.extend(true, {
+		attr: {
+			selected: {
+				fill: '#da532c',
+				opacity: 1,
+			},
+			deselected: {
+				fill: '#da532c',
+				opacity: 0.5,
+			}
+		},
+	}, options);
+};
+
+TrackButton.create = function(track, placement, cssClass, action, options) {
+	return new TrackButton(track, placement, cssClass, action, options);
+};
+
+TrackButton.innerWidth = Controller.width / 12;
+TrackButton.innerHeight = Controller.height / 8;
+TrackButton.outerSize = 6;
+TrackButton.width = TrackButton.innerWidth + TrackButton.outerSize;
+TrackButton.height = TrackButton.innerHeight + TrackButton.outerSize;
+
+TrackButton.prototype.select = function() {
+	if (this.track.buttons.selected) {
+		// Deselect current button.
+		this.track.buttons.selected.deselect();
+	}
+	// Select this button.
+	this.track.buttons.selected = this;
+	this.shape.attr(this.options.attr.selected);
+};
+
+TrackButton.prototype.deselect = function() {
+	this.track.buttons.selected = null;
+	this.shape.attr(this.options.attr.deselected);
+	return this;
+};
+
+TrackButton.prototype.selected = function() {
+	return this.track.buttons.selected == this;
+};

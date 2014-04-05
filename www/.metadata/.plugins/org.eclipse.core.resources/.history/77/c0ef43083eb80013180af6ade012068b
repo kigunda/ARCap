@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.ui-slider {
+	height: 400px;
+}
+
+#shootButton1 {
+	width: 100px;
+	height: 200px;
+	float: left;
+}
+
+#shootButton2 {
+	width: 100px;
+	height: 200px;
+	float: right;
+}
+</style>
+<link rel="stylesheet" type="text/css" media="all"
+	href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+</head>
+
+<body>
+	<div id="w">
+		<div id="content">
+			<h1>
+				<b>Augmented Reality Capture The Flag Game</b>
+			</h1>
+			<textarea rows="2" cols="50">Created by: Kenan Kigunda, Amshu Gongal and Matt Pon
+	</textarea>
+			<div>
+				<div id="leftVal">
+					Left Slider Value: <span id="currentvalleft">0</span>
+				</div>
+
+				<div id="leftSlide"></div>
+			</div>
+			<div>
+				<div id="rightVal">
+					Right Slider Value: <span id="currentvalright">0</span>
+				</div>
+				<div id="rightSlide" float="Right"></div>
+			</div>
+			<br>
+		</div>
+		<!-- @end #content -->
+	</div>
+	<!-- @end #w -->
+
+	<fieldset>
+		<span><input id="shootButton1" type="button" value="Shoot"></span>
+		<span><input id="shootButton2" type="button" value="Shoot"></span>
+	</fieldset>
+
+
+	<script>
+		$(document).ready(function() {
+		  $("#shootButton1").click(function(event){
+			var name = $("#name").val();
+			$.post('http://192.168.0.100/arcap/motor/shoot.php', {
+				command: 'i'',
+				shoot: 's',
+			}).done(function(response) {
+				var move = JSON.decode(response);
+				console.log(move);
+			});
+		  });
+		});
+$(document).ready(function() {
+		  $("#shootButton2").click(function(event){
+			var name = $("#name").val();
+			$.post('http://192.168.0.100/arcap/motor/shoot.php', {
+				command: 'i'',
+				shoot: 's',
+			}).done(function(response) {
+				var move = JSON.decode(response);
+				console.log(move);
+			});
+		  });
+		});
+</script>
+	<script type="text/javascript">
+
+
+$(function(){
+  $('#leftSlide').slider({ 
+    
+    max: 127,
+    min: -127,
+    orientation: "vertical",
+    value: 0,
+    slide: function(e,ui) {
+      $('#currentvalleft').html(ui.value);
+      if (ui.value >= 0){
+      $.post('http://192.168.0.100/arcap/motor/move.php', {
+				motor: 'l',
+				direction: 'f',
+				speed: ui.value,
+			})}
+	else{
+		$.post('http://192.168.0.100/arcap/motor/move.php', {
+				motor: 'l',
+				direction: 'b',
+				speed: Math.abs(ui.value),
+			})	
+	}
+     }
+  });
+$('#rightSlide').slider({ 
+    
+    max: 127,
+    min: -127,
+    orientation: "vertical",
+    value: 0,
+    slide: function(e,ui) {
+      $('#currentvalright').html(ui.value);
+      if (ui.value >= 0){
+      $.post('http://192.168.0.100/arcap/motor/move.php', {
+				motor: 'r',
+				direction: 'f',
+				speed: ui.value,
+			})}
+	else{
+		$.post('http://192.168.0.100/arcap/motor/move.php', {
+				motor: 'r',
+				direction: 'b',
+				speed: Math.abs(ui.value),
+			})	
+	}
+     }
+  });
+
+		
+});
+
+</script>
+</body>
+</html>

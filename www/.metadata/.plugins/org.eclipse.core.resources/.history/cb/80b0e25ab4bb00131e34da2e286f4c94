@@ -1,0 +1,80 @@
+function TrackButton(track, placement, cssClass, motor, options) {
+	this.setOptions(options);
+	this.controller = track.controller;
+	this.track = track;
+	this.motor = motor;
+	this.action = "m" + motor.motor + motor.direction + motor.speed;
+	this.track.buttons[this.action] = this;
+	this.controller.move[this.action] = this;
+	this.position = {
+			x: placement.origin.x + (placement.offset.x * TrackButton.width),
+			y: placement.origin.y + (placement.offset.y * TrackButton.height),
+	};
+	var button = this;
+	this.shape = this.controller.draw
+	.rect(TrackButton.innerWidth, TrackButton.innerHeight)
+	.move(this.position.x, this.position.y)
+	.attr({'class': 'button button-track ' + cssClass})
+	.attr(this.options.attr.deselected)
+	.on('click', function() {
+		if (button.controller.ready()) {
+			button.select();
+//			button.controller.perform(button.action);
+		}
+	});
+}
+
+TrackButton.prototype.setOptions = function(options) {
+	this.options = $.extend(true, {
+		attr: {
+			selected: {
+				fill: '#da532c',
+				opacity: 1,
+			},
+			deselected: {
+				fill: '#da532c',
+				opacity: 0.5,
+			}
+		},
+	}, options);
+};
+
+TrackButton.create = function(track, placement, cssClass, action, options) {
+	return new TrackButton(track, placement, cssClass, action, options);
+};
+
+TrackButton.innerWidth = Controller.width / 6;
+TrackButton.innerHeight = Controller.height / 8;
+TrackButton.outerSize = 6;
+TrackButton.width = TrackButton.innerWidth + TrackButton.outerSize;
+TrackButton.height = TrackButton.innerHeight + TrackButton.outerSize;
+
+TrackButton.prototype.select = function() {
+	console.log(this.track.buttons.selected.action)
+	if (this.selected()) {
+		console.log(this.action + ' already selected');
+		// Select the pair of this button.
+		this.controller.selectPairOf(this);
+	} else {
+		console.log(this.action + ' to be selected');
+		if (this.track.buttons.selected) {
+			// Deselect current button.
+			this.track.buttons.selected.deselect();
+		} else {
+			// Select this button.
+			this.track.buttons.selected = this;
+			this.shape.attr(this.options.attr.selected);
+		}
+	}
+	return this;
+};
+
+TrackButton.prototype.deselect = function() {
+	this.track.buttons.selected = null;
+	this.shape.attr(this.options.attr.deselected);
+	return this;
+};
+
+TrackButton.prototype.selected = function() {
+	return this.track.buttons.selected == this;
+};
