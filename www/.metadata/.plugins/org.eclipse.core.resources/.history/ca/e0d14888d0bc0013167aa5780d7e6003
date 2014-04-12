@@ -69,15 +69,13 @@ Controller.status.marker.y = Controller.height - Controller.status.marker.height
 
 DpadController.prototype.ready = function(ready) {
 	if (typeof(ready) !== 'undefined') {
-		if (ready != this.status.ready) {
-			// If new value provided, set and update the status marker.
-			this.status.ready = ready;
-			if (ready) {
-				this.status.marker.fill('green');
-			} else {
-				this.status.marker.fill('red');
-				this.connection.send('mbf0');
-			}
+		// If value provided, set and update the status marker.
+		this.status.ready = ready;
+		if (ready) {
+			this.status.marker.fill('green');
+		} else {
+			this.status.marker.fill('red');
+			this.move.buttons.stop.execute();
 		}
 		return this;
 	} else {
