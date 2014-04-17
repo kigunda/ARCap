@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;ARCap/Command.h&apos; to &apos;Messages.h&apos;" description="Rename resource &apos;Command.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Command.h" name="Messages.h" stamp="1396559389196" updateReferences="true"/>
-</session>

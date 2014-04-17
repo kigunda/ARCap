@@ -1,0 +1,34 @@
+function SimpleButton(controller, placement, cssClass, action) {
+	this.controller = controller;
+	this.action = action;
+	this.position = {
+			x: SimpleButton.origin.x + placement.x,
+			y: SimpleButton.origin.y + placement.y,
+	};
+	var button = this;
+	this.shape = controller.draw
+	.circle(placement.size)
+	.move(this.position.x, this.position.y)
+	.attr({
+		'class': 'button button-simple ' + cssClass,
+		fill: '#da532c',
+		opacity: 0.5,
+	})
+	.on('click', function() {
+		button.shape.opacity(1);
+		console.log(action);
+		window.setTimeout(function() {
+			button.shape.opacity(0.5);
+		}, 250);
+	});
+}
+
+SimpleButton.create = function(controller, placement, cssClass, action) {
+	return new SimpleButton(controller, placement, cssClass, action);
+};
+
+SimpleButton.size = 120;
+SimpleButton.origin = {
+		x: Controller.width * (4/5) - SimpleButton.size / 2,
+		y: Controller.height / 2 - SimpleButton.size / 2,
+};

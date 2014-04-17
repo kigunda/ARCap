@@ -1,0 +1,5 @@
+# README - ARCap Socket Server
+
+The server is a PHP socket server which accepts connections from rovers and from players. The rovers and the server exchange ASCII data, while the players and the server communicate using the WebSocket protocol which requires an initial handshake exchanging a security key, performed in ASCII, followed by exchanges of masked binary data. The server distinguishes plaintext TCP connections from WebSocket connections using the first message received: if the message starts with the connect prefix +, then the client is a rover TCP socket; if the message starts with GET, then the client is a player browser WebSocket.
+
+The file *socket.php* is the main file that actually runs the server, while *Client.php* defines a class that abstracts the details of reading and writing to clients. The file *Websocket.php* contains the functions used to perform WebSocket handshakes and to mask and unmask WebSocket communications, while *config.php* defines the server parameters, such as the IP address and port.

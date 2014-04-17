@@ -1,0 +1,96 @@
+$(document).ready(function() {
+	DpadController.create();
+});
+
+function DpadController() {
+	this.connection = new Connection(this);
+	this.draw = SVG('controller').size(Controller.width, Controller.height);
+	this.shape = this.draw.rect(Controller.width, Controller.height).fill('#f5f5f5');
+	this.status = {
+		ready: false,
+		marker: this.draw
+		.rect(Controller.status.marker.width, Controller.status.marker.height)
+		.move(Controller.status.marker.x, Controller.status.marker.y)
+		.fill("red"),
+	};
+	// Create dpad buttons for move commands.
+	this.move = {};
+	this.move.stop = DpadButton.create(this, {
+		width: DpadButton.baseSize,
+		height: DpadButton.baseSize,
+		x: 0, 
+		y: 0,		
+	}, "move", ["mbf0"]).select();
+	this.move.forward = DpadButton.create(this, {
+		width: DpadButton.baseSize,
+		height: DpadButton.fullSize,
+		x: 0, 
+		y: -DpadButton.fullSize,		
+	}, "move", ["mbf100"]);
+	this.move.backward = DpadButton.create(this, {
+		width: DpadButton.baseSize,
+		height: DpadButton.fullSize,
+		x: 0, 
+		y: DpadButton.baseSize,	
+	}, "move", ["mbb100"]);
+	this.move.left = DpadButton.create(this, {
+		width: DpadButton.fullSize,
+		height: DpadButton.baseSize,
+		x: -DpadButton.fullSize, 
+		y: 0,	
+	}, "move", ["mlf100"]);
+	this.move.right = DpadButton.create(this, {
+		width: DpadButton.fullSize,
+		height: DpadButton.baseSize,
+		x: DpadButton.baseSize, 
+		y: 0,	
+	}, "move", ["mrf100"]);
+	// Create simple button for shoot command.
+	this.shoot = SimpleButton.create(this, {
+		size: SimpleButton.size,
+		x: 0,
+		y: 0,
+	}, "shoot", ["is"]);
+}
+
+DpadController.create = function() {
+	return new Controller();
+};
+
+Controller = {};
+Controller.width = $('#content').width();
+Controller.height = $('#content').height();
+
+Controller.status = {
+	marker: {
+		width: Controller.width,
+		height: 10,
+	},
+};
+Controller.status.marker.x = Controller.width * (1/2) - Controller.status.marker.width / 2;
+Controller.status.marker.y = Controller.height - Controller.status.marker.height;
+
+DpadController.prototype.ready = function(ready) {
+	if (typeof(ready) !== 'undefined') {
+		// If value provided, set and update the status marker.
+		this.status.ready = ready;
+		if (ready) {
+			this.status.marker.fill('green');
+		} else {
+			this.status.marker.fill('red');
+			this.move.stop.select();
+		}
+		return this;
+	} else {
+		// If no value provided, return the current status.
+		console.log(this.status.ready);
+		return this.status.ready;
+	}
+};
+
+DpadController.prototype.perform = function(actions) {
+	var controller = this;
+	actions.forEach(function(action) {
+		controller.connection.send(action);
+	});
+};

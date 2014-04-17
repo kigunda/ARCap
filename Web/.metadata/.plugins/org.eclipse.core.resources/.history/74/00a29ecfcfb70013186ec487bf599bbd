@@ -1,0 +1,117 @@
+<?php
+
+require_once 'config.php';
+require_once 'Client.php';
+
+define("ARCAP_WEBSOCKET_MAX_READ_LENGTH", 1024);
+
+/**
+ * A class used to control WebSocket connections
+ * between the socket server and JavaScript clients.
+ * @author Kenan Kigunda
+ * Based on an example by Saran Chamling.
+ * http://www.sanwebe.com/2013/05/chat-using-websocket-php-socket
+ *
+ */
+class WebSocket {
+	/**
+	 * The client served by this websocket.
+	 * @var Client
+	 */
+	private $client;
+
+	/**
+	 * Indicates whether this client has performed the websocket handshake.
+	 * @var boolean
+	 */
+	private $handshaked;
+	
+	// CONSTRUCTION
+
+	/**
+	 * Creates a new websocket handler.
+	 * @param Client $client
+	 */
+	public function __construct(Client $client) {
+		$this->client = $client;
+		$this->handshaked = false;
+	}
+
+	// HANDSHAKING
+
+	/**
+	 * Performs a websocket handshake with this client.
+	 */
+	public function handshake() {
+		// TODO Simply handshake.
+		// Get the headers.
+		$headers = $this->client->read(ARCAP_WEBSOCKET_MAX_READ_LENGTH, PHP_BINARY_READ);
+		$lines = preg_split("/\r\n/", $receved_header);
+		foreach($lines as $line) {
+			$line = chop($line);
+			if(preg_match('/\A(\S+): (.*)\z/', $line, $matches)) {
+				$headers[$matches[1]] = $matches[2];
+			}
+		}
+		// Compute the handshaking accept key.
+		$key = $headers['Sec-WebSocket-Key'];
+		$accept = base64_encode(pack('H*', sha1($key . '258EAFA5-E914-47DA-95CA-C5AB0DC85B11')));
+		// Prepare the handshaking upgrade header.
+		$upgrade  = "HTTP/1.1 101 Web Socket Protocol Handshake\r\n" .
+				"Upgrade: websocket\r\n" .
+				"Connection: Upgrade\r\n" .
+				"WebSocket-Origin: ".ARCAP_SERVER_ADDRESS."\r\n" .
+				"WebSocket-Location: ws://".ARCAP_SERVER_ADDRESS.":".ARCAP_SERVER_PORT."/socket/run.php\r\n".
+				"Sec-WebSocket-Accept:$accept\r\n";
+		// Send the upgrade header to the client.
+		$this->client->write($upgrade, "\r\n");
+		$this->handshaked = true;
+	}
+	
+	// MASKING
+	
+	/**
+	 * Unmasks the given text received from a websocket client.
+	 * @param string $text the text to unmask
+	 * @return string the unmasked text
+	 */
+	public function unmask($text) {
+		$length = ord($text[1]) & 127;
+		if($length == 126) {
+			$masks = substr($text, 4, 4);
+			$data = substr($text, 8);
+		}
+		elseif($length == 127) {
+			$masks = substr($text, 10, 4);
+			$data = substr($text, 14);
+		}
+		else {
+			$masks = substr($text, 2, 4);
+			$data = substr($text, 6);
+		}
+		$text = "";
+		for ($i = 0; $i < strlen($data); ++$i) {
+			$text .= $data[$i] ^ $masks[$i%4];
+		}
+		return $text;
+	}
+	
+	/**
+	 * Masks the given text for sending to a websocket client.
+	 * @param string $text the text to mask
+	 * @return string the masked text
+	 */
+	public function mask($text) {
+		$b1 = 0x80 | (0x1 & 0x0f);
+		$length = strlen($text);
+	
+		if($length <= 125)
+			$header = pack('CC', $b1, $length);
+		elseif($length > 125 && $length < 65536)
+		$header = pack('CCn', $b1, 126, $length);
+		elseif($length >= 65536)
+		$header = pack('CCNN', $b1, 127, $length);
+		return $header.$text;
+	}
+
+}

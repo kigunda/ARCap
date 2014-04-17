@@ -1,0 +1,118 @@
+var controller;
+
+$(document).ready(function() {
+	controller = DpadController.create();
+});
+
+function DpadController() {
+	this.connection = new Connection(this);
+	this.id = this.connection.id;
+	this.draw = SVG('controller').size(Controller.width, Controller.height);
+	this.shape = this.draw.rect(Controller.width, Controller.height).fill('#f5f5f5');
+	this.status = {
+		ready: false,
+		marker: this.draw
+		.rect(Controller.status.marker.width, Controller.status.marker.height)
+		.move(Controller.status.marker.x, Controller.status.marker.y)
+		.fill("red"),
+	};
+	// Create dpad move commands.
+	this.move = Dpad.create(this, {
+		x: Controller.width * 0.17,
+		y: Controller.height * (1/2),
+	}, "move");
+	// Create simple button for shoot command.
+	this.shoot = SimpleButton.create(this, {
+		x: Controller.width * 0.9,
+		y: Controller.height * (1/2),
+	}, "shoot", ["is"]);
+	// Create rover status markers.
+	this.rovers = [];
+	this.rovers['1'] = new StatusMarker(this, '1', {
+		origin: {
+			x: Controller.width / 2,
+			y: Controller.height / 2,
+		},
+		offset: {
+			x: -1,
+			y: 0
+		}
+	});
+	this.rovers['2'] = new StatusMarker(this, '2', {
+		origin: {
+			x: Controller.width / 2,
+			y: Controller.height / 2,
+		},
+		offset: {
+			x: 1,
+			y: 0
+		}
+	});
+}
+
+DpadController.create = function() {
+	return new DpadController();
+};
+
+Controller = {};
+Controller.width = $('#content').width();
+Controller.height = $('#content').height();
+
+Controller.status = {
+	marker: {
+		width: Controller.width,
+		height: 10,
+	},
+};
+Controller.status.marker.x = Controller.width * (1/2) - Controller.status.marker.width / 2;
+Controller.status.marker.y = Controller.height - Controller.status.marker.height;
+
+DpadController.prototype.ready = function(ready) {
+	if (typeof(ready) !== 'undefined') {
+		// If value provided, set and update the status marker.
+		this.status.ready = ready;
+		if (ready) {
+			this.status.marker.fill('green');
+		} else {
+			this.status.marker.fill('red');
+			this.move.buttons.stop.select();
+		}
+		return this;
+	} else {
+		// If no value provided, return the current status.
+		return this.status.ready && this.rovers[this.id].enabled;
+	}
+};
+
+DpadController.prototype.enabled = function() {
+	return 
+};
+
+DpadController.prototype.canAct = function() {
+	return this.ready() && this.enabled();
+}
+
+DpadController.prototype.hit = function(id) {
+	// If this player was hit, blink the controller.
+	if (id == this.id) {
+		this.rovers.forEach(function(rover) {rover.hide();});
+		this.blink(0);
+	}
+	// Update the status marker.
+	this.rovers[id].onHit();
+};
+
+DpadController.prototype.blink = function(count) {
+	var controller = this;
+	if (count < 3) {
+		// Blink three times.
+		this.shape.animate(250).fill('#da532c').after(function() {
+			this.animate(250).fill('#f5f5f5').after(function() {
+				controller.blink(count + 1);
+			});
+		});
+	} else {
+		// At end, show the status markers.
+		this.rovers.forEach(function(rover) {rover.show();});
+	}
+};

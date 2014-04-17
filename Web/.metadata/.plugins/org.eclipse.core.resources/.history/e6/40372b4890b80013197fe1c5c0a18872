@@ -1,0 +1,66 @@
+$(document).ready(function() {
+	bindButtonToShoot(".shoot");
+	bindSliderToMove(".move");
+});
+
+function bindButtonToShoot(buttons) {
+	$(buttons).click(function(e) {
+		console.log("is");
+//		websocket.send("is");
+	});
+}
+
+function bindSliderToMove(sliders) {
+	var range = 125;
+	var step = 5;
+	$(sliders).each(function() {
+		$(this).attr('min', -range);
+		$(this).attr('max', range);
+		$(this).attr('step', step);
+		$(this).attr('orient', 'vertical');
+		$(this).val(0);
+		var motor = $(this).attr('data-motor');
+		$(this).change(function() {
+			var value = $(this).val();
+			var direction, speed;
+			if (value > 0) {
+				direction = 'f';
+				speed = value;
+			} else {
+				direction = 'b';
+				speed = Math.abs(value);
+			}
+			var command = "m" + motor + direction + speed;
+			console.log(command);
+	//		websocket.send(command);
+		});
+	});
+}
+
+function bindSliderToMoveJQUI(sliders) {
+	var range = 125;
+	var step = 5;
+	$(sliders).each(function() {
+		var motor = $(this).attr('data-motor');
+		$(this).slider({
+			max: range,
+			min: -range,
+			step: step, 
+			orientation: 'vertical',
+			value: 0,
+			slide: function(e, ui) {
+				var direction, speed;
+				if (ui.value > 0) {
+					direction = 'f';
+					speed = ui.value;
+				} else {
+					direction = 'b';
+					speed = Math.abs(ui.value);
+				}
+				var command = "m" + motor + direction + speed;
+				console.log(command);
+//				websocket.send(command);
+			},
+		});
+	});
+}

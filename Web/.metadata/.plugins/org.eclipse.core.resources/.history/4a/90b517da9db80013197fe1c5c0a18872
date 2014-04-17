@@ -1,0 +1,28 @@
+function SimpleButton(controller, placement, cssClass, action) {
+	this.controller = controller;
+	this.position = {
+			x: SimpleButton.origin.x + placement.x,
+			y: SimpleButton.origin.y + placement.y,
+	};
+	console.log(this.position);
+	this.shape = controller.draw
+	.circle(placement.size)
+	.attr({
+		'class': 'button button-simple ' + cssClass,
+		'cx': this.position.x,
+		'cy': this.position.y,
+	})
+	.on('click', function() {
+		console.log(action);
+	});
+}
+
+SimpleButton.create = function(controller, placement, cssClass, action) {
+	return new SimpleButton(controller, placement, cssClass, action);
+};
+
+SimpleButton.size = 120;
+SimpleButton.origin = {
+		x: Controller.width * (3/4) - SimpleButton.size / 2,
+		y: Controller.height / 2 - SimpleButton.size / 2,
+};
