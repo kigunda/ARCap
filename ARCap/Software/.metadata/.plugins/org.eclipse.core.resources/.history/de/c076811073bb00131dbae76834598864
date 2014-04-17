@@ -1,0 +1,76 @@
+/*
+ * NetworkChecker.h
+ *
+ *  Created on: 2014-04-03
+ *      Author: Kenan Kigunda
+ */
+
+#ifndef NETWORKCHECKER_H_
+#define NETWORKCHECKER_H_
+
+#include <vector>
+
+#include "Status.h"
+#include "WifiHandler.h"
+
+#define NETWORK_COMMAND	"n"
+#define NETWORK_CONNECT	"c"
+#define NETWORK_DISCONNECT	"d"
+
+/* The LED is turned off when we're connected to the server. */
+#define NETWORK_LED_WAITING			0
+#define NETWORK_LED_CONNECTED		0
+#define NETWORK_LED_DISCONNECTED	1
+
+/* Indicates how often we should ping the server to maintain the connection. */
+#define NETWORK_CHECKER_UPDATE_TIME_SECONDS	3
+
+/**
+ * Pings the server to check if this rover is connected to the network
+ * and forwards the connection status to listeners.
+ */
+class NetworkChecker {
+public:
+	/**
+	 * Creates a new network checker.
+	 * @param wifiHandler - the wifi handler used to ping the server
+	 */
+	NetworkChecker(WifiHandler *wifiHandler);
+
+	/*
+	 * Adds a listener queue to this network checker.
+	 * The queue will receive network connection events such as NETWORK_DISCONNECT
+	 * @param queue - the queue to which network connection events will be forwarded
+	 */
+	void addListener(OS_EVENT *queue);
+
+	/**
+	 * Updates this checker. The checker will ping the server
+	 * and issue NETWORK_CONNECT if the server responds
+	 * and NETWORK_DISCONNECT if the server does not respond.
+	 * @throw PostException if a message cannot be posted to a listener
+	 */
+	void update();
+
+private:
+	/* The wifi handler used by this receiver to communicate with the server. */
+	WifiHandler *wifi;
+
+	/* The queues used to send messages to listeners. */
+	vector<OS_EVENT *> listeners;
+
+	/**
+	 * Posts a network connection event to the listeners.
+	 * @param event - the name and parameters of the event.
+	 * @throw QueuePostException if the event cannot be posted to a listener
+	 */
+	void post(const char *event);
+};
+
+#if defined(NETWORKCHECKER_DEBUG) || defined(DEBUG)
+#define NETWORKCHECKER_LOG(info) info
+#else
+#define NETWORKCHECKER_LOG(info)
+#endif
+
+#endif /* NETWORKCHECKER_H_ */

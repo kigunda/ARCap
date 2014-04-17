@@ -1,0 +1,59 @@
+/*
+ * NetworkChecker.h
+ *
+ *  Created on: 2014-04-03
+ *      Author: Kenan Kigunda
+ */
+
+#ifndef NETWORKCHECKER_H_
+#define NETWORKCHECKER_H_
+
+#include <vector>
+
+#include "Status.h"
+#include "WifiHandler.h"
+
+#define NETWORK_COMMAND	"n"
+#define NETWORK_CONNECT	"c"
+#define NETWORK_DISCONNECT	"d"
+
+/**
+ * Pings the server to check if this rover is connected to the network
+ * and forwards the connection status to listeners.
+ */
+class NetworkChecker {
+public:
+	NetworkChecker();
+
+	/*
+	 * Adds a listener queue to this network checker.
+	 * The queue will receive network connection events such as NETWORK_DISCONNECT
+	 * @param queue - the queue to which network connection events will be forwarded
+	 */
+	void addListener(char key, OS_EVENT *queue);
+
+	/**
+	 * Updates this checker. The checker will ping the server
+	 * and issue NETWORK_CONNECT if the server responds and NETWORK_DISCONNECT if the server does not respond.
+	 * and forward them to the corresponding listeners.
+	 * @throw PostException if a message cannot be posted to a listener
+	 */
+	void update();
+
+private:
+	/* The wifi handler used by this receiver to communicate with the server. */
+	WifiHandler *wifi;
+
+	/* The queues used to send messages to listeners. */
+	vector<OS_EVENT *> listeners;
+
+	/**
+	 * Posts a network event to the matching listener.
+	 * @param event - the name and parameters of the event.
+	 * The event will be posted to the listener whose key matches the first character of the event.
+	 * @throw PostException if the event cannot be posted to the matching listener
+	 */
+	void post(const char *event);
+};
+
+#endif /* NETWORKCHECKER_H_ */

@@ -1,0 +1,58 @@
+/*
+ * NetworkChecker.h
+ *
+ *  Created on: 2014-04-03
+ *      Author: gongal
+ */
+
+#ifndef NETWORKCHECKER_H_
+#define NETWORKCHECKER_H_
+
+#include <vector>
+
+#include "Status.h"
+#include "WifiHandler.h"
+
+/**
+ * Pings the server to check if this rover is connected to the network
+ * and forwards the connection status to listeners.
+ */
+class NetworkChecker {
+public:
+	NetworkChecker();
+
+	/*
+	 * Adds a listener queue to this network receiver.
+	 * The queue will receive network events which start with the listener's key.
+	 * @param key the first character of network events intended for the listener
+	 * @param queue - the queue to which matching network events will be forwarded
+	 */
+	void addListener(char key, OS_EVENT *queue);
+
+	/**
+	 * Updates this receiver. The receiver will check the wifi handler for new TCP messages
+	 * and forward them to the corresponding listeners.
+	 * @throw PostException if a message cannot be posted to a listener
+	 */
+	void update();
+
+private:
+	/* The wifi handler used by this receiver to communicate with the server. */
+	WifiHandler *wifi;
+
+	/* The keys used to identify listeners. */
+	vector<char> keys;
+
+	/* The queues used to send messages to listeners. */
+	vector<OS_EVENT *> listeners;
+
+	/**
+	 * Posts a network event to the matching listener.
+	 * @param event - the name and parameters of the event.
+	 * The event will be posted to the listener whose key matches the first character of the event.
+	 * @throw PostException if the event cannot be posted to the matching listener
+	 */
+	void post(const char *event);
+};
+
+#endif /* NETWORKCHECKER_H_ */

@@ -1,6 +1,0 @@
-INDEX VERSION 1.122+C:\wamp\www\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-3950781525.index
-2830671509.index
-411606867.index
-599151154.index
-3382182246.index
