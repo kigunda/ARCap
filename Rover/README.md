@@ -1,8 +1,8 @@
 # README - ARCap Rover Software
 
 This folder contains the software that runs on the rovers. There are a total of seven tasks, which communicate through queues. Each of the tasks is managed through a C++ singleton class, i.e. there is one object instantiated for each class. In general each class has an update task, with the exception of the *NetworkReceiver* class which has both an update and a connect task. There are two categories of classes: 
-	* the datasource classes *InfraredReceiver* and *NetworkReceiver* poll periodically to check for updates
-	* the listener classes *InfraredSender*, *MotorHandler*, and *NetworkReceiver* wait on queues for new events from datasource classes and process them as they arrive.
+- the datasource classes *InfraredReceiver* and *NetworkReceiver* poll periodically to check for updates
+- the listener classes *InfraredSender*, *MotorHandler*, and *NetworkReceiver* wait on queues for new events from datasource classes and process them as they arrive.
 
 Class 				| Description
 -------------------	| ----------------
